@@ -1,0 +1,113 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - 'release/novintix-*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Clean npm cache
+        run: npm cache clean --force
+
+      - name: Install dependencies (fresh)
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Clean previous build
+        run: rm -rf dist .astro
+
+      - name: Build Astro site
+        run: npm run build
+
+      - name: Extract project name from branch
+        id: extract
+        run: |
+          # Branch: release/novintix-v3 -> Project: novintix-v3
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          PROJECT_NAME="${BRANCH_NAME#release/}"
+          echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT
+          echo "Deploying to Cloudflare Pages project: $PROJECT_NAME"
+
+      - name: Add Basic Auth Worker
+        run: |
+          cat > dist/_worker.js << 'EOF'
+          const CREDENTIALS = {
+            username: '${{ secrets.HTTP_AUTH_USER }}',
+            password: '${{ secrets.HTTP_AUTH_PASS }}'
+          };
+
+          export default {
+            async fetch(request, env) {
+              const authorization = request.headers.get('Authorization');
+
+              if (!authorization) {
+                return new Response('Authentication required', {
+                  status: 401,
+                  headers: {
+                    'WWW-Authenticate': 'Basic realm="Protected Area"'
+                  }
+                });
+              }
+
+              const [scheme, encoded] = authorization.split(' ');
+
+              if (scheme !== 'Basic') {
+                return new Response('Invalid authentication scheme', { status: 401 });
+              }
+
+              const decoded = atob(encoded);
+              const [username, password] = decoded.split(':');
+
+              if (username !== CREDENTIALS.username || password !== CREDENTIALS.password) {
+                return new Response('Invalid credentials', {
+                  status: 401,
+                  headers: {
+                    'WWW-Authenticate': 'Basic realm="Protected Area"'
+                  }
+                });
+              }
+
+              return env.ASSETS.fetch(request);
+            }
+          };
+          EOF
+
+      - name: Add cache control headers
+        run: |
+          cat > dist/_headers << 'EOF'
+          /*
+            Cache-Control: no-cache, no-store, must-revalidate
+            Pragma: no-cache
+            Expires: 0
+          EOF
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ steps.extract.outputs.project_name }} --branch=main --commit-dirty=true
+
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}' || echo "Cache purge skipped (no zone ID or pages.dev domain)"
+        continue-on-error: true
