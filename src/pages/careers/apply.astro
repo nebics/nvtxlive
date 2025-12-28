@@ -1,122 +1,114 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHero from '../../components/PageHero.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 ---
 
 <BaseLayout title="Open Positions" currentPage="/careers">
   <PageHero
-    badge="Careers"
+    icon="careers"
     title="Open Positions"
-    description="Find your next opportunity at NovintiX."
+    description="Join our team and help shape the future of life sciences."
   />
 
-  <section class="jobs-section section">
-    <div class="container">
-      <div class="jobs-intro">
-        <p>We're always looking for talented professionals who share our passion for life sciences. Browse current openings below or send us your resume directly.</p>
+  <section class="section">
+    <div class="container relative z-10">
+      <div class="section-header-center">
+        <h2>Current Opportunities</h2>
+        <p>Explore roles where you can make a meaningful impact.</p>
       </div>
 
-      <div class="jobs-widget">
+      <!-- Widget Container -->
+      <div class="widget-wrapper">
         <div id="example-widget-container"></div>
       </div>
+    </div>
+  </section>
 
-      <div class="jobs-fallback">
-        <div class="fallback-content">
-          <h3>Don't see a perfect fit?</h3>
-          <p>We'd still love to hear from you. Send us your resume and we'll reach out when a suitable position opens.</p>
-        </div>
-        <a href="mailto:careers@novintix.com" class="btn">Send Your Resume</a>
+  <section class="section section-darker">
+    <div class="container text-center relative z-10">
+      <div class="cta-box">
+        <h2>Don't see a perfect fit?</h2>
+        <p>
+          We're always looking for talent. Send us your resume and we'll keep
+          you in mind for future roles.
+        </p>
+        <a href="mailto:careers@novintix.com" class="btn btn-primary"
+          >Email Your Resume</a
+        >
       </div>
     </div>
   </section>
 </BaseLayout>
 
-<script type="text/javascript" src="https://jobsapi.ceipal.com/APISource/widget.js" data-ceipal-api-key="ZmlYbU9kMTBTdXJVUDVwTFByWW1xQT09" data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script>
+<script
+  type="text/javascript"
+  src="https://jobsapi.ceipal.com/APISource/widget.js"
+  data-ceipal-api-key="ZmlYbU9kMTBTdXJVUDVwTFByWW1xQT09"
+  data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script>
 
 <style>
-  .jobs-section {
-    background: #fff;
+  /* --- Scoped Styles --- */
+  .section {
+    padding: 6rem 0;
+    position: relative;
+  }
+  .section-darker {
+    background: rgba(0, 0, 0, 0.2);
   }
 
-  .jobs-intro {
+  .section-header-center {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 3rem;
   }
-
-  .jobs-intro p {
-    color: var(--color-muted);
-    font-size: 1.0625rem;
-    line-height: 1.7;
-  }
-
-  .jobs-widget {
-    min-height: 400px;
-    background: var(--color-light);
-    border-radius: var(--radius-xl);
-    padding: 2rem;
-    margin-bottom: 3rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  /* Style overrides for CEIPAL widget */
-  .jobs-widget :global(.ceipal-widget) {
-    font-family: var(--font-body);
-  }
-
-  .jobs-widget :global(.ceipal-job-title) {
-    color: var(--color-primary);
-    font-family: var(--font-heading);
-  }
-
-  .jobs-widget :global(.ceipal-apply-btn) {
-    background: var(--gradient-primary);
-    border-radius: var(--radius-full);
-    border: none;
-  }
-
-  .jobs-fallback {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2.5rem;
-    background: var(--gradient-dark);
-    border-radius: var(--radius-xl);
-  }
-
-  .fallback-content h3 {
+  .section-header-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #fff;
-    margin-bottom: 0.5rem;
+  }
+  .section-header-center p {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
   }
 
-  .fallback-content p {
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+  /* Widget Styling Wrapper */
+  .widget-wrapper {
+    background: #fff; /* Widget likely needs light bg */
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .jobs-fallback .btn {
-    flex-shrink: 0;
-    background: var(--color-white);
-    color: var(--color-primary);
+  /* CTA Box */
+  .cta-box {
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem;
+    border-radius: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cta-box p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
   }
 
-  .jobs-fallback .btn:hover {
-    background: var(--color-light);
-  }
+  /* Force CEIPAL Widget Updates via Global CSS injection if possible, 
+     but since it's an iframe/external script, we wrap it in a clean white box 
+     to ensure it remains readable. */
 
-  @media (max-width: 768px) {
-    .jobs-widget {
+  @media (max-width: 640px) {
+    .cta-box {
+      padding: 2rem;
+    }
+    .widget-wrapper {
       padding: 1rem;
-    }
-
-    .jobs-fallback {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .jobs-fallback .btn {
-      width: 100%;
     }
   }
 </style>

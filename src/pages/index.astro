@@ -1,641 +1,801 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Home" currentPage="/">
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-gradient"></div>
-      <div class="hero-grid"></div>
-    </div>
-    <div class="container">
+  <section class="hero-section">
+    <div class="hero-atmosphere"></div>
+    <div class="container relative z-10">
       <div class="hero-content">
-        <span class="badge">Life Sciences Consulting</span>
-        <h1>Transform Ideas Into<br /><span class="text-gradient">Market-Ready Products</span></h1>
-        <p class="hero-description">We partner with life sciences companies to accelerate product development, ensure regulatory compliance, and drive operational excellence.</p>
-        <div class="hero-actions">
-          <a href="/contact-us" class="btn">Start Your Project</a>
+        <span class="hero-badge animate-fade-in">Life Sciences Consulting</span>
+        <h1 class="hero-title animate-fade-in" style="animation-delay: 0.1s;">
+          Transform Ideas Into <br />
+          <span class="text-gradient">Market-Ready Reality</span>
+        </h1>
+        <p
+          class="hero-description animate-fade-in"
+          style="animation-delay: 0.2s;"
+        >
+          We partner with ambitious life sciences companies to accelerate
+          product development, navigate complex regulations, and drive
+          operational excellence through digital innovation.
+        </p>
+        <div
+          class="hero-actions animate-fade-in"
+          style="animation-delay: 0.3s;"
+        >
+          <a href="/contact-us" class="btn btn-primary">Start Your Project</a>
           <a href="/industries" class="btn btn-outline">Explore Industries</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">200+</span>
-            <span class="stat-label">Projects Delivered</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Expert Consultants</span>
-          </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="hero-stats animate-fade-in" style="animation-delay: 0.5s;">
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Client Satisfaction</span>
         </div>
       </div>
     </div>
+
+    <!-- Background "Watermark" Text -->
+    <div class="hero-watermark">NOVINTIX</div>
   </section>
 
-  <!-- Clients Section -->
+  <!-- Clients Marquee -->
   <section class="clients-section">
     <div class="container">
-      <p class="clients-label">Trusted by industry leaders</p>
-      <div class="clients-carousel">
-        <div class="clients-track">
-          <div class="client-logo"><img src="/images/johnson.png" alt="Johnson & Johnson" /></div>
-          <div class="client-logo"><img src="/images/medtronic.png" alt="Medtronic" /></div>
-          <div class="client-logo"><img src="/images/stryker.png" alt="Stryker" /></div>
-          <div class="client-logo"><img src="/images/B-braun.png" alt="B. Braun" /></div>
-          <div class="client-logo"><img src="/images/dentsply.png" alt="Dentsply" /></div>
-          <div class="client-logo"><img src="/images/janseen.png" alt="Janssen" /></div>
-          <div class="client-logo"><img src="/images/johnson.png" alt="Johnson & Johnson" /></div>
-          <div class="client-logo"><img src="/images/medtronic.png" alt="Medtronic" /></div>
-          <div class="client-logo"><img src="/images/stryker.png" alt="Stryker" /></div>
-          <div class="client-logo"><img src="/images/B-braun.png" alt="B. Braun" /></div>
-          <div class="client-logo"><img src="/images/dentsply.png" alt="Dentsply" /></div>
-          <div class="client-logo"><img src="/images/janseen.png" alt="Janssen" /></div>
+      <p class="clients-label">Trusted by Industry Leaders</p>
+      <div class="clients-marquee">
+        <div class="track">
+          <!-- Repeat logos for seamless loop -->
+          {
+            [
+              "johnson",
+              "medtronic",
+              "stryker",
+              "B-braun",
+              "dentsply",
+              "janseen",
+            ].map((logo) => (
+              <div class="client-logo">
+                <img
+                  src={`/images/${logo}.png`}
+                  alt={`${logo} logo`}
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+          {
+            [
+              "johnson",
+              "medtronic",
+              "stryker",
+              "B-braun",
+              "dentsply",
+              "janseen",
+            ].map((logo) => (
+              <div class="client-logo">
+                <img
+                  src={`/images/${logo}.png`}
+                  alt={`${logo} logo`}
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section section">
+  <!-- About / Value Prop -->
+  <section class="section about-section relative">
     <div class="container">
       <div class="about-grid">
         <div class="about-content">
           <h6>Why NovintiX</h6>
-          <h2>Your Partner in Life Sciences Innovation</h2>
-          <p class="about-lead">We bring deep industry knowledge, hands-on expertise, and a commitment to your success. Our team has walked in your shoes—we understand the challenges of bringing products to market.</p>
-          <div class="about-features">
-            <div class="feature">
+          <h2>
+            Bridging the gap between <span class="text-gradient"
+              >Science & Technology</span
+            >
+          </h2>
+          <p class="about-lead">
+            The life sciences industry is at a pivot point. Traditional methods
+            are too slow. We bring deep industry knowledge and cutting-edge
+            digital expertise to help you build the future of healthcare.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
               <div class="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline
+                    points="22 4 12 14.01 9 11.01"></polyline></svg
+                >
               </div>
               <div>
-                <h5>Proven Track Record</h5>
-                <p>200+ successful projects across medical devices, pharma, and biotech.</p>
+                <h4>Proven Expertise</h4>
+                <p>Veterans from top medical device & pharma companies.</p>
               </div>
             </div>
-            <div class="feature">
+            <div class="feature-item">
               <div class="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><circle cx="12" cy="12" r="10"></circle><polyline
+                    points="12 6 12 12 16 14"></polyline></svg
+                >
               </div>
               <div>
-                <h5>Industry Veterans</h5>
-                <p>Our consultants average 15+ years at leading life sciences companies.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div>
-                <h5>Faster Time to Market</h5>
-                <p>Streamlined processes that reduce development cycles by 30%.</p>
+                <h4>Speed to Market</h4>
+                <p>
+                  Streamlined frameworks that reduce development cycles by 30%.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="about-image">
-          <img src="/images/Corporate_Differentiator.jpg" alt="Team collaboration" />
-          <div class="about-card">
-            <div class="about-card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
+        <div class="about-visual">
+          <div class="glass-panel text-card">
+            <span class="quote-mark">“</span>
+            <p>
+              NovintiX helped us navigate FDA compliance while accelerating our
+              software release cycle. A true partner in innovation.
+            </p>
+            <div class="author">
+              <span class="author-name">VP of Engineering</span>
+              <span class="author-title">Leading MedTech Firm</span>
             </div>
-            <h4>98%</h4>
-            <p>Client Satisfaction</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="services-section section section-light">
+  <!-- Bento Grid Services -->
+  <section class="section services-section">
     <div class="container">
       <div class="section-header">
-        <h6>Our Services</h6>
-        <h2>End-to-End Solutions for Life Sciences</h2>
-        <p>From concept to commercialization, we provide the expertise you need at every stage.</p>
+        <h6>Our Expertise</h6>
+        <h2>Comprehensive Solutions</h2>
+        <p>
+          From concept to commercialization, we possess the capabilities to
+          support every stage of your product lifecycle.
+        </p>
       </div>
-      <div class="services-grid">
-        <a href="/services/product-engineering" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+
+      <div class="bento-grid">
+        <!-- Main Service 1 -->
+        <a
+          href="/services/product-engineering"
+          class="bento-card main-card card-eng"
+        >
+          <div class="card-bg"></div>
+          <div class="card-deco-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+              <path d="M2.05 13a10 10 0 0 1 .45-2.5"></path>
+              <path d="M22 12A10 10 0 0 0 12 2v10l5 5"></path>
             </svg>
           </div>
-          <h4>Product Engineering</h4>
-          <p>Design and develop innovative medical devices and healthcare products from concept to launch.</p>
-          <span class="service-link">Learn more <span>→</span></span>
-        </a>
-
-        <a href="/services/supply-chain" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="1" y="3" width="15" height="13"></rect>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-              <circle cx="5.5" cy="18.5" r="2.5"></circle>
-              <circle cx="18.5" cy="18.5" r="2.5"></circle>
-            </svg>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Product Engineering</h3>
+            <p>End-to-end device & software development.</p>
+            <span class="arrow-link">Explore &rarr;</span>
           </div>
-          <h4>Supply Chain</h4>
-          <p>Optimize your supply network for resilience, efficiency, and regulatory compliance.</p>
-          <span class="service-link">Learn more <span>→</span></span>
         </a>
 
-        <a href="/services/manufacturing" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 20h20"></path>
-              <path d="M5 20V8.5a2.5 2.5 0 0 1 2.5-2.5h9a2.5 2.5 0 0 1 2.5 2.5V20"></path>
-              <path d="M9 20v-5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v5"></path>
-            </svg>
-          </div>
-          <h4>Manufacturing</h4>
-          <p>Transform operations with lean manufacturing, automation, and quality excellence.</p>
-          <span class="service-link">Learn more <span>→</span></span>
-        </a>
-
-        <a href="/services/quality-regulatory-compliance" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 11l3 3L22 4"></path>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-          </div>
-          <h4>Quality & Compliance</h4>
-          <p>Navigate FDA, EU MDR, and global regulations with confidence and speed.</p>
-          <span class="service-link">Learn more <span>→</span></span>
-        </a>
-
-        <a href="/services/clinical-affairs" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h4>Clinical Affairs</h4>
-          <p>Plan and execute clinical trials that generate the evidence you need for approval.</p>
-          <span class="service-link">Learn more <span>→</span></span>
-        </a>
-
-        <a href="/digital-solutions" class="service-card">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Main Service 2 -->
+        <a href="/digital-solutions" class="bento-card main-card card-digital">
+          <div class="card-bg"></div>
+          <div class="card-deco-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+            >
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
               <line x1="8" y1="21" x2="16" y2="21"></line>
               <line x1="12" y1="17" x2="12" y2="21"></line>
             </svg>
           </div>
-          <h4>Digital Solutions</h4>
-          <p>Leverage AI, data analytics, and digital tools to accelerate innovation.</p>
-          <span class="service-link">Learn more <span>→</span></span>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3>Digital Solutions</h3>
+            <p>AI, Data Science, and Connected Health.</p>
+            <span class="arrow-link">Explore &rarr;</span>
+          </div>
         </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-bg"></div>
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Accelerate Your Product Journey?</h2>
-        <p>Let's discuss how we can help you overcome challenges and reach your goals faster.</p>
-        <div class="cta-actions">
-          <a href="/contact-us" class="btn btn-white">Get in Touch</a>
-          <a href="/careers" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">Join Our Team</a>
-        </div>
+        <!-- Secondary Services -->
+        <a
+          href="/services/quality-regulatory-compliance"
+          class="bento-card sub-card"
+        >
+          <div class="card-bg-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h4>Quality & Compliance</h4>
+            <p>FDA, EU MDR, ISO 13485</p>
+          </div>
+        </a>
+
+        <a href="/services/supply-chain" class="bento-card sub-card">
+          <div class="card-bg-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              ></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+              </svg>
+            </div>
+            <h4>Supply Chain</h4>
+            <p>Resilience & Optimization</p>
+          </div>
+        </a>
+
+        <a href="/services/manufacturing" class="bento-card sub-card">
+          <div class="card-bg-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path d="M3 3h18v18H3zM12 8v8M8 12h8"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h4>Manufacturing</h4>
+            <p>Industry 4.0 & Automation</p>
+          </div>
+        </a>
+
+        <a href="/services/clinical-affairs" class="bento-card sub-card">
+          <div class="card-bg-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path
+                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+              ></path>
+              <path
+                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+              ></path>
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="mini-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                ></path>
+                <path
+                  d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                ></path>
+              </svg>
+            </div>
+            <h4>Clinical Affairs</h4>
+            <p>Strategy & Evidence</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  /* Hero Section */
-  .hero {
+  /* --- Hero Section --- */
+  .hero-section {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 0 6rem;
     overflow: hidden;
-  }
-
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-dark);
-  }
-
-  .hero-gradient {
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 80%;
-    height: 150%;
-    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .hero-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .hero .container {
-    position: relative;
-    z-index: 1;
+    padding-top: 6rem;
   }
 
   .hero-content {
     max-width: 800px;
+    margin-bottom: 4rem;
   }
 
-  .hero .badge {
+  .hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 100px;
+    color: var(--color-accent-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
-  .hero h1 {
-    color: #fff;
+  .hero-title {
     margin-bottom: 1.5rem;
-  }
-
-  .text-gradient {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1.1;
   }
 
   .hero-description {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.7);
     max-width: 600px;
     margin-bottom: 2.5rem;
     line-height: 1.7;
+    color: rgba(248, 250, 252, 0.8);
   }
 
   .hero-actions {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
   }
 
-  .hero-actions .btn-outline {
-    border-color: rgba(255, 255, 255, 0.3);
-    color: #fff;
-  }
-
-  .hero-actions .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
+  .hero-watermark {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%);
+    font-size: 25vw;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.03);
+    z-index: 0;
+    pointer-events: none;
+    line-height: 1;
   }
 
   .hero-stats {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .stat {
-    text-align: left;
   }
 
   .stat-number {
     display: block;
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #fff;
-    line-height: 1;
     margin-bottom: 0.25rem;
   }
 
   .stat-label {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
-  /* Clients Section */
+  /* --- Clients Marquee --- */
   .clients-section {
     padding: 3rem 0;
-    background: var(--color-light);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .clients-label {
     text-align: center;
     font-size: 0.875rem;
-    color: var(--color-muted);
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .clients-carousel {
+  .clients-marquee {
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    position: relative;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
   }
 
-  .clients-track {
+  .track {
     display: flex;
     gap: 4rem;
-    animation: scroll 40s linear infinite;
     width: max-content;
-  }
-
-  .clients-track:hover {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    animation: scroll 40s linear infinite;
   }
 
   .client-logo {
-    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 1.5rem;
-    background: var(--color-primary);
-    border-radius: var(--radius-md);
     height: 60px;
+    width: 140px;
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
+    transition: opacity 0.3s;
   }
 
-  .client-logo img {
-    height: 28px !important;
-    width: auto !important;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: opacity var(--transition-base);
-  }
-
-  .client-logo:hover img {
+  .client-logo:hover {
     opacity: 1;
   }
 
-  /* About Section */
-  .about-section {
-    background: #fff;
+  .client-logo img {
+    max-height: 40px;
+    object-fit: contain;
   }
 
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* --- About Section --- */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 4rem;
     align-items: center;
-  }
-
-  .about-content h6 {
-    margin-bottom: 0.75rem;
-  }
-
-  .about-content h2 {
-    margin-bottom: 1.5rem;
   }
 
   .about-lead {
     font-size: 1.125rem;
-    color: var(--color-muted);
-    margin-bottom: 2.5rem;
     line-height: 1.8;
   }
 
-  .about-features {
+  .feature-list {
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
-  .feature {
+  .feature-item {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    gap: 1.25rem;
   }
 
   .feature-icon {
-    flex-shrink: 0;
     width: 48px;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--color-accent-primary);
     border-radius: var(--radius-md);
-    color: var(--color-accent);
+    flex-shrink: 0;
   }
 
-  .feature h5 {
-    margin-bottom: 0.25rem;
-  }
-
-  .feature p {
-    font-size: 0.9375rem;
-    color: var(--color-muted);
-  }
-
-  .about-image {
+  .text-card {
+    padding: 3rem;
+    border-radius: var(--radius-lg);
     position: relative;
   }
 
-  .about-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: var(--radius-xl);
-  }
-
-  .about-card {
-    position: absolute;
-    bottom: -2rem;
-    left: -2rem;
-    background: var(--gradient-primary);
-    color: #fff;
-    padding: 2rem;
-    border-radius: var(--radius-lg);
-    text-align: center;
-    box-shadow: var(--shadow-xl);
-  }
-
-  .about-card-icon {
-    margin-bottom: 0.5rem;
-  }
-
-  .about-card h4 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #fff;
+  .quote-mark {
+    font-family: serif;
+    font-size: 6rem;
     line-height: 1;
-    margin-bottom: 0.25rem;
+    color: var(--color-accent-primary);
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
   }
 
-  .about-card p {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  /* Services Section */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .service-card {
-    display: block;
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    text-decoration: none;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: transparent;
-  }
-
-  .service-icon {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-md);
+  .text-card p {
+    font-size: 1.5rem;
+    font-weight: 500;
     color: #fff;
-    margin-bottom: 1.25rem;
-  }
-
-  .service-card h4 {
-    margin-bottom: 0.75rem;
-    color: var(--color-primary);
-  }
-
-  .service-card p {
-    font-size: 0.9375rem;
-    color: var(--color-muted);
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
-  }
-
-  .service-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    transition: gap var(--transition-base);
-  }
-
-  .service-card:hover .service-link {
-    gap: 0.75rem;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    position: relative;
-    padding: 6rem 0;
-    overflow: hidden;
-  }
-
-  .cta-bg {
-    position: absolute;
-    inset: 0;
-    background: var(--gradient-primary);
-  }
-
-  .cta-bg::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -20%;
-    width: 60%;
-    height: 200%;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
-  }
-
-  .cta-content {
+    line-height: 1.4;
     position: relative;
     z-index: 1;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .cta-content h2 {
-    color: #fff;
-    margin-bottom: 1rem;
-  }
-
-  .cta-content p {
-    font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 2rem;
   }
 
-  .cta-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  .author-name {
+    display: block;
+    font-weight: 700;
+    color: #fff;
   }
 
-  /* Responsive */
+  .author-title {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  /* --- Bento Grid --- */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 1.5rem;
+  }
+
+  .bento-card {
+    position: relative;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all var(--transition-base);
+  }
+
+  .bento-card:hover {
+    border-color: var(--color-accent-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Main Cards Span 2 Rows or Cols */
+  .main-card {
+    grid-row: span 2;
+    overflow: hidden;
+  }
+
+  .main-card .card-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .main-card .card-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Massive Decorative Icons for Main Cards */
+  .card-deco-icon {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    opacity: 0.05;
+    transform: rotate(15deg);
+    transition: all 0.5s ease;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .bento-card:hover .card-deco-icon {
+    opacity: 0.1;
+    transform: rotate(0deg) scale(1.1);
+  }
+
+  /* Sub Card Background Icons */
+  .card-bg-icon {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 140px;
+    height: 140px;
+    opacity: 0.05;
+    color: #fff;
+    transform: rotate(-10deg);
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+
+  .bento-card:hover .card-bg-icon {
+    opacity: 0.1;
+    transform: rotate(0deg) scale(1.1) translateY(-10px);
+  }
+
+  /* Mini Icons for Sub Cards */
+  .mini-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--color-accent-primary);
+  }
+
+  .mini-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-eng .card-bg {
+    background-image:
+      linear-gradient(to top, rgba(2, 6, 23, 1), transparent),
+      url("/images/services-eng.jpg");
+    background: radial-gradient(
+      circle at top right,
+      rgba(56, 189, 248, 0.2),
+      transparent 70%
+    );
+  }
+
+  .card-digital .card-bg {
+    background: radial-gradient(
+      circle at bottom left,
+      rgba(192, 132, 252, 0.2),
+      transparent 70%
+    );
+  }
+
+  .card-icon {
+    margin-bottom: 1rem;
+    color: var(--color-accent-primary);
+  }
+
+  .bento-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bento-card h4 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .arrow-link {
+    display: inline-block;
+    color: var(--color-accent-primary);
+    font-weight: 600;
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+  }
+
+  .bento-card:hover .arrow-link {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
   @media (max-width: 1024px) {
+    .bento-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .bento-card {
+      min-height: 250px;
+    }
+    /* ... rest of existing styles ... */
+
     .about-grid {
       grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .about-image {
-      order: -1;
-    }
-
-    .about-card {
-      bottom: 1rem;
-      left: 1rem;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 6rem 0 4rem;
-      min-height: auto;
     }
 
     .hero-stats {
@@ -643,37 +803,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       gap: 1.5rem;
     }
 
-    .hero-actions {
-      flex-direction: column;
-    }
-
-    .hero-actions .btn {
-      width: 100%;
-    }
-
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-      height: 300px;
-    }
-
-    .about-card {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      margin-top: -3rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-
-    .cta-actions {
-      flex-direction: column;
-    }
-
-    .cta-actions .btn {
-      width: 100%;
+    .hero-watermark {
+      font-size: 40vw;
+      top: 80%;
+      right: -20%;
     }
   }
 </style>

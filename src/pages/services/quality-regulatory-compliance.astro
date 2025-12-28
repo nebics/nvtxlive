@@ -1,274 +1,404 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHero from '../../components/PageHero.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const services = [
+  {
+    title: "Quality Management Systems",
+    desc: "Design and implementation of robust QMS tailored to ISO 13485 and FDA 21 CFR Part 820 standards.",
+    icon: "shield-check",
+  },
+  {
+    title: "Regulatory Strategy",
+    desc: "Comprehensive roadmaps for global market access, including FDA clearance/approval and CE marking.",
+    icon: "compass",
+  },
+  {
+    title: "Audit Readiness",
+    desc: "Mock inspections and preparation services for FDA, Notified Body, and MDSAP audits.",
+    icon: "file-check",
+  },
+  {
+    title: "CAPA Management",
+    desc: "Effective corrective and preventive action systems to drive continuous improvement and compliance.",
+    icon: "refresh",
+  },
+  {
+    title: "Risk Management",
+    desc: "ISO 14971-compliant risk analysis and management strategies throughout the product lifecycle.",
+    icon: "alert-triangle",
+  },
+  {
+    title: "Post-Market Surveillance",
+    desc: "Ongoing monitoring and vigilance reporting to maintain compliance and ensure patient safety.",
+    icon: "eye",
+  },
+];
 ---
 
-<BaseLayout title="Quality & Compliance" currentPage="/services/quality-regulatory-compliance">
+<BaseLayout
+  title="Quality & Compliance"
+  currentPage="/services/quality-regulatory-compliance"
+  footerCtaTitlePrefix="Ensure global"
+  footerCtaTitleHighlight="compliance and quality?"
+  footerCtaButtonText="Get Compliance Support"
+>
   <PageHero
     icon="services"
-    title="Quality & Regulatory Compliance"
-    description="Streamline operations, reduce risks, and stay compliant with evolving requirements."
+    title="Quality & Regulatory"
+    description="Streamline operations, reduce risks, and stay compliant with evolving global requirements."
   />
 
-  <section class="intro-section section">
-    <div class="container">
-      <div class="intro-split">
-        <div class="intro-content">
-          <h2>Quality Compliance</h2>
-          <p>Quality management has a far-reaching impact across all facets of your business—from R&D and clinical trials to manufacturing and distribution. Consolidating quality management within an enterprise platform streamlines operations, enabling greater efficiency and effectiveness, along with reductions in risks and costs.</p>
-          <p>This approach aligns with your most significant business objectives: introducing new products, improving patient safety, fostering collaboration with partners, and staying compliant with evolving regulatory requirements.</p>
-          <p>Minimize the burden, mitigate risks, and trim the expenses associated with quality compliance. Our customized solutions offer the capability to automate a single process or enhance your complete quality management system.</p>
+  <section class="section">
+    <div class="container relative z-10">
+      <div class="feature-row">
+        <div class="feature-content">
+          <span class="badge">Streamlines & Secure</span>
+          <h2>Integrated Compliance</h2>
+          <p class="lead">
+            Quality management impacts every facet of your business. We
+            consolidate quality operations into an efficient enterprise
+            platform, reducing risk while accelerating new product introductions
+            and improving patient safety.
+          </p>
         </div>
-        <div class="intro-content">
-          <h2>Regulatory Compliance</h2>
-          <p>Global regulations continue to evolve, with thousands being introduced each year, making compliance both expensive and intricate.</p>
-          <p>Our Regulatory Compliance solutions ensure you remain on course and in command. Our operational framework assists in aligning with industry standards. Our team of digital technology experts aids in independent validation services and the development of regulatory applications.</p>
-          <p>Our approach centers on best practices encompassing information security management, FDA guidelines on system validation, and electronic records and signatures.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section section section-light">
-    <div class="container">
-      <div class="services-split">
-        <div class="services-left">
-          <h3>What we do</h3>
-          <div class="service-items">
-            <div class="service-item">
-              <h4>Quality Management Systems</h4>
-              <p>QMS design, implementation, and optimization for ISO 13485 and FDA compliance.</p>
+        <div class="feature-visual">
+          <div class="visual-card-abstract">
+            <div class="abstract-icon">
+              <!-- Shield/Check Icon -->
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
             </div>
-            <div class="service-item">
-              <h4>Regulatory Strategy</h4>
-              <p>Global regulatory planning and submission support for FDA, EU MDR, and international markets.</p>
-            </div>
-            <div class="service-item">
-              <h4>Audit Readiness</h4>
-              <p>Preparation for FDA inspections, notified body audits, and ISO certifications.</p>
-            </div>
-            <div class="service-item">
-              <h4>CAPA Management</h4>
-              <p>Effective corrective and preventive action systems that drive continuous improvement.</p>
-            </div>
-            <div class="service-item">
-              <h4>Risk Management</h4>
-              <p>ISO 14971 compliance and comprehensive risk assessment programs.</p>
-            </div>
-            <div class="service-item">
-              <h4>Post-Market Surveillance</h4>
-              <p>Vigilance, complaint handling, and regulatory reporting systems.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="services-right">
-          <div class="expertise-card">
-            <h4>Regulatory Expertise</h4>
-            <p>Deep experience with global regulations:</p>
-            <ul class="expertise-list">
-              <li>FDA 21 CFR Part 820, 210/211</li>
-              <li>EU MDR and IVDR</li>
-              <li>ISO 13485 and ISO 9001</li>
-              <li>Health Canada</li>
-              <li>MDSAP</li>
-              <li>International requirements</li>
-            </ul>
+            <div class="abstract-ring"></div>
+            <div class="abstract-glow"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="cta-content">
-          <h2>We invest time to fully understand your needs</h2>
-          <p>Let's discuss how we can strengthen your quality and compliance systems.</p>
-        </div>
-        <a href="/contact-us" class="btn">Contact Us</a>
+  <section class="section section-darker">
+    <div class="container relative z-10">
+      <div class="section-header-center">
+        <h2>Compliance Solutions</h2>
+        <p>Expert guidance through the complex regulatory landscape.</p>
+      </div>
+
+      <div class="solutions-grid">
+        {
+          services.map((service) => (
+            <div class="solution-card">
+              <div class="icon-box">
+                {service.icon === "shield-check" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                  </svg>
+                )}
+                {service.icon === "compass" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                  </svg>
+                )}
+                {service.icon === "file-check" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <path d="m9 15 2 2 4-4" />
+                  </svg>
+                )}
+                {service.icon === "refresh" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="23 4 23 10 17 10" />
+                    <polyline points="1 20 1 14 7 14" />
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                  </svg>
+                )}
+                {service.icon === "alert-triangle" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                )}
+                {service.icon === "eye" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                )}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container text-center relative z-10">
+      <div class="cta-box">
+        <h2>Mitigate risk, ensure quality</h2>
+        <p>Partner with us to navigate the complex regulatory environment.</p>
+        <a href="/contact-us" class="btn btn-primary">Start Compliance Review</a
+        >
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .intro-section {
-    background: #fff;
+  /* --- Shared Scoped Styles --- */
+  .section {
+    padding: 6rem 0;
+    position: relative;
+  }
+  .section-darker {
+    background: rgba(0, 0, 0, 0.2);
   }
 
-  .intro-split {
+  /* Feature Row */
+  .feature-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-  }
-
-  .intro-content h2 {
-    margin-bottom: 1.25rem;
-    font-size: 1.5rem;
-  }
-
-  .intro-content p {
-    color: var(--color-muted);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .intro-content p:last-child {
-    margin-bottom: 0;
-  }
-
-  .services-split {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-  }
-
-  .services-left h3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
     margin-bottom: 2rem;
   }
+  .feature-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #fff;
+  }
+  .feature-content .lead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    background: rgba(56, 189, 248, 0.1);
+  }
 
-  .service-items {
+  /* Visual Abstract Card */
+  .feature-visual {
+    display: flex;
+    justify-content: center;
+  }
+  .visual-card-abstract {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .abstract-icon {
+    width: 100px;
+    height: 100px;
+    background: #0f172a;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .abstract-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+  }
+  .abstract-glow {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.15) 0%,
+      transparent 60%
+    );
+    filter: blur(40px);
+    z-index: 0;
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Solutions Grid */
+  .section-header-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+  }
+  .section-header-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  .section-header-center p {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+  }
+
+  .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
-
-  .service-item {
-    padding: 1.5rem;
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
-  }
-
-  .service-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-color: transparent;
-  }
-
-  .service-item h4 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .service-item p {
-    color: var(--color-muted);
-    font-size: 0.875rem;
-    line-height: 1.6;
-  }
-
-  .expertise-card {
-    background: var(--gradient-dark);
-    border-radius: var(--radius-xl);
+  .solution-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
-    color: #fff;
-    position: sticky;
-    top: 100px;
+    border-radius: 1rem;
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
   }
-
-  .expertise-card h4 {
-    color: #fff;
-    margin-bottom: 0.75rem;
+  .solution-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
   }
-
-  .expertise-card > p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9375rem;
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
     margin-bottom: 1.5rem;
   }
-
-  .expertise-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .expertise-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.9375rem;
-    padding: 0.625rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .expertise-list li:last-child {
-    border-bottom: none;
-  }
-
-  .expertise-list li::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: var(--color-accent-light);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .cta-section {
-    background: #fff;
-  }
-
-  .cta-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-xl);
-    padding: 3rem 4rem;
-  }
-
-  .cta-content h2 {
+  .solution-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
     color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  .solution-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
   }
 
-  .cta-content p {
-    color: rgba(255, 255, 255, 0.85);
+  /* CTA Box */
+  .cta-box {
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem;
+    border-radius: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cta-box p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
   }
 
-  .cta-card .btn {
-    background: var(--color-white);
-    color: var(--color-primary);
-    flex-shrink: 0;
-  }
-
+  /* Responsive */
   @media (max-width: 1024px) {
-    .intro-split {
+    .feature-row {
       grid-template-columns: 1fr;
+      text-align: center;
       gap: 3rem;
     }
-
-    .services-split {
-      grid-template-columns: 1fr;
-      gap: 3rem;
+    .feature-content {
+      order: 2;
     }
-
-    .expertise-card {
-      position: static;
+    .feature-visual {
+      order: 1;
+    }
+    .solutions-grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
-
-  @media (max-width: 768px) {
-    .service-items {
+  @media (max-width: 640px) {
+    .solutions-grid {
       grid-template-columns: 1fr;
     }
-
-    .cta-card {
-      flex-direction: column;
-      text-align: center;
-      padding: 2.5rem;
-    }
-
-    .cta-card .btn {
-      width: 100%;
+    .cta-box {
+      padding: 2rem;
     }
   }
 </style>

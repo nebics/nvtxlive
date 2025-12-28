@@ -1,0 +1,284 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<div class="footer-grid">
+    <div class="footer-brand">
+        <a href="/" class="footer-logo">
+            <span class="logo-icon">N</span>
+            <span class="logo-text">NovintiX</span>
+        </a>
+        <p class="footer-description">
+            Accelerating innovation in MedTech, Pharma, and Biotech through
+            digital transformation and engineering excellence.
+        </p>
+        <div class="footer-social">
+            <a href="#" aria-label="LinkedIn" class="social-link">
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                >
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    ></path>
+                </svg>
+            </a>
+            <a
+                href="mailto:connect@novintix.com"
+                aria-label="Email"
+                class="social-link"
+            >
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-nav-group">
+        <h5>Services</h5>
+        <ul>
+            <li>
+                <a href="/services/product-engineering">Product Engineering</a>
+            </li>
+            <li><a href="/services/supply-chain">Supply Chain</a></li>
+            <li><a href="/services/manufacturing">Manufacturing</a></li>
+            <li>
+                <a href="/services/quality-regulatory-compliance"
+                    >Quality & Compliance</a
+                >
+            </li>
+            <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-nav-group">
+        <h5>Company</h5>
+        <ul>
+            <li><a href="/industries">Industries</a></li>
+            <li><a href="/digital-solutions">Digital Solutions</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact-us">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-nav-group contact-group">
+        <h5>Contact</h5>
+        <p>123 Innovation Way<br />Tech Park, CA 94000</p>
+        <a href="tel:+13023061115" class="contact-link">+1 302-306-1115</a>
+        <a href="mailto:connect@novintix.com" class="contact-link"
+            >connect@novintix.com</a
+        >
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>&copy; {currentYear} NovintiX. All rights reserved.</p>
+    <div class="footer-legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+    </div>
+</div>
+
+<style>
+    /* Footer Grid */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr; /* Brand takes more space */
+        gap: 4rem;
+        margin-bottom: 4rem;
+        align-items: start;
+    }
+
+    .footer-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        margin-bottom: 1.25rem;
+    }
+
+    .footer-logo .logo-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        border-radius: 8px;
+    }
+
+    .footer-logo .logo-text {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .footer-description {
+        color: var(--color-text-secondary);
+        font-size: 0.9375rem;
+        margin-bottom: 2rem;
+        max-width: 320px;
+        line-height: 1.6;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        color: var(--color-text-secondary);
+        transition: all 0.3s;
+        border: 1px solid transparent;
+    }
+
+    .social-link:hover {
+        background: rgba(56, 189, 248, 0.1);
+        color: var(--color-accent-primary);
+        border-color: rgba(56, 189, 248, 0.3);
+        transform: translateY(-3px);
+    }
+
+    .footer-nav-group h5 {
+        color: #fff;
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        min-width: 40px;
+    }
+
+    .footer-nav-group ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav-group li {
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-nav-group a {
+        color: var(--color-text-secondary);
+        font-size: 0.9375rem;
+        transition: all 0.2s;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .footer-nav-group a:hover {
+        color: var(--color-accent-primary);
+        padding-left: 5px;
+    }
+
+    .contact-group p {
+        font-size: 0.9375rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+    }
+
+    .contact-link {
+        display: block;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-size: 0.9375rem;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .contact-link:hover {
+        color: var(--color-accent-primary);
+    }
+
+    /* Bottom */
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+    }
+
+    .footer-legal {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .footer-legal a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .footer-legal a:hover {
+        color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .footer-grid {
+            grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+            gap: 3rem;
+        }
+
+        .footer-brand {
+            grid-column: span 2; /* Brand takes full width top row */
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .footer-description {
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .footer-grid {
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 2.5rem;
+        }
+
+        .footer-brand {
+            grid-column: auto;
+        }
+
+        .footer-bottom {
+            flex-direction: column-reverse; /* Copyright at bottom */
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-legal {
+            justify-content: center;
+            gap: 1.5rem;
+        }
+    }
+</style>

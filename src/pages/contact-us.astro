@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/PageHero.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
 ---
 
 <BaseLayout title="Contact Us" currentPage="/contact-us">
@@ -11,114 +11,197 @@ import PageHero from '../components/PageHero.astro';
   />
 
   <section class="contact-section section">
-    <div class="container">
+    <div class="container relative z-10">
       <div class="contact-grid">
+        <!-- Contact Info Column -->
         <div class="contact-info">
-          <h2>Get in Touch</h2>
-          <p class="contact-intro">Whether you're exploring a new project or looking to improve existing processes, we're here to help you succeed.</p>
-
-          <h3 class="section-subtitle">Communications</h3>
-
-          <div class="contact-methods">
-            <a href="mailto:connect@novintix.com" class="contact-method">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Email Us</span>
-                <span class="contact-value">connect@novintix.com</span>
-              </div>
-            </a>
-
-            <a href="tel:+13023061115" class="contact-method">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Let's Talk</span>
-                <span class="contact-value">+(1) 302-306-1115</span>
-              </div>
-            </a>
-
-            <a href="/careers" class="contact-method">
-              <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Join Us</span>
-                <span class="contact-value">View open positions</span>
-              </div>
-            </a>
+          <div class="info-header">
+            <h2 class="mb-4 text-3xl font-bold">Get in Touch</h2>
+            <p class="text-secondary text-lg mb-8">
+              Whether you're exploring a new project or looking to improve
+              existing processes, we're here to help you succeed.
+            </p>
           </div>
 
-          <div class="response-info">
-            <div class="response-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+          <div class="info-items space-y-6">
+            <!-- Email -->
+            <div class="info-item flex items-start gap-4">
+              <div class="icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path><polyline points="22,6 12,13 2,6"></polyline></svg
+                >
+              </div>
+              <div>
+                <h5 class="font-semibold text-white mb-1">Email Us</h5>
+                <a
+                  href="mailto:connect@novintix.com"
+                  class="text-accent hover:text-accent-light transition-colors"
+                  >connect@novintix.com</a
+                >
+              </div>
             </div>
-            <p>We typically respond within 24 hours</p>
+
+            <!-- Phone -->
+            <div class="info-item flex items-start gap-4">
+              <div class="icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path></svg
+                >
+              </div>
+              <div>
+                <h5 class="font-semibold text-white mb-1">Call Us</h5>
+                <a
+                  href="tel:+13023061115"
+                  class="text-accent hover:text-accent-light transition-colors"
+                  >+1 302-306-1115</a
+                >
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="info-item flex items-start gap-4">
+              <div class="icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path><circle cx="12" cy="10" r="3"></circle></svg
+                >
+              </div>
+              <div>
+                <h5 class="font-semibold text-white mb-1">Visit Us</h5>
+                <p class="text-muted">
+                  123 Innovation Way<br />Tech Park, CA 94000
+                </p>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="info-item flex items-start gap-4">
+              <div class="icon-box">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  ><rect x="2" y="2" width="20" height="20" rx="5" ry="5"
+                  ></rect><path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"
+                  ></line></svg
+                >
+              </div>
+              <div>
+                <h5 class="font-semibold text-white mb-1">Follow Us</h5>
+                <a
+                  href="#"
+                  class="text-accent hover:text-accent-light transition-colors"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="contact-form-wrapper">
-          <div class="form-header">
-            <h3>Send Us a Message</h3>
-            <p>Don't hesitate to reach out. We'd love to hear from you.</p>
-          </div>
-          <form class="contact-form" action="#" method="POST">
-            <div class="form-row">
+        <!-- Contact Form Column -->
+        <div class="contact-form-wrapper glass-panel p-8 rounded-xl">
+          <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+
+          <form class="contact-form space-y-4" action="#" method="POST">
+            <div class="form-row grid grid-cols-2 gap-4">
               <div class="form-group">
-                <label for="firstName">First name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-white mb-2">Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors"
+                />
               </div>
               <div class="form-group">
-                <label for="lastName">Last name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-white mb-2">Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="john@company.com"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors"
+                />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="john@company.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Your company name" />
-            </div>
-
-            <div class="form-group">
-              <label for="service">What can we help with?</label>
-              <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option value="product-engineering">Product Engineering</option>
-                <option value="supply-chain">Supply Chain</option>
-                <option value="manufacturing">Manufacturing</option>
-                <option value="quality-compliance">Quality & Compliance</option>
-                <option value="clinical-affairs">Clinical Affairs</option>
-                <option value="digital-solutions">Digital Solutions</option>
-                <option value="other">Other</option>
+              <label
+                for="subject"
+                class="block text-sm font-medium text-white mb-2">Subject</label
+              >
+              <select
+                id="subject"
+                name="subject"
+                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
+              >
+                <option value="general" class="bg-slate-900"
+                  >General Inquiry</option
+                >
+                <option value="project" class="bg-slate-900"
+                  >Project Discussion</option
+                >
+                <option value="partnership" class="bg-slate-900"
+                  >Partnership</option
+                >
+                <option value="careers" class="bg-slate-900">Careers</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+              <label
+                for="message"
+                class="block text-sm font-medium text-white mb-2">Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="How can we help?"
+                required
+                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors resize-y min-h-[120px]"
+              ></textarea>
             </div>
 
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn btn-primary w-full justify-center"
+              >Send Message</button
+            >
           </form>
         </div>
       </div>
@@ -127,193 +210,148 @@ import PageHero from '../components/PageHero.astro';
 </BaseLayout>
 
 <style>
-  .contact-section {
-    background: #fff;
-  }
-
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: start;
   }
 
-  .contact-info h2 {
-    margin-bottom: 1rem;
+  /* Typography Utilities */
+  .text-white {
+    color: #fff;
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  .text-accent {
+    color: var(--color-accent-primary);
+  }
+  .text-muted {
+    color: var(--color-text-muted);
   }
 
-  .contact-intro {
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-semibold {
+    font-weight: 600;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .text-lg {
     font-size: 1.125rem;
-    color: var(--color-muted);
-    line-height: 1.7;
+    line-height: 1.75rem;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .mb-1 {
+    margin-bottom: 0.25rem;
+  }
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .mb-8 {
     margin-bottom: 2rem;
   }
 
-  .section-subtitle {
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .contact-methods {
+  /* Layout Utilities */
+  .flex {
     display: flex;
-    flex-direction: column;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .gap-4 {
     gap: 1rem;
-    margin-bottom: 2.5rem;
+  }
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
   }
 
-  .contact-method {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem;
-    background: var(--color-light);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    transition: all var(--transition-base);
+  .grid {
+    display: grid;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .contact-method:hover {
-    background: rgba(99, 102, 241, 0.05);
-    transform: translateX(4px);
+  .w-full {
+    width: 100%;
+  }
+  .block {
+    display: block;
+  }
+  .inline-block {
+    display: inline-block;
   }
 
-  .contact-icon {
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .p-8 {
+    padding: 2rem;
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+
+  /* Icon Box */
+  .icon-box {
     width: 48px;
     height: 48px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-md);
-    color: #fff;
+    color: var(--color-accent-primary);
     flex-shrink: 0;
   }
 
-  .contact-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-muted);
-    margin-bottom: 0.125rem;
+  /* Form Elements Customization */
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-text-muted);
   }
 
-  .contact-value {
-    display: block;
-    font-weight: 600;
-    color: var(--color-primary);
-  }
-
-  .response-info {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background: rgba(99, 102, 241, 0.05);
-    border-radius: var(--radius-md);
-    border-left: 3px solid var(--color-accent);
-  }
-
-  .response-icon {
-    color: var(--color-accent);
-  }
-
-  .response-info p {
-    font-size: 0.875rem;
-    color: var(--color-secondary);
-    margin: 0;
-  }
-
-  .contact-form-wrapper {
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-xl);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .form-header {
-    margin-bottom: 2rem;
-  }
-
-  .form-header h3 {
-    margin-bottom: 0.5rem;
-    color: var(--color-primary);
-  }
-
-  .form-header p {
-    color: var(--color-muted);
-    font-size: 0.9375rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .form-group {
-    margin-bottom: 1.25rem;
-  }
-
-  .form-group label {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius-md);
-    background: var(--color-light);
-    transition: all var(--transition-fast);
-  }
-
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: var(--color-muted);
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    outline: none;
-    border-color: var(--color-accent);
-    background: var(--color-white);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  .form-group select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1rem;
-    padding-right: 2.5rem;
-  }
-
-  .contact-form .btn {
-    width: 100%;
-    margin-top: 0.5rem;
   }
 
   @media (max-width: 1024px) {
@@ -323,12 +361,12 @@ import PageHero from '../components/PageHero.astro';
     }
   }
 
-  @media (max-width: 768px) {
-    .form-row {
+  @media (max-width: 640px) {
+    .grid-cols-2 {
       grid-template-columns: 1fr;
     }
 
-    .contact-form-wrapper {
+    .p-8 {
       padding: 1.5rem;
     }
   }

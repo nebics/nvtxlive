@@ -1,334 +1,450 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHero from '../../components/PageHero.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const services = [
+  {
+    title: "Clinical Strategy",
+    desc: "Expert development planning and regulatory pathway analysis to optimize your clinical trial approach.",
+    icon: "map",
+  },
+  {
+    title: "Study Design",
+    desc: "Robust protocol development and statistical analysis plans to ensure successful trial outcomes.",
+    icon: "file-text",
+  },
+  {
+    title: "CER Development",
+    desc: "Clinical Evaluation Reports aligned with EU MDR requirements, including systematic literature reviews.",
+    icon: "book-open",
+  },
+  {
+    title: "Stakeholder Engagement",
+    desc: "Connect effectively with payers, providers, and patients to communicate your product's value.",
+    icon: "users",
+  },
+  {
+    title: "HTA & Reimbursement",
+    desc: "Preparation for Health Technology Assessments and payer negotiations to secure market access.",
+    icon: "dollar-sign",
+  },
+  {
+    title: "Post-Market Follow-up",
+    desc: "PMCF planning and execution to maintain compliance throughout your product's lifecycle.",
+    icon: "activity",
+  },
+  {
+    title: "Regulatory Submissions",
+    desc: "Comprehensive support for IDE, 510(k), PMA, and CE marking clinical submissions.",
+    icon: "file-check",
+  },
+  {
+    title: "Literature Reviews",
+    desc: "Systematic searches and in-depth analysis to support your clinical and regulatory strategy.",
+    icon: "search",
+  },
+  {
+    title: "Real-World Evidence",
+    desc: "Generation and analysis of real-world data to demonstrate safety and efficacy post-launch.",
+    icon: "database",
+  },
+];
 ---
 
-<BaseLayout title="Clinical Affairs" currentPage="/services/clinical-affairs">
+<BaseLayout
+  title="Clinical Affairs"
+  currentPage="/services/clinical-affairs"
+  footerCtaTitlePrefix="Accelerate your"
+  footerCtaTitleHighlight="clinical success?"
+  footerCtaButtonText="Start Conversation"
+>
   <PageHero
     icon="services"
-    title="Clinical Affairs"
-    description="Present compelling value narratives to all essential stakeholders—providers, regulatory agencies, HTA bodies, payers, and patients—from clinical development to market success."
+    title="Clinical Excellence"
+    description="Orchestrating your journey from clinical development to market entry with evidence-based strategies."
   />
 
-  <section class="intro-section section">
-    <div class="container">
-      <div class="intro-content-full">
-        <p class="intro-lead">Payers and regulatory authorities demand comprehensive evidence data and expert assessments during evaluation. We help orchestrate your journey from clinical development to market entry by showcasing the distinctive value and outcomes your innovations offer.</p>
-      </div>
-
-      <div class="capabilities-grid">
-        <div class="capability-card">
-          <div class="capability-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-          </div>
-          <h4>Stakeholder Engagement</h4>
-          <p>Connect effectively with providers, payers, and patients to communicate your product's value proposition.</p>
+  <section class="section">
+    <div class="container relative z-10">
+      <div class="feature-row">
+        <div class="feature-content">
+          <span class="badge">Evidence-Based</span>
+          <h2>Showcase Your Value</h2>
+          <p class="lead">
+            Payers and regulatory authorities demand comprehensive evidence. We
+            help you orchestrate your journey from development to market entry,
+            showcasing the distinctive value and outcomes your innovations offer
+            to providers, patients, and healthcare systems.
+          </p>
         </div>
-        <div class="capability-card">
-          <div class="capability-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-            </svg>
+        <div class="feature-visual">
+          <div class="visual-card-abstract">
+            <div class="abstract-icon">
+              <!-- Heartbeat/Medical Icon -->
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="abstract-ring"></div>
+            <div class="abstract-glow"></div>
           </div>
-          <h4>Regulatory Strategy</h4>
-          <p>Navigate IDE, 510(k), PMA, and CE marking pathways with expert clinical support.</p>
-        </div>
-        <div class="capability-card">
-          <div class="capability-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h4>HTA & Reimbursement</h4>
-          <p>Health technology assessment preparation and payer negotiations for market access.</p>
-        </div>
-        <div class="capability-card capability-card-highlight">
-          <div class="capability-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 11l3 3L22 4"></path>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-          </div>
-          <h4>Evidence Generation</h4>
-          <p>Comprehensive clinical data and real-world evidence to demonstrate safety and efficacy.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="services-section section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h6>Capabilities</h6>
-        <h2>Full-spectrum clinical support</h2>
+  <section class="section section-darker">
+    <div class="container relative z-10">
+      <div class="section-header-center">
+        <h2>Full-Spectrum Support</h2>
+        <p>Comprehensive clinical services for every stage of development.</p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-          </div>
-          <h4>Clinical Strategy</h4>
-          <p>Development planning and regulatory pathway analysis to optimize your clinical approach.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
-          <h4>Study Design</h4>
-          <p>Protocol development, statistical analysis plans, and study setup for successful trials.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-          </div>
-          <h4>Clinical Evaluation Reports</h4>
-          <p>CER development per EU MDR requirements with systematic literature reviews.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-          </div>
-          <h4>Literature Reviews</h4>
-          <p>Systematic searches and analysis to support regulatory submissions.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <h4>Post-Market Clinical Follow-up</h4>
-          <p>PMCF planning and execution to maintain compliance throughout product lifecycle.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 11l3 3L22 4"></path>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-          </div>
-          <h4>Regulatory Submissions</h4>
-          <p>IDE, 510(k), PMA, and CE marking clinical support for global approvals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="cta-content">
-          <h2>We invest time to fully understand your needs</h2>
-          <p>Let's discuss how we can help showcase your value proposition effectively.</p>
-        </div>
-        <a href="/contact-us" class="btn">Contact Us</a>
+      <div class="solutions-grid">
+        {
+          services.map((service) => (
+            <div class="solution-card">
+              <div class="icon-box">
+                {service.icon === "map" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" />
+                    <line x1="8" y1="2" x2="8" y2="18" />
+                    <line x1="16" y1="6" x2="16" y2="22" />
+                  </svg>
+                )}
+                {service.icon === "file-text" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                )}
+                {service.icon === "book-open" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                )}
+                {service.icon === "users" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
+                {service.icon === "dollar-sign" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="12" y1="1" x2="12" y2="23" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                )}
+                {service.icon === "activity" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  </svg>
+                )}
+                {service.icon === "file-check" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <path d="m9 15 2 2 4-4" />
+                  </svg>
+                )}
+                {service.icon === "search" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                )}
+                {service.icon === "database" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                  </svg>
+                )}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .intro-section {
-    background: #fff;
+  /* --- Shared Scoped Styles --- */
+  .section {
+    padding: 6rem 0;
+    position: relative;
+  }
+  .section-darker {
+    background: rgba(0, 0, 0, 0.2);
   }
 
-  .intro-content-full {
-    max-width: 100%;
-    margin-bottom: 3rem;
-  }
-
-  .intro-lead {
-    color: var(--color-muted);
-    font-size: 1.1875rem;
-    line-height: 1.8;
-    margin: 0;
-  }
-
-  /* Capabilities Grid */
-  .capabilities-grid {
+  /* Feature Row */
+  .feature-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .feature-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #fff;
+  }
+  .feature-content .lead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    background: rgba(56, 189, 248, 0.1);
   }
 
-  .capability-card {
-    background: var(--color-light);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all var(--transition-base);
+  /* Visual Abstract Card */
+  .feature-visual {
+    display: flex;
+    justify-content: center;
   }
-
-  .capability-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    background: #fff;
-  }
-
-  .capability-card-highlight {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-  }
-
-  .capability-card-highlight:hover {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
-  }
-
-  .capability-icon {
-    width: 56px;
-    height: 56px;
+  .visual-card-abstract {
+    position: relative;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: var(--radius-md);
-    color: var(--color-accent);
-    margin-bottom: 1.25rem;
-    box-shadow: var(--shadow-sm);
+  }
+  .abstract-icon {
+    width: 100px;
+    height: 100px;
+    background: #0f172a;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .abstract-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+  }
+  .abstract-glow {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.15) 0%,
+      transparent 60%
+    );
+    filter: blur(40px);
+    z-index: 0;
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
   }
 
-  .capability-card-highlight .capability-icon {
-    background: var(--gradient-primary);
+  /* Solutions Grid */
+  .section-header-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+  }
+  .section-header-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #fff;
   }
-
-  .capability-card h4 {
+  .section-header-center p {
+    color: var(--color-text-secondary);
     font-size: 1.125rem;
-    margin-bottom: 0.625rem;
   }
 
-  .capability-card p {
-    color: var(--color-muted);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .services-grid {
+  .solutions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
-
-  .service-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
+  .solution-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
   }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: transparent;
+  .solution-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
   }
-
-  .service-icon {
+  .icon-box {
     width: 48px;
     height: 48px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(99, 102, 241, 0.1);
-    border-radius: var(--radius-md);
-    color: var(--color-accent);
-    margin-bottom: 1.25rem;
+    color: var(--color-accent-primary);
+    margin-bottom: 1.5rem;
   }
-
-  .service-card h4 {
+  .solution-card h3 {
+    font-size: 1.25rem;
     margin-bottom: 0.75rem;
-  }
-
-  .service-card p {
-    color: var(--color-muted);
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-
-  .cta-section {
-    background: #fff;
-  }
-
-  .cta-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background: var(--gradient-dark);
-    border-radius: var(--radius-xl);
-    padding: 3rem 4rem;
-  }
-
-  .cta-content h2 {
     color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  .solution-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
   }
 
-  .cta-content p {
-    color: rgba(255, 255, 255, 0.7);
+  /* CTA Box */
+  .cta-box {
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem;
+    border-radius: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cta-box p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
   }
 
-  .cta-card .btn {
-    flex-shrink: 0;
-  }
-
+  /* Responsive */
   @media (max-width: 1024px) {
-    .capabilities-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .feature-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 3rem;
     }
-
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .feature-content {
+      order: 2;
+    }
+    .feature-visual {
+      order: 1;
+    }
+    .solutions-grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
-
-  @media (max-width: 768px) {
-    .capabilities-grid {
+  @media (max-width: 640px) {
+    .solutions-grid {
       grid-template-columns: 1fr;
     }
-
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .cta-card {
-      flex-direction: column;
-      text-align: center;
-      padding: 2.5rem;
-    }
-
-    .cta-card .btn {
-      width: 100%;
+    .cta-box {
+      padding: 2rem;
     }
   }
 </style>

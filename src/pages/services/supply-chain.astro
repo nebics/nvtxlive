@@ -1,310 +1,395 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHero from '../../components/PageHero.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+
+const services = [
+  {
+    title: "Value Engineering",
+    desc: "Maximize efficiency and cost-effectiveness through strategic process optimization and value analysis.",
+    icon: "trending-up",
+  },
+  {
+    title: "Supplier Optimization",
+    desc: "Enhance supplier relationships and performance to improve quality, reduce risk, and drive innovation.",
+    icon: "users",
+  },
+  {
+    title: "Cold Chain Logistics",
+    desc: "Ensure product integrity during transport with specialized temperature-controlled supply chain solutions.",
+    icon: "thermometer", // Abstract representation
+  },
+  {
+    title: "Asset Tracking",
+    desc: "Real-time visibility into inventory and equipment location for improved utilization and reduced loss.",
+    icon: "map-pin",
+  },
+  {
+    title: "Risk Management",
+    desc: "Proactive identification and mitigation of supply chain disruptions to ensure business continuity.",
+    icon: "shield",
+  },
+  {
+    title: "Master Data Management",
+    desc: "Ensure data accuracy and consistency across the entire supply chain ecosystem for better decision making.",
+    icon: "database",
+  },
+];
 ---
 
-<BaseLayout title="Supply Chain" currentPage="/services/supply-chain">
+<BaseLayout
+  title="Supply Chain"
+  currentPage="/services/supply-chain"
+  footerCtaTitlePrefix="Strengthen your"
+  footerCtaTitleHighlight="supply chain resilience?"
+  footerCtaButtonText="Optimize Now"
+>
   <PageHero
     icon="services"
-    title="Supply Chain"
-    description="Build agile, resilient supply chains through cross-functional collaboration—uniting R&D, regulatory affairs, procurement, manufacturing, quality, and logistics."
+    title="Supply Chain Excellence"
+    description="Build agile, resilient supply chains through cross-functional collaboration and digital integration."
   />
 
-  <section class="intro-section section">
-    <div class="container">
-      <div class="intro-content-full">
-        <p class="intro-lead">The emergence of new science as the driving force behind life sciences has increased both complexity and costs. The industry's ability to adapt requires a shift from operational efficiency within isolated departments to resilience through cross-functional collaboration and rapid innovation. We bring together R&D, NPD, regulatory affairs, procurement, manufacturing, quality, digital, logistics, and supply chain planning—all working in unison to maximize efficiency, reduce expenses, and enhance overall product value. From seamless technology transfers between facilities to real-time asset tracking and master data management, we help transform your supply chain from operational silos into a source of value, innovation, and competitive distinction.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="services-section section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h2>What We Offer</h2>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-            </svg>
-          </div>
-          <h4>Value Engineering & Cost Optimization</h4>
-          <p>Maximize efficiency, reduce expenses, and enhance the overall value of your products and processes.</p>
+  <section class="section">
+    <div class="container relative z-10">
+      <div class="feature-row">
+        <div class="feature-content">
+          <span class="badge">Operational Resilience</span>
+          <h2>Optimize Your Value Chain</h2>
+          <p class="lead">
+            The industry's ability to adapt requires a shift from isolated
+            departments to resilience through cross-functional collaboration. We
+            bring together R&D, manufacturing, quality, and logistics to
+            maximize efficiency and enhance product value.
+          </p>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            </svg>
-          </div>
-          <h4>Product Obsolescence</h4>
-          <p>Manage, update, or replace outdated products to ensure continued relevance and customer satisfaction.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="17 1 21 5 17 9"></polyline>
-              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-              <polyline points="7 23 3 19 7 15"></polyline>
-              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-            </svg>
-          </div>
-          <h4>Product/Technology Transfer</h4>
-          <p>Streamline transfers between facilities and external manufacturers while maintaining quality and compliance.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-          </div>
-          <h4>Asset Tracking</h4>
-          <p>Monitor and manage assets efficiently, improving visibility, reducing loss, and optimizing utilization.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 3h15v13H1zM16 8h7v13H8v-4"></path>
-            </svg>
-          </div>
-          <h4>Supplier Optimization</h4>
-          <p>Enhance supplier relationships, performance, and efficiency to improve product quality and cost-effectiveness.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
-          </div>
-          <h4>Master Data Management</h4>
-          <p>Ensure data accuracy, consistency, and integrity across systems, enhancing decision-making and efficiency.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tech-transfer-section section">
-    <div class="container">
-      <div class="tech-transfer-grid">
-        <div class="tech-transfer-content">
-          <h2>Technology Transfer</h2>
-          <p>Successful technology transfer is critical for bringing innovative solutions to market. We specialize in providing seamless and reliable technology transfer services, ensuring consistent process execution, optimization, accurate analytical method transfer, and robust scale-up.</p>
-          <p>Our meticulous approach is built on strict data integrity, a robust Quality Management System (QMS), and unwavering compliance.</p>
-        </div>
-        <div class="tech-transfer-services">
-          <div class="transfer-item">
-            <span class="transfer-label">Process Development</span>
-          </div>
-          <div class="transfer-item">
-            <span class="transfer-label">Risk Gap Analysis</span>
-          </div>
-          <div class="transfer-item">
-            <span class="transfer-label">Project Management</span>
-          </div>
-          <div class="transfer-item">
-            <span class="transfer-label">Technical & Analytical Support</span>
-          </div>
-          <div class="transfer-item">
-            <span class="transfer-label">Validation Strategy</span>
-          </div>
-          <div class="transfer-item">
-            <span class="transfer-label">Scale-up Support</span>
+        <div class="feature-visual">
+          <div class="visual-card-abstract">
+            <div class="abstract-icon">
+              <!-- Truck/Logistics Icon -->
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="abstract-ring"></div>
+            <div class="abstract-glow"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-section section section-light">
-    <div class="container">
-      <div class="cta-card">
-        <div class="cta-content">
-          <h2>We invest time to fully understand your needs</h2>
-          <p>Let's discuss how we can transform your supply chain into a source of value and innovation.</p>
-        </div>
-        <a href="/contact-us" class="btn">Contact Us</a>
+  <section class="section section-darker">
+    <div class="container relative z-10">
+      <div class="section-header-center">
+        <h2>End-to-End Solutions</h2>
+        <p>
+          From procurement to delivery, we optimize every link in the chain.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        {
+          services.map((service) => (
+            <div class="solution-card">
+              <div class="icon-box">
+                {service.icon === "trending-up" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
+                  </svg>
+                )}
+                {service.icon === "users" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
+                {service.icon === "thermometer" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+                  </svg>
+                )}
+                {service.icon === "map-pin" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                )}
+                {service.icon === "shield" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                )}
+                {service.icon === "database" && (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                  </svg>
+                )}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .intro-section {
-    background: #fff;
+  /* --- Shared Scoped Styles (Same as Digital Solutions) --- */
+  .section {
+    padding: 6rem 0;
+    position: relative;
+  }
+  .section-darker {
+    background: rgba(0, 0, 0, 0.2);
   }
 
-  .intro-content-full {
-    max-width: 100%;
-    margin-bottom: 3rem;
+  /* Two Column Feature Row */
+  .feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin-bottom: 2rem;
   }
-
-  .intro-lead {
-    color: var(--color-muted);
-    font-size: 1.1875rem;
-    line-height: 1.8;
-    margin: 0;
+  .feature-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #fff;
   }
-
-  .section-header {
+  .feature-content .lead {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
     margin-bottom: 2.5rem;
   }
-
-  .section-header h2 {
-    margin-bottom: 0;
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    background: rgba(56, 189, 248, 0.1);
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+  /* Visual Abstract Card */
+  .feature-visual {
+    display: flex;
+    justify-content: center;
   }
-
-  .service-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all var(--transition-base);
-  }
-
-  .service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    border-color: transparent;
-  }
-
-  .service-icon {
-    width: 48px;
-    height: 48px;
+  .visual-card-abstract {
+    position: relative;
+    width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(99, 102, 241, 0.1);
-    border-radius: var(--radius-md);
-    color: var(--color-accent);
-    margin-bottom: 1.25rem;
   }
-
-  .service-card h4 {
-    margin-bottom: 0.75rem;
-    font-size: 1.0625rem;
-  }
-
-  .service-card p {
-    color: var(--color-muted);
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-
-  /* Technology Transfer Section */
-  .tech-transfer-section {
-    background: #fff;
-  }
-
-  .tech-transfer-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .tech-transfer-content h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .tech-transfer-content p {
-    color: var(--color-muted);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .tech-transfer-services {
-    background: var(--gradient-dark);
-    border-radius: var(--radius-xl);
-    padding: 2rem;
-  }
-
-  .transfer-item {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .transfer-item:last-child {
-    border-bottom: none;
-  }
-
-  .transfer-label {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9375rem;
-    font-weight: 500;
-  }
-
-  .cta-section {
-    background: var(--color-light);
-  }
-
-  .cta-card {
+  .abstract-icon {
+    width: 100px;
+    height: 100px;
+    background: #0f172a;
+    border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background: var(--gradient-primary);
-    border-radius: var(--radius-xl);
-    padding: 3rem 4rem;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .abstract-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+    z-index: 1;
+  }
+  .abstract-glow {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(
+      circle,
+      rgba(56, 189, 248, 0.15) 0%,
+      transparent 60%
+    );
+    filter: blur(40px);
+    z-index: 0;
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
   }
 
-  .cta-content h2 {
+  /* Solutions Grid */
+  .section-header-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+  }
+  .section-header-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
+  }
+  .section-header-center p {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
   }
 
-  .cta-content p {
-    color: rgba(255, 255, 255, 0.85);
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .solution-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
+  }
+  .solution-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    margin-bottom: 1.5rem;
+  }
+  .solution-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .solution-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.9375rem;
   }
 
-  .cta-card .btn {
-    background: var(--color-white);
-    color: var(--color-primary);
-    flex-shrink: 0;
+  /* CTA Box */
+  .cta-box {
+    background: var(--gradient-glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4rem;
+    border-radius: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .cta-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cta-box p {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
   }
 
+  /* Responsive */
   @media (max-width: 1024px) {
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tech-transfer-grid {
+    .feature-row {
       grid-template-columns: 1fr;
-      gap: 2rem;
+      text-align: center;
+      gap: 3rem;
+    }
+    .feature-content {
+      order: 2;
+    }
+    .feature-visual {
+      order: 1;
+    }
+    .solutions-grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
-
-  @media (max-width: 768px) {
-    .services-grid {
+  @media (max-width: 640px) {
+    .solutions-grid {
       grid-template-columns: 1fr;
     }
-
-    .cta-card {
-      flex-direction: column;
-      text-align: center;
-      padding: 2.5rem;
-    }
-
-    .cta-card .btn {
-      width: 100%;
+    .cta-box {
+      padding: 2rem;
     }
   }
 </style>
