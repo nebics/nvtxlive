@@ -1,0 +1,3170 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <link rel="preconnect" href="//app.usercentrics.eu">
+    <link rel="preconnect" href="//api.usercentrics.eu">
+    
+    <link rel="preload" href="//web.cmp.usercentrics.eu/ui/loader.js" as="script">
+
+    <script src="/Scripts/lazysizes.min.js" async=""></script>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "url": "https://www.chartindustries.com",
+        "logo": "https://www.chartindustries.com/ChartIndustries/media/BrandLogos/ChartLogo.png",
+        "name" : "Chart Industries, Inc.",
+        "telephone" : "+17707218800",
+        "tickerSymbol" : "GTLS",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ball Ground",
+        "addressRegion": "GA",
+        "postalCode": "30107",
+        "streetAddress": "3055 Torrington Drive"
+        },
+        "sameAs" : [
+        "https://www.facebook.com/ChartInd",
+        "https://twitter.com/Chartind",
+        "https://www.linkedin.com/company/27725?trk=tyah",
+        "https://www.youtube.com/user/ChartIndustries"
+        ]
+        }
+    </script>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+            <link rel="canonical" href="https://www.chartindustries.com/Businesses-Brands/Howden" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helping our customers increase operational and environmental efficiencies" />
+    <meta name="keywords" content="" />
+    <!--Open Graph tags-->
+    <meta property="og:title" content="Howden" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="For over 160 years, Howden, has been at the forefront of developing engineered solutions for the needs of industrial processes. Today our technology and worldwide engineering expertise and services optimise our customers&#39; vital processes throughout the world.&#160; This is ensured through a strong global network of experts, formed from responsive local service and delivery teams, in more than 100 countries, who are familiar with local requirements and challenges." />
+    <meta property="og:url" content="https://chartindustriesv12.azurewebsites.net/Howden" />
+    <meta property="og:image" content="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/brands/howden/grid-logo.jpg?ext=.jpg" />
+    <meta property="fb:app_id" content="514262339247864" />
+
+    <title>Howden | Chart Industries</title>
+    
+    
+
+
+    
+
+    
+
+
+
+    
+    <script src="/Scripts/jquery.min.js"></script>
+
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" defer />
+    
+
+    
+    
+    <link rel="stylesheet" href="/Content/style.min.css?v=2.60.0" defer />
+    <link rel="stylesheet" href="/Content/mediaquery.css?v=2.60.0" media="screen and (max-width: 1366px)" defer />
+    <link rel="stylesheet" type="text/css" href="/Content/slick.css" defer />
+    <!-- <script src="https://kit.fontawesome.com/fadc3ce157.js" crossorigin="anonymous"></script> -->
+
+    <link class="faScript" rel="preload" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link class="faScript" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"></noscript>
+
+    
+
+    
+    <script nomodule>
+        window.MSInputMethodContext &&
+            document.documentMode &&
+            document.write(
+                '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5.0.0-beta2/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Array.prototype.find,Number.parseFloat%2CNumber.parse"><\/script>');
+    </script>
+    <style type="text/css">
+        .fa, .fab, .fal, .far, .fas {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1
+        }
+
+        .fa-sm {
+            font-size: .875em
+        }
+
+        .fa-2x {
+            font-size: 2em
+        }
+
+        .fa-bars:before {
+            content: "\f0c9"
+        }
+
+        .fa-chevron-left:before {
+            content: "\f053"
+        }
+
+        .fa-chevron-right:before {
+            content: "\f054"
+        }
+
+        .fa-city:before {
+            content: "\f64f"
+        }
+
+        .fa-cogs:before {
+            content: "\f085"
+        }
+
+        .fa-facebook:before {
+            content: "\f09a"
+        }
+
+        .fa-facebook:before {
+            content: "\f09a"
+        }
+
+        .fa-times:before {
+            content: "\f00d"
+        }
+
+        .fa-twitter:before {
+            content: "\f099"
+        }
+
+        .fa-user-circle:before {
+            content: "\f2bd"
+        }
+
+        .fa-youtube:before {
+            content: "\f167"
+        }
+
+        .fab {
+            font-family: "Font Awesome 5 Brands"
+        }
+
+        .fa, .far, .fas {
+            font-family: "Font Awesome 5 Free"
+        }
+
+        .fa, .fas {
+            font-weight: 900
+        }
+        /* Parallax Classes */
+        .parallax-window {
+            min-height: 400px;
+            background: transparent;
+        }
+
+        .bluebutton {
+            background: #3fa8de;
+            text-decoration: none;
+            border: 0;
+            margin-top: 10px;
+            /*padding: 0 50px 0 50px;*/
+            border-radius: 2px;
+            color: #fff;
+            height: 3em;
+        }
+        .bs-example {
+            margin: 20px;
+        }
+
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Video links overrides
+            
+        */
+        #VideoModal .modal-dialog {
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        #VideoModal .modal-dialog .modal-content .modal-body {
+            position: relative;
+            padding: 35px 10px 10px 10px;
+        }
+
+        #VideoModal .modal-dialog .modal-content .btn-close {
+            position: absolute;
+            right: -30px;
+            top: 0;
+        }
+
+        .videoCloseBtn {
+            border: 0;
+            background: #ffffff;
+            color: #004785;
+            position: absolute;
+            right: 0px;
+            padding: 1px 10px 1px 1px;
+            height: 30px;
+            width: 30px;
+            z-index: 1;
+
+        }
+
+            .videobtn:active {
+                border: 0;
+            }
+
+        .sticky-banner {
+            background-color: #f09320;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            font-size: 18px;
+        }
+            .sticky-banner a:link,
+            .sticky-banner a:visited,
+            .sticky-banner a:hover,
+            .sticky-banner a:active {
+                color: white !important;
+                text-decoration: underline !important;
+            }
+            .sticky-banner p {
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+            }
+
+            .sticky-banner button {
+                background-color: #f09320;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+
+                .sticky-banner button:hover {
+                    background-color: #d32f2f;
+                }
+
+
+        .sticky-banner {
+            position: relative;
+        }
+
+        .sticky-banner-close {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+            z-index: 1001;
+        }
+
+            .sticky-banner-close:hover {
+                color: #f44336;
+            }
+        .content {
+            padding-top: 60px; /* Adjusted for sticky banner */
+            padding: 20px;
+            height: 1500px; /* Just for demo purpose to show scrolling */
+        }
+
+    </style>
+    <script type="text/plain" src="https://www.googletagmanager.com/gtag/js?id=G-QXRCQ6LBSP" data-usercentrics="Google Tag Manager">
+    </script>
+    <script type="text/plain" data-usercentrics="Google Tag Manager">
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+
+                gtag('js', new Date());
+                gtag('config', 'G-QXRCQ6LBSP', {
+                    
+                    cookie_flags: 'max-age=7200; secure; samesite=none'
+                });
+
+    </script>
+    <!-- Hotjar Tracking Code for https://www.chartindustries.com -->
+    <!--<script type="text/plain" data-usercentrics="Hotjar">
+        (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3113960,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>-->
+</head>
+
+
+<body id="lower-level-8" class="page-template">
+    
+
+
+    <noscript class="nojs-message">
+        <p>This site works best with JavaScript enabled</p>
+    </noscript>
+    <div class="container-fluid p-0">
+        <!-- This Div is ended in the home slider partial or in the site pages after the banner -->
+        
+
+        <header style="position:absolute; z-index: 800; width: 100vw;">
+    <!-- eSticky Banner -->
+    <!--<div class="sticky-banner" id="sticky-banner">
+        <p><i class="fas fa-info-circle"></i> Chart Industries and Flowserve announce a merger of equals to create a differentiated leader in industrial process technologies. <a href="https://www.chartflowserve.com" target="_blank">Learn More.</a></p>
+        <span id="close-banner" class="sticky-banner-close" aria-label="Close" title="Close">&times;</span>
+    </div> -->
+    <div class="h-b_c">
+<div class="container px-md-0">
+        <a href="/News-And-Events">News, Events &amp; Trainings</a>
+    <a href="https://login.chartparts.com" rel="noreferrer" target='_blank'>Sign In <i class="fas fa-user-circle"></i></a>
+    <select aria-label="Language" id="selectLanguage">
+        <option value="cz.chartindustries.com">CZ</option>
+        <option value="de.chartindustries.com">DE</option>
+        <option value="www.chartindustries.com">EN</option>
+        <option value="es.chartindustries.com">ES</option>
+        <option value="fr.chartindustries.com">FR</option>
+        <option value="it.chartindustries.com">IT</option>
+        <option value="zh.chartindustries.com">ZH</option>
+    </select>
+    <script>
+
+    </script>
+</div>
+    </div>
+    <nav class="navbar navbar-expand-lg justify-content-between" id="navbar">
+        <div class="container pe-0">
+
+            <a class="navbar-brand" href="/">
+                <img data-src="/img/chart-icon.png" class="lazyload" style="object-fit:contain;" width="180" height="44" alt="Chart Industries Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation" id="navbar-toggler" name="navbar">
+                <i title="" class="fa fa-bars text-light"></i>
+            </button>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto position-relative">
+            <li class="nav-item pr-1 ">
+                        <a href="#" class="nav-link py-2 menu-1" supernav="true">
+                            
+                            Solutions
+
+                                <i class="fas fa-xs text-orange fa-chevron-down"></i>
+
+                        </a>
+            </li>
+            <li class="nav-item pr-1 ">
+                        <a href="#" class="nav-link py-2 menu-2" supernav="true">
+                            
+                            Businesses
+
+                                <i class="fas fa-xs text-orange fa-chevron-down"></i>
+
+                        </a>
+            </li>
+            <li class="nav-item pr-1 ">
+                        <a href="#" class="nav-link py-2 menu-3" supernav="true">
+                            
+                            We are Chart
+
+                                <i class="fas fa-xs text-orange fa-chevron-down"></i>
+
+                        </a>
+            </li>
+            <li class="nav-item pr-1 ">
+                        <a href="#" class="nav-link py-2 menu-4" supernav="true">
+                            
+                            Investors
+
+                                <i class="fas fa-xs text-orange fa-chevron-down"></i>
+
+                        </a>
+            </li>
+            <li class="nav-item pr-1 ">
+                        <a href="#" class="nav-link py-2 menu-5" supernav="true">
+                            
+                            Careers
+
+                                <i class="fas fa-xs text-orange fa-chevron-down"></i>
+
+                        </a>
+            </li>
+            <li class="nav-item px-0 py-2 py-lg-0 px-lg-2">
+                
+
+                    <button class="green-btn-text btn menu-btn-1" data-toggle="modal" data-target="#contactModal" id="showContactModal">Contact Us</button>
+
+            </li>
+        <li class="nav-item pr-1 search-btn">
+            <div class="open search-display">
+                <i class="fas fa-search nav-link my-auto py-auto"></i>
+            </div>
+            <div class="search-overlay">
+                <form action="/Search-Results" method="get">
+                    <input name="__RequestVerificationToken" type="hidden" value="Ppw4mdakT1EtTitT3VopnQDc4xoW5PsE7qaz4qsFL91Hub8c-LwI413oF8al_qm87BFsm3sdwlB8-9YijLtOsfEtKjBmQviDKD5rXhWzVmY1" />
+                    <button class="submit" id="contactModalShow">
+                        <i class="fas fa-search nav-link my-auto py-auto"></i>
+                    </button>
+                    <input type="text" name="searchtext" placeholder="Search Chart">
+                </form>
+                <button class="close search-display">
+                    <i class="fas fa-times nav-link my-auto py-auto"></i>
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>
+        </div>
+    </nav>
+</header>
+<!--Begin Super Nav-->
+        <div class="dropdown-navbar" id="dropdown-navbar">
+
+
+<!--  -->
+<div class="menu-1" id="menu-1">
+    <div class="container">
+        <div class="row row-fix">
+            <div class="col-8 title p-0 d-flex align-items-center">
+                <h3><a href="/Products">Solutions</a></h3>
+            </div>
+            <div class="col-4 text-end p-0 ">
+                <button class="btn d-flex align-items-center" id="drop-close" onclick="closedrop()">
+                    <i class="fa fa-times text-white fa-2x "></i>
+                    <span class="text">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="row row-fix">
+                <div class="col-12  services">
+                    <nav>
+                        <ul class="row flex-column p-0 row-fix">
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/Cryo-Tank-Solutions" class="menu-link current">Gas Storage &amp; Distribution</a>
+                                        <div class="row col-12 col-lg-7 sub-menu" style="display: flex;">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Bulk-CO2-Carbonation'>Bulk CO2 Carbonation</a>
+<a href='/Products/Cryogenic-Transport-Trailers'>Cryogenic Vehicles</a>
+<a href='/Products/Fuel-Systems'>Fuel Systems</a>
+<a href='/Products/ISO-Containers'>ISO Containers</a>
+<a href='/Products/Packaged-Gases'>Liquid Gas Cylinders</a>
+<a href='/Products/Critical-Care'>Medical Oxygen Products</a>
+<a href='/Products/MicroBulk-Storage-Tanks'>MicroBulk Storage Systems</a>
+<a href='/Products/Non-cryogenic-Transport-Trailers'>Hazardous Transport Vehicles</a>
+<a href='/Products/Small-Scale-LNG'>Small Scale LNG</a>
+<a href='/Products/Vaporizers'>Vaporizers</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Bulk-Cryogenic-Tanks'>Cryogenic Tanks</a>
+<a href='/Products/Flow-Measurement'>Flow Measurement</a>
+<a href='/Products/Hydrogen-Fueling-Stations'>Hydrogen Fueling Stations</a>
+<a href='/Products/Laser-Assist-Gas-Systems'>Laser Assist Gas Systems</a>
+<a href='/Products/LNG-Fueling-Stations'>LNG Fueling Stations</a>
+<a href='/Products/MicroBulk-Delivery'>MicroBulk Delivery Systems</a>
+<a href='/Products/Nitrogen-Dosing'>Nitrogen Dosing</a>
+<a href='/Products/Safety-Valves'>Safety Valves</a>
+<a href='/Products/Vacuum-Insulated-Pipe'>Vacuum Insulated Pipe</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/Heat-Transfer-Systems" class="menu-link">Heat Transfer Systems</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Air-Cooled-Heat-Exchangers'>Air Cooled Heat Exchangers</a>
+<a href='/Products/Brazed-Aluminum-Heat-Exchangers'>Brazed Aluminum Heat Exchangers</a>
+<a href='/Products/Helium-Liquefiers'>Helium Liquefiers</a>
+<a href='/Products/LABLEX'>LABLEX</a>
+<a href='/Products/Nitrogen-Rejection-Units'>Nitrogen Rejection Units</a>
+<a href='/Products/Specialty-Heat-Exchangers'>Specialty Heat Exchangers</a>
+<a href='/Products/Turboexpanders'>Turboexpanders</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/FinFan'>Axial Fans - Tuf-Lite</a>
+<a href='/Products/Hairpin-Heat-Exchangers'>Hairpin Heat Exchangers</a>
+<a href='/Products/Hydrogen-Liquefiers'>Hydrogen Liquefiers</a>
+<a href='/Products/LNG-Liquefaction-Plants'>LNG Liquefaction Plants</a>
+<a href='/Products/Heaters'>Rotary Heat Exchangers</a>
+<a href='/Products/SPINTUBE'>SPINTUBE</a>
+<a href='/Products/Turboexpander-Aftermarket'>Turboexpander Aftermarket</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/Howden-Products" class="menu-link">Rotating &amp; Compression</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Axial-and-Centrifugal-Fans'>Axial and Centrifugal Fans</a>
+<a href='/Products/Compression-Centrifugal-Compressors'>Centrifugal Compressors</a>
+<a href='/Products/Compression-Screw-Compressors'>Screw Compressors</a>
+<a href='/Products/CPI-Compression'>CPI Compression</a>
+<a href='/Products/Howden-Uptime'>Digital - Howden Uptime</a>
+<a href='/Products/Solysmart'>Digital - Solysmart</a>
+<a href='/Products/Electrostatic-Precipitator'>Emission Control - Electrostatic Precipitator</a>
+<a href='/Products/Howden-Aftermarket'>Howden Aftermarket</a>
+<a href='/Products/Mine-Cooling-Systems'>Mine Cooling Systems</a>
+<a href='/Products/Steam-Turbines'>Steam Turbines</a>
+<a href='/Products/Turboexpanders'>Turboexpanders</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Centrifugal-Blowers'>Centrifugal Blowers</a>
+<a href='/Products/Compression-Reciprocating-and-Diaphragm-Compressor'>Reciprocating Compressors: Piston and Diaphragm</a>
+<a href='/Products/Fans-Cooling-Fans'>Cooling Fans</a>
+<a href='/Products/Engineering-Suite'>Digital - Engineering Suite</a>
+<a href='/Products/Pumpsim'>Digital - Pumpsim</a>
+<a href='/Products/Ventsim'>Digital-Ventsim</a>
+<a href='/Products/DELTA-WING-Gas-Mixers'>Emission Control - Gas Mixers</a>
+<a href='/Products/Mechanical-Vapor-Recompression'>Mechanical Vapor Recompression</a>
+<a href='/Products/Mine-Heating-Solutions'>Mine Heating Solutions</a>
+<a href='/Products/turbo-fans'>Turbo Fans</a>
+<a href='/Products/Turboexpander-Aftermarket'>Turboexpander Aftermarket</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/Repair-Service-Leasing" class="menu-link">Aftermarket</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Chart-Leasing'>Chart Leasing</a>
+<a href='/Products/CPI-Compression'>CPI Compression</a>
+<a href='/Products/Cryogenic-Aftersales-Service-(US)'>Cryogenic Aftersales Service (US)</a>
+<a href='/Products/Howden-Aftermarket'>Howden Aftermarket</a>
+<a href='/Products/Turboexpander-Aftermarket'>Turboexpander Aftermarket</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Parts'>Chart Parts</a>
+<a href='/Products/Europe-Aftersales'>Cryogenic Aftersales Service (Europe)</a>
+<a href='/Products/Howden-Uptime'>Digital - Howden Uptime</a>
+<a href='/Products/Maintenance-Partners-by-Howden'>Maintenance Partners by Howden</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/Specialty-Markets" class="menu-link">Applications</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Aerospace'>Aerospace</a>
+<a href='/Products/Carbon-Dioxide-Enrichment'>Carbon Dioxide Enrichment</a>
+<a href='/Products/Carbon-Capture'>CCUS - Cryogenic Carbon Capture</a>
+<a href='/Products/Data-Centers'>Data Centers</a>
+<a href='/Products/Hydrogen-Energy'>Hydrogen Energy</a>
+<a href='/Products/Marine-Systems-(1)'>Marine Systems</a>
+<a href='/Products/Metals'>Metals Processing</a>
+<a href='/Products/Mine-Heating-Solutions'>Mine Heating Solutions</a>
+<a href='/Products/Nuclear'>Nuclear</a>
+<a href='/Products/Rail'>Rail</a>
+<a href='/Products/Waste-To-Energy'>Waste-To-Energy</a>
+<a href='/Products/Wind-Tunnel'>Wind Tunnel</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Products/Bulk-CO2-Carbonation'>Bulk CO2 Carbonation</a>
+<a href='/Products/Small-Scale-Carbon-Capture'>CCUS - CiCi Technology</a>
+<a href='/Products/Cement'>Cement</a>
+<a href='/Products/Glass'>Glass</a>
+<a href='/Markets/LNG-Equipment'>LNG Equipment</a>
+<a href='/Products/Mechanical-Vapor-Recompression'>Mechanical Vapor Recompression</a>
+<a href='/Products/Mine-Cooling-Systems'>Mine Cooling Systems</a>
+<a href='/Products/Mine-Safety'>Mine Safety</a>
+<a href='/Products/Pulp-and-Paper'>Pulp and Paper</a>
+<a href='/Products/tunnel-ventilation'>Tunnel Ventilation </a>
+<a href='/Products/Water-Treatment'>Water Treatment</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                        </ul>
+                    </nav>
+                </div>
+                        
+        </div>
+    </div>
+    
+</div>
+                
+
+
+
+<!--  -->
+<div class="menu-2" id="menu-2">
+    <div class="container">
+        <div class="row row-fix">
+            <div class="col-8 title p-0 d-flex align-items-center">
+                <h3><a href="/Businesses-Brands">Businesses</a></h3>
+            </div>
+            <div class="col-4 text-end p-0 ">
+                <button class="btn d-flex align-items-center" id="drop-close" onclick="closedrop()">
+                    <i class="fa fa-times text-white fa-2x "></i>
+                    <span class="text">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="row row-fix">
+                            <div class="col-md-4 col-12 services">
+                        <a href="/Businesses-Brands/Air-X-Changers" target="_self" >Air-X-Changers</a>
+                        <a href="/Businesses-Brands/Chart-China" target="_self" >Chart China</a>
+                        <a href="/Businesses-Brands/ChartMarine" target="_self" >ChartMarine</a>
+                        <a href="/chartwater" target="_self" >ChartWater</a>
+                        <a href="/Businesses-Brands/CPI-Compression" target="_self" >CPI</a>
+                        <a href="/Businesses-Brands/Cryogenic-Service-Center" target="_self" >Cryogenic Service Center</a>
+                        <a href="/Businesses-Brands/Cryo-Technologies" target="_self" >Cryo Technologies</a>
+                        <a href="/Businesses-Brands/Earthly-Labs" target="_self" >Earthly Labs</a>
+                        <a href="/Businesses-Brands/FEMA" target="_self" >FEMA</a>
+                        <a href="/Businesses-Brands/Chart-Ferox" target="_self" >Chart Ferox</a>
+                        <a href="/Businesses-Brands/Flow" target="_self" >Flow Instruments</a>
+                        <a href="/Businesses-Brands/Fronti-Fabrications" target="_self" >Fronti Fabrications</a>
+                        <a href="/Businesses-Brands/GOFA" target="_self" >GOFA</a>
+                        <a href="/Businesses-Brands/Howden" target="_self" >Howden</a>
+                        <a href="/Businesses-Brands/Hudson" target="_self" >Hudson</a>
+                        <a href="/IMB" target="_self" >IMB</a>
+                        <a href="/Businesses-Brands/LA-Turbine" target="_self" >LA Turbine</a>
+                        <a href="/Products/Maintenance-Partners-by-Howden" target="_self" >Maintenance Partners by Howden</a>
+                        <a href="/Businesses-Brands/Smithco" target="_self" >Smithco</a>
+                        <a href="/Businesses-Brands/Spencer-Turbine" target="_self" >Spencer Turbine</a>
+                        <a href="/Businesses-Brands/Sustainable-Energy-Solutions" target="_self" >Sustainable Energy Solutions</a>
+                        <a href="/Businesses-Brands/VCT-Vogel" target="_self" >VCT Vogel</a>
+                        <a href="/VRV" target="_self" >VRV</a>
+                </div>
+                            <div class="col-md-8 col-0 d-none d-lg-block">
+                    <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/backgrounds/nexusofcleanforheader-1366x650.jpg?ext=.jpg" class="w-100-full lazyload" alt="Businesses">
+                </div>
+
+        </div>
+    </div>
+    
+</div>
+                
+
+
+
+<!--  -->
+<div class="menu-3" id="menu-3">
+    <div class="container">
+        <div class="row row-fix">
+            <div class="col-8 title p-0 d-flex align-items-center">
+                <h3><a href="/We-Are-Chart">We are Chart</a></h3>
+            </div>
+            <div class="col-4 text-end p-0 ">
+                <button class="btn d-flex align-items-center" id="drop-close" onclick="closedrop()">
+                    <i class="fa fa-times text-white fa-2x "></i>
+                    <span class="text">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="row row-fix">
+                            <div class="col-md-4 col-12 services">
+                        <a href="/Articles" target="_self" >Articles</a>
+                        <a href="/We-Are-Chart/Corporate-Responsibility" target="_self" >Corporate Responsibility</a>
+                        <a href="/We-Are-Chart/ESG" target="_self" >Environmental, Social &amp; Governance</a>
+                        <a href="/We-Are-Chart/History" target="_self" >History</a>
+                        <a href="/Investors" target="_self" >Investors</a>
+                        <a href="/We-Are-Chart/Our-Leadership" target="_self" >Leadership</a>
+                        <a href="/Locations" target="_self" >Locations &amp; Contacts</a>
+                        <a href="/News-And-Events" target="_self" >News, Events &amp; Trainings</a>
+                </div>
+                            <div class="col-md-8 col-0 d-none d-lg-block">
+                    <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/backgrounds/chart-china-new-768x416.jpg?ext=.jpg" class="w-100-full lazyload" alt="We are Chart">
+                </div>
+
+        </div>
+    </div>
+    
+</div>
+                
+
+
+
+<!--  -->
+<div class="menu-4" id="menu-4">
+    <div class="container">
+        <div class="row row-fix">
+            <div class="col-8 title p-0 d-flex align-items-center">
+                <h3><a href="https://ir.chartindustries.com/home/default.aspx">Investors</a></h3>
+            </div>
+            <div class="col-4 text-end p-0 ">
+                <button class="btn d-flex align-items-center" id="drop-close" onclick="closedrop()">
+                    <i class="fa fa-times text-white fa-2x "></i>
+                    <span class="text">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="row row-fix">
+                <div class="col-12  services">
+                    <nav>
+                        <ul class="row flex-column p-0 row-fix">
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://ir.chartindustries.com/overview/corporate-overview/default.aspx" class="menu-link current">Overview</a>
+                                        <div class="row col-12 col-lg-7 sub-menu" style="display: flex;">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Overview/Corporate-Overview'>Corporate Overview</a>
+<a href='/Investors/Overview/Management-Board'>Management & Board</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Overview/Documents'>Documents</a>
+<a href='/Investors/Overview/Regulatory-Documents'>Regulatory Documents</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://ir.chartindustries.com/financial-information/annual-reports/default.aspx" class="menu-link">Financial Information</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Financial-Information/Regulatory-Documents'>Annual Reports</a>
+<a href='/Investors/Financial-Information/Insider-Filings'>Insider Filings</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Financial-Information/Financial-Statements'>Financial Statements</a>
+<a href='/Investors/Financial-Information/SEC-Filings'>SEC Filings</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://ir.chartindustries.com/resources/analyst-coverage/default.aspx" class="menu-link">Resources</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Resources/Analyst-Coverage'>Analyst Coverage</a>
+<a href='/Investors/Resources/Email-Notifications'>Email Notifications</a>
+<a href='/Investors/Resources/Contact-Us'>Contact Us</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/Resources/Stock-Quote'>Stock Quote</a>
+<a href='/Investors/Resources/Historic-Prices'>Historic Prices</a>
+<a href='/Investors/Resources/Shareholder-Information'>Shareholder Information</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://ir.chartindustries.com/news-and-events/events-and-presentations/default.aspx" class="menu-link">News and Events</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/News-and-Events/Events-and-Presentations'>Events and Presentations</a>
+<a href='/Investors/News-and-Events/Press-Releases'>Press Releases</a>
+<a href='/Investors/News-and-Events/Howden-Newsletter'>Howden Newsletter</a>
+<a href='/Investors/News-and-Events/Howden-Articles'>Howden Articles</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/News-and-Events/Quarterly-Results'>Quarterly Results</a>
+<a href='/Investors/News-and-Events/Howden-Events'>Howden Events</a>
+<a href='/Investors/News-and-Events/Howden-Press-Centre'>Howden Press Centre</a>
+<a href='/Investors/News-and-Events/Video-Library'>Video Library</a>
+
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/We-Are-Chart/ESG" class="menu-link">ESG</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                <a href='/Investors/ESG/Environmental-Sustainability-Governance'>Environmental Sustainability & Governance</a>
+
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                        </ul>
+                    </nav>
+                </div>
+                        
+        </div>
+    </div>
+    
+</div>
+                
+
+
+
+<!--  -->
+<div class="menu-5" id="menu-5">
+    <div class="container">
+        <div class="row row-fix">
+            <div class="col-8 title p-0 d-flex align-items-center">
+                <h3><a href="https://www.chartindustries.com/careers">Careers</a></h3>
+            </div>
+            <div class="col-4 text-end p-0 ">
+                <button class="btn d-flex align-items-center" id="drop-close" onclick="closedrop()">
+                    <i class="fa fa-times text-white fa-2x "></i>
+                    <span class="text">Close</span>
+                </button>
+            </div>
+        </div>
+        <div class="row row-fix">
+                <div class="col-12  services">
+                    <nav>
+                        <ul class="row flex-column p-0 row-fix">
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/careers/career-opportunities" class="menu-link current">View All Career Opportunities</a>
+                                        <div class="row col-12 col-lg-7 sub-menu" style="display: flex;">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="/careers" class="menu-link">Find Your Dream Job</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/careers/benefits" class="menu-link">Benefits</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/careers/equity" class="menu-link">Our Commitment To Equity</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/careers/culture" class="menu-link">Our Culture</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                                <li class="col-12 col-lg-3 menu-item-has-children p-0">
+                                    
+                                        <a href="https://www.chartindustries.com/careers/how-to-apply" class="menu-link">How To Apply</a>
+                                        <div class="row col-12 col-lg-7 sub-menu">
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                            <div class="col-12 col-lg-6 items">
+                                                
+                                            </div>
+                                        </div>
+
+                                </li>
+                        </ul>
+                    </nav>
+                </div>
+                        
+        </div>
+    </div>
+    
+</div>
+                
+
+
+        </div>
+    <!--End Super Nav-->
+
+
+
+
+
+        
+        
+        
+
+
+<style type="text/css">
+    .sect {
+        /* padding: 5% 10% 5% 10%;*/
+        padding: 0% .65% 0% .65%;
+    }
+
+    .more-info-sect {
+        padding: 2%;
+    }
+
+        .more-info-sect h2 {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+    .other-info {
+        border-left: 1px dotted gray;
+    }
+
+    .sect h2 {
+        color: #004785;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    .sect h3 {
+        color: #33A3DC;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .col-padding {
+        padding: 2%;
+    }
+
+    .more-box a.button {
+        background: #004785;
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid #ccc;
+    }
+
+        .more-box a.button:hover {
+            background: #0B5DA5;
+            border: 2px solid #33a3dc;
+        }
+
+    .more-box a:link {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .more-box a:visited {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .more-box a:hover {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: underline !important;
+    }
+
+    .cp-prod-carousel > span {
+        min-height: 50px;
+        display: block;
+    }
+
+    .qr-lit-list {
+        list-style-type: square;
+    }
+
+        .qr-lit-list li {
+            color: #9DC335;
+        }
+
+    .qr-contact {
+        margin-bottom: 25px;
+    }
+    .thumbnail a:link{
+        color: #fff;
+        font-weight: bold;
+    }
+    .thumbnail a:visited{
+        color: #fff;
+        font-weight:bold;
+    }
+    .thumbnail a:hover{
+        color: #fff;
+        font-weight: bold;
+        text-decoration: underline !important;
+    }
+</style>
+    <!-- Carousel section -->
+    <div id="carouselChart" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="gradient-overlay"></div>
+                        <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/brands/howden/banner.jpg?ext=.jpg" class="d-block w-100 lazyload" alt="" />
+                <div class="carousel-caption d-md-block">
+                        <h3>Howden</h3>
+                    <p>
+Howden provides mission critical air and gas handling products and services that our customers’ vital processes depend on. We help our customers increase their environmental and operational efficiencies and decarbonize their operations. We are advancing a more sustainable future.                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<link defer="defer" href="/Content/cofimco.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/pchooser.js" type="text/javascript"></script>
+
+
+
+
+
+<div id="aboutBusiness">
+<div class="container" id="freeFormContent">
+<div class="row">
+<div class="col-md-1 col-xl-1 col-lg-1 col-sm-1 col-xs-1">&nbsp;</div>
+
+<div class="col-md-10 col-xl-10 col-lg-10 col-sm-10 col-xs-10">
+<h2 style="text-align:center">We are Howden</h2>
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe allow="autoplay; fullscreen; picture-in-picture" frameborder="0" src="https://player.vimeo.com/video/901063268?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Howden Overview Video 2023"></iframe></div>
+<script src="https://player.vimeo.com/api/player.js" type="text/javascript"></script></div>
+</div>
+</div>
+    <div class="aboutBusiness__text_container">
+            <h2>Revolving Around You</h2>
+                    <div class="row">
+                <div class="col-lg-6 aboutBusiness__text_container__col">
+                    <p>
+                        For over 160 years, Howden has been at the forefront of developing engineered solutions for the needs of industrial processes. Today our technology and worldwide engineering expertise and services optimize our customers&#39; vital processes throughout the world.&nbsp; This is ensured through a strong global network of experts, formed from responsive local service and delivery teams in more than 100 countries, who are familiar with local requirements and challenges.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        The latest chapter of our history is as a Chart Industries company, having been acquired in 2023. The strategic acquisition expands Chart&#39;s offering of products and solutions across the Nexus of Clean&trade; - clean power, clean water, clean food and clean industrials. The complementary nature of the equipment and solution portfolios results in a differentiated offering across many industries benefiting customers by enabling a more complete solution to their operational and engineering needs.
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- #Featured products -->
+<!-- #END OF Featured products -->
+<!-- START VIDEO LINKS -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 aboutBusiness__text_container">
+                    <h2 style="padding: 20px;">Video Library</h2>
+            </div>
+        </div>
+        <div class="row" style="background: #004785; padding: 25px; border-bottom: 5px solid #9DC335; border-top: 5px solid #9DC335;">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                
+
+
+
+
+    <div class="row">
+
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/901063268?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/enabling.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Introducing Howden</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/1094967086?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/women-in-engineering-2.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Women in Engineering</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/901482675?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/reciprocating_comp_c_series_1.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Howden C Series Reciprocating Compressor</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/901807723?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/brands/cpi compression/cpi-lubrication-products.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>CPI Lubrication Products</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/925393671?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/cubusturbo-by-howden.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>CubusTurbo by Howden</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/881660856?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/steam-turbine.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Frankenthal Factory Tour</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/900368596?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/uptime-1.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Howden Uptime</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="#" class="video-btn" data-src="https://player.vimeo.com/video/904039987?autoplay=0&modestbranding=1&showinfo=0">
+                        <img src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/video thumbnails/diaphragm-compressor-animation.jpg?ext=.jpg" alt="Lights" style="width:100%" class="rounded">
+                        <div class="caption">
+                            <p>Take a look inside a diaphragm compressor</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+    </div>
+
+  
+
+
+
+
+
+
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <!-- #END of VIDEO LINKS-->
+        <div class="aboutBusiness__text_container container">
+            <div class="row">
+                <div class="col-md-2">&nbsp;</div>
+                <div class="col-md-8">
+                    
+                        <h2>Product & Brand Portfolio</h2>
+                                            <p>Use the carousel below to navigate straight to our principal product pages. Continue to scroll to learn more about our business.</p>
+                </div>
+                <div class="col-md-2">&nbsp;</div>
+            </div>
+        </div>
+            <section id="slider-card">
+                <div class="slider-card bbd-slider-card">
+<div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Axial-and-Centrifugal-Fans">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_axialfan.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Axial Fans 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Axial fans for high efficiency air supply to critical and demanding processes across multiple industries. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Axial-and-Centrifugal-Fans">
+                                <button class="dark-blue-btn bluebutton">Axial Fans </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/burton-corblin-web_3.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Burton Corblin
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Howden diaphragm &quot;D&quot; series compressors date back to the origins of Burton Corblin.
+Diaphragm compression is the technology of choice in any situation where complete hermetic separation is required, for example in the handling of rare, toxic, flammable, explosive or radioactive gases.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Go to Diaphragm Compressors</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Centrifugal-Blowers">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_centrifblower.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Centrifugal Blowers
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        We own the Howden, HV-TURBO, Turblex, Spencer and Kuehnle, Kopp and Kausch brands. Range encompasses industrial type blowers used in the power, mining and water industries and turbo compressors suited to applications in the downstream oil and gas industry. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Centrifugal-Blowers">
+                                <button class="dark-blue-btn bluebutton">Centrifugal Blowers</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Compression-Centrifugal-Compressors">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_centrifcompressor.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Centrifugal Compressors
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Industrial turbo compressors to meet the needs of the metallurgical, oil and gas and chemical industries. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Compression-Centrifugal-Compressors">
+                                <button class="dark-blue-btn bluebutton">Centrifugal Compressors</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Axial-and-Centrifugal-Fans">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_centrifugalfans.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Centrifugal Fans 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        High efficiency air supply to critical and demanding processes. Used in highly contaminated airstreams, material-handling applications, and systems that require flow of air or gas at high temperatures. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Axial-and-Centrifugal-Fans">
+                                <button class="dark-blue-btn bluebutton">Centrifugal Fans </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://files.chartindustries.com/Aftermarket-Academy-recip-comp.pdf" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/aftermarketacademy.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Compressor Training
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Graduate from our Aftermarket Academy with this hands on 4 day training course that will equip you with a comprehensive insight into reciprocating compressors and compression technology. For details, available courses and to sign up, click the button below.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://files.chartindustries.com/Aftermarket-Academy-recip-comp.pdf" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Course Details</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Fans-Cooling-Fans">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_coolingfans.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Cooling Fans 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Howden’s range of cooling fans are used as part of wet, dry and hybrid cooling systems. Our fans lead the way in high efficiency and low noise operation. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Fans-Cooling-Fans">
+                                <button class="dark-blue-btn bluebutton">Cooling Fans </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Businesses-Brands/CPI-Compression">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/cpi-banner-and-logo-v2.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                CPI by Howden
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Our comprehensive knowledge, proven products and extensive field experience are valued by customers the world over who count on CPI by Howden for service and solutions that keep their compressors, lubrication systems, and business running safely and efficiently.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Businesses-Brands/CPI-Compression">
+                                <button class="dark-blue-btn bluebutton">Go to Web Page</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/DELTA-WING-Gas-Mixers">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_deltawing.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                DELTA WING Gas Mixers
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        An advanced static gas mixer increasing the efficiency of gas handling equipment by homogenizing the inflow of process gas along with any conditioning agents. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/DELTA-WING-Gas-Mixers">
+                                <button class="dark-blue-btn bluebutton">DELTA WING Gas Mixers</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Electrostatic-Precipitator">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_esp.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                ESP Services
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        A vital contributor to lowering emissions from plant operations, Electrostatic Precipitators (ESP) capture particles from waste gas streams.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Electrostatic-Precipitator">
+                                <button class="dark-blue-btn bluebutton">Electrostatic Precipitator</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Howden-Uptime">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_uptime.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Howden Uptime
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        A unique digital solution for equipment performance optimization that seamlessly gathers and integrates the physical sensor data from any type of rotating equipment, and analyses how it operates and responds to the environment. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Howden-Uptime">
+                                <button class="dark-blue-btn bluebutton">Go to Web Page</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://files.chartindustries.com/Howden_HVTurbo_Brochure.pdf" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/hvturbo.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                HV-TURBO/TURBLEX
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        High performance centrifugal turbo compressor for municipal wastewater treatment and industrial applications. Howden also provides expertise service and support to your existing HV-TURBO/TURBLEX equipment.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://files.chartindustries.com/Howden_HVTurbo_Brochure.pdf" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Access Brochure</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://files.chartindustries.com/Howden_Hydrogen_Brochure.pdf" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/reciprocating-compressor-for-hydrogen-3-png.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Hydrogen Compressors 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Howden has a robust track record in delivering advanced compression solutions to flagship projects, including: the world’s largest hydrogen refuelling station; the world’s first climate-neutral fuels (efuels); and the world’s first green steel project. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://files.chartindustries.com/Howden_Hydrogen_Brochure.pdf" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Access Brochure</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://go.chartindustries.com/l/77772/2024-03-14/fhjw8k" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/stbrochure.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                K&#252;hnle, Kopp &amp; Kausch
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Howden was delighted to return the K&#252;hnle, Kopp &amp; Kausch name back to the market. Whether it is the range of industrial compressors or steam turbines, K&#252;hnle, Kopp &amp; Kausch stands for state-of-the-art quality, &quot;Made in Germany&quot;.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://go.chartindustries.com/l/77772/2024-03-14/fhjw8k" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Literature Request</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Pumpsim">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_pumpsim.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Pumpsim
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        A 3-dimensional software package that simulates the pumping and transportation of liquids and slurries through piping systems and networks.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Pumpsim">
+                                <button class="dark-blue-btn bluebutton">Pumpsim</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_recip.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Reciprocating Compressors
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Both piston and diaphragm technologies play a vital role in the safe processing of gas including hydrogen throughout production, transmission and distribution phases. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor">
+                                <button class="dark-blue-btn bluebutton">Reciprocating Compressors: Piston and Diaphragm </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/peterbrotherhood.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Reciprocating Compressors
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Reciprocating gas compressors rated to 20MW and operating between 260 and 1,000 rpm. Peter Brotherhood range covers a wide spectrum of gas mixtures, including corrosive and hazardous gases.
+Designed to operate at low speeds with variable strokes to give maximum reliability, smooth operation and low wear, for maximum service life.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Compression-Reciprocating-and-Diaphragm-Compressor">
+                                <button class="dark-blue-btn bluebutton">Go to Reciprocating Compressors</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Compression-Screw-Compressors">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_screw.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Screw Compressors 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Rotary twin-screw compressors for gas compression applications within oil &amp; gas, power and industrial refrigeration. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Compression-Screw-Compressors">
+                                <button class="dark-blue-btn bluebutton">Screw Compressors </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Heaters" target="_blank">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/rothemuhle.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Rothem&#252;hle
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Rothem&#252;hle is a leading OEM brand for air preheaters, gas-gas heaters and related heat recovery equipment, increasing efficiency in air and flue gas paths in power and industrial plants. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Heaters" target="_blank">
+                               <button class="dark-blue-btn bluebutton">Go to Rotary Heat Exchangers</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Solysmart">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_solysmart.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Solysmart
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        A continual monitoring system suitable for fans of all types in real-time. It assists operators in keeping fans running at peak efficiency. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Solysmart">
+                                <button class="dark-blue-btn bluebutton">Solysmart</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Centrifugal-Blowers">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/spencer-legacy-web.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Spencer
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Spencer Turbine Company were known for their innovative solutions for air and gas handling solutions. Spencer vacuum systems, gas pressure boosters, industrial blowers, and other products were designed to withstand extreme conditions and perform for years at a time with little maintenance,
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Centrifugal-Blowers">
+                                <button class="dark-blue-btn bluebutton">Go to Centrifugal Blowers</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Steam-Turbines">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/products/steam turbines/steamturbines.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Steam Turbines
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Robust, reliable and efficient steam turbine solutions for heat and power generation from 75kW up to 40MWe. Steam turbines as mechanical drive for all rotating equipment such as pumps, compressors and fans from 10kW to 40MW. 
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Steam-Turbines">
+                                <button class="dark-blue-btn bluebutton">Steam Turbines </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Steam-Turbines">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/peterbrotherhood.jpg?ext=.jpg" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Steam Turbines
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Steam turbines designed for a variety of applications from 1 MW to 40 MW and inlet pressures to 70 bar; condensing, mixed pressure and back-pressure. Our steam turbines provide over 1000 MW of installed power in Waste to Energy Power Plants and we have in excess of 500 machines installed in the cane sugar industry.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Steam-Turbines">
+                                <button class="dark-blue-btn bluebutton">Go to Steam Turbines</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://www.chartindustries.com/Products/Turbo-Fans">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_turbofans.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Turbo Fans 
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        Advanced technologies generating high pressures at a wide volume flow range for air, process gas, and vapor compression applications. Industries served include oil &amp; gas, power generation, metals, mining, food/dairy and pharmaceutical.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://www.chartindustries.com/Products/Turbo-Fans">
+                                <button class="dark-blue-btn bluebutton">Turbo Fans </button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div><div class="item">
+    <div class="wrap">
+        <figure>
+                            <a href="https://chartindustries.com/Products/Ventsim">
+                                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/carousels/main_ventsim.png?ext=.png" alt="" class="lazyload">
+                            </a>
+        </figure>
+        <div class="body-text">
+            <h3>
+                Ventsim
+            </h3>
+            <!--<div class="more-box"> -->
+            <div>
+                    <p>
+                        A software suite enabling the design and simulation of underground mine and tunnel ventilation systems with controls for safe and efficient operation.
+                    </p>
+                                            <div style="text-align:center;">
+                            <a href="https://chartindustries.com/Products/Ventsim">
+                                <button class="dark-blue-btn bluebutton">Ventsim</button>
+                            </a>
+                            </div>
+                <!--<div class="read-more">
+                    <div class="button">+</div>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>                </div>
+                <div class="slick-arrows">
+                    <button class="slick-prev"><i class="fa fa-chevron-left fa-md"></i></button>
+                    <button class="slick-next"><i class="fa fa-chevron-right fa-md"></i></button>
+                </div>
+
+                <div class="bg-html">
+                </div>
+
+                <input type="hidden" id="CarouselItemsToShow" value="4" />
+            </section>
+
+
+<div class="container" id="freeFormContent">
+<div class="row">
+<h2 style="text-align:center">Aftermarket</h2>
+
+<div class="col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
+<p>Howden has developed the unique 4P (Parts, Presence, Precision, Prevention) concept to deliver faster and higher productivity with continuous technological innovation. That means quality products, training, and services designed and tailored to meet each custumer&rsquo;s needs.</p>
+
+<p>We offer Outage Solutions that bring together a wide range of technical expertise we reduce complexity, identify optimized scope solutions, and deliver within the tightest of timescales. With careful planning and risk management, we can avoid lost revenue by reducing the risk of future plant failure, maximising component life, and restoring and improving plant performance.</p>
+
+<p>&nbsp;</p>
+</div>
+
+<div class="col-md-6 col-xl-6 col-lg-6 col-sm-6 col-xs-6">
+<div class="d-flex align-items-center"><img align="center" alt="Howden Aftermarket" class="img-fluid mx-auto" src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/brands/howden/howdenhomemainheroshot-small.jpg" /></div>
+</div>
+
+<div class="row">
+<div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 col-xs-12">
+<center><strong><a class="btn mt-1 mb-3" href="https://www.chartindustries.com/Products/Howden-Aftermarket" style=" border-radius:1px; padding:10px 40px;font-size:1.125rem;color:#fff; background-color:#3fa8de; " type="button">Howden Aftermarket Services</a></strong></center>
+</div>
+</div>
+</div>
+</div>
+
+
+        <!-- Counter/Factoid section -->
+        <div class="bg-counter">
+            <div class="container-counter">
+                <div class="container px-0 counter-1" id="counter-1">
+                    <div class="item">
+                        <div class="row">
+
+    <div class="col-lg-6 col-sm-12 p-0 counterContainer overflow-hidden">
+        <div class="bg-html">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/factoids/cpi_emissionguard_dark_logo1.png?ext=.png" alt="Interesting Facts" class="z-index-0 lazyload" />
+        </div>
+        <div class="counterContent">
+            <p id="number" class="number counter-value" data-count="20173000" data-unitofmeasure=" Nm&#179; " data-count-finished="false">20173000</p>
+            <p class="counterSubtitle">of leaking vent gas prevented</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 secondColumn p-0 counterContainer overflow-hidden">
+        <div>
+            <h2 class="sectionTitleColumn2 mt-2">Emission Reduction</h2>
+            <p class="textDescription">
+                Our innovative EMISSIONGUARD™ TR&#178; Packing Rings have prevented an estimated 20,173,000 Nm&#179; (693,144,000 scf) of gas from leaking through the vents of packing cases mainly in the petrochemical and natural gas compression industry.
+ This reduction in emissions is equivalent to 60,500 metric tons of CO₂, which compares to 150,191,000 miles driven by an average gasoline-powered passenger vehicle.
+
+            </p>
+            <a href="/Businesses-Brands/CPI-Compression"><button type="button" class="btnLearnMore dark-blue-btn">CPI by Howden</button></a>
+        </div>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container-fluid"></div>
+
+    
+    
+
+<div class="container-fluid px-0 about_container overflow-hidden" id="about_container">
+            <div id="dvImgFeaturette1911" class="bg-html image image-1911 active">
+                <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/featurettes/uptimecover-banner-bright.jpg?ext=.jpg" alt="" class="lazyload" />
+            </div>
+            <div id="dvContainerFeaturette1911" class="about_container__title position-absolute mt-5" style="visibility: visble">
+                }
+                <div class="container" id="featuretteText">
+                    <h1 class="text-white mt-5 mb-3" id="about_title">Howden Uptime</h1>
+                    <p class="text-white mb-4" id="about_description">Howden Uptime is your performance monitoring solution, this is the starting point to&nbsp;<strong>data driven advantage</strong>.</p>
+
+                        <a href="/Products/Howden-Uptime"><button type="button" class="btn dark-blue-btn mt-1 mb-3">Check out Howden Uptime!</button></a>
+                </div>
+            </div>
+            <div id="dvImgFeaturette122" class="bg-html image image-122">
+                    <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/featurettes/chart-nyse-opening-bell.jpg?ext=.jpg" alt="" class="lazyload" />
+                </div>
+            <div id="dvContainerFeaturette122" class="about_container__title position-absolute mt-5" style="visibility: hidden">
+                <div class="container" id="featuretteText">
+                    <h1 class="text-white mt-5 mb-3" id="about_title">Sustainability Report</h1>
+                    <p class="text-white mb-4" id="about_description">Our 2024 Sustainability Report clearly outlines our sustainability priorities and strategy, and is a key part of our OneChart&trade; culture. We enable our customers to achieve their environmental and business objectives while improving our own sustainability performance</p>
+
+                            <a href="https://files.chartindustries.com/ChartSustainabilityReport.pdf" target="_blank"><button type="button" class="btn dark-blue-btn mt-1 mb-3">View 2024 Report</button></a>
+                </div>
+            </div>
+</div>
+<div class="container about_container__buttons">
+    <div class="row align-items-center m-auto">
+        <div class="btn-group px-2 featuretteRadioButtonGroup" role="group" aria-label="Basic radio toggle button group">
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnFeaturette1911" autocomplete="off" checked="">
+                <label class="btn btn-primary btn-lg btn-about" for="btnFeaturette1911">Check out Howden Uptime!</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnFeaturette122" autocomplete="off" checked="">
+                <label class="btn btn-primary btn-lg btn-about" for="btnFeaturette122">Sustainability Report</label>
+
+        </div>
+    </div>
+</div>
+    
+
+        <!--Begin Literature-->
+        <!-- Technical library burger buttons  -->
+        <div id="TechnicalLibrary">
+            <div class="technicalLibrary__container">
+                <div class="technicalLibrary__container__header">
+                        <h2>Technical Library</h2>
+                    <p>
+View and download solutions brochures for some of our major markets.                    </p>
+                </div>
+                <div class="technicalLibrary__buttons-container">
+
+
+
+
+            <div class="dvLitItemPanel">
+                <button id="btn_C_S" class="btn btn-primary position-relative literatureButton" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseBrochures" aria-expanded="false" aria-controls="collapseBrochures">
+                    Brochures
+                    <i class="fas fa-xs text-orange fa-chevron-down icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse" id="collapseBrochures">
+                    <div class="card card-body technicalLibrary__button-card container">
+                        <div class="technicalLibrary__button-card__container">
+
+                                    <h4>Air and Gas Handling in Oil, Gas and Chemicals</h4>
+                                        <p>Howden air and gas handling equipment is highly prized in upstream and midstream oil and gas, refining chemicals and petrochemicals. Enabling efficient performance and reliable operations across the hydrocarbon production chain.
+</p>
+                                    <a href="https://files.chartindustries.com/Howden_OilGas_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Chesterfield UK Aftermarket Facility</h4>
+                                        <p>Centrally located in the UK and opened in 2025, the Chesterfield facility brings together rotating equipment and cryogenic expertise for a full service aftermarket capability.</p>
+                                    <a href="https://files.chartindustries.com/Chesterfield_facility.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Compressor Technology for Biogas</h4>
+                                        <p>As the biogas industry continues to advance towards a more sustainable and energy efficient future, Howden screw compressors stand at the forefront of innovation revolutionizing the way biogas is process, upgraded and distributed.</p>
+                                    <a href="https://files.chartindustries.com/compressor_technology_biogas.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Diaphragm Compressor Packages for Hydrogen</h4>
+                                        <p>TFC90 and TFC180 standardized diaphragm compressor packages specifically designed for hydrogen applications. Skid-mounted compressors including all process
+equipment, piping and auxiliary systems.</p>
+                                    <a href="https://files.chartindustries.com/TFC90_180_Diaphragm_Compressors.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Howden Select</h4>
+                                        <p>Screw compressor configuration software for all process gas and refrigeration selections in a single unified platform.</p>
+                                    <a href="https://files.chartindustries.com/Howden_Select.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Hydrogen Compression Solutions</h4>
+                                        <p>Compression technologies are a key component in the hydrogen value chain and accelerate the
+energy transition. </p>
+                                    <a href="https://files.chartindustries.com/Howden_Hydrogen_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Kühnle, Kopp & Kausch®</h4>
+                                        <p>Howden range of Kühnle, Kopp & Kausch® single and multi-stage industrial turbo compressors.</p>
+                                    <a href="https://files.chartindustries.com/" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Maintenance Partners by Howden (HMP)</h4>
+                                        <p>Total solution aftermarket service partner maximizing the efficiency, longevity and safety of rotating and turbomachinery equipment.
+Servicing all Howden brands and 3rd party equipment.</p>
+                                    <a href="https://files.chartindustries.com/Maintenance_Partners_HMP_2024.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Solutions for the Cement Sector</h4>
+                                        <p></p>
+                                    <a href="https://files.chartindustries.com/Howden_Cement_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Solutions for the Energy Recovery Sector</h4>
+                                        <p></p>
+                                    <a href="https://files.chartindustries.com/Howden_EnergyRecovery_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Solutions for the Metals Industry</h4>
+                                        <p></p>
+                                    <a href="https://files.chartindustries.com/Howden_Metals_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Solutions for the Mining Industry</h4>
+                                        <p>An overview of our Total Mine Ventilation Solution </p>
+                                    <a href="https://files.chartindustries.com/Howden_Mining_TMVS_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Solutions for the Wastewater Sector</h4>
+                                        <p></p>
+                                    <a href="https://files.chartindustries.com/Howden_Wastewater_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Spencer - Blowers and Vacuum Systems</h4>
+                                        <p>Spencer's products include single and multi-stage centrifugal blowers, gas boosters, central vacuum systems, mobile vacuum units, separators, regenerative blowers, electrical control panels, tubing and fittings and vacuum accessories.</p>
+                                    <a href="https://files.chartindustries.com/722N_Spencer_Product_Overview.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Spencer - Custom Blowers and Gas Boosters</h4>
+                                        <p>The specialists for air and gas handling equipment in corrosive, toxic and harsh environments and applications, such as high temperature, high pressure and gastight requirements.</p>
+                                    <a href="https://files.chartindustries.com/510E_Spencer_Custom_Blowers_and_Gas_Boosters_071018.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Spencer - Industravac Vacuum Units</h4>
+                                        <p>Powerful, low noise, high efficiency vacuums maintain a clean operational environment for employees and visitors.</p>
+                                    <a href="https://files.chartindustries.com/Spencer_Industravac_2020.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Spencer - Vortex Regenerative Blowers</h4>
+                                        <p>Compact, lightweight design, wide performance range, proven long term reliability, oil-free air delivery, reduced heat and noise with application flexibility.</p>
+                                    <a href="https://files.chartindustries.com/Spencer_Vortex_Regenerative_Blowers_.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>TURBLEX Centrifugal Turbo Compressor</h4>
+                                        <p>TURBLEX compressors are engineered and built according to plant specifications and consume significantly less energy compared to other compressor designs.</p>
+                                    <a href="https://files.chartindustries.com/Howden_Turblex_Brochure.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>TURBLEX/HV-TURBO - Wastewater Aeration</h4>
+                                        <p>TURBLEX/HV-TURBO compressors are significantly more energy efficient compared to other compressor designs used for biological effluent treatment in municipal and industrial sewage plants.</p>
+                                    <a href="https://files.chartindustries.com/Howden_Turblex_aeration.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>W255 Product Leaflet</h4>
+                                        <p></p>
+                                    <a href="https://files.chartindustries.com/Howden_ScrewCompressor_W255_leaflet.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dvLitItemPanel">
+                <button id="btn_C_S" class="btn btn-primary position-relative literatureButton" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCaseStudies-Articles" aria-expanded="false" aria-controls="collapseCaseStudies-Articles">
+                    Case Studies-Articles
+                    <i class="fas fa-xs text-orange fa-chevron-down icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse" id="collapseCaseStudies-Articles">
+                    <div class="card card-body technicalLibrary__button-card container">
+                        <div class="technicalLibrary__button-card__container">
+
+                                    <h4>Air-Preheater Rotor Retrofit</h4>
+                                        <p>At Millmerran power station the Howden Air Pre-Heater (APH) is an essential part of the system saving 120MW of energy at peak load. When significant erosion of the rotors occurred over years of operation they turned to Howden for a local retrofit solution to maintain operational reliability and long-term performance.</p>
+                                    <a href="https://files.chartindustries.com/Millmerran_power_station_casestudy.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>FLNG Compression</h4>
+                                        <p>Howden screw compressors have been selected for a number of FLNG projects for their compact design, high performance and reliability.</p>
+                                    <a href="https://files.chartindustries.com/FLNGscrewcompressor.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Mine Ventilation and Cooling</h4>
+                                        <p>Combining the air and gas handling products and mining experience of Howden with Chart's cryogenic expertise creates a unique opportunity for enhanced, efficient cooling solutions for mines.
+Article first published in Engineering News & Mining Weekly.</p>
+                                    <a href="https://files.chartindustries.com/Mine_cooling_and_ventilation.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dvLitItemPanel">
+                <button id="btn_C_S" class="btn btn-primary position-relative literatureButton" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCertifications" aria-expanded="false" aria-controls="collapseCertifications">
+                    Certifications
+                    <i class="fas fa-xs text-orange fa-chevron-down icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse" id="collapseCertifications">
+                    <div class="card card-body technicalLibrary__button-card container">
+                        <div class="technicalLibrary__button-card__container">
+
+                                    <h4>Howden Axial Fans ApS - ISO14001</h4>
+                                        <p>Bureau Veritas Certification</p>
+                                    <a href="https://files.chartindustries.com/Howden_Axial_Fans_ApS_ISO14001.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Howden Axial Fans ApS - ISO45001</h4>
+                                        <p>Bureau Veritas Certification</p>
+                                    <a href="https://files.chartindustries.com/Howden_Axial_Fans_ApS_ISO45001.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Howden Axial Fans ApS - ISO9001</h4>
+                                        <p>Bureau Veritas Certification</p>
+                                    <a href="https://files.chartindustries.com/Howden_Axial_Fans_ApS_ISO9001.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dvLitItemPanel">
+                <button id="btn_C_S" class="btn btn-primary position-relative literatureButton" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTechnicalBulletins" aria-expanded="false" aria-controls="collapseTechnicalBulletins">
+                    Technical Bulletins
+                    <i class="fas fa-xs text-orange fa-chevron-down icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse" id="collapseTechnicalBulletins">
+                    <div class="card card-body technicalLibrary__button-card container">
+                        <div class="technicalLibrary__button-card__container">
+
+                                    <h4>Diaphragm Compressor Maintenance Parts</h4>
+                                        <p>Howden recommended maintenance spare part stocks for Burton Corblin diaphragm compressors.</p>
+                                    <a href="https://files.chartindustries.com/diaphragm_compressor_maintenance_parts.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Diaphragm Replacement Instructions</h4>
+                                        <p>Storage and installation instructions for replacement diaphragms for Burton Corblin compressors.</p>
+                                    <a href="https://files.chartindustries.com/diaphragm_replacement_instructions.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Diaphragms for Burton Corblin Compressors</h4>
+                                        <p>Maintain the integrity of your valuable assets with Howden OEM parts.</p>
+                                    <a href="https://files.chartindustries.com/OEM_diaphragms.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Dynalim Limiter</h4>
+                                        <p>Set's the compressor's maximum discharge pressure.</p>
+                                    <a href="https://files.chartindustries.com/diaphragm_compressors_Dynalim_limiter.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Measuring Kit - Limiter Setting Point</h4>
+                                        <p>An accurate hydraulic limiter setting is critical for the efficiency and reliability of diaphragm compressors.</p>
+                                    <a href="https://files.chartindustries.com/diaphragm_compressors_measuring_kit.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+                                    <h4>Valves for Burton Corblin Compressors</h4>
+                                        <p>Maintain the integrity of your valuable assets with Howden OEM parts.</p>
+                                    <a href="https://files.chartindustries.com/Burton_Corblin_OEM-valves.pdf" target="_blank">
+                                        <button type="button" class="btn btn-secondary">Download</button>
+                                    </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+        <!--End Literature-->
+
+    <div class="container" style="padding-top: 50px;">
+    </div>
+
+        <!-- #Connect with Business -->
+        <div id="connectBusiness" class="position-relative overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9 col-md-9 col-sm-12 firstColumn">
+                            <h2 class="sectionTitle mt-2">Contact Howden</h2>
+                                                    <span class="textDescription">
+                                To send an enquiry, submit an RFQ, find our locations or join our team, click the Contact Us button.
+                            </span>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+
+    <p class="textDescription font-weight-bold mb-1">
+        <b class="color-white">
+            Telephone&nbsp;
++44 141 885 7500        </b>
+    </p>
+
+
+
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <button type="button" class="btnLearnMore" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-html">
+                    <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/brands/howden/contact-background.jpg?ext=.jpg" class="lazyload" alt="Background Image" />
+            </div>
+        </div>
+        <div class="container" style="padding-top: 50px;">
+        </div>
+
+    <!-- #END OF Connect with Business -->
+        <div class="container-fluid position-relative overflow-hidden" id="ChartNews">
+            <div class="row position-relative z-index-1">
+                <div class="col-md-4 col-12" id="title">
+                    <div class="chartNews-all">
+<div class="chartNew-all-wrap">
+    <span class="title">Chart News</span>
+    <p class="text p-0">
+        Stay up to date on all of the great things happening at Chart.
+    </p>
+    <a href="/News-And-Events"><button class="btn dark-blue-btn button" type="button">View All News</button></a>
+</div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12 position-relative p-0">
+                    <div class="item " id="chart-slider">
+                        <div class="chartNews-slider">
+
+
+<div class="card">
+    <a href="/News-And-Events/Hydrogen-compressors-in-India">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/reciprocating-compressor-for-hydrogen-1.jpg?ext=.jpg" alt="Chart supplies hydrogen compressors in India" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+Howden                </div>
+                <span class="title">
+                    Chart supplies hydrogen compressors in India
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    We are delighted to announce the successful delivery of large reciprocating compressor…
+                </p>
+                <span class="date">
+
+                    10/30/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/Sempra-Port-Arthur-LNG">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/achx-h-model-2.jpg?ext=.jpg" alt="Chart selected for US LNG project" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    Chart selected for US LNG project
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    Chart has receieved an award by Bechtel Energy for the supply of air-cooled and brazed…
+                </p>
+                <span class="date">
+
+                    10/6/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/LBG-fueling-station">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/biolng-fuelling-station-811x563.jpg?ext=.jpg" alt="Chart delivers turnkey biogas fueling station for European trucking fleets" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    Chart delivers turnkey biogas fueling station for European trucking fleets
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    Chart has successfully completed the largest liquefied biogas refuelling station in…
+                </p>
+                <span class="date">
+
+                    9/3/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/Baker-Hughes-to-Acquire-Chart-Industries">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/thumbnails/bkrgtls-thumb.jpg?ext=.jpg" alt="Baker Hughes to Acquire Chart Industries" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    Baker Hughes to Acquire Chart Industries
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    Chart Industries (NYSE: GTLS) (Chart) and Baker Hughes (NASDAQ: BKR) announced they have…
+                </p>
+                <span class="date">
+
+                    7/29/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/LNG-Alliance">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/mid-scale-lng-3d-model.png?ext=.png" alt="LNG Alliance Selects Chart Technology and Modular Solution" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    LNG Alliance Selects Chart Technology and Modular Solution
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    LNG Alliance Pte Ltd, an integrated provider of LNG export terminal infrastructure and LNG…
+                </p>
+                <span class="date">
+
+                    7/11/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/PFAS-Guard">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/pfasguard-system_811x563.jpg?ext=.jpg" alt="ChartWater™ appointed as exclusive distributor for PFAS Guard, LLC" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+ChartWater                </div>
+                <span class="title">
+                    ChartWater™ appointed as exclusive distributor for PFAS Guard, LLC
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    ChartWater, a leader in advanced water treatment technologies and a brand of Chart…
+                </p>
+                <span class="date">
+
+                    7/3/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/Chart-ships-worlds-largest-tanks">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/cryogenic-tanks-1700m3-811x563.jpg?ext=.jpg" alt="Chart ships record breaking tanks" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    Chart ships record breaking tanks
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    Chart is pleased to announce a major milestone for the company and industry with shipment…
+                </p>
+                <span class="date">
+
+                    5/7/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/Blue-Spruce-Operating">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/cold-box-despatch-811x563.png?ext=.png" alt="Chart receives helium and carbon sequestration project award" class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+                        Chart Industries
+                </div>
+                <span class="title">
+                    Chart receives helium and carbon sequestration project award
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    Chart today announced selection by Blue Spruce Operating LLC to provide the Nitrogen…
+                </p>
+                <span class="date">
+
+                    3/11/2025
+                </span>
+            </div>
+        </a>
+</div>
+<div class="card">
+    <a href="/News-And-Events/ChartWater-SDOX-UK">
+            <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/pinheirosriversdoxinstallation-811x563.jpg?ext=.jpg" alt="ChartWater™ introduces SDOX&#174; technology in UK " class="img lazyload">
+            <div class="card-content">
+                <div class="category">
+ChartWater                </div>
+                <span class="title">
+                    ChartWater™ introduces SDOX&#174; technology in UK 
+                </span>
+                <p class="text">
+                    <!--93 chars is the limit here-->
+                    
+
+                    ChartWater is pleased to expand the supersaturated dissolved oxygen technology offering…
+                </p>
+                <span class="date">
+
+                    2/24/2025
+                </span>
+            </div>
+        </a>
+</div>
+                        </div>
+                        <div class="arrows">
+                            <button class="arrow-prev" name="previous"><i class="fa fa-chevron-left fa-md"></i></button>
+                            <button class="arrow-next" name="next"><i class="fa fa-chevron-right fa-md"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-html gradient-overlay">
+                    <img data-src="https://chartwebstorage.blob.core.windows.net/cms/chartindustries/media/img/news/ht1000-1366x580.jpg?ext=.jpg" class="lazyload" alt="Latest Chart News">
+            </div>
+        </div>
+    
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-lg-start overflow-hidden">
+    <!-- Container -->
+    <div class="container px-0 py-3" id="footer-container">
+        <div class="row main-row p-0 m-0">
+            <div class="col-lg-3 col-md-3 mb-4 mb-md-0 socialMediaFooter  d-flex justify-content-center d-md-inline-block align-items-center order-xs-2">
+                <div class="social_media_container">
+
+    <ul class="list-unstyled mb-0 d-flex d-md-inline-block">
+            <li>
+                <a href="https://www.facebook.com/ChartInd" class="facebook" rel="external" target="_blank" rel="noopener">
+                <i class="fab fa-facebook"></i>  facebook</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/chart_industries/" class="instagram" rel="external" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>  instagram</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/company/27725?trk=tyah" class="linkedin" rel="external" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>  linkedin</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Chartind" class="twitter" rel="external" target="_blank" rel="noopener">
+                <i class="fab fa-twitter"></i>  twitter</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/user/ChartIndustries" class="youtube" rel="external" target="_blank" rel="noopener">
+                <i class="fab fa-youtube"></i>  youtube</a>
+            </li>
+    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 columna Seccion Titulo-->
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0 text-center seccionCentral order-xs-1">
+                <div>
+                    <h5 class="sectionTitle">Cooler By Design<sup>&reg;</sup></h5>
+
+                        <button class="green-btn green-btn-text" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                    </div>
+
+            </div>
+
+            <!--3 columna Seccion Legal-->
+            <div class="col-lg-3 col-md-3  seccionLegal text-left order-xs-3">
+
+<ul class="list-unstyled d-flex flex-column d-md-inline-block">
+        <li>
+            <a href="/Terms-Conditions">Terms &amp; Conditions</a>
+        </li>
+        <li>
+            <a href="/Privacy-Policy">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="/Cookie-Policy">Cookie Policy</a>
+        </li>
+        <li>
+            <a href="/California-Privacy-Notice">California Privacy Notice</a>
+        </li>
+        <li>
+            <a href="/China-Privacy-Notice">China Privacy Notice</a>
+        </li>
+        <li>
+            <a href="/Supply-Chain-Due-Diligence-Act">Supply Chain Due Diligence Act</a>
+        </li>
+</ul>
+            </div>
+        </div>
+
+        <div class="row year-row">
+            <div class="col-12">
+                <div class="text-left year p-3 p-lg-0">
+                    <p class="copyright">&copy; 2025 Chart Industries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+        
+
+        <script src="/bundles/scripts?v="></script>
+
+
+        
+        
+
+        
+
+
+        <script src="/Scripts/bootstrap.bundle.min.js"></script>
+        
+
+
+        <script type="text/javascript" src="/Scripts/slick.min.js" defer></script>
+        <!--END OF Libraries -->
+
+        <script src="/Scripts/script.js?v=2.60.0" defer></script>
+        
+
+
+
+
+
+        <!--Contact Us modal-->
+
+        <div class="modal fade" id="contactModal" tabindex="-1"
+             role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Chart</h5>
+                        <!--<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                        <div class="close closeButton" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-2x fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <!-- This is where we create the Chooser -->
+                        <div class="container" id="ChooserDiv">
+                            <div class="row">
+                                <a href="https://rfqapplication.howden.com/?rfqrfi=RFQ" class="contactMenu">
+                                    <div class="col-sm-12 contactMenu">
+                                        <img src="/img/rfq.png" /> Request A Quote
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row" id="EmailRow">
+                                <a href="#" class="contactMenu" id="EmailContactButton">
+                                    <div class="col-sm-12 contactMenu">
+                                        <img src="/img/inquiry.png" id="inquiryButton" /> Email An Inquiry
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="row">
+                                <a href="/locations" class="contactMenu">
+                                    <div class="col-sm-12 contactMenu">
+                                        <img src="/img/location.png" /> Find Our Locations
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <a href="/careers" class="contactMenu">
+                                    <div class="col-sm-12 contactMenu">
+                                        <img src="/img/workforus.png" /> Join Our Team
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /Chooser-->
+                        <div id="ContactUsFormDiv" style="display: none;">
+                            <form id="ContactForm" class="row g-2 needs-validation" method="post" action="/contactform" novalidate>
+                                <input name="__RequestVerificationToken" type="hidden" value="F1x4a6BT3fmag3qNcHihdzQVLyo01tvDtr7t05Qd7nF0rLVlQLoLRTAXP48llSf6FVRMaPLvbz7z6a9G-wnfjIWBriCN8LI0r7vu_8MQq-c1" />
+                                <div class="col-md-6">
+                                    <label for="FirstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control  form-control-lg" id="FirstName" value="" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a first name.
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="LastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control form-control-lg" id="LastName" value="" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a last name.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="Company" class="form-label">Company *</label>
+                                    <input type="text" class="form-control form-control-lg" id="Company" value="" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a company name.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="Email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control form-control-lg" id="Email" required>
+                                    
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="Country" class="form-label">Country *</label>
+                                    <select class="form-control form-control-lg form-select" id="Country_Selected" data-init="" required>
+                                        <option value="">select a country</option>
+                                        
+                                            <option value="Afghanistan">Afghanistan</option>
+                                            <option value="Aland Islands">Aland Islands</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Anguilla">Anguilla</option>
+                                            <option value="Antarctica">Antarctica</option>
+                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Aruba">Aruba</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belarus - Archive">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bhutan">Bhutan</option>
+                                            <option value="Bolivia">Bolivia, Plurinational State of</option>
+                                            <option value="Bonaire">Bonaire, Sint Eustatius and Saba</option>
+                                            <option value="Bosnia and Hercegovina">Bosnia and Herzegovina</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Bouvet Island">Bouvet Island</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                            <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Burundi">Burundi</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Cape Verdi">Cape Verde</option>
+                                            <option value="Cayman Islands">Cayman Islands</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Christmas Island">Christmas Island</option>
+                                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo">Congo</option>
+                                            <option value="Congo">Congo, the Democratic Republic of the</option>
+                                            <option value="Cook Islands">Cook Islands</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Ivory Coast">Cote d&#39;Ivoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Cura&#231;ao">Cura&#231;ao</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Djibouti">Djibouti</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Eritrea">Eritrea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Ethiopia">Ethiopia</option>
+                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                            <option value="Faroe Islands">Faroe Islands</option>
+                                            <option value="Fiji">Fiji</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="French Guiana">French Guiana</option>
+                                            <option value="Tahiti">French Polynesia</option>
+                                            <option value="French Southern Territories">French Southern Territories</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Gambia">Gambia</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="Gibraltar">Gibraltar</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Greenland">Greenland</option>
+                                            <option value="Grenada/Carricou">Grenada</option>
+                                            <option value="Guadeloupe">Guadeloupe</option>
+                                            <option value="Guam">Guam</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guernsey">Guernsey</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                                            <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Iran">Iran, Islamic Republic of</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Isle of Man">Isle of Man</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jersey">Jersey</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kazakhstan">Kazakhstan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Kiribati Republic">Kiribati</option>
+                                            <option value="Korea">Korea, Democratic People&#39;s Republic of</option>
+                                            <option value="Korea">Korea, Republic of</option>
+                                            <option value="Kosovo">Kosovo</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                            <option value="Laos">Lao People&#39;s Democratic Republic</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Lesotho">Lesotho</option>
+                                            <option value="Liberia">Liberia</option>
+                                            <option value="Libya">Libyan Arab Jamahiriya</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macao">Macao</option>
+                                            <option value="Macedonia">Macedonia, the former Yugoslav Republic of</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malawi">Malawi</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Maldives">Maldives</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Malta">Malta</option>
+                                            <option value="Martinique">Martinique</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mayotte">Mayotte</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Moldova">Moldova, Republic of</option>
+                                            <option value="Monaco">Monaco</option>
+                                            <option value="Mongolia">Mongolia</option>
+                                            <option value="Montenegro">Montenegro</option>
+                                            <option value="Montserrat">Montserrat</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Myanmar">Myanmar</option>
+                                            <option value="Namibia">Namibia</option>
+                                            <option value="Nauru">Nauru</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherlands">Netherlands</option>
+                                            <option value="New Caledonia">New Caledonia</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Niue">Niue</option>
+                                            <option value="Norfolk Island">Norfolk Island</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Palestine">Palestinian Territory, Occupied</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Pitcairn">Pitcairn</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Puerto Rico">Puerto Rico</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Reunion">Reunion</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russia - Archive">Russian Federation</option>
+                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="Saint Barth&#233;lemy">Saint Barth&#233;lemy</option>
+                                            <option value="Saint Helena">Saint Helena, Ascension and Tristan da Cunha</option>
+                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                            <option value="Saint Lucia">Saint Lucia</option>
+                                            <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                            <option value="American Samoa">Samoa</option>
+                                            <option value="San Marino">San Marino</option>
+                                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Serbia">Serbia</option>
+                                            <option value="Serbia and Montenegro">Serbia and Montenegro</option>
+                                            <option value="Seychelles">Seychelles</option>
+                                            <option value="Sierra Leone">Sierra Leone</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="Solomon Islands">Solomon Islands</option>
+                                            <option value="Somalia">Somalia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                                            <option value="South Sudan">South Sudan</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sudan">Sudan</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                            <option value="Switzerland">Swaziland</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Tajikistan">Tajikistan</option>
+                                            <option value="Tanzania">Tanzania, United Republic of</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Timor-Leste">Timor-Leste</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Tokelau">Tokelau</option>
+                                            <option value="Tonga">Tonga</option>
+                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Turkmenistan">Turkmenistan</option>
+                                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                            <option value="Tuvalu">Tuvalu</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="USA">United States</option>
+                                            <option value="Uruguay">Uruguay</option>
+                                            <option value="Uzbekistan">Uzbekistan</option>
+                                            <option value="Vanuatu">Vanuatu</option>
+                                            <option value="Venezuela">Venezuela, Bolivarian Republic of</option>
+                                            <option value="Vietnam">Viet Nam</option>
+                                            <option value="Virgin Islands">Virgin Islands</option>
+                                            <option value="British Virgin Islands">Virgin Islands, British</option>
+                                            <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                            <option value="Western Sahara">Western Sahara</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Zambia">Zambia</option>
+                                            <option value="Zimbabwe">Zimbabwe</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a country.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="ContactMeRegarding" class="form-label">Contact me regarding *</label>
+                                    <select class="form-control form-control-lg form-select" id="ContactMeRegarding" placeholder="select a reason for contact" required>
+                                        <option value="">select a reason</option>
+                                        <option value="Aftersales (Parts / Service / Performance upgrade)">Aftersales (Parts / Service / Performance upgrade)</option>
+                                        <option value="New Equipment">New Equipment</option>
+                                        <option value="General Product Information">General Product Information</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a reason for contact.
+                                    </div>
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    
+                                    <label for="Phone" class="form-label">Phone Number * (eg: +1 (770) 123-7654 )</label>
+                                    <input type="text" class="form-control form-control-lg" id="Phone" placeholder="enter phone number" required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid phone number.
+                                    </div>
+                                    <div class="valid-feedback">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="Notes" class="col-form-label">I am interested in *</label>
+                                    <textarea class="form-control form-control-lg" id="Notes" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please tell us what you are interested in.
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-12">
+                                    <br />
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6LeyaVMUAAAAACWD1tmC1oWppmJ_KZdbHB8hKy0n"
+                                         data-callback="InvisibleCaptchaCallback"
+                                         data-expired-callback="ErrorCallBack"
+                                         data-error-callback="ErrorCallBack"
+                                         >
+                                    </div>
+                                    <input id="HiddenRecaptcha" name="HiddenRecaptcha" type="hidden" value="" data-validate="true" required />
+                                    <input id="ContactRoutingMode" name="ContactRoutingMode" type="hidden" value="Email" />
+                                    <input id="ContactRoutingEmail" name="ContactRoutingEmail" type="hidden" value="paul.shields@chartindustries.com; andrew.laviers@howden.com" />
+                                    <input id="DetC" name="DetC" type="hidden" value="" data-called="false" />
+                                    <input id="DetR" name="DetR" type="hidden" value="" />
+                                    <input id="DetCC" name="DetCC" type="hidden" value="" />
+                                    <div class="invalid-feedback">
+                                        Please complete the captcha by checking the "I'm not a robot" check box.
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button class="btn btn-primary" id="btnContactSubmit" type="submit" name="Submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--Thankyou-->
+                        <div id="ThankYouMessage" style="display: none;">
+                            <p>Thank you for your interest in Chart's products and services.</p><p>Your request has been received and a member of our sales and customer service team will respond shortly. </p>
+                        </div>
+                        <!--AcceptAll Cookies message-->
+                        <div id="AcceptCookiesDiv" style="display: none;">
+                            <p>Please open privacy settings and Accept All Cookies to use our "Email an Inquiry" feature.</p><p>
+                                <center><a href="javascript:UC_UI.showSecondLayer();" class="btn btn-primary">Open Privacy Settings</a> </center>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Video Modal-->
+
+        <div class="modal fade" id="VideoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="close closeButton videoCloseBtn" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-2x fa-times-circle"></i></div>
+                    <div class="modal-body">
+
+
+
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="VideoIframe" allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Video Modal-->
+        
+        <script src="/Scripts/footer.js?v=2.60.0"></script>
+        
+
+
+        
+        <script id="usercentrics-cmp"
+                data-settings-id="RZGpbvOmP"
+                src="https://web.cmp.usercentrics.eu/ui/loader.js"
+                async>
+        </script>
+
+        <style>
+        </style>
+
+        <script>
+            $(document).ready(function () {
+
+                var $videoSrc;
+                $('.video-btn').click(function () {
+                    $videoSrc = $(this).data("src");
+                    $('#VideoModal').modal('show');
+                });
+
+                console.log($videoSrc);
+
+                // when the modal is opened autoplay it
+                $('#VideoModal').on('shown.bs.modal', function (e) {
+
+                    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+                    $("#VideoIframe").attr('src', $videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1");
+                })
+
+                // stop playing the youtube video when I close the modal
+                $('#VideoModal').on('hide.bs.modal', function (e) {
+                    // a poor man's stop video
+                    $("#VideoIframe").attr('src', "");
+                })
+
+
+            });
+        </script>
+                <script type="text/javascript">
+                    var customerServiceEmail = 'inquiries.USA@Howden.com';
+                </script>
+
+</body>
+</html>

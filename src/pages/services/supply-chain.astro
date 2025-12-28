@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Supply Chain" currentPage="/services/supply-chain">
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Supply Chain</h1>
+      <p>Optimize your supply chain for resilience, efficiency, and compliance.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>Building Resilient Supply Chains</h2>
+          <p>In today's complex global environment, a robust supply chain is essential for business success. NovintiX helps life sciences companies design, optimize, and manage supply chains that deliver consistent quality while minimizing risk and cost.</p>
+
+          <h3>Our Services Include:</h3>
+          <ul>
+            <li><strong>Supply Chain Strategy</strong> - End-to-end supply chain design and optimization</li>
+            <li><strong>Supplier Management</strong> - Qualification, auditing, and performance monitoring</li>
+            <li><strong>Risk Management</strong> - Identification and mitigation of supply chain risks</li>
+            <li><strong>Inventory Optimization</strong> - Demand planning and inventory management</li>
+            <li><strong>Logistics & Distribution</strong> - Cold chain management and distribution network design</li>
+            <li><strong>Compliance</strong> - GDP, serialization, and regulatory requirements</li>
+          </ul>
+
+          <h3>Why Choose NovintiX?</h3>
+          <p>Our supply chain experts understand the unique challenges of regulated industries. We combine operational excellence with deep regulatory knowledge to help you build supply chains that are both efficient and compliant.</p>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h5>Related Services</h5>
+            <ul>
+              <li><a href="/services/manufacturing">Manufacturing</a></li>
+              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
+              <li><a href="/services/product-engineering">Product Engineering</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h5>Get Started</h5>
+            <p>Ready to optimize your supply chain?</p>
+            <a href="/contact-us" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    padding: 7% 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url('/images/pattern.png') repeat;
+    opacity: 0.1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 720px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    color: rgba(255,255,255,0.85);
+    font-size: 18px;
+  }
+
+  .content-section {
+    padding: 5em 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+
+  .content-main h2 {
+    margin-bottom: 20px;
+  }
+
+  .content-main h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .content-main p {
+    color: #7C7C7D;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .content-main ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+
+  .content-main li {
+    color: #7C7C7D;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  .content-main li strong {
+    color: #1E2128;
+  }
+
+  .sidebar-card {
+    background: #f8f8f9;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .sidebar-card h5 {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar-card li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar-card a {
+    color: #033C59;
+    font-size: 14px;
+  }
+
+  .sidebar-card a:hover {
+    color: #F5A302;
+  }
+
+  .sidebar-card p {
+    color: #7C7C7D;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

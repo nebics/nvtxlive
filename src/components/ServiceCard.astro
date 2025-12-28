@@ -1,0 +1,83 @@
+---
+interface Props {
+  icon?: string;
+  title: string;
+  description: string;
+  link?: string;
+}
+
+const { icon, title, description, link } = Astro.props;
+---
+
+<div class="service-card">
+  {icon && (
+    <div class="service-icon">
+      <Fragment set:html={icon} />
+    </div>
+  )}
+  <h5 class="service-title">{title}</h5>
+  <p class="service-description">{description}</p>
+  {link && (
+    <a href={link} class="service-link">Learn More →</a>
+  )}
+</div>
+
+<style>
+  .service-card {
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    background: #F5A302;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .service-icon :global(svg) {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1E2128;
+    margin-bottom: 10px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    color: #7C7C7D;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .service-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #033C59;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .service-link:hover {
+    color: #F5A302;
+  }
+</style>

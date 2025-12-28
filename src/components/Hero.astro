@@ -1,0 +1,136 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  backgroundImage?: string;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  backgroundImage = '/images/hero-bg.jpg',
+  showCta = false,
+  ctaText = 'Learn More',
+  ctaLink = '#'
+} = Astro.props;
+---
+
+<section class="hero" style={`--bg-image: url('${backgroundImage}')`}>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      {subtitle && <h6 class="hero-subtitle">{subtitle}</h6>}
+      <h1 class="hero-title">{title}</h1>
+      {description && <p class="hero-description">{description}</p>}
+      {showCta && (
+        <a href={ctaLink} class="btn hero-cta">{ctaText}</a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    padding: 7% 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #1E2128 0%, rgba(30, 33, 40, 0.5) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 4em;
+  }
+
+  .hero-subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #F5A302;
+    margin-bottom: 15px;
+  }
+
+  .hero-title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+
+  .hero-cta {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    .hero {
+      min-height: 400px;
+      padding: 5em 0;
+    }
+
+    .hero-text {
+      padding: 3em;
+    }
+
+    .hero-title {
+      font-size: 37px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero {
+      min-height: 350px;
+    }
+
+    .hero-text {
+      padding: 2em;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+  }
+</style>
