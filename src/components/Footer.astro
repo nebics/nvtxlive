@@ -7,12 +7,25 @@ const currentYear = new Date().getFullYear();
     <div class="footer-main">
       <div class="footer-brand">
         <a href="/" class="footer-logo">
+          <span class="logo-icon">N</span>
           <span class="logo-text">NovintiX</span>
         </a>
-        <p class="footer-tagline">Accelerate Transformation To Shape Your Future</p>
         <p class="footer-description">
-          Let's Embark on a Journey with NOVINTIX – Discover Innovation, Embrace Transformation, and Unlock Your Business's Full Potential.
+          Your trusted partner in life sciences consulting. We help companies bring innovative products to market faster.
         </p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="mailto:info@novintix.com" aria-label="Email" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer-links">
@@ -33,91 +46,127 @@ const currentYear = new Date().getFullYear();
             <li><a href="/industries">Industries</a></li>
             <li><a href="/digital-solutions">Digital Solutions</a></li>
             <li><a href="/careers">Careers</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/careers/apply">Open Positions</a></li>
+            <li><a href="/contact-us">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h5>Contact</h5>
-          <ul class="contact-info">
-            <li>
-              <strong>Email</strong>
-              <a href="mailto:info@novintix.com">info@novintix.com</a>
-            </li>
-            <li>
-              <strong>Phone</strong>
-              <span>Contact us for details</span>
-            </li>
-          </ul>
+          <h5>Get in Touch</h5>
+          <p class="footer-contact-text">Have a project in mind? We'd love to hear from you.</p>
+          <a href="mailto:info@novintix.com" class="footer-email">info@novintix.com</a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; {currentYear} NovintiX. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    background: #1E2128;
+    background: var(--color-primary);
     color: #fff;
-    padding: 60px 0 30px;
   }
 
   .footer-container {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.5rem;
   }
 
   .footer-main {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    grid-template-columns: 1.2fr 2fr;
+    gap: 4rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .footer-brand {
-    max-width: 300px;
+    max-width: 280px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-logo .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--gradient-primary);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    border-radius: 10px;
   }
 
   .footer-logo .logo-text {
-    font-family: 'Rubik', sans-serif;
-    font-size: 28px;
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
     font-weight: 700;
-    color: #E05A47;
-  }
-
-  .footer-tagline {
-    font-size: 12px;
-    color: #F5A302;
-    margin-top: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #fff;
+    letter-spacing: -0.02em;
   }
 
   .footer-description {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #90A4AF;
-    line-height: 1.6;
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-base);
+  }
+
+  .social-link:hover {
+    background: var(--gradient-primary);
+    color: #fff;
+    transform: translateY(-2px);
   }
 
   .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 2rem;
   }
 
   .footer-column h5 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 16px;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
   }
 
   .footer-column ul {
@@ -127,56 +176,75 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-column li {
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
   }
 
   .footer-column a {
-    font-size: 14px;
-    color: #90A4AF;
-    transition: color 0.3s ease;
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all var(--transition-fast);
   }
 
   .footer-column a:hover {
-    color: #F5A302;
+    color: #fff;
   }
 
-  .contact-info li {
-    margin-bottom: 15px;
+  .footer-contact-text {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
-  .contact-info strong {
-    display: block;
-    font-size: 12px;
-    color: #F5A302;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+  .footer-email {
+    display: inline-block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-accent-light);
+    transition: color var(--transition-fast);
   }
 
-  .contact-info span {
-    font-size: 14px;
-    color: #90A4AF;
+  .footer-email:hover {
+    color: #fff;
   }
 
+  /* Footer Bottom */
   .footer-bottom {
-    padding-top: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
   }
 
   .footer-bottom p {
-    font-size: 13px;
-    color: #90A4AF;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
   }
 
+  .footer-legal {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-legal a {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-legal a:hover {
+    color: #fff;
+  }
+
+  /* Responsive */
   @media (max-width: 1024px) {
     .footer-main {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 3rem;
     }
 
     .footer-brand {
       max-width: 100%;
-      text-align: center;
     }
 
     .footer-links {
@@ -184,10 +252,28 @@ const currentYear = new Date().getFullYear();
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
+    .footer-top {
+      padding: 3rem 0;
+    }
+
+    .footer-main {
+      padding: 3rem 0;
+    }
+
     .footer-links {
       grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
       text-align: center;
+    }
+
+    .footer-legal {
+      gap: 1.5rem;
     }
   }
 </style>

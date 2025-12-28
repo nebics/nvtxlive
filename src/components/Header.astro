@@ -12,87 +12,104 @@ const navItems = [
     label: 'Services',
     href: '#',
     children: [
-      { href: '/services/product-engineering', label: 'Product Engineering & Discovery' },
+      { href: '/services/product-engineering', label: 'Product Engineering' },
       { href: '/services/supply-chain', label: 'Supply Chain' },
       { href: '/services/manufacturing', label: 'Manufacturing' },
-      { href: '/services/quality-regulatory-compliance', label: 'Quality & Regulatory Compliance' },
+      { href: '/services/quality-regulatory-compliance', label: 'Quality & Compliance' },
       { href: '/services/clinical-affairs', label: 'Clinical Affairs' },
     ]
   },
-  { href: '/digital-solutions', label: 'Digital Solutions' },
+  { href: '/digital-solutions', label: 'Digital' },
   { href: '/careers', label: 'Careers' },
-  { href: '/contact-us', label: 'Contact us' },
 ];
 ---
 
 <header class="site-header">
   <div class="header-container">
     <a href="/" class="logo">
+      <span class="logo-icon">N</span>
       <span class="logo-text">NovintiX</span>
-      <span class="logo-tagline">Accelerate Transformation To Shape Your Future</span>
     </a>
-
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-      <span class="hamburger"></span>
-    </button>
 
     <nav class="site-navigation">
       <ul class="menu">
         {navItems.map((item) => (
-          <li class={`menu-item ${item.children ? 'has-children' : ''} ${currentPage === item.href ? 'current' : ''}`}>
+          <li class={`menu-item ${item.children ? 'has-children' : ''} ${currentPage === item.href || (item.children && item.children.some(c => currentPage === c.href)) ? 'current' : ''}`}>
             <a href={item.href}>{item.label}</a>
             {item.children && (
-              <ul class="sub-menu">
-                {item.children.map((child) => (
-                  <li class={`menu-item ${currentPage === child.href ? 'current' : ''}`}>
-                    <a href={child.href}>{child.label}</a>
-                  </li>
-                ))}
-              </ul>
+              <div class="dropdown">
+                <ul class="sub-menu">
+                  {item.children.map((child) => (
+                    <li class={`sub-menu-item ${currentPage === child.href ? 'current' : ''}`}>
+                      <a href={child.href}>{child.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </li>
         ))}
       </ul>
     </nav>
+
+    <a href="/contact-us" class="header-cta">Get in Touch</a>
+
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
   </div>
 </header>
 
 <style>
   .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .header-container {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 72px;
   }
 
   .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
     text-decoration: none;
   }
 
-  .logo-text {
-    font-family: 'Rubik', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #E05A47;
-    letter-spacing: -0.5px;
+  .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--gradient-primary);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    border-radius: 10px;
   }
 
-  .logo-tagline {
-    font-size: 11px;
-    color: #7C7C7D;
+  .logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
   }
 
   .site-navigation .menu {
@@ -100,65 +117,118 @@ const navItems = [
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 30px;
+    gap: 0.25rem;
   }
 
   .menu-item > a {
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
     font-weight: 500;
-    color: #033C59;
-    padding: 10px 0;
+    color: var(--color-secondary);
+    padding: 0.5rem 1rem;
     display: block;
-    transition: color 0.3s ease;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
   }
 
-  .menu-item > a:hover,
+  .menu-item > a:hover {
+    color: var(--color-accent);
+    background: rgba(99, 102, 241, 0.05);
+  }
+
   .menu-item.current > a {
-    color: #F5A302;
+    color: var(--color-accent);
   }
 
   .menu-item.has-children {
     position: relative;
   }
 
+  .menu-item.has-children > a {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
   .menu-item.has-children > a::after {
-    content: '▾';
-    margin-left: 5px;
-    font-size: 10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform var(--transition-fast);
+  }
+
+  .menu-item.has-children:hover > a::after {
+    transform: rotate(180deg);
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .menu-item.has-children:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
   }
 
   .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    min-width: 280px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    padding: 15px 0;
+    background: var(--color-white);
+    min-width: 220px;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--radius-lg);
+    padding: 0.5rem;
     list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  .menu-item.has-children:hover .sub-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  .sub-menu-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
   }
 
-  .sub-menu .menu-item a {
-    padding: 10px 25px;
-    font-size: 14px;
-    color: #1E2128;
+  .sub-menu-item a:hover {
+    background: rgba(99, 102, 241, 0.05);
+    color: var(--color-accent);
   }
 
-  .sub-menu .menu-item a:hover {
-    background: #f8f8f9;
-    color: #033C59;
+  .sub-menu-item.current a {
+    color: var(--color-accent);
+    background: rgba(99, 102, 241, 0.05);
+  }
+
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(99, 102, 241, 0.3);
+    color: var(--color-white);
   }
 
   .mobile-menu-toggle {
@@ -166,15 +236,17 @@ const navItems = [
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 0.625rem;
+    margin-left: 1rem;
   }
 
   .hamburger {
     display: block;
-    width: 25px;
-    height: 3px;
-    background: #F5A302;
+    width: 22px;
+    height: 2px;
+    background: var(--color-primary);
     position: relative;
+    transition: all var(--transition-fast);
   }
 
   .hamburger::before,
@@ -183,28 +255,48 @@ const navItems = [
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #F5A302;
+    background: var(--color-primary);
     left: 0;
+    transition: all var(--transition-fast);
   }
 
-  .hamburger::before { top: -8px; }
-  .hamburger::after { top: 8px; }
+  .hamburger::before { top: -7px; }
+  .hamburger::after { top: 7px; }
+
+  .mobile-menu-toggle.active .hamburger {
+    background: transparent;
+  }
+
+  .mobile-menu-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .mobile-menu-toggle.active .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
 
   @media (max-width: 1024px) {
     .mobile-menu-toggle {
       display: block;
     }
 
+    .header-cta {
+      display: none;
+    }
+
     .site-navigation {
       position: fixed;
-      top: 80px;
+      top: 72px;
       left: 0;
       right: 0;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      bottom: 0;
+      background: var(--color-white);
+      padding: 1.5rem;
       transform: translateX(-100%);
-      transition: transform 0.3s ease;
+      transition: transform var(--transition-base);
+      overflow-y: auto;
     }
 
     .site-navigation.active {
@@ -217,17 +309,29 @@ const navItems = [
     }
 
     .menu-item > a {
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 0;
     }
 
-    .sub-menu {
+    .dropdown {
       position: static;
       opacity: 1;
       visibility: visible;
       transform: none;
+      padding: 0;
+    }
+
+    .sub-menu {
       box-shadow: none;
-      padding-left: 20px;
+      border: none;
+      padding: 0 0 0.5rem 1rem;
+      border-radius: 0;
+    }
+
+    .sub-menu-item a {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     }
   }
 </style>
@@ -237,6 +341,17 @@ const navItems = [
   const nav = document.querySelector('.site-navigation');
 
   toggle?.addEventListener('click', () => {
+    toggle.classList.toggle('active');
     nav?.classList.toggle('active');
+    document.body.style.overflow = nav?.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close menu when clicking on a link
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle?.classList.remove('active');
+      nav?.classList.remove('active');
+      document.body.style.overflow = '';
+    });
   });
 </script>

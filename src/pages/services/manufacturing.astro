@@ -1,177 +1,249 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <BaseLayout title="Manufacturing" currentPage="/services/manufacturing">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Manufacturing</h1>
-      <p>Transform your manufacturing operations for excellence and efficiency.</p>
+  <PageHero
+    icon="services"
+    title="Manufacturing"
+    description="Transform operations for quality, efficiency, and compliance."
+  />
+
+  <section class="intro-section section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <h2>Manufacturing that delivers results</h2>
+          <p>Manufacturing excellence isn't just about efficiency—it's about consistency, compliance, and the ability to scale. We help life sciences companies optimize their manufacturing operations to achieve higher quality at lower cost.</p>
+          <p>Our consultants bring hands-on experience from leading manufacturers, combining lean principles with deep regulatory knowledge.</p>
+        </div>
+        <div class="intro-highlight">
+          <div class="highlight-card">
+            <span class="highlight-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </span>
+            <h4>30% average yield improvement</h4>
+            <p>Our optimization programs consistently deliver measurable results.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <section class="services-section section section-light">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Manufacturing Excellence</h2>
-          <p>NovintiX helps life sciences companies optimize their manufacturing operations to achieve higher quality, lower costs, and faster time to market. Our team brings deep expertise in lean manufacturing, process optimization, and regulatory compliance.</p>
+      <div class="section-header">
+        <h6>Capabilities</h6>
+        <h2>What we deliver</h2>
+      </div>
 
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Process Development</strong> - Scale-up, tech transfer, and process validation</li>
-            <li><strong>Lean Manufacturing</strong> - Waste reduction and continuous improvement</li>
-            <li><strong>Facility Design</strong> - Cleanroom design and equipment qualification</li>
-            <li><strong>Production Support</strong> - Troubleshooting and yield improvement</li>
-            <li><strong>Automation</strong> - Manufacturing execution systems and Industry 4.0</li>
-            <li><strong>Compliance</strong> - GMP compliance and audit readiness</li>
-          </ul>
-
-          <h3>Why Choose NovintiX?</h3>
-          <p>We understand that manufacturing excellence requires a balance of quality, cost, and speed. Our consultants bring hands-on experience from leading life sciences companies, combined with expertise in the latest manufacturing technologies and methodologies.</p>
-        </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/supply-chain">Supply Chain</a></li>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Ready to optimize your manufacturing?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
+      <div class="services-list">
+        <div class="service-row">
+          <div class="service-number">01</div>
+          <div class="service-info">
+            <h4>Process Development</h4>
+            <p>Scale-up, tech transfer, and process validation that ensures consistent manufacturing performance.</p>
           </div>
         </div>
+        <div class="service-row">
+          <div class="service-number">02</div>
+          <div class="service-info">
+            <h4>Lean Manufacturing</h4>
+            <p>Waste reduction and continuous improvement programs that drive efficiency without compromising quality.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-number">03</div>
+          <div class="service-info">
+            <h4>Facility Design</h4>
+            <p>Cleanroom design, equipment qualification, and facility layout optimization.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-number">04</div>
+          <div class="service-info">
+            <h4>Production Support</h4>
+            <p>Troubleshooting, yield improvement, and ongoing operational excellence support.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-number">05</div>
+          <div class="service-info">
+            <h4>Automation & Industry 4.0</h4>
+            <p>Manufacturing execution systems, data analytics, and smart factory implementation.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="service-number">06</div>
+          <div class="service-info">
+            <h4>GMP Compliance</h4>
+            <p>GMP compliance programs, audit preparation, and remediation support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Optimize your manufacturing</h2>
+          <p>Let's discuss how we can help improve your operations.</p>
+        </div>
+        <a href="/contact-us" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
-    display: flex;
+  .intro-section {
+    background: #fff;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .intro-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-content p {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .highlight-card {
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .highlight-icon {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.25rem;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
+  .highlight-card h4 {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 0.75rem;
   }
 
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
+  .highlight-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9375rem;
   }
 
-  .content-section {
-    padding: 5em 0;
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
+  .service-row {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
   }
 
-  .content-main h2 {
-    margin-bottom: 20px;
+  .service-row:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
   }
 
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+  .service-number {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    opacity: 0.4;
+    flex-shrink: 0;
   }
 
-  .content-main p {
-    color: #7C7C7D;
-    line-height: 1.7;
-    margin-bottom: 15px;
+  .service-info h4 {
+    margin-bottom: 0.5rem;
   }
 
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
+  .service-info p {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
   }
 
-  .content-main li {
-    color: #7C7C7D;
-    line-height: 1.8;
-    margin-bottom: 10px;
+  .cta-section {
+    background: #fff;
   }
 
-  .content-main li strong {
-    color: #1E2128;
+  .cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
   }
 
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
+  .cta-content h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
   }
 
-  .sidebar-card h5 {
-    margin-bottom: 15px;
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.7);
   }
 
-  .sidebar-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar-card li {
-    margin-bottom: 10px;
-  }
-
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
-  }
-
-  .sidebar-card a:hover {
-    color: #F5A302;
-  }
-
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card .btn {
-    width: 100%;
-    text-align: center;
+  .cta-card .btn {
+    flex-shrink: 0;
   }
 
   @media (max-width: 1024px) {
-    .content-grid {
+    .intro-grid {
       grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-row {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .cta-card .btn {
+      width: 100%;
     }
   }
 </style>

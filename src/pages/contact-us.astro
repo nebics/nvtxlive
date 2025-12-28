@@ -5,83 +5,104 @@ import PageHero from '../components/PageHero.astro';
 
 <BaseLayout title="Contact Us" currentPage="/contact-us">
   <PageHero
-    title="Contact Us"
-    description="Let's Start a Conversation"
-    backgroundImage="/images/contact-bg.jpg"
+    icon="contact"
+    title="Let's Work Together"
+    description="Have a project in mind? We'd love to hear from you."
   />
 
-  <section class="contact-section">
+  <section class="contact-section section">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="info-card">
-            <h6>Get In Touch</h6>
-            <h2>We'd Love to Hear From You</h2>
-            <div class="divider"></div>
+          <h2>Get in touch</h2>
+          <p class="contact-intro">Whether you're starting a new project or looking to improve an existing process, we're here to help.</p>
 
-            <div class="contact-item">
-              <h5>Email</h5>
-              <p><a href="mailto:info@novintix.com">info@novintix.com</a></p>
-            </div>
+          <div class="contact-methods">
+            <a href="mailto:info@novintix.com" class="contact-method">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">Email us</span>
+                <span class="contact-value">info@novintix.com</span>
+              </div>
+            </a>
 
-            <div class="contact-item">
-              <h5>Phone</h5>
-              <p>Contact us for details</p>
+            <a href="/careers/apply" class="contact-method">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="contact-label">Join us</span>
+                <span class="contact-value">View open positions</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="response-info">
+            <div class="response-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
             </div>
+            <p>We typically respond within 24 hours</p>
           </div>
         </div>
 
         <div class="contact-form-wrapper">
-          <div class="form-card">
-            <h6>Send Us a Message</h6>
-            <h3>How Can We Help?</h3>
-
-            <form class="contact-form" action="#" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" required />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" required />
-                </div>
-              </div>
-
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required />
               </div>
-
               <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" />
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
               </div>
+            </div>
 
-              <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required />
+            </div>
 
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company name" />
+            </div>
 
-              <button type="submit" class="btn">Send Message</button>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="service">What can we help with?</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="product-engineering">Product Engineering</option>
+                <option value="supply-chain">Supply Chain</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="quality-compliance">Quality & Compliance</option>
+                <option value="clinical-affairs">Clinical Affairs</option>
+                <option value="digital-solutions">Digital Solutions</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="map-section">
-    <div class="container">
-      <div class="section-header">
-        <h6>Our Presence</h6>
-        <h2>Global Reach, Local Expertise</h2>
-        <p>NovintiX serves clients worldwide with offices strategically located to provide localized support and expertise.</p>
       </div>
     </div>
   </section>
@@ -89,110 +110,149 @@ import PageHero from '../components/PageHero.astro';
 
 <style>
   .contact-section {
-    padding: 5em 0;
+    background: #fff;
   }
 
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
     align-items: start;
   }
 
-  .info-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
-    padding: 2.5em;
+  .contact-info h2 {
+    margin-bottom: 1rem;
   }
 
-  .info-card h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
+  .contact-intro {
+    font-size: 1.125rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
   }
 
-  .info-card h2 {
-    margin-bottom: 20px;
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
   }
 
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: #D3D3DC;
-    margin: 20px 0;
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--color-light);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: all var(--transition-base);
   }
 
-  .contact-item {
-    margin-bottom: 20px;
+  .contact-method:hover {
+    background: rgba(99, 102, 241, 0.05);
+    transform: translateX(4px);
   }
 
-  .contact-item h5 {
-    margin-bottom: 5px;
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    color: #fff;
+    flex-shrink: 0;
   }
 
-  .contact-item p {
-    color: #7C7C7D;
+  .contact-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin-bottom: 0.125rem;
   }
 
-  .contact-item a {
-    color: #033C59;
+  .contact-value {
+    display: block;
+    font-weight: 600;
+    color: var(--color-primary);
   }
 
-  .contact-item a:hover {
-    color: #F5A302;
+  .response-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
   }
 
-  .form-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
-    padding: 2.5em;
+  .response-icon {
+    color: var(--color-accent);
   }
 
-  .form-card h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
+  .response-info p {
+    font-size: 0.875rem;
+    color: var(--color-secondary);
+    margin: 0;
   }
 
-  .form-card h3 {
-    margin-bottom: 25px;
+  .contact-form-wrapper {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1rem;
   }
 
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .form-group label {
     display: block;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
-    color: #1E2128;
-    margin-bottom: 8px;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
   }
 
   .form-group input,
-  .form-group textarea {
+  .form-group textarea,
+  .form-group select {
     width: 100%;
-    padding: 12px 16px;
-    font-size: 16px;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
     font-family: inherit;
-    border: 1px solid #D3D3DC;
-    border-radius: 10px;
-    background: #F8F8F9;
-    transition: border-color 0.3s ease, background 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-md);
+    background: var(--color-light);
+    transition: all var(--transition-fast);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-muted);
   }
 
   .form-group input:focus,
-  .form-group textarea:focus {
+  .form-group textarea:focus,
+  .form-group select:focus {
     outline: none;
-    border-color: #F5A302;
-    background: #fff;
+    border-color: var(--color-accent);
+    background: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
   }
 
   .form-group textarea {
@@ -200,40 +260,35 @@ import PageHero from '../components/PageHero.astro';
     min-height: 120px;
   }
 
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+  }
+
   .contact-form .btn {
     width: 100%;
-  }
-
-  .map-section {
-    padding: 5em 0;
-    background: #f8f8f9;
-  }
-
-  .map-section .section-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .map-section .section-header h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
-  }
-
-  .map-section .section-header p {
-    color: #7C7C7D;
-    margin-top: 15px;
+    margin-top: 0.5rem;
   }
 
   @media (max-width: 1024px) {
     .contact-grid {
       grid-template-columns: 1fr;
+      gap: 3rem;
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .form-row {
       grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+      padding: 1.5rem;
     }
   }
 </style>

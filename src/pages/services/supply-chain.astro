@@ -1,177 +1,230 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <BaseLayout title="Supply Chain" currentPage="/services/supply-chain">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Supply Chain</h1>
-      <p>Optimize your supply chain for resilience, efficiency, and compliance.</p>
+  <PageHero
+    icon="services"
+    title="Supply Chain"
+    description="Build resilient, compliant supply networks that deliver."
+  />
+
+  <section class="intro-section section">
+    <div class="container">
+      <div class="intro-content-center">
+        <h2>Supply chains that perform under pressure</h2>
+        <p>Supply chain disruptions can halt production, delay launches, and damage customer relationships. We help life sciences companies build supply networks that are resilient, efficient, and fully compliant.</p>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <section class="services-section section section-light">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Building Resilient Supply Chains</h2>
-          <p>In today's complex global environment, a robust supply chain is essential for business success. NovintiX helps life sciences companies design, optimize, and manage supply chains that deliver consistent quality while minimizing risk and cost.</p>
-
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Supply Chain Strategy</strong> - End-to-end supply chain design and optimization</li>
-            <li><strong>Supplier Management</strong> - Qualification, auditing, and performance monitoring</li>
-            <li><strong>Risk Management</strong> - Identification and mitigation of supply chain risks</li>
-            <li><strong>Inventory Optimization</strong> - Demand planning and inventory management</li>
-            <li><strong>Logistics & Distribution</strong> - Cold chain management and distribution network design</li>
-            <li><strong>Compliance</strong> - GDP, serialization, and regulatory requirements</li>
+      <div class="services-grid">
+        <div class="service-card large">
+          <span class="service-badge">Strategy</span>
+          <h3>Supply Chain Strategy</h3>
+          <p>End-to-end supply chain design and optimization. We help you build networks that balance cost, speed, and risk across global operations.</p>
+          <ul class="service-list">
+            <li>Network design & optimization</li>
+            <li>Make vs. buy analysis</li>
+            <li>Supplier portfolio strategy</li>
+            <li>Risk mitigation planning</li>
           </ul>
-
-          <h3>Why Choose NovintiX?</h3>
-          <p>Our supply chain experts understand the unique challenges of regulated industries. We combine operational excellence with deep regulatory knowledge to help you build supply chains that are both efficient and compliant.</p>
         </div>
 
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/manufacturing">Manufacturing</a></li>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Ready to optimize your supply chain?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
-          </div>
+        <div class="service-card">
+          <h4>Supplier Management</h4>
+          <p>Qualification, auditing, and performance management for critical suppliers.</p>
         </div>
+
+        <div class="service-card">
+          <h4>Logistics & Distribution</h4>
+          <p>Cold chain, distribution network design, and last-mile delivery optimization.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Inventory Optimization</h4>
+          <p>Right-size inventory while maintaining service levels and compliance.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Supply Chain Compliance</h4>
+          <p>GDP, serialization, and regulatory compliance across global supply chains.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Strengthen your supply chain</h2>
+          <p>Let's discuss how we can help build resilience into your operations.</p>
+        </div>
+        <a href="/contact-us" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+  .intro-section {
+    background: #fff;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
+  .intro-content-center {
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
   }
 
-  .hero-content h1 {
-    color: #fff;
-    margin-bottom: 20px;
+  .intro-content-center h2 {
+    margin-bottom: 1.5rem;
   }
 
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
-  }
-
-  .content-section {
-    padding: 5em 0;
-  }
-
-  .content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-  }
-
-  .content-main h2 {
-    margin-bottom: 20px;
-  }
-
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-
-  .content-main p {
-    color: #7C7C7D;
-    line-height: 1.7;
-    margin-bottom: 15px;
-  }
-
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
-  }
-
-  .content-main li {
-    color: #7C7C7D;
+  .intro-content-center p {
+    color: var(--color-muted);
+    font-size: 1.125rem;
     line-height: 1.8;
-    margin-bottom: 10px;
   }
 
-  .content-main li strong {
-    color: #1E2128;
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
+  .service-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
   }
 
-  .sidebar-card h5 {
-    margin-bottom: 15px;
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
   }
 
-  .sidebar-card ul {
+  .service-card.large {
+    grid-row: span 2;
+    background: var(--gradient-dark);
+    color: #fff;
+  }
+
+  .service-card.large h3,
+  .service-card.large h4 {
+    color: #fff;
+  }
+
+  .service-card.large p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .service-badge {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h4 {
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .service-list {
     list-style: none;
     padding: 0;
+    margin: 1.5rem 0 0;
   }
 
-  .sidebar-card li {
-    margin-bottom: 10px;
+  .service-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9375rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
+  .service-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
   }
 
-  .sidebar-card a:hover {
-    color: #F5A302;
+  .cta-section {
+    background: #fff;
   }
 
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
+  .cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
   }
 
-  .sidebar-card .btn {
-    width: 100%;
-    text-align: center;
+  .cta-content h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
   }
 
-  @media (max-width: 1024px) {
-    .content-grid {
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .cta-card .btn {
+    background: var(--color-white);
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
       grid-template-columns: 1fr;
+    }
+
+    .service-card.large {
+      grid-row: span 1;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .cta-card .btn {
+      width: 100%;
     }
   }
 </style>

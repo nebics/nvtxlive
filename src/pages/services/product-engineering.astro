@@ -1,176 +1,264 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
-<BaseLayout title="Product Engineering & Discovery" currentPage="/services/product-engineering">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Product Engineering & Discovery</h1>
-      <p>From concept to commercialization, we bring your product vision to life.</p>
+<BaseLayout title="Product Engineering" currentPage="/services/product-engineering">
+  <PageHero
+    icon="services"
+    title="Product Engineering"
+    description="From concept to commercialization, we bring your product vision to life."
+  />
+
+  <section class="intro-section section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <h2>Turn ideas into market-ready products</h2>
+          <p>Product development in life sciences is complex. Regulatory requirements, technical challenges, and time-to-market pressures demand expertise at every step.</p>
+          <p>We've helped companies navigate this journey hundreds of times. Our team brings hands-on experience from leading medical device and pharma companies, giving you the practical knowledge you need to succeed.</p>
+        </div>
+        <div class="intro-stats">
+          <div class="stat-card">
+            <span class="stat-value">200+</span>
+            <span class="stat-label">Products launched</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">95%</span>
+            <span class="stat-label">First-time approval rate</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <section class="services-section section section-light">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Transforming Ideas into Market-Ready Products</h2>
-          <p>At NovintiX, we combine technical expertise with creative innovation to help you navigate the complex journey from initial concept to successful product launch. Our comprehensive product engineering services cover every stage of the development lifecycle.</p>
+      <div class="section-header">
+        <h6>What We Do</h6>
+        <h2>End-to-end product development</h2>
+      </div>
 
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Product Discovery & Ideation</strong> - Market research, competitive analysis, and concept development</li>
-            <li><strong>Design & Development</strong> - Design controls, prototyping, and iterative development</li>
-            <li><strong>Verification & Validation</strong> - Testing strategies and execution to ensure product performance</li>
-            <li><strong>Design Transfer</strong> - Seamless transition from development to manufacturing</li>
-            <li><strong>Technical Documentation</strong> - Comprehensive documentation for regulatory submissions</li>
-          </ul>
-
-          <h3>Why Choose NovintiX?</h3>
-          <p>Our team brings deep expertise in medical device development, combined with a practical understanding of regulatory requirements. We work as an extension of your team, providing the specialized skills you need to accelerate your product timeline while maintaining the highest quality standards.</p>
-        </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/manufacturing">Manufacturing</a></li>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Ready to bring your product to market?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-number">01</div>
+          <div class="service-content">
+            <h4>Discovery & Ideation</h4>
+            <p>Market research, competitive analysis, and concept development to validate your product opportunity.</p>
           </div>
         </div>
+        <div class="service-item">
+          <div class="service-number">02</div>
+          <div class="service-content">
+            <h4>Design & Development</h4>
+            <p>Design controls, prototyping, and iterative development following FDA and ISO requirements.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">03</div>
+          <div class="service-content">
+            <h4>Verification & Validation</h4>
+            <p>Comprehensive testing strategies to demonstrate safety, efficacy, and performance.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">04</div>
+          <div class="service-content">
+            <h4>Design Transfer</h4>
+            <p>Seamless transition from development to manufacturing with full documentation.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">05</div>
+          <div class="service-content">
+            <h4>Technical Documentation</h4>
+            <p>Complete regulatory submissions, DHFs, and technical files for global markets.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-number">06</div>
+          <div class="service-content">
+            <h4>Post-Market Support</h4>
+            <p>Ongoing engineering support for product improvements and lifecycle management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Ready to start your project?</h2>
+          <p>Let's discuss how we can help bring your product to market.</p>
+        </div>
+        <a href="/contact-us" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
+  .intro-section {
+    background: #fff;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .intro-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-content p {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .intro-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .stat-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
+  }
+
+  .service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
+  }
+
+  .service-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+  }
+
+  .service-content h4 {
+    margin-bottom: 0.75rem;
+  }
+
+  .service-content p {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .cta-section {
+    background: #fff;
+  }
+
+  .cta-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
+  .cta-content h2 {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
   }
 
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
   }
 
-  .content-section {
-    padding: 5em 0;
+  .cta-card .btn {
+    background: var(--color-white);
+    color: var(--color-primary);
+    flex-shrink: 0;
   }
 
-  .content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-  }
-
-  .content-main h2 {
-    margin-bottom: 20px;
-  }
-
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-
-  .content-main p {
-    color: #7C7C7D;
-    line-height: 1.7;
-    margin-bottom: 15px;
-  }
-
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
-  }
-
-  .content-main li {
-    color: #7C7C7D;
-    line-height: 1.8;
-    margin-bottom: 10px;
-  }
-
-  .content-main li strong {
-    color: #1E2128;
-  }
-
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-  }
-
-  .sidebar-card h5 {
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar-card li {
-    margin-bottom: 10px;
-  }
-
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
-  }
-
-  .sidebar-card a:hover {
-    color: #F5A302;
-  }
-
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card .btn {
-    width: 100%;
-    text-align: center;
+  .cta-card .btn:hover {
+    background: var(--color-light);
   }
 
   @media (max-width: 1024px) {
-    .content-grid {
+    .intro-grid {
       grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .intro-stats {
+      flex-direction: row;
+    }
+
+    .stat-card {
+      flex: 1;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-stats {
+      flex-direction: column;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .cta-card .btn {
+      width: 100%;
     }
   }
 </style>

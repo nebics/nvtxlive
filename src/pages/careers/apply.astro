@@ -3,93 +3,120 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 ---
 
-<BaseLayout title="Apply - Careers" currentPage="/careers">
+<BaseLayout title="Open Positions" currentPage="/careers">
   <PageHero
-    title="Current Openings"
-    description="Explore opportunities to join our team of innovators"
-    backgroundImage="/images/careers-bg.jpg"
+    badge="Careers"
+    title="Open Positions"
+    description="Find your next opportunity at NovintiX."
   />
 
-  <section class="jobs-section">
+  <section class="jobs-section section">
     <div class="container">
       <div class="jobs-intro">
-        <h2>Life at NovintiX</h2>
-        <p>We're always looking for talented professionals who share our passion for innovation and excellence in the life sciences industry. Browse our current openings below.</p>
+        <p>We're always looking for talented professionals who share our passion for life sciences. Browse current openings below or send us your resume directly.</p>
       </div>
 
       <div class="jobs-widget">
-        <!-- CEIPAL Jobs Widget -->
         <div id="example-widget-container"></div>
       </div>
 
       <div class="jobs-fallback">
-        <p>Can't find a suitable position? We'd still love to hear from you.</p>
-        <a href="/contact-us" class="btn">Send Your Resume</a>
+        <div class="fallback-content">
+          <h3>Don't see a perfect fit?</h3>
+          <p>We'd still love to hear from you. Send us your resume and we'll reach out when a suitable position opens.</p>
+        </div>
+        <a href="mailto:careers@novintix.com" class="btn">Send Your Resume</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
-<!-- CEIPAL Widget Script -->
 <script type="text/javascript" src="https://jobsapi.ceipal.com/APISource/widget.js" data-ceipal-api-key="ZmlYbU9kMTBTdXJVUDVwTFByWW1xQT09" data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script>
 
 <style>
   .jobs-section {
-    padding: 4em 0 5em;
+    background: #fff;
   }
 
   .jobs-intro {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 3em;
-  }
-
-  .jobs-intro h2 {
-    margin-bottom: 15px;
+    max-width: 600px;
+    margin: 0 auto 3rem;
   }
 
   .jobs-intro p {
-    color: #7C7C7D;
+    color: var(--color-muted);
+    font-size: 1.0625rem;
     line-height: 1.7;
   }
 
   .jobs-widget {
     min-height: 400px;
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 2em;
-    margin-bottom: 3em;
+    background: var(--color-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   /* Style overrides for CEIPAL widget */
   .jobs-widget :global(.ceipal-widget) {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
   }
 
   .jobs-widget :global(.ceipal-job-title) {
-    color: #1E2128;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
   }
 
   .jobs-widget :global(.ceipal-apply-btn) {
-    background: #F5A302;
-    border-radius: 25px;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    border: none;
   }
 
   .jobs-fallback {
-    text-align: center;
-    padding: 2em;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.5rem;
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
   }
 
-  .jobs-fallback p {
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 20px;
+  .fallback-content h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
   }
 
-  @media (max-width: 767px) {
+  .fallback-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .jobs-fallback .btn {
+    flex-shrink: 0;
+    background: var(--color-white);
+    color: var(--color-primary);
+  }
+
+  .jobs-fallback .btn:hover {
+    background: var(--color-light);
+  }
+
+  @media (max-width: 768px) {
     .jobs-widget {
-      padding: 1em;
+      padding: 1rem;
+    }
+
+    .jobs-fallback {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .jobs-fallback .btn {
+      width: 100%;
     }
   }
 </style>

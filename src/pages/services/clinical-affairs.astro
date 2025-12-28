@@ -1,177 +1,287 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
 <BaseLayout title="Clinical Affairs" currentPage="/services/clinical-affairs">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Clinical Affairs</h1>
-      <p>Expert guidance through clinical trials and regulatory submissions.</p>
+  <PageHero
+    icon="services"
+    title="Clinical Affairs"
+    description="Generate the evidence you need for regulatory approval."
+  />
+
+  <section class="intro-section section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-content">
+          <h2>Clinical strategies that deliver approvals</h2>
+          <p>Getting clinical evidence right is critical. Too little data and you risk rejection. Too much and you waste time and resources. We help you develop efficient clinical strategies that meet regulatory requirements while minimizing burden.</p>
+          <p>Our team has supported clinical programs across cardiovascular, orthopedic, diagnostic, and digital health devices.</p>
+        </div>
+        <div class="intro-stats">
+          <div class="stat-item">
+            <span class="stat-value">150+</span>
+            <span class="stat-label">Clinical studies supported</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">95%</span>
+            <span class="stat-label">Approval success rate</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <section class="services-section section section-light">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Clinical Excellence for Medical Devices</h2>
-          <p>NovintiX provides comprehensive clinical affairs services to help medical device companies generate the clinical evidence needed for regulatory approval and market success. Our team brings extensive experience in designing and executing clinical strategies across a wide range of device types.</p>
+      <div class="section-header">
+        <h6>Capabilities</h6>
+        <h2>Full-spectrum clinical support</h2>
+      </div>
 
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Clinical Strategy Development</strong> - Clinical development planning and regulatory pathway analysis</li>
-            <li><strong>Clinical Study Design</strong> - Protocol development, statistical analysis plans, and study setup</li>
-            <li><strong>Clinical Evaluation Reports</strong> - CER development per EU MDR requirements</li>
-            <li><strong>Literature Reviews</strong> - Systematic literature searches and analysis</li>
-            <li><strong>Post-Market Clinical Follow-up</strong> - PMCF planning and execution</li>
-            <li><strong>Regulatory Submissions</strong> - IDE, 510(k), and CE marking clinical support</li>
-          </ul>
-
-          <h3>Why Choose NovintiX?</h3>
-          <p>Our clinical affairs team combines scientific rigor with practical regulatory knowledge. We help you develop efficient clinical strategies that meet regulatory requirements while minimizing time and cost.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h4>Clinical Strategy</h4>
+          <p>Development planning and regulatory pathway analysis to optimize your clinical approach.</p>
         </div>
 
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
-              <li><a href="/digital-solutions">Digital Solutions</a></li>
-            </ul>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
           </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Need clinical affairs support?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
-          </div>
+          <h4>Study Design</h4>
+          <p>Protocol development, statistical analysis plans, and study setup for successful trials.</p>
         </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h4>Clinical Evaluation Reports</h4>
+          <p>CER development per EU MDR requirements with systematic literature reviews.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h4>Literature Reviews</h4>
+          <p>Systematic searches and analysis to support regulatory submissions.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <h4>Post-Market Clinical Follow-up</h4>
+          <p>PMCF planning and execution to maintain compliance throughout product lifecycle.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 11l3 3L22 4"></path>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h4>Regulatory Submissions</h4>
+          <p>IDE, 510(k), PMA, and CE marking clinical support for global approvals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Plan your clinical strategy</h2>
+          <p>Let's discuss how we can support your clinical program.</p>
+        </div>
+        <a href="/contact-us" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
+  .intro-section {
+    background: #fff;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .intro-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-content p {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .intro-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stat-item {
+    background: var(--color-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .stat-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: transparent;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
+  .service-card h4 {
+    margin-bottom: 0.75rem;
   }
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
-    color: #fff;
-    margin-bottom: 20px;
-  }
-
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
-  }
-
-  .content-section {
-    padding: 5em 0;
-  }
-
-  .content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-  }
-
-  .content-main h2 {
-    margin-bottom: 20px;
-  }
-
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-
-  .content-main p {
-    color: #7C7C7D;
+  .service-card p {
+    color: var(--color-muted);
+    font-size: 0.9375rem;
     line-height: 1.7;
-    margin-bottom: 15px;
   }
 
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
+  .cta-section {
+    background: #fff;
   }
 
-  .content-main li {
-    color: #7C7C7D;
-    line-height: 1.8;
-    margin-bottom: 10px;
+  .cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
   }
 
-  .content-main li strong {
-    color: #1E2128;
+  .cta-content h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
   }
 
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.7);
   }
 
-  .sidebar-card h5 {
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar-card li {
-    margin-bottom: 10px;
-  }
-
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
-  }
-
-  .sidebar-card a:hover {
-    color: #F5A302;
-  }
-
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card .btn {
-    width: 100%;
-    text-align: center;
+  .cta-card .btn {
+    flex-shrink: 0;
   }
 
   @media (max-width: 1024px) {
-    .content-grid {
+    .intro-grid {
       grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .intro-stats {
+      flex-direction: row;
+    }
+
+    .stat-item {
+      flex: 1;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-stats {
+      flex-direction: column;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .cta-card .btn {
+      width: 100%;
     }
   }
 </style>

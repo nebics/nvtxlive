@@ -1,183 +1,253 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
 ---
 
-<BaseLayout title="Quality & Regulatory Compliance" currentPage="/services/quality-regulatory-compliance">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Quality & Regulatory Compliance</h1>
-      <p>Navigate complex regulatory landscapes with confidence.</p>
+<BaseLayout title="Quality & Compliance" currentPage="/services/quality-regulatory-compliance">
+  <PageHero
+    icon="services"
+    title="Quality & Compliance"
+    description="Navigate complex regulations with confidence and speed."
+  />
+
+  <section class="intro-section section">
+    <div class="container">
+      <div class="intro-content-center">
+        <h2>Compliance that enables growth</h2>
+        <p>Quality and regulatory compliance aren't obstacles—they're opportunities to build better products and stronger businesses. We help life sciences companies meet the highest standards while moving faster to market.</p>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <section class="services-section section section-light">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Ensuring Compliance, Enabling Success</h2>
-          <p>NovintiX provides comprehensive quality and regulatory consulting services to help life sciences companies meet the highest standards of compliance. Our experienced team understands the complexities of global regulatory requirements and helps you navigate them efficiently.</p>
-
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Quality Management Systems</strong> - QMS design, implementation, and optimization</li>
-            <li><strong>Regulatory Strategy</strong> - Global regulatory planning and submission support</li>
-            <li><strong>Audit Readiness</strong> - Preparation for FDA, EU MDR, and ISO audits</li>
-            <li><strong>CAPA Management</strong> - Corrective and preventive action systems</li>
-            <li><strong>Risk Management</strong> - ISO 14971 compliance and risk assessment</li>
-            <li><strong>Post-Market Surveillance</strong> - Vigilance, complaint handling, and MDR reporting</li>
-          </ul>
-
-          <h3>Regulatory Expertise</h3>
-          <p>Our team has extensive experience with:</p>
-          <ul>
-            <li>FDA 21 CFR Part 820, 210/211</li>
-            <li>EU MDR and IVDR</li>
-            <li>ISO 13485 and ISO 9001</li>
-            <li>Health Canada and international regulations</li>
-          </ul>
+      <div class="services-split">
+        <div class="services-left">
+          <h3>What we do</h3>
+          <div class="service-items">
+            <div class="service-item">
+              <h4>Quality Management Systems</h4>
+              <p>QMS design, implementation, and optimization for ISO 13485 and FDA compliance.</p>
+            </div>
+            <div class="service-item">
+              <h4>Regulatory Strategy</h4>
+              <p>Global regulatory planning and submission support for FDA, EU MDR, and international markets.</p>
+            </div>
+            <div class="service-item">
+              <h4>Audit Readiness</h4>
+              <p>Preparation for FDA inspections, notified body audits, and ISO certifications.</p>
+            </div>
+            <div class="service-item">
+              <h4>CAPA Management</h4>
+              <p>Effective corrective and preventive action systems that drive continuous improvement.</p>
+            </div>
+            <div class="service-item">
+              <h4>Risk Management</h4>
+              <p>ISO 14971 compliance and comprehensive risk assessment programs.</p>
+            </div>
+            <div class="service-item">
+              <h4>Post-Market Surveillance</h4>
+              <p>Vigilance, complaint handling, and regulatory reporting systems.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
-              <li><a href="/services/manufacturing">Manufacturing</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
+        <div class="services-right">
+          <div class="expertise-card">
+            <h4>Regulatory Expertise</h4>
+            <p>Deep experience with global regulations:</p>
+            <ul class="expertise-list">
+              <li>FDA 21 CFR Part 820, 210/211</li>
+              <li>EU MDR and IVDR</li>
+              <li>ISO 13485 and ISO 9001</li>
+              <li>Health Canada</li>
+              <li>MDSAP</li>
+              <li>International requirements</li>
             </ul>
           </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Need help with compliance?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
-          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Get compliance right</h2>
+          <p>Let's discuss how we can help strengthen your quality systems.</p>
+        </div>
+        <a href="/contact-us" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+  .intro-section {
+    background: #fff;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
+  .intro-content-center {
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
   }
 
-  .hero-content h1 {
-    color: #fff;
-    margin-bottom: 20px;
+  .intro-content-center h2 {
+    margin-bottom: 1.5rem;
   }
 
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
+  .intro-content-center p {
+    color: var(--color-muted);
+    font-size: 1.125rem;
+    line-height: 1.8;
   }
 
-  .content-section {
-    padding: 5em 0;
-  }
-
-  .content-grid {
+  .services-split {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 50px;
+    gap: 4rem;
   }
 
-  .content-main h2 {
-    margin-bottom: 20px;
+  .services-left h3 {
+    margin-bottom: 2rem;
   }
 
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+  .service-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
-  .content-main p {
-    color: #7C7C7D;
-    line-height: 1.7;
-    margin-bottom: 15px;
+  .service-item {
+    padding: 1.5rem;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
   }
 
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
+  .service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
   }
 
-  .content-main li {
-    color: #7C7C7D;
-    line-height: 1.8;
-    margin-bottom: 10px;
+  .service-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
-  .content-main li strong {
-    color: #1E2128;
+  .service-item p {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
   }
 
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
+  .expertise-card {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    color: #fff;
+    position: sticky;
+    top: 100px;
   }
 
-  .sidebar-card h5 {
-    margin-bottom: 15px;
+  .expertise-card h4 {
+    color: #fff;
+    margin-bottom: 0.75rem;
   }
 
-  .sidebar-card ul {
+  .expertise-card > p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .expertise-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .sidebar-card li {
-    margin-bottom: 10px;
+  .expertise-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9375rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
+  .expertise-list li:last-child {
+    border-bottom: none;
   }
 
-  .sidebar-card a:hover {
-    color: #F5A302;
+  .expertise-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent-light);
+    border-radius: 50%;
+    flex-shrink: 0;
   }
 
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
+  .cta-section {
+    background: #fff;
   }
 
-  .sidebar-card .btn {
-    width: 100%;
-    text-align: center;
+  .cta-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-xl);
+    padding: 3rem 4rem;
+  }
+
+  .cta-content h2 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+  }
+
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .cta-card .btn {
+    background: var(--color-white);
+    color: var(--color-primary);
+    flex-shrink: 0;
   }
 
   @media (max-width: 1024px) {
-    .content-grid {
+    .services-split {
       grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .expertise-card {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .service-items {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .cta-card .btn {
+      width: 100%;
     }
   }
 </style>
