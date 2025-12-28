@@ -2,43 +2,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  /* --- Deep Tech Colors --- */
+  /* --- Deep Tech Bio - Light Theme --- */
   /* Backgrounds */
-  --color-bg-main: #020617;       /* Deepest Midnight */
-  --color-bg-surface: #0f172a;    /* Surface lighter */
-  --color-bg-highlight: #1e293b;  /* Hover/Highlight */
-  
-  /* Text */
-  --color-text-main: #f8fafc;     /* White/Off-white */
-  --color-text-secondary: #94a3b8; /* Muted Slate */
-  --color-text-muted: #64748b;    /* Darker Slate */
+  --color-bg-main: #ffffff;
+  /* Pure White */
+  --color-bg-surface: #f8fafc;
+  /* Very Light Slate */
+  --color-bg-highlight: #f1f5f9;
+  /* Light Gray */
 
-  /* Accents - Luminous & Electric */
-  --color-accent-primary: #38bdf8;   /* Electric Sky */
-  --color-accent-secondary: #818cf8; /* Electric Indigo */
-  --color-accent-tertiary: #c084fc;  /* Electric Purple */
-  
+  /* Text */
+  --color-text-main: #0f172a;
+  /* Deep Slate (almost black) */
+  --color-text-secondary: #334155;
+  /* Slate */
+  --color-text-muted: #64748b;
+  /* Muted Slate */
+
+  /* Accents - Luminous & Electric (Adjusted for Light Mode) */
+  --color-accent-primary: #0ea5e9;
+  /* Sky Blue */
+  --color-accent-secondary: #6366f1;
+  /* Indigo */
+  --color-accent-tertiary: #a855f7;
+  /* Purple */
+
   /* Functional */
-  --color-success: #34d399;
-  --color-warning: #fbbf24;
-  --color-error: #f87171;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-hover: rgba(255, 255, 255, 0.2);
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-border: #e2e8f0;
+  /* Light Border */
+  --color-border-hover: #cbd5e1;
+  /* Hover Border */
 
   /* --- Gradients --- */
   /* Main Brand Gradient */
-  --gradient-brand: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-  /* Dark Surface Gradient */
-  --gradient-surface: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0) 100%);
-  /* Glow Effects */
-  --gradient-glow: radial-gradient(circle at center, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+  --gradient-brand: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+  /* Light Surface Gradient */
+  --gradient-surface: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  /* Glow Effects - Adjusted for Light */
+  --gradient-glow: radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
 
   /* --- Typography --- */
   --font-heading: 'Manrope', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   /* --- Spacing --- */
-  --container-max: 1280px; /* Slightly wider for modern feel */
+  --container-max: 1280px;
   --section-padding: 8rem;
   --section-padding-mobile: 4rem;
 
@@ -49,16 +60,16 @@
   --radius-xl: 40px;
   --radius-full: 9999px;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(15, 23, 42, 0.6);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --backdrop-blur: blur(12px);
+  /* Glassmorphism - Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --backdrop-blur: blur(16px);
 
-  /* Shadows */
+  /* Shadows - Softer for Light Mode */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.025);
+  --shadow-glow: 0 0 20px rgba(14, 165, 233, 0.15);
 
   /* Transitions */
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -69,7 +80,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -92,7 +105,12 @@ body {
 }
 
 /* Typography Overhaul */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--color-text-main);
   line-height: 1.1;
@@ -152,8 +170,13 @@ a {
   background-clip: text;
 }
 
-.text-white { color: var(--color-text-main); }
-.text-muted { color: var(--color-text-muted); }
+.text-white {
+  color: var(--color-text-main);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
 
 /* Buttons & Interactive Elements */
 .btn {
@@ -166,13 +189,14 @@ a {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  background: var(--color-bg-surface);
-  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--color-text-main);
+  background: #fff;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   overflow: hidden;
   transition: all var(--transition-base);
   z-index: 1;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn::before {
@@ -187,8 +211,9 @@ a {
 
 .btn:hover {
   border-color: transparent;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
 }
 
 .btn:hover::before {
@@ -198,41 +223,50 @@ a {
 .btn-primary {
   background: var(--gradient-brand);
   border: none;
+  color: #fff;
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
 }
 
 .btn-outline:hover {
   border-color: var(--color-accent-primary);
-  background: rgba(56, 189, 248, 0.1);
+  background: white;
+  color: var(--color-accent-primary);
 }
 
-/* Glassmorphism Cards */
+.btn-outline:hover::before {
+  opacity: 0;
+  /* No gradient fill for outline hover in light mode, keep it clean */
+}
+
+/* Glassmorphism Cards - Light Mode */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: var(--backdrop-blur);
   -webkit-backdrop-filter: var(--backdrop-blur);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .card {
-  background: var(--color-bg-surface);
+  background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
   border-color: var(--color-accent-primary);
   transform: translateY(-5px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-lg);
 }
 
 .card::after {
@@ -242,7 +276,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(255,255,255,0.06), transparent 40%);
+  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(14, 165, 233, 0.05), transparent 40%);
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
@@ -268,9 +302,17 @@ a {
 
 /* Animations */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
@@ -278,8 +320,17 @@ a {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.1); }
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }
 
 /* Background Mesh/Glow Utilities */
@@ -297,7 +348,8 @@ a {
 }
 
 /* Code/Pre formatting */
-pre, code {
+pre,
+code {
   font-family: 'Fira Code', monospace;
 }
 
@@ -306,10 +358,15 @@ pre, code {
   :root {
     --section-padding: 4rem;
   }
-  
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.5rem; }
-  
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
   .container {
     padding: 0 1rem;
   }

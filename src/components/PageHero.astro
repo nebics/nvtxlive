@@ -81,31 +81,35 @@ const selectedIcon = icons[icon] || icons.default;
     inset: 0;
     overflow: hidden;
     pointer-events: none;
+    /* Ultra-Light Sky Blue Theme */
     background:
-      /* Hex Grid Overlay */
+      /* Very Faint Hex Grid */
       radial-gradient(
         circle at 50% 50%,
-        rgba(2, 6, 23, 0.8) 0%,
-        rgba(2, 6, 23, 1) 100%
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 60%
       ),
       repeating-linear-gradient(
         60deg,
-        rgba(255, 255, 255, 0.03) 0,
-        rgba(255, 255, 255, 0.03) 1px,
+        rgba(56, 189, 248, 0.03) 0,
+        rgba(56, 189, 248, 0.03) 1px,
         transparent 1px,
         transparent 40px
       ),
       repeating-linear-gradient(
         -60deg,
-        rgba(255, 255, 255, 0.03) 0,
-        rgba(255, 255, 255, 0.03) 1px,
+        rgba(56, 189, 248, 0.03) 0,
+        rgba(56, 189, 248, 0.03) 1px,
         transparent 1px,
         transparent 40px
-      );
+      ),
+      /* Ultra-Light Sky Gradient Base */
+      linear-gradient(150deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
     background-size:
       100% 100%,
       100px 174px,
-      100px 174px;
+      100px 174px,
+      100% 100%;
     z-index: 0;
   }
 

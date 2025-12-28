@@ -108,7 +108,7 @@ const industries = [
                 ))}
               </div>
 
-              <div class="mt-8">
+              <div class="action-wrapper">
                  <a href="/contact-us" class="btn-text">
                     <span>Explore Solutions</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
@@ -145,8 +145,8 @@ const industries = [
     top: 80px; /* Adjust based on header height */
     z-index: 40;
     backdrop-filter: blur(12px);
-    background: rgba(2, 6, 23, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--color-border);
     padding: 1rem 0;
   }
 
@@ -160,7 +160,7 @@ const industries = [
   .subnav-link {
     color: var(--color-text-secondary);
     font-size: 0.9375rem;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
     transition: all 0.2s;
     padding: 0.5rem 1rem;
@@ -168,111 +168,42 @@ const industries = [
   }
 
   .subnav-link:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-main);
+    background: rgba(0, 0, 0, 0.05);
   }
   
   /* Sections */
   .industry-section {
-    padding: 6rem 0;
+    padding: 8rem 0; /* Increased padding */
     position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--color-border);
+    background: #ffffff;
+    overflow: hidden; /* Contain large icons */
+  }
+  
+  /* Distinct Alternating Backgrounds */
+  .section-alt {
+    /* Soft Blue Gradient for alternate sections */
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); 
   }
 
+  /* Grid Layout Centering */
   .grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    grid-template-columns: 1fr 0.8fr; /* Visual side slightly smaller */
+    gap: 8rem; /* Large gap */
     align-items: center;
   }
 
   .grid-layout.reverse {
-     direction: rtl; /* Quick hack for order, reset text direction in children */
+     direction: rtl; 
   }
   
   .grid-layout.reverse > * {
-      direction: ltr; /* Reset text direction */
+      direction: ltr; 
   }
 
-  /* Content Styling */
-  .section-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent-primary);
-    margin-bottom: 1.5rem;
-  }
-
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: currentColor;
-    box-shadow: 0 0 8px currentColor;
-  }
-
-  .section-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    line-height: 1.1;
-  }
-
-  .section-desc {
-    font-size: 1.125rem;
-    color: var(--color-text-secondary);
-    line-height: 1.7;
-    margin-bottom: 3rem;
-    max-width: 500px;
-  }
-
-  .capabilities-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .cap-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: #e2e8f0;
-    font-weight: 500;
-  }
-
-  .cap-icon-box {
-    color: var(--color-accent-primary);
-    display: flex;
-    align-items: center;
-  }
-
-  .btn-text {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--color-accent-primary);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.875rem;
-    transition: gap 0.2s;
-  }
-
-  .btn-text:hover {
-    gap: 0.75rem;
-  }
-
-  /* Visual Styling */
+  /* Visual Icons - Make them POP */
   .visual-abstract {
     aspect-ratio: 1;
     display: flex;
@@ -280,47 +211,114 @@ const industries = [
     justify-content: center;
     position: relative;
     border-radius: var(--radius-xl);
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #fff;
+    border: 1px solid var(--color-border);
     overflow: hidden;
+    /* Soft but deep shadow */
+    box-shadow: 0 20px 60px -10px rgba(14, 165, 233, 0.15); 
   }
 
+  /* Large Hero Icon */
   .icon-hero-wrapper {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-accent-primary);
     z-index: 2;
+    transform: scale(1.5); /* Make icon significantly larger */
+    filter: drop-shadow(0 10px 20px rgba(14, 165, 233, 0.2)); /* Add depth */
   }
 
+  /* Enhanced Glow */
   .glow-effect {
     position: absolute;
     width: 200%;
     height: 200%;
     top: -50%;
     left: -50%;
-    opacity: 0.15;
-    filter: blur(60px);
+    opacity: 0.15; /* More visible glow */
+    background: radial-gradient(circle, var(--color-accent-primary) 0%, transparent 70%);
+    filter: blur(80px);
     z-index: 1;
     animation: rotate 20s linear infinite;
   }
 
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  /* Capabilities List */
+  .cap-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-text-main);
+    font-weight: 600;
+  }
+
+  .cap-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    /* Vibrant Box */
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.2));
+    color: var(--color-accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Text & Badges */
+  .section-badge {
+    display: inline-block;
+    padding-left: 1rem;
+    border-left: 4px solid var(--color-accent-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-primary);
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  
+  /* Remove the dot style as we are switching to border-left */
+  .badge-dot {
+    display: none; 
+  }
+
+  /* Action Button Wrapper to prevent overlap */
+  .action-wrapper {
+    margin-top: 2.5rem;
+  }
+
+  /* Text Button Styling */
+  .btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: var(--color-accent-primary);
+    transition: all 0.2s ease;
+  }
+  
+  .btn-text:hover {
+    gap: 0.75rem;
+    color: var(--color-accent-secondary);
   }
 
   /* Responsive */
   @media (max-width: 1024px) {
+    .industry-section { padding: 4rem 0; }
     .grid-layout {
       grid-template-columns: 1fr;
-      gap: 3rem;
+      gap: 4rem;
     }
-
-    .grid-layout.reverse {
-      direction: ltr;
-    }
-    
+    .grid-layout.reverse { direction: ltr; }
     .visual-side {
-      order: -1; /* Keep visuals on top for mobile if desired, or remove to keep below */
+      order: -1; 
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .visual-abstract {
       max-width: 400px;
+      margin: 0 auto;
     }
   }
 </style>

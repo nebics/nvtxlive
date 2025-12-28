@@ -62,10 +62,11 @@ const {
 <style>
   .site-footer {
     position: relative;
-    background: #000;
+    background: #f8fafc; /* Very Light Slate background for footer in light mode */
     padding: 6rem 0 2rem;
     overflow: hidden;
     margin-top: auto;
+    border-top: 1px solid var(--color-border);
   }
 
   .footer-glow {
@@ -77,8 +78,8 @@ const {
     height: 100%;
     background: radial-gradient(
       circle at top,
-      rgba(56, 189, 248, 0.1) 0%,
-      transparent 60%
+      rgba(14, 165, 233, 0.05) 0%,
+      /* Soft blue glow */ transparent 60%
     );
     pointer-events: none;
   }
@@ -97,6 +98,7 @@ const {
     line-height: 1.1;
     margin-bottom: 2.5rem;
     letter-spacing: -0.03em;
+    color: var(--color-text-main); /* Dark slate for headline */
   }
 
   .footer-actions {
@@ -116,14 +118,15 @@ const {
 
   .btn-outline {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    border: 1px solid var(--color-border-hover);
+    color: var(--color-text-secondary);
     transition: all 0.3s ease;
   }
 
   .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #fff;
+    background: #fff;
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
   }
 
   .footer-divider {
@@ -131,7 +134,7 @@ const {
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.05),
       transparent
     );
     margin-bottom: 4rem;

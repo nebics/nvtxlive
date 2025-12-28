@@ -188,17 +188,6 @@ const services = [
       </div>
     </div>
   </section>
-
-  <section class="section">
-    <div class="container text-center relative z-10">
-      <div class="cta-box">
-        <h2>Mitigate risk, ensure quality</h2>
-        <p>Partner with us to navigate the complex regulatory environment.</p>
-        <a href="/contact-us" class="btn btn-primary">Start Compliance Review</a
-        >
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -208,7 +197,7 @@ const services = [
     position: relative;
   }
   .section-darker {
-    background: rgba(0, 0, 0, 0.2);
+    background: #f1f5f9; /* Light Gray */
   }
 
   /* Feature Row */
@@ -223,7 +212,7 @@ const services = [
     font-size: 3rem;
     margin-bottom: 1.5rem;
     line-height: 1.1;
-    color: #fff;
+    color: var(--color-text-main);
   }
   .feature-content .lead {
     font-size: 1.125rem;
@@ -241,7 +230,7 @@ const services = [
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(14, 165, 233, 0.1);
   }
 
   /* Visual Abstract Card */
@@ -260,7 +249,7 @@ const services = [
   .abstract-icon {
     width: 100px;
     height: 100px;
-    background: #0f172a;
+    background: #fff; /* White icon BG */
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -268,14 +257,14 @@ const services = [
     color: var(--color-accent-primary);
     position: relative;
     z-index: 2;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(14, 165, 233, 0.15); /* Soft blue shadow */
+    border: 1px solid var(--color-border);
   }
   .abstract-ring {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(14, 165, 233, 0.3);
     border-radius: 50%;
     animation: rotate 20s linear infinite;
     z-index: 1;
@@ -286,7 +275,7 @@ const services = [
     height: 150%;
     background: radial-gradient(
       circle,
-      rgba(56, 189, 248, 0.15) 0%,
+      rgba(14, 165, 233, 0.1) 0%,
       transparent 60%
     );
     filter: blur(40px);
@@ -307,7 +296,7 @@ const services = [
   .section-header-center h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--color-text-main);
   }
   .section-header-center p {
     color: var(--color-text-secondary);
@@ -320,23 +309,24 @@ const services = [
     gap: 2rem;
   }
   .solution-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: #fff;
+    border: 1px solid var(--color-border);
     padding: 2.5rem;
     border-radius: 1rem;
     transition:
       transform 0.3s ease,
       background 0.3s ease;
+    box-shadow: var(--shadow-sm);
   }
   .solution-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent-primary);
+    box-shadow: var(--shadow-lg);
   }
   .icon-box {
     width: 48px;
     height: 48px;
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(14, 165, 233, 0.1);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -347,7 +337,7 @@ const services = [
   .solution-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
-    color: #fff;
+    color: var(--color-text-main);
     font-weight: 600;
   }
   .solution-card p {

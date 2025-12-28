@@ -116,8 +116,8 @@ const currentYear = new Date().getFullYear();
         justify-content: center;
         width: 32px;
         height: 32px;
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
+        background: rgba(14, 165, 233, 0.1);
+        color: var(--color-accent-primary);
         font-family: var(--font-heading);
         font-weight: 800;
         border-radius: 8px;
@@ -127,7 +127,7 @@ const currentYear = new Date().getFullYear();
         font-family: var(--font-heading);
         font-size: 1.25rem;
         font-weight: 700;
-        color: #fff;
+        color: var(--color-text-main); /* Dark text for logo */
     }
 
     .footer-description {
@@ -149,28 +149,31 @@ const currentYear = new Date().getFullYear();
         justify-content: center;
         width: 40px;
         height: 40px;
-        background: rgba(255, 255, 255, 0.05);
+        background: #fff;
         border-radius: 50%;
         color: var(--color-text-secondary);
         transition: all 0.3s;
-        border: 1px solid transparent;
+        border: 1px solid var(--color-border);
     }
 
     .social-link:hover {
-        background: rgba(56, 189, 248, 0.1);
+        background: rgba(14, 165, 233, 0.1);
         color: var(--color-accent-primary);
-        border-color: rgba(56, 189, 248, 0.3);
+        border-color: var(--color-accent-primary);
         transform: translateY(-3px);
     }
 
     .footer-nav-group h5 {
-        color: #fff;
+        color: var(--color-text-main); /* Dark heading */
         font-size: 0.875rem;
         margin-bottom: 1.5rem;
         padding-bottom: 0.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid var(--color-border);
         display: inline-block;
         min-width: 40px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
     }
 
     .footer-nav-group ul {
@@ -205,11 +208,12 @@ const currentYear = new Date().getFullYear();
 
     .contact-link {
         display: block;
-        color: #fff;
+        color: var(--color-text-main); /* Dark text for contact info */
         margin-bottom: 0.5rem;
         font-size: 0.9375rem;
         text-decoration: none;
         transition: color 0.2s;
+        font-weight: 500;
     }
 
     .contact-link:hover {
@@ -222,7 +226,7 @@ const currentYear = new Date().getFullYear();
         justify-content: space-between;
         align-items: center;
         padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 1px solid var(--color-border);
         font-size: 0.875rem;
         color: var(--color-text-muted);
     }
@@ -239,7 +243,7 @@ const currentYear = new Date().getFullYear();
     }
 
     .footer-legal a:hover {
-        color: #fff;
+        color: var(--color-accent-primary);
     }
 
     /* Responsive Design */
