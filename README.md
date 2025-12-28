@@ -98,8 +98,47 @@ novintix-static/
 
 - **Framework:** Astro 5.x
 - **Styling:** Vanilla CSS with CSS variables
-- **Fonts:** Google Fonts (Rubik, Inter)
+- **Fonts:** Google Fonts (Inter, Manrope)
 - **Output:** Static HTML/CSS/JS
+- **SEO:** @astrojs/sitemap integration
+
+---
+
+## SEO Features
+
+The site is optimized for search engines with the following features:
+
+| Feature | Implementation |
+|---------|----------------|
+| **Sitemap** | Auto-generated via `@astrojs/sitemap` at `/sitemap-index.xml` |
+| **Robots.txt** | Configured for full crawling at `/robots.txt` |
+| **Meta Tags** | Title, description, keywords on all pages |
+| **Open Graph** | Facebook/LinkedIn sharing optimization |
+| **Twitter Cards** | Twitter sharing with large image cards |
+| **Canonical URLs** | Proper canonical link handling |
+| **Structured Data** | Organization schema (JSON-LD) |
+| **Semantic HTML** | Proper heading hierarchy and landmarks |
+
+### SEO Configuration
+
+The site URL is configured in `astro.config.mjs`:
+
+```javascript
+export default defineConfig({
+  site: 'https://novintix.com',
+  integrations: [sitemap()],
+});
+```
+
+Each page can override default meta tags via the BaseLayout props:
+
+```astro
+<BaseLayout
+  title="Page Title"
+  description="Page description for search results"
+  keywords="custom, keywords, here"
+/>
+```
 
 ---
 
@@ -114,17 +153,27 @@ novintix-static/
 
 ---
 
-## Pages
+## Pages Overview
+
+### Main Pages
 
 | Route | Description |
 |-------|-------------|
-| `/` | Homepage |
-| `/industries` | Industries served |
-| `/digital-solutions` | Digital transformation services |
-| `/careers` | Career opportunities |
-| `/careers/apply` | Job listings (CEIPAL widget) |
-| `/contact-us` | Contact form |
-| `/services/*` | Individual service pages |
+| `/` | Homepage - Hero, services overview, value proposition |
+| `/industries` | Industries served: MedTech (IoMT, remote monitoring, VR/AR, AI diagnostics), Pharmaceutical (digital transformation, AI drug discovery), Healthcare, Biotechnology, Digital Health |
+| `/digital-solutions` | Technology offerings: Connected Healthcare, Intelligent Automation, IoMT, Data Analytics & Data Science, AR/VR Services, Telemedicine |
+| `/careers` | Life at NovintiX - Company culture, team values, job opportunities |
+| `/contact-us` | Contact form and company info (Email: connect@novintix.com, Phone: +(1) 302-306-1115) |
+
+### Service Pages
+
+| Route | Description |
+|-------|-------------|
+| `/services/product-engineering` | Product Engineering & Discovery - R&D transformation, smart connected products, embedded devices, IoT, Drug Discovery & Development (AI/ML, high-throughput screening, target validation) |
+| `/services/supply-chain` | Supply Chain - Value engineering, product obsolescence, technology transfer, asset tracking, supplier optimization, master data management |
+| `/services/manufacturing` | Manufacturing - Digital twin, augmented reality, IoT platforms, edge computing, OEE optimization, Industry 4.0, autonomous factories |
+| `/services/quality-regulatory-compliance` | Quality & Regulatory Compliance - Quality management systems, regulatory compliance, FDA 21 CFR Part 820, EU MDR/IVDR, ISO 13485, MDSAP |
+| `/services/clinical-affairs` | Clinical Affairs - Stakeholder value communication, clinical strategy, HTA bodies, regulatory submissions, IDE, 510(k), PMA, CE marking |
 
 ---
 

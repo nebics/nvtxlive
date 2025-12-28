@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novintix.com/sitemap-index.xml

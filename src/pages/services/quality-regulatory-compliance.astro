@@ -6,15 +6,25 @@ import PageHero from '../../components/PageHero.astro';
 <BaseLayout title="Quality & Compliance" currentPage="/services/quality-regulatory-compliance">
   <PageHero
     icon="services"
-    title="Quality & Compliance"
-    description="Navigate complex regulations with confidence and speed."
+    title="Quality & Regulatory Compliance"
+    description="Streamline operations, reduce risks, and stay compliant with evolving requirements."
   />
 
   <section class="intro-section section">
     <div class="container">
-      <div class="intro-content-center">
-        <h2>Compliance that enables growth</h2>
-        <p>Quality and regulatory compliance aren't obstacles—they're opportunities to build better products and stronger businesses. We help life sciences companies meet the highest standards while moving faster to market.</p>
+      <div class="intro-split">
+        <div class="intro-content">
+          <h2>Quality Compliance</h2>
+          <p>Quality management has a far-reaching impact across all facets of your business—from R&D and clinical trials to manufacturing and distribution. Consolidating quality management within an enterprise platform streamlines operations, enabling greater efficiency and effectiveness, along with reductions in risks and costs.</p>
+          <p>This approach aligns with your most significant business objectives: introducing new products, improving patient safety, fostering collaboration with partners, and staying compliant with evolving regulatory requirements.</p>
+          <p>Minimize the burden, mitigate risks, and trim the expenses associated with quality compliance. Our customized solutions offer the capability to automate a single process or enhance your complete quality management system.</p>
+        </div>
+        <div class="intro-content">
+          <h2>Regulatory Compliance</h2>
+          <p>Global regulations continue to evolve, with thousands being introduced each year, making compliance both expensive and intricate.</p>
+          <p>Our Regulatory Compliance solutions ensure you remain on course and in command. Our operational framework assists in aligning with industry standards. Our team of digital technology experts aids in independent validation services and the development of regulatory applications.</p>
+          <p>Our approach centers on best practices encompassing information security management, FDA guidelines on system validation, and electronic records and signatures.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -74,10 +84,10 @@ import PageHero from '../../components/PageHero.astro';
     <div class="container">
       <div class="cta-card">
         <div class="cta-content">
-          <h2>Get compliance right</h2>
-          <p>Let's discuss how we can help strengthen your quality systems.</p>
+          <h2>We invest time to fully understand your needs</h2>
+          <p>Let's discuss how we can strengthen your quality and compliance systems.</p>
         </div>
-        <a href="/contact-us" class="btn">Get in Touch</a>
+        <a href="/contact-us" class="btn">Contact Us</a>
       </div>
     </div>
   </section>
@@ -88,20 +98,26 @@ import PageHero from '../../components/PageHero.astro';
     background: #fff;
   }
 
-  .intro-content-center {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
+  .intro-split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
   }
 
-  .intro-content-center h2 {
-    margin-bottom: 1.5rem;
+  .intro-content h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
   }
 
-  .intro-content-center p {
+  .intro-content p {
     color: var(--color-muted);
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .intro-content p:last-child {
+    margin-bottom: 0;
   }
 
   .services-split {
@@ -225,6 +241,11 @@ import PageHero from '../../components/PageHero.astro';
   }
 
   @media (max-width: 1024px) {
+    .intro-split {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
     .services-split {
       grid-template-columns: 1fr;
       gap: 3rem;

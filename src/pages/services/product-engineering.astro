@@ -3,30 +3,67 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 ---
 
-<BaseLayout title="Product Engineering" currentPage="/services/product-engineering">
+<BaseLayout title="Product Engineering & Discovery" currentPage="/services/product-engineering">
   <PageHero
     icon="services"
-    title="Product Engineering"
-    description="From concept to commercialization, we bring your product vision to life."
+    title="Product Engineering & Discovery"
+    description="Energize your R&D teams through our innovative approach to product development. We combine deep industry knowledge with cutting-edge technology to accelerate your product journey from concept to market."
   />
 
   <section class="intro-section section">
     <div class="container">
-      <div class="intro-grid">
-        <div class="intro-content">
-          <h2>Turn ideas into market-ready products</h2>
-          <p>Product development in life sciences is complex. Regulatory requirements, technical challenges, and time-to-market pressures demand expertise at every step.</p>
-          <p>We've helped companies navigate this journey hundreds of times. Our team brings hands-on experience from leading medical device and pharma companies, giving you the practical knowledge you need to succeed.</p>
+      <div class="intro-content-full">
+        <p class="intro-lead">The future of growth depends on transforming business models, execution processes, and products to meet evolving customer demands. The development of new offerings using smart connected products, embedded devices, IoT, analytics, and telemetry has become critical.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4"></path>
+              <path d="M12 18v4"></path>
+              <path d="M4.93 4.93l2.83 2.83"></path>
+              <path d="M16.24 16.24l2.83 2.83"></path>
+              <path d="M2 12h4"></path>
+              <path d="M18 12h4"></path>
+            </svg>
+          </div>
+          <h4>Smart Connected Products</h4>
+          <p>IoT-enabled devices with embedded intelligence and real-time analytics capabilities.</p>
         </div>
-        <div class="intro-stats">
-          <div class="stat-card">
-            <span class="stat-value">200+</span>
-            <span class="stat-label">Products launched</span>
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
           </div>
-          <div class="stat-card">
-            <span class="stat-value">95%</span>
-            <span class="stat-label">First-time approval rate</span>
+          <h4>Embedded Systems</h4>
+          <p>Hardware and firmware development for medical devices and life sciences equipment.</p>
+        </div>
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
           </div>
+          <h4>Cloud & Analytics</h4>
+          <p>Data platforms and telemetry solutions for product insights and remote monitoring.</p>
+        </div>
+        <div class="capability-card capability-card-highlight">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h4>Global Engineering Talent</h4>
+          <p>Access our worldwide network of specialized engineers and domain experts.</p>
         </div>
       </div>
     </div>
@@ -86,14 +123,57 @@ import PageHero from '../../components/PageHero.astro';
     </div>
   </section>
 
-  <section class="cta-section section">
+  <section class="discovery-section section">
+    <div class="container">
+      <div class="discovery-grid">
+        <div class="discovery-content">
+          <h2>Drug Discovery & Development</h2>
+          <p>Accelerate your Drug Discovery & Development efforts through our data-driven, technology-enabled, and collaborative approach. The growing urgency for novel therapies, personalized medicine, and cost-effective innovation is redefining how pharmaceutical and biotech organizations operate.</p>
+          <p>We fuse deep scientific expertise with next-generation technologies—AI/ML, high-throughput screening, digital biology, and cloud-based platforms—to streamline molecule discovery, enhance target validation, and accelerate clinical readiness.</p>
+          <p>From early discovery through clinical development and regulatory submission, we deliver end-to-end support that transforms your R&D into a strategic growth driver.</p>
+        </div>
+        <div class="discovery-features">
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>AI/ML-powered discovery</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Target validation</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Clinical readiness</span>
+          </div>
+          <div class="feature-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Regulatory intelligence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section section-light">
     <div class="container">
       <div class="cta-card">
         <div class="cta-content">
-          <h2>Ready to start your project?</h2>
-          <p>Let's discuss how we can help bring your product to market.</p>
+          <h2>We invest time to fully understand your needs</h2>
+          <p>Let's discuss how we can accelerate your product development journey.</p>
         </div>
-        <a href="/contact-us" class="btn">Get in Touch</a>
+        <a href="/contact-us" class="btn">Contact Us</a>
       </div>
     </div>
   </section>
@@ -104,50 +184,75 @@ import PageHero from '../../components/PageHero.astro';
     background: #fff;
   }
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-    align-items: center;
+  .intro-content-full {
+    max-width: 100%;
+    margin-bottom: 3rem;
   }
 
-  .intro-content h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .intro-content p {
+  .intro-lead {
     color: var(--color-muted);
-    font-size: 1.0625rem;
+    font-size: 1.1875rem;
     line-height: 1.8;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
-  .intro-stats {
-    display: flex;
-    flex-direction: column;
+  /* Capabilities Grid */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 
-  .stat-card {
-    background: var(--gradient-dark);
-    border-radius: var(--radius-xl);
+  .capability-card {
+    background: var(--color-light);
+    border-radius: var(--radius-lg);
     padding: 2rem;
-    text-align: center;
+    transition: all var(--transition-base);
   }
 
-  .stat-value {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 800;
+  .capability-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    background: #fff;
+  }
+
+  .capability-card-highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .capability-card-highlight:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+  }
+
+  .capability-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: var(--radius-md);
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .capability-card-highlight .capability-icon {
+    background: var(--gradient-primary);
     color: #fff;
-    line-height: 1;
-    margin-bottom: 0.5rem;
   }
 
-  .stat-label {
+  .capability-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .capability-card p {
+    color: var(--color-muted);
     font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
   }
 
   .services-grid {
@@ -189,8 +294,56 @@ import PageHero from '../../components/PageHero.astro';
     line-height: 1.7;
   }
 
-  .cta-section {
+  /* Discovery Section */
+  .discovery-section {
     background: #fff;
+  }
+
+  .discovery-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .discovery-content h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .discovery-content p {
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .discovery-features {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9375rem;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .feature-item:last-child {
+    border-bottom: none;
+  }
+
+  .feature-item svg {
+    color: var(--color-accent-light);
+    flex-shrink: 0;
+  }
+
+  .cta-section {
+    background: var(--color-light);
   }
 
   .cta-card {
@@ -224,27 +377,23 @@ import PageHero from '../../components/PageHero.astro';
   }
 
   @media (max-width: 1024px) {
-    .intro-grid {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .intro-stats {
-      flex-direction: row;
-    }
-
-    .stat-card {
-      flex: 1;
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .services-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .discovery-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .intro-stats {
-      flex-direction: column;
+    .capabilities-grid {
+      grid-template-columns: 1fr;
     }
 
     .services-grid {

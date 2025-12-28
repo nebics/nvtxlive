@@ -7,26 +7,58 @@ import PageHero from '../../components/PageHero.astro';
   <PageHero
     icon="services"
     title="Clinical Affairs"
-    description="Generate the evidence you need for regulatory approval."
+    description="Present compelling value narratives to all essential stakeholders—providers, regulatory agencies, HTA bodies, payers, and patients—from clinical development to market success."
   />
 
   <section class="intro-section section">
     <div class="container">
-      <div class="intro-grid">
-        <div class="intro-content">
-          <h2>Clinical strategies that deliver approvals</h2>
-          <p>Getting clinical evidence right is critical. Too little data and you risk rejection. Too much and you waste time and resources. We help you develop efficient clinical strategies that meet regulatory requirements while minimizing burden.</p>
-          <p>Our team has supported clinical programs across cardiovascular, orthopedic, diagnostic, and digital health devices.</p>
+      <div class="intro-content-full">
+        <p class="intro-lead">Payers and regulatory authorities demand comprehensive evidence data and expert assessments during evaluation. We help orchestrate your journey from clinical development to market entry by showcasing the distinctive value and outcomes your innovations offer.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h4>Stakeholder Engagement</h4>
+          <p>Connect effectively with providers, payers, and patients to communicate your product's value proposition.</p>
         </div>
-        <div class="intro-stats">
-          <div class="stat-item">
-            <span class="stat-value">150+</span>
-            <span class="stat-label">Clinical studies supported</span>
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
           </div>
-          <div class="stat-item">
-            <span class="stat-value">95%</span>
-            <span class="stat-label">Approval success rate</span>
+          <h4>Regulatory Strategy</h4>
+          <p>Navigate IDE, 510(k), PMA, and CE marking pathways with expert clinical support.</p>
+        </div>
+        <div class="capability-card">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
           </div>
+          <h4>HTA & Reimbursement</h4>
+          <p>Health technology assessment preparation and payer negotiations for market access.</p>
+        </div>
+        <div class="capability-card capability-card-highlight">
+          <div class="capability-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 11l3 3L22 4"></path>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h4>Evidence Generation</h4>
+          <p>Comprehensive clinical data and real-world evidence to demonstrate safety and efficacy.</p>
         </div>
       </div>
     </div>
@@ -115,10 +147,10 @@ import PageHero from '../../components/PageHero.astro';
     <div class="container">
       <div class="cta-card">
         <div class="cta-content">
-          <h2>Plan your clinical strategy</h2>
-          <p>Let's discuss how we can support your clinical program.</p>
+          <h2>We invest time to fully understand your needs</h2>
+          <p>Let's discuss how we can help showcase your value proposition effectively.</p>
         </div>
-        <a href="/contact-us" class="btn">Get in Touch</a>
+        <a href="/contact-us" class="btn">Contact Us</a>
       </div>
     </div>
   </section>
@@ -129,51 +161,75 @@ import PageHero from '../../components/PageHero.astro';
     background: #fff;
   }
 
-  .intro-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
-    align-items: center;
+  .intro-content-full {
+    max-width: 100%;
+    margin-bottom: 3rem;
   }
 
-  .intro-content h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .intro-content p {
+  .intro-lead {
     color: var(--color-muted);
-    font-size: 1.0625rem;
+    font-size: 1.1875rem;
     line-height: 1.8;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
-  .intro-stats {
-    display: flex;
-    flex-direction: column;
+  /* Capabilities Grid */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 
-  .stat-item {
+  .capability-card {
     background: var(--color-light);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     padding: 2rem;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
   }
 
-  .stat-value {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 800;
+  .capability-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    background: #fff;
+  }
+
+  .capability-card-highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .capability-card-highlight:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+  }
+
+  .capability-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: var(--radius-md);
     color: var(--color-accent);
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
   }
 
-  .stat-label {
-    font-size: 0.9375rem;
+  .capability-card-highlight .capability-icon {
+    background: var(--gradient-primary);
+    color: #fff;
+  }
+
+  .capability-card h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .capability-card p {
     color: var(--color-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
   }
 
   .services-grid {
@@ -247,17 +303,8 @@ import PageHero from '../../components/PageHero.astro';
   }
 
   @media (max-width: 1024px) {
-    .intro-grid {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .intro-stats {
-      flex-direction: row;
-    }
-
-    .stat-item {
-      flex: 1;
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .services-grid {
@@ -266,8 +313,8 @@ import PageHero from '../../components/PageHero.astro';
   }
 
   @media (max-width: 768px) {
-    .intro-stats {
-      flex-direction: column;
+    .capabilities-grid {
+      grid-template-columns: 1fr;
     }
 
     .services-grid {

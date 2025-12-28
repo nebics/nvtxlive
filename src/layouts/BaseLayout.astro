@@ -7,9 +7,21 @@ interface Props {
   title: string;
   description?: string;
   currentPage?: string;
+  keywords?: string;
+  ogImage?: string;
 }
 
-const { title, description = 'NovintiX - Accelerate Transformation To Shape Your Future', currentPage = '' } = Astro.props;
+const {
+  title,
+  description = 'NovintiX - Life sciences consulting firm specializing in digital transformation, product engineering, and regulatory compliance for healthcare and pharmaceutical industries.',
+  currentPage = '',
+  keywords = 'life sciences consulting, digital transformation, product engineering, regulatory compliance, pharmaceutical, healthcare, medical devices, clinical affairs',
+  ogImage = '/images/og-image.jpg'
+} = Astro.props;
+
+const siteUrl = 'https://novintix.com';
+const canonicalUrl = new URL(currentPage || Astro.url.pathname, siteUrl).href;
+const fullTitle = title === 'Home' ? 'NovintiX - Accelerate Transformation To Shape Your Future' : `${title} | NovintiX`;
 ---
 
 <!DOCTYPE html>
@@ -17,11 +29,58 @@ const { title, description = 'NovintiX - Accelerate Transformation To Shape Your
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>{fullTitle}</title>
+  <meta name="title" content={fullTitle}>
   <meta name="description" content={description}>
-  <title>{title} - NovintiX</title>
+  <meta name="keywords" content={keywords}>
+  <meta name="author" content="NovintiX">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href={canonicalUrl}>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalUrl}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={`${siteUrl}${ogImage}`}>
+  <meta property="og:site_name" content="NovintiX">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={canonicalUrl}>
+  <meta property="twitter:title" content={fullTitle}>
+  <meta property="twitter:description" content={description}>
+  <meta property="twitter:image" content={`${siteUrl}${ogImage}`}>
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NovintiX",
+      "url": "https://novintix.com",
+      "logo": "https://novintix.com/images/logo.png",
+      "description": "Life sciences consulting firm specializing in digital transformation, product engineering, and regulatory compliance.",
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-306-1115",
+        "contactType": "customer service",
+        "email": "connect@novintix.com"
+      }
+    }
+  </script>
 </head>
 <body>
   <Header currentPage={currentPage} />

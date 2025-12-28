@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://localhost:4321",
+  "pages": [
+    "/",
+    "/careers",
+    "/careers/apply",
+    "/contact-us",
+    "/digital-solutions",
+    "/industries",
+    "/services/clinical-affairs",
+    "/services/manufacturing",
+    "/services/product-engineering",
+    "/services/quality-regulatory-compliance",
+    "/services/supply-chain",
+
+    "privacy-policy",
+    "terms-of-service"
+  ]
+}

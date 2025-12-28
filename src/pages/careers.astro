@@ -6,8 +6,8 @@ import PageHero from '../components/PageHero.astro';
 <BaseLayout title="Careers" currentPage="/careers">
   <PageHero
     icon="careers"
-    title="Join Our Team"
-    description="Help life sciences companies bring better products to patients faster."
+    title="Life at Novintix"
+    description="We are dedicated to creating a brighter future by helping our customers achieve their goals and fostering the aspirations of our team members."
   />
 
   <section class="intro-section section">
@@ -15,9 +15,9 @@ import PageHero from '../components/PageHero.astro';
       <div class="intro-card">
         <div class="intro-content">
           <h2>Build your career with purpose</h2>
-          <p>At NovintiX, you'll work alongside industry experts on projects that matter. We're a team of problem-solvers who thrive on helping clients overcome their toughest challenges.</p>
-          <p>Whether you're a seasoned consultant or just starting your career, we offer the support, mentorship, and opportunities you need to grow.</p>
-          <a href="/careers/apply" class="btn">View Open Positions</a>
+          <p>At NovintiX, you'll work alongside industry experts on projects that truly matter. We're a team of problem-solvers who help life sciences companies bring innovative products to patients faster.</p>
+          <p>Whether you're an experienced professional or starting your career journey, we provide the support, mentorship, and meaningful opportunities you need to grow and make a difference.</p>
+          <a href="/careers/apply" class="btn">Explore Opportunities</a>
         </div>
         <div class="intro-image">
           <img src="/images/Corporate_Differentiator.jpg" alt="Team collaboration" />
@@ -82,16 +82,38 @@ import PageHero from '../components/PageHero.astro';
     </div>
   </section>
 
-  <section class="cta-section section">
+  <section id="openings" class="openings-section section">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Our current openings</h2>
+        <p>Join our team and help shape the future of life sciences. We're always looking for talented individuals who share our passion for innovation and excellence.</p>
+      </div>
+      <div class="openings-placeholder">
+        <div class="openings-card">
+          <div class="openings-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h3>Explore Career Opportunities</h3>
+          <p>We're growing our team across multiple disciplines. Check back regularly for new positions or send us your resume directly.</p>
+          <a href="mailto:careers@novintix.com" class="btn">Send Your Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section section-light">
     <div class="container">
       <div class="cta-card">
         <div class="cta-content">
           <h2>Ready to make an impact?</h2>
-          <p>We're always looking for talented people. Check out our open positions or send us your resume.</p>
+          <p>We're always looking for talented people who want to make a real difference in life sciences. Join us in creating a brighter future.</p>
         </div>
         <div class="cta-actions">
-          <a href="/careers/apply" class="btn">View Open Positions</a>
-          <a href="mailto:careers@novintix.com" class="btn btn-outline">Send Resume</a>
+          <a href="mailto:careers@novintix.com" class="btn">Get In Touch</a>
+          <a href="/contact-us" class="btn btn-outline">Contact Us</a>
         </div>
       </div>
     </div>
@@ -203,8 +225,65 @@ import PageHero from '../components/PageHero.astro';
     line-height: 1.6;
   }
 
-  .cta-section {
+  /* Openings Section */
+  .openings-section {
     background: #fff;
+  }
+
+  .section-header-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-header-center h2 {
+    margin-bottom: 1rem;
+  }
+
+  .section-header-center p {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  .openings-placeholder {
+    display: flex;
+    justify-content: center;
+  }
+
+  .openings-card {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 4rem;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .openings-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto 1.5rem;
+  }
+
+  .openings-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .openings-card p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .cta-section {
+    background: var(--color-light);
   }
 
   .cta-card {
