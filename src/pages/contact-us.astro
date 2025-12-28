@@ -40,10 +40,10 @@ import PageHero from "../components/PageHero.astro";
                 >
               </div>
               <div>
-                <h5 class="font-semibold text-white mb-1">Email Us</h5>
+                <h5 class="font-semibold text-main mb-1">Email Us</h5>
                 <a
                   href="mailto:connect@novintix.com"
-                  class="text-accent hover:text-accent-light transition-colors"
+                  class="text-accent hover:text-accent-secondary transition-colors"
                   >connect@novintix.com</a
                 >
               </div>
@@ -65,10 +65,10 @@ import PageHero from "../components/PageHero.astro";
                 >
               </div>
               <div>
-                <h5 class="font-semibold text-white mb-1">Call Us</h5>
+                <h5 class="font-semibold text-main mb-1">Call Us</h5>
                 <a
                   href="tel:+13023061115"
-                  class="text-accent hover:text-accent-light transition-colors"
+                  class="text-accent hover:text-accent-secondary transition-colors"
                   >+1 302-306-1115</a
                 >
               </div>
@@ -89,8 +89,8 @@ import PageHero from "../components/PageHero.astro";
                 >
               </div>
               <div>
-                <h5 class="font-semibold text-white mb-1">Visit Us</h5>
-                <p class="text-muted">
+                <h5 class="font-semibold text-main mb-1">Visit Us</h5>
+                <p class="text-secondary">
                   123 Innovation Way<br />Tech Park, CA 94000
                 </p>
               </div>
@@ -114,10 +114,10 @@ import PageHero from "../components/PageHero.astro";
                 >
               </div>
               <div>
-                <h5 class="font-semibold text-white mb-1">Follow Us</h5>
+                <h5 class="font-semibold text-main mb-1">Follow Us</h5>
                 <a
                   href="#"
-                  class="text-accent hover:text-accent-light transition-colors"
+                  class="text-accent hover:text-accent-secondary transition-colors"
                   >LinkedIn</a
                 >
               </div>
@@ -127,14 +127,14 @@ import PageHero from "../components/PageHero.astro";
 
         <!-- Contact Form Column -->
         <div class="contact-form-wrapper glass-panel p-8 rounded-xl">
-          <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+          <h3 class="text-2xl font-bold text-main mb-6">Send a Message</h3>
 
           <form class="contact-form space-y-4" action="#" method="POST">
             <div class="form-row grid grid-cols-2 gap-4">
               <div class="form-group">
                 <label
                   for="name"
-                  class="block text-sm font-medium text-white mb-2">Name</label
+                  class="block text-sm font-medium text-main mb-2">Name</label
                 >
                 <input
                   type="text"
@@ -142,13 +142,13 @@ import PageHero from "../components/PageHero.astro";
                   name="name"
                   placeholder="John Doe"
                   required
-                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors"
+                  class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-main focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
               <div class="form-group">
                 <label
                   for="email"
-                  class="block text-sm font-medium text-white mb-2">Email</label
+                  class="block text-sm font-medium text-main mb-2">Email</label
                 >
                 <input
                   type="email"
@@ -156,7 +156,7 @@ import PageHero from "../components/PageHero.astro";
                   name="email"
                   placeholder="john@company.com"
                   required
-                  class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors"
+                  class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-main focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
             </div>
@@ -164,30 +164,24 @@ import PageHero from "../components/PageHero.astro";
             <div class="form-group">
               <label
                 for="subject"
-                class="block text-sm font-medium text-white mb-2">Subject</label
+                class="block text-sm font-medium text-main mb-2">Subject</label
               >
               <select
                 id="subject"
                 name="subject"
-                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
+                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-main focus:outline-none focus:border-accent transition-colors appearance-none cursor-pointer"
               >
-                <option value="general" class="bg-slate-900"
-                  >General Inquiry</option
-                >
-                <option value="project" class="bg-slate-900"
-                  >Project Discussion</option
-                >
-                <option value="partnership" class="bg-slate-900"
-                  >Partnership</option
-                >
-                <option value="careers" class="bg-slate-900">Careers</option>
+                <option value="general">General Inquiry</option>
+                <option value="project">Project Discussion</option>
+                <option value="partnership">Partnership</option>
+                <option value="careers">Careers</option>
               </select>
             </div>
 
             <div class="form-group">
               <label
                 for="message"
-                class="block text-sm font-medium text-white mb-2">Message</label
+                class="block text-sm font-medium text-main mb-2">Message</label
               >
               <textarea
                 id="message"
@@ -195,7 +189,7 @@ import PageHero from "../components/PageHero.astro";
                 rows="5"
                 placeholder="How can we help?"
                 required
-                class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:border-accent transition-colors resize-y min-h-[120px]"
+                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-main focus:outline-none focus:border-accent transition-colors resize-y min-h-[120px]"
               ></textarea>
             </div>
 
@@ -327,18 +321,25 @@ import PageHero from "../components/PageHero.astro";
     border-radius: 0.75rem;
   }
 
-  /* Icon Box */
+  /* Icon Box - Light Theme */
   .icon-box {
     width: 48px;
     height: 48px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(14, 165, 233, 0.1); /* Light Blue Tint */
+    border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-accent-primary);
     flex-shrink: 0;
+  }
+
+  /* Form Input - Light Theme Customization if not global */
+  input,
+  select,
+  textarea {
+    color: var(--color-text-main);
   }
 
   /* Form Elements Customization */

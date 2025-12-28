@@ -42,212 +42,203 @@ const selectedIcon = icons[icon] || icons.default;
 
 <section class="page-hero">
   <div class="page-hero-bg">
-    <div class="hero-glass"></div>
+    <!-- Animated Gradient Blobs -->
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
+    <!-- Noise Texture for visual richness -->
+    <div class="hero-noise"></div>
+
+    <!-- Glass Sheen Overlay -->
+    <div class="glass-overlay"></div>
+
+    <!-- Large Background Icon -->
     <div class="hero-icon-bg" set:html={selectedIcon} />
-    <div class="hero-gradient-orb hero-orb-1"></div>
-    <div class="hero-gradient-orb hero-orb-2"></div>
   </div>
+
   <div class="container relative z-10">
     <div class="page-hero-grid">
       <div class="page-hero-content animate-fade-in-up">
         <h1>{title}</h1>
         {description && <p class="hero-description">{description}</p>}
       </div>
-      <!-- Spacer for the large icon on the right -->
-      <div class="page-hero-visual"></div>
     </div>
   </div>
-  <!-- Enhanced Glass Border Separator -->
-  <div class="hero-separator">
-    <div class="separator-glow"></div>
-  </div>
+
+  <!-- Use a clean border separator instead of glow -->
+  <div class="hero-separator"></div>
 </section>
 
 <style>
   .page-hero {
     position: relative;
-    /* Dynamic height: at least 45vh, but adapts to content */
-    min-height: clamp(450px, 50vh, 700px);
+    /* Dynamic height */
+    min-height: clamp(400px, 45vh, 600px);
     display: flex;
     align-items: center;
     overflow: hidden;
-    /* Responsive padding: large on desktop, tighter on mobile */
-    padding: clamp(8rem, 12vh, 12rem) 0 clamp(4rem, 6vh, 6rem);
-    background: var(--color-bg-main);
+    padding: clamp(8rem, 12vh, 10rem) 0 clamp(4rem, 6vh, 6rem);
+    background: #ffffff;
   }
 
   .page-hero-bg {
     position: absolute;
     inset: 0;
     overflow: hidden;
-    pointer-events: none;
-    /* Ultra-Light Sky Blue Theme */
-    background:
-      /* Very Faint Hex Grid */
-      radial-gradient(
-        circle at 50% 50%,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0) 60%
-      ),
-      repeating-linear-gradient(
-        60deg,
-        rgba(56, 189, 248, 0.03) 0,
-        rgba(56, 189, 248, 0.03) 1px,
-        transparent 1px,
-        transparent 40px
-      ),
-      repeating-linear-gradient(
-        -60deg,
-        rgba(56, 189, 248, 0.03) 0,
-        rgba(56, 189, 248, 0.03) 1px,
-        transparent 1px,
-        transparent 40px
-      ),
-      /* Ultra-Light Sky Gradient Base */
-      linear-gradient(150deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
-    background-size:
-      100% 100%,
-      100px 174px,
-      100px 174px,
-      100% 100%;
+    z-index: 0;
+    background: #ffffff; /* Fallback */
+  }
+
+  /* --- Creative Glassy Elements --- */
+
+  /* 1. Moving Gradient Blobs */
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* Heavy blur for soft diffuse look */
+    opacity: 0.6;
+    animation: floatBlob 20s infinite alternate ease-in-out;
     z-index: 0;
   }
 
-  .page-hero-bg::before {
-    content: "";
+  .hero-blob-1 {
+    width: 60vh;
+    height: 60vh;
+    background: radial-gradient(
+      circle,
+      rgba(14, 165, 233, 0.4) 0%,
+      transparent 70%
+    ); /* Sky Blue */
+    top: -20%;
+    right: -10%;
+    animation-delay: 0s;
+  }
+
+  .hero-blob-2 {
+    width: 70vh;
+    height: 70vh;
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.3) 0%,
+      transparent 70%
+    ); /* Indigo */
+    bottom: -30%;
+    left: -10%;
+    animation-delay: -5s;
+  }
+
+  .hero-blob-3 {
+    width: 40vh;
+    height: 40vh;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 70%
+    ); /* White Highlight */
+    top: 40%;
+    right: 20%;
+    mix-blend-mode: overlay;
+    animation-delay: -10s;
+  }
+
+  @keyframes floatBlob {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(50px, 30px) scale(1.1);
+    }
+  }
+
+  /* 2. Noise Texture - Vital for "Premium" feel */
+  .hero-noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  /* 3. Glass Sheen/Reflection */
+  .glass-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      180deg,
-      rgba(56, 189, 248, 0.05) 0%,
-      transparent 100%
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 70%
     );
-    z-index: 1;
+    z-index: 2;
+    opacity: 0.6;
+    pointer-events: none;
   }
 
-  .hero-glass {
+  /* 4. Large Icon Watermark */
+  .hero-icon-bg {
     position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at 15% 50%,
-      rgba(2, 6, 23, 0) 0%,
-      rgba(2, 6, 23, 0.9) 100%
-    );
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-10deg);
+    width: 60vh;
+    height: 60vh;
+    color: var(--color-accent-primary);
+    opacity: 0.03; /* Very faint */
     z-index: 1;
+    pointer-events: none;
   }
 
-  /* Enhanced Separator */
-  .hero-separator {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
+  /* --- Content Styling --- */
+  .page-hero-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 900px; /* Centered focus */
+    margin: 0 auto;
+    text-align: center; /* Center aligned for impact */
+    position: relative;
     z-index: 10;
   }
 
-  .separator-glow {
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--color-accent-primary),
-      transparent
-    );
-    box-shadow: 0 -2px 10px var(--color-accent-primary);
-    opacity: 0.7;
-  }
-
-  /* Large Creative Icon Background */
-  .hero-icon-bg {
-    position: absolute;
-    right: -10%;
-    top: 50%;
-    transform: translateY(-50%) rotate(-15deg);
-    width: 50vh;
-    height: 50vh;
-    color: rgba(56, 189, 248, 0.05);
-    z-index: 0;
-    transition: all 0.5s ease-out;
-  }
-
-  .hero-gradient-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.25;
-    z-index: 0;
-  }
-
-  .hero-orb-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-      circle,
-      var(--color-accent-primary) 0%,
-      transparent 70%
-    );
-    top: -20%;
-    left: -10%;
-  }
-
-  .hero-orb-2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(
-      circle,
-      var(--color-accent-secondary) 0%,
-      transparent 70%
-    );
-    bottom: -10%;
-    right: 10%;
-  }
-
-  .page-hero-grid {
-    display: grid;
-    /* Adjusted grid to give more space to text */
-    grid-template-columns: 1.5fr 0.5fr;
-    gap: 2rem;
-    align-items: center;
-  }
-
-  .page-hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
   .page-hero-content h1 {
-    color: #fff;
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Slightly adjusted for better fit */
+    color: var(--color-text-main); /* Dark Slate */
+    font-size: clamp(3rem, 6vw, 5rem);
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .hero-description {
     color: var(--color-text-secondary);
     font-size: 1.25rem;
     line-height: 1.7;
-    /* Increased max-width significantly to use breadth */
-    max-width: 800px;
-    border-left: 1px solid var(--color-accent-primary);
-    padding-left: 2rem;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  /* --- Separator --- */
+  .hero-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.06),
+      transparent
+    );
+    z-index: 10;
   }
 
   /* Animation */
   .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   @keyframes fadeInUp {
@@ -257,36 +248,18 @@ const selectedIcon = icons[icon] || icons.default;
     }
   }
 
-  @media (max-width: 1024px) {
-    .page-hero {
-      min-height: auto;
-      padding: 9rem 0 5rem;
-    }
-
-    .page-hero-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .page-hero-visual {
-      display: none;
-    }
-
-    .hero-icon-bg {
-      right: -10%;
-      width: 40vh;
-      height: 40vh;
-      opacity: 0.1;
-    }
-  }
-
   @media (max-width: 768px) {
     .page-hero-content h1 {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
     }
-
     .hero-description {
       font-size: 1.125rem;
-      padding-left: 1.5rem;
+    }
+    .hero-blob-1 {
+      right: -20%;
+    }
+    .hero-blob-2 {
+      left: -20%;
     }
   }
 </style>
