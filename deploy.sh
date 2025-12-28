@@ -76,7 +76,8 @@ echo "✓ Cleaned dist folder"
 
 # Step 2: Install dependencies (ensure fresh)
 echo -e "\n${YELLOW}[2/5] Installing dependencies...${NC}"
-npm ci
+rm -rf node_modules package-lock.json
+npm install
 echo "✓ Dependencies installed"
 
 # Step 3: Build
