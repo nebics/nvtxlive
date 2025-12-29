@@ -6,7 +6,7 @@ import PageHero from "../../components/PageHero.astro";
 <BaseLayout title="Clinical Affairs" currentPage="/services/clinical-affairs">
   <PageHero
     title="Clinical Affairs"
-    description="Expert guidance through clinical trials and regulatory submissions."
+    description="Present compelling value narratives to all essential stakeholders—providers, regulatory agencies, HTA bodies, payers, and patients—from clinical development to market success."
     icon="services"
   />
 
@@ -43,15 +43,129 @@ import PageHero from "../../components/PageHero.astro";
 
           <!-- Right: Content -->
           <div>
-            <p class="text-xl text-secondary leading-relaxed">
-              NovintiX provides comprehensive <strong
-                class="text-accent font-medium"
-                >clinical affairs services</strong
-              > to help medical device companies generate the clinical evidence needed
-              for regulatory approval and market success. Our team brings extensive
-              experience in designing and executing clinical strategies across a wide
-              range of device types.
+            <p class="text-xl text-secondary leading-relaxed mb-6">
+              Payers and regulatory authorities demand comprehensive evidence
+              data and expert assessments during evaluation. We help orchestrate
+              your journey from clinical development to market entry by
+              showcasing the distinctive value and outcomes your innovations
+              offer.
             </p>
+          </div>
+        </div>
+
+        <!-- New V3 Capabilities Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
+          <div
+            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold mb-2">Stakeholder Engagement</h4>
+            <p class="text-muted text-sm leading-relaxed">
+              Connect effectively with providers, payers, and patients to
+              communicate your product's value proposition.
+            </p>
+          </div>
+
+          <div
+            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold mb-2">Regulatory Strategy</h4>
+            <p class="text-muted text-sm leading-relaxed">
+              Navigate IDE, 510(k), PMA, and CE marking pathways with expert
+              clinical support.
+            </p>
+          </div>
+
+          <div
+            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold mb-2">HTA & Reimbursement</h4>
+            <p class="text-muted text-sm leading-relaxed">
+              Health technology assessment preparation and payer negotiations
+              for market access.
+            </p>
+          </div>
+
+          <div
+            class="relative overflow-hidden bg-gradient-brand p-[1px] rounded-2xl group hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div
+              class="absolute inset-0 bg-white/90 rounded-2xl group-hover:bg-white/95 transition-colors"
+            >
+            </div>
+            <div class="relative p-8 h-full">
+              <div
+                class="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center text-white mb-6 shadow-sm"
+              >
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path
+                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="text-lg font-bold mb-2">Evidence Generation</h4>
+              <p class="text-muted text-sm leading-relaxed">
+                Comprehensive clinical data and real-world evidence to
+                demonstrate safety and efficacy.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -77,8 +191,8 @@ import PageHero from "../../components/PageHero.astro";
             </div>
             <h4>Clinical Strategy</h4>
             <p>
-              Development planning and regulatory pathway analysis to ensure
-              study success.
+              Development planning and regulatory pathway analysis to optimize
+              your clinical approach.
             </p>
           </div>
 
@@ -91,8 +205,8 @@ import PageHero from "../../components/PageHero.astro";
             </div>
             <h4>Study Design</h4>
             <p>
-              Protocol development, statistical analysis plans, and
-              comprehensive study setup.
+              Protocol development, statistical analysis plans, and study setup
+              for successful trials.
             </p>
           </div>
 
@@ -105,8 +219,8 @@ import PageHero from "../../components/PageHero.astro";
             </div>
             <h4>CER Development</h4>
             <p>
-              Clinical Evaluation Reports strictly aligned with EU MDR
-              requirements.
+              CER development per EU MDR requirements with systematic literature
+              reviews.
             </p>
           </div>
 
@@ -119,7 +233,8 @@ import PageHero from "../../components/PageHero.astro";
             </div>
             <h4>Literature Reviews</h4>
             <p>
-              Systematic literature searches and gap analysis for clinical data.
+              Systematic searches and analysis to support regulatory
+              submissions.
             </p>
           </div>
 
@@ -130,9 +245,10 @@ import PageHero from "../../components/PageHero.astro";
             >
               05
             </div>
-            <h4>PMCF</h4>
+            <h4>Post-Market Clinical Follow-up</h4>
             <p>
-              Post-Market Clinical Follow-up planning and execution strategies.
+              PMCF planning and execution to maintain compliance throughout
+              product lifecycle.
             </p>
           </div>
 
@@ -143,10 +259,10 @@ import PageHero from "../../components/PageHero.astro";
             >
               06
             </div>
-            <h4>Submissions</h4>
+            <h4>Regulatory Submissions</h4>
             <p>
-              Full support for IDE, 510(k), and CE marking clinical
-              documentation.
+              IDE, 510(k), PMA, and CE marking clinical support for global
+              approvals.
             </p>
           </div>
         </div>
