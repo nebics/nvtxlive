@@ -10,338 +10,216 @@ import PageHero from "../../components/PageHero.astro";
     icon="services"
   />
 
-  <section class="section">
+  <!-- Intro Section -->
+  <section class="section bg-white">
     <div class="container">
-      <!-- Creative Intro Section (Redesigned) -->
-      <div class="relative max-w-6xl mx-auto mb-32 pt-12 px-4">
-        <!-- Floating Watermark -->
-        <div
-          class="absolute -top-20 -left-10 text-[10rem] opacity-[0.03] select-none pointer-events-none text-accent font-serif leading-none hidden lg:block"
-        >
-          &ldquo;
+      <div class="intro-block">
+        <div class="intro-header">
+          <span class="intro-badge">Clinical Excellence</span>
+          <h2 class="intro-title">From Evidence to Market Success</h2>
+          <p class="intro-description">
+            Payers and regulatory authorities demand comprehensive evidence data and expert assessments
+            during evaluation. We help orchestrate your journey from clinical development to market entry
+            by showcasing the distinctive value and outcomes your innovations offer.
+          </p>
         </div>
 
-        <div
-          class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
-        >
-          <!-- Left: Heading (Flexbox Layout) -->
-          <div class="flex flex-row items-stretch" style="gap: 1.5rem;">
-            <!-- Vertical Accent Bar -->
-            <div
-              class="shrink-0 rounded-full"
-              style="width: 6px; background-color: #F5A302;"
-            >
-            </div>
-
-            <!-- Heading Text -->
-            <h2
-              class="text-4xl lg:text-5xl font-extrabold tracking-tight text-gradient leading-[1.15]"
-            >
-              Clinical Excellence
-            </h2>
-          </div>
-
-          <!-- Right: Content -->
-          <div>
-            <p class="text-xl text-secondary leading-relaxed mb-6">
-              Payers and regulatory authorities demand comprehensive evidence
-              data and expert assessments during evaluation. We help orchestrate
-              your journey from clinical development to market entry by
-              showcasing the distinctive value and outcomes your innovations
-              offer.
-            </p>
-          </div>
-        </div>
-
-        <!-- New V3 Capabilities Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
-          <div
-            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
-            >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <h4 class="text-lg font-bold mb-2">Stakeholder Engagement</h4>
-            <p class="text-muted text-sm leading-relaxed">
-              Connect effectively with providers, payers, and patients to
-              communicate your product's value proposition.
-            </p>
+            <div class="capability-content">
+              <h4>Stakeholder Engagement</h4>
+              <p>Connect effectively with providers, payers, and patients to communicate your product's value.</p>
+            </div>
           </div>
 
-          <div
-            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
-            >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                ></path>
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="16" y1="13" x2="8" y2="13"></line>
                 <line x1="16" y1="17" x2="8" y2="17"></line>
               </svg>
             </div>
-            <h4 class="text-lg font-bold mb-2">Regulatory Strategy</h4>
-            <p class="text-muted text-sm leading-relaxed">
-              Navigate IDE, 510(k), PMA, and CE marking pathways with expert
-              clinical support.
-            </p>
+            <div class="capability-content">
+              <h4>Regulatory Strategy</h4>
+              <p>Navigate IDE, 510(k), PMA, and CE marking pathways with expert clinical support.</p>
+            </div>
           </div>
 
-          <div
-            class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
-            >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
               </svg>
             </div>
-            <h4 class="text-lg font-bold mb-2">HTA & Reimbursement</h4>
-            <p class="text-muted text-sm leading-relaxed">
-              Health technology assessment preparation and payer negotiations
-              for market access.
-            </p>
-          </div>
-
-          <div
-            class="relative overflow-hidden bg-gradient-brand p-[1px] rounded-2xl group hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            <div
-              class="absolute inset-0 bg-white/90 rounded-2xl group-hover:bg-white/95 transition-colors"
-            >
-            </div>
-            <div class="relative p-8 h-full">
-              <div
-                class="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center text-white mb-6 shadow-sm"
-              >
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M9 11l3 3L22 4"></path>
-                  <path
-                    d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                  ></path>
-                </svg>
-              </div>
-              <h4 class="text-lg font-bold mb-2">Evidence Generation</h4>
-              <p class="text-muted text-sm leading-relaxed">
-                Comprehensive clinical data and real-world evidence to
-                demonstrate safety and efficacy.
-              </p>
+            <div class="capability-content">
+              <h4>HTA & Reimbursement</h4>
+              <p>Health technology assessment preparation and payer negotiations for market access.</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Services Grid -->
-      <div class="mb-24">
-        <div class="text-center mb-16">
-          <h6
-            class="text-accent text-sm font-bold uppercase tracking-widest mb-3"
-          >
-            Capabilities
-          </h6>
-          <h3>Our Services Include</h3>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service Card 1 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              01
+          <div class="capability-card capability-card-featured">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
             </div>
-            <h4>Clinical Strategy</h4>
-            <p>
-              Development planning and regulatory pathway analysis to optimize
-              your clinical approach.
-            </p>
-          </div>
-
-          <!-- Service Card 2 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              02
+            <div class="capability-content">
+              <h4>Evidence Generation</h4>
+              <p>Comprehensive clinical data and real-world evidence to demonstrate safety and efficacy.</p>
             </div>
-            <h4>Study Design</h4>
-            <p>
-              Protocol development, statistical analysis plans, and study setup
-              for successful trials.
-            </p>
           </div>
-
-          <!-- Service Card 3 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              03
-            </div>
-            <h4>CER Development</h4>
-            <p>
-              CER development per EU MDR requirements with systematic literature
-              reviews.
-            </p>
-          </div>
-
-          <!-- Service Card 4 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              04
-            </div>
-            <h4>Literature Reviews</h4>
-            <p>
-              Systematic searches and analysis to support regulatory
-              submissions.
-            </p>
-          </div>
-
-          <!-- Service Card 5 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              05
-            </div>
-            <h4>Post-Market Clinical Follow-up</h4>
-            <p>
-              PMCF planning and execution to maintain compliance throughout
-              product lifecycle.
-            </p>
-          </div>
-
-          <!-- Service Card 6 -->
-          <div class="card service-feature-card group">
-            <div
-              class="feature-icon group-hover:scale-110 transition-transform duration-300"
-            >
-              06
-            </div>
-            <h4>Regulatory Submissions</h4>
-            <p>
-              IDE, 510(k), PMA, and CE marking clinical support for global
-              approvals.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Why Choose Us -->
-      <div
-        class="bg-surface rounded-3xl p-12 text-center relative overflow-hidden mb-24"
-      >
-        <div class="bg-glow"></div>
-        <!-- Decorative Glow -->
-        <div class="relative z-10 max-w-3xl mx-auto">
-          <h3 class="mb-6">Why Choose NovintiX?</h3>
-          <p class="text-lg mb-0 text-secondary">
-            Our clinical affairs team combines scientific rigor with practical
-            regulatory knowledge. We help you develop efficient clinical
-            strategies that meet regulatory requirements while minimizing time
-            and cost.
-          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Related Services Nav -->
-  <section class="section border-t border-border bg-surface/50">
+  <!-- Services Section -->
+  <section class="section bg-surface">
     <div class="container">
-      <div class="text-center mb-10">
-        <h6 class="text-accent mb-2">Explore More</h6>
-        <h3>Related Services</h3>
+      <div class="section-header">
+        <span class="section-badge">Capabilities</span>
+        <h2 class="section-title">Our Services Include</h2>
+        <p class="section-subtitle">
+          Comprehensive clinical affairs support from strategy through submission.
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <a
-          href="/services/quality-regulatory-compliance"
-          class="card hover-card group"
-        >
-          <h5 class="group-hover:text-accent transition-colors">
-            Quality & Compliance
-          </h5>
-          <p class="text-sm mb-0">Navigate regulatory landscapes.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-content">
+            <h3>Clinical Strategy</h3>
+            <p>Development planning and regulatory pathway analysis to optimize your clinical approach.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <div class="service-content">
+            <h3>Study Design</h3>
+            <p>Protocol development, statistical analysis plans, and study setup for successful trials.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-content">
+            <h3>CER Development</h3>
+            <p>CER development per EU MDR requirements with systematic literature reviews.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <div class="service-content">
+            <h3>Literature Reviews</h3>
+            <p>Systematic searches and analysis to support regulatory submissions.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">05</div>
+          <div class="service-content">
+            <h3>Post-Market Clinical Follow-up</h3>
+            <p>PMCF planning and execution to maintain compliance throughout product lifecycle.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">06</div>
+          <div class="service-content">
+            <h3>Regulatory Submissions</h3>
+            <p>IDE, 510(k), PMA, and CE marking clinical support for global approvals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="highlight-block">
+        <h3>Why Choose NovintiX?</h3>
+        <p>
+          Our clinical affairs team combines scientific rigor with practical regulatory knowledge.
+          We help you develop efficient clinical strategies that meet regulatory requirements while
+          minimizing time and cost.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Explore More</span>
+        <h2 class="section-title">Related Services</h2>
+      </div>
+
+      <div class="related-grid">
+        <a href="/services/quality-regulatory-compliance" class="related-card">
+          <h4>Quality & Compliance</h4>
+          <p>Navigate complex regulatory landscapes.</p>
+          <span class="related-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
         </a>
-        <a href="/services/product-engineering" class="card hover-card group">
-          <h5 class="group-hover:text-accent transition-colors">
-            Product Engineering
-          </h5>
-          <p class="text-sm mb-0">From concept to commercialization.</p>
+
+        <a href="/services/product-engineering" class="related-card">
+          <h4>Product Engineering</h4>
+          <p>From concept to commercialization.</p>
+          <span class="related-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
         </a>
-        <a href="/digital-solutions" class="card hover-card group">
-          <h5 class="group-hover:text-accent transition-colors">
-            Digital Solutions
-          </h5>
-          <p class="text-sm mb-0">Accelerate innovation.</p>
+
+        <a href="/digital-solutions" class="related-card">
+          <h4>Digital Solutions</h4>
+          <p>Accelerate innovation with technology.</p>
+          <span class="related-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="section text-center">
+  <section class="section bg-white">
     <div class="container">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="mb-6">Need clinical affairs support?</h2>
-        <p class="mb-8">
-          Let's discuss how we can help you generate the evidence you need.
-        </p>
-        <a href="/contact-us" class="btn btn-primary">
+      <div class="cta-block">
+        <div class="cta-content">
+          <h2>Need Clinical Affairs Support?</h2>
+          <p>Let's discuss how we can help you generate the evidence you need.</p>
+        </div>
+        <a href="/contact-us" class="btn-primary">
           Get in Touch
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
-              points="12 5 19 12 12 19"></polyline></svg
-          >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
         </a>
       </div>
     </div>
@@ -349,296 +227,358 @@ import PageHero from "../../components/PageHero.astro";
 </BaseLayout>
 
 <style>
-  /* Local Utilities */
-  .max-w-6xl {
-    max-width: 72rem;
-  }
-  .max-w-5xl {
-    max-width: 64rem;
-  }
-  .max-w-4xl {
-    max-width: 56rem;
-  }
-  .max-w-3xl {
-    max-width: 48rem;
-  }
-  .max-w-2xl {
-    max-width: 42rem;
-  }
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  /* Section Headers */
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
   }
 
-  .mb-2 {
-    margin-bottom: 0.5rem;
-  }
-  .mb-3 {
-    margin-bottom: 0.75rem;
-  }
-  .mb-4 {
+  .section-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: var(--color-accent-light, #fff7e6);
+    color: var(--color-accent, #F5A302);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 9999px;
     margin-bottom: 1rem;
   }
-  .mb-6 {
-    margin-bottom: 1.5rem;
-  }
-  .mb-8 {
-    margin-bottom: 2rem;
-  }
-  .mb-10 {
-    margin-bottom: 2.5rem;
-  }
-  .mb-16 {
-    margin-bottom: 4rem;
-  }
-  .mb-24 {
-    margin-bottom: 6rem;
-  }
-  .mb-32 {
-    margin-bottom: 8rem;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
 
-  .pt-10 {
-    padding-top: 2.5rem;
-  }
-  .pt-12 {
-    padding-top: 3rem;
-  }
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .p-12 {
-    padding: 3rem;
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.7;
   }
 
-  .gap-6 {
+  /* Intro Block */
+  .intro-block {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .intro-header {
+    margin-bottom: 3rem;
+  }
+
+  .intro-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: var(--color-accent-light, #fff7e6);
+    color: var(--color-accent, #F5A302);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+
+  .intro-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .intro-description {
+    font-size: 1.125rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.8;
+    max-width: 800px;
+  }
+
+  /* Capabilities Grid */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  .gap-8 {
-    gap: 2rem;
-  }
-  .gap-12 {
-    gap: 3rem;
-  }
-  .gap-16 {
-    gap: 4rem;
+
+  @media (max-width: 768px) {
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
-  .grid {
-    display: grid;
+  .capability-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--color-surface, #f8fafc);
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
   }
 
-  .text-center {
-    text-align: center;
-  }
-  .text-xl {
-    font-size: 1.25rem;
-  }
-  .text-lg {
-    font-size: 1.125rem;
-  }
-  .text-sm {
-    font-size: 0.875rem;
-  }
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-  .text-5xl {
-    font-size: 3rem;
-  }
-  .text-\[10rem\] {
-    font-size: 10rem;
-  }
-  .text-\[12rem\] {
-    font-size: 12rem;
+  .capability-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
   }
 
-  .font-bold {
+  .capability-card-featured {
+    background: linear-gradient(135deg, #fff7e6 0%, #fff 100%);
+    border-color: var(--color-accent, #F5A302);
+  }
+
+  .capability-card-featured .capability-icon {
+    background: var(--color-accent, #F5A302);
+    color: white;
+  }
+
+  .capability-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--color-accent, #F5A302);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .capability-content h4 {
+    font-size: 1rem;
     font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.5rem;
   }
-  .font-extrabold {
+
+  .capability-content p {
+    font-size: 0.875rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .service-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent, #F5A302);
+    color: white;
+    font-size: 0.875rem;
     font-weight: 800;
-  }
-  .font-medium {
-    font-weight: 500;
-  }
-  .font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    border-radius: 0.5rem;
   }
 
-  .leading-none {
-    line-height: 1;
-  }
-  .leading-tight {
-    line-height: 1.25;
-  }
-  .leading-relaxed {
-    line-height: 1.625;
-  }
-  .leading-\[1\.15\] {
-    line-height: 1.15;
+  .service-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.5rem;
   }
 
-  .tracking-tight {
-    letter-spacing: -0.025em;
-  }
-  .tracking-widest {
-    letter-spacing: 0.1em;
-  }
-
-  .uppercase {
-    text-transform: uppercase;
+  .service-content p {
+    font-size: 0.875rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.6;
+    margin: 0;
   }
 
-  .relative {
-    position: relative;
-  }
-  .absolute {
-    position: absolute;
-  }
-  .-top-10 {
-    top: -2.5rem;
-  }
-  .-top-20 {
-    top: -5rem;
-  }
-  .-left-10 {
-    left: -2.5rem;
-  }
-
-  .w-24 {
-    width: 6rem;
-  }
-  .h-1\.5 {
-    height: 0.375rem;
-  }
-
-  .rounded-full {
-    border-radius: 9999px;
-  }
-  .rounded-3xl {
+  /* Highlight Block */
+  .highlight-block {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    background: var(--color-surface, #f8fafc);
     border-radius: 1.5rem;
   }
 
-  .opacity-5 {
-    opacity: 0.05;
-  }
-  .opacity-\[0\.03\] {
-    opacity: 0.03;
-  }
-  .opacity-60 {
-    opacity: 0.6;
-  }
-
-  .bg-accent {
-    background-color: var(--color-accent-primary);
-  }
-  .bg-surface {
-    background-color: var(--color-bg-surface);
-  }
-  .bg-surface\/50 {
-    background-color: rgba(248, 250, 252, 0.5);
-  }
-
-  .text-accent {
-    color: var(--color-accent-primary);
-  }
-  .text-secondary {
-    color: var(--color-text-secondary);
-  }
-
-  .border-t {
-    border-top-width: 1px;
-  }
-  .border-border {
-    border-color: var(--color-border);
-  }
-
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  .select-none {
-    user-select: none;
-  }
-  .pointer-events-none {
-    pointer-events: none;
-  }
-  .hidden {
-    display: none;
-  }
-  .z-10 {
-    z-index: 10;
-  }
-
-  @media (min-width: 1024px) {
-    .lg\:grid-cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .lg\:grid-cols-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .lg\:grid-cols-12 {
-      grid-template-columns: repeat(12, 1fr);
-    }
-    .lg\:text-5xl {
-      font-size: 3rem;
-    }
-    .lg\:block {
-      display: block;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .md\:grid-cols-3 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  /* Custom Feature Card Styling */
-  .service-feature-card {
-    text-align: left;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .feature-icon {
-    font-family: var(--font-heading);
+  .highlight-block h3 {
     font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--color-accent-primary);
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
     margin-bottom: 1rem;
-    opacity: 0.4;
   }
 
-  .hover-card {
-    transition: all 0.3s ease;
-    text-decoration: none;
+  .highlight-block p {
+    font-size: 1.0625rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* Related Grid */
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .related-card {
     display: block;
-    height: 100%;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
   }
 
-  .group-hover\:text-accent {
-    transition: color 0.2s;
+  .related-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-color: var(--color-accent, #F5A302);
   }
 
-  .hover-card:hover .group-hover\:text-accent {
-    color: var(--color-accent-primary);
+  .related-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
   }
 
-  .group:hover .feature-icon {
+  .related-card:hover h4 {
+    color: var(--color-accent, #F5A302);
+  }
+
+  .related-card p {
+    font-size: 0.875rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .related-arrow {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: var(--color-accent, #F5A302);
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+
+  .related-card:hover .related-arrow {
     opacity: 1;
-    transform: scale(1.1);
+    transform: translateX(0);
   }
-  .transition-transform {
-    transition-property: transform;
+
+  /* CTA Block */
+  .cta-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem;
+    background: var(--color-primary, #1a1a2e);
+    border-radius: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
-  .duration-300 {
-    transition-duration: 300ms;
+
+  @media (max-width: 768px) {
+    .cta-block {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--color-accent, #F5A302);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #e09500;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 163, 2, 0.3);
+  }
+
+  .btn-primary svg {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-primary:hover svg {
+    transform: translateX(4px);
   }
 </style>

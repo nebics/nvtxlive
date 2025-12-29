@@ -10,180 +10,95 @@ import PageHero from "../components/PageHero.astro";
     description="We invest time to fully understand your needs and bring specialized expertise to help you navigate challenges and capture opportunities in life sciences and healthcare."
   />
 
-  <section class="industries-section section">
+  <!-- Medical Technology Section -->
+  <section class="section bg-white">
     <div class="container">
-      <div class="industries-showcase">
-        <!-- MedTech -->
-        <div class="industry-primary">
-          <div class="industry-primary-content">
-            <div class="industry-tag">MedTech</div>
-            <h3>Medical Technology</h3>
-            <p>
-              The medical device landscape is being transformed by cutting-edge
-              innovations. From advanced sensors to the Internet of Medical
-              Things (IoMT), these technologies are enabling remote patient
-              monitoring and personalized treatment like never before.
-            </p>
-            <p class="secondary-text">
-              We provide solutions that integrate AI, cloud computing, and IoT
-              to make healthcare more precise, personalized, and cost-effective.
-              Our focus is on creating highly personalized interactions for both
-              patients and providers.
-            </p>
-            <ul class="capabilities-list">
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                IoMT & connected devices
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                Remote patient monitoring
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                VR/AR training tools
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                AI-powered diagnostics
-              </li>
-            </ul>
-          </div>
-          <div class="industry-primary-visual">
-            <div class="visual-card">
-              <div class="visual-icon">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                </svg>
-              </div>
-              <span class="visual-text"
-                >Democratizing healthcare through technology</span
-              >
-            </div>
-          </div>
+      <div class="industry-block">
+        <div class="industry-header">
+          <span class="industry-badge">Medical Technology</span>
+          <h2 class="industry-title">Transforming Patient Care</h2>
+          <p class="industry-description">
+            The medical device landscape is evolving rapidly. From IoMT sensors to remote monitoring,
+            we help you build the connected ecosystem of the future—enabling better patient outcomes
+            through innovative technology solutions.
+          </p>
         </div>
 
-        <!-- Pharmaceutical - Full Width -->
-        <div class="industry-card industry-card-full">
-          <div class="card-icon">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path>
-              <path d="M3 21h18"></path>
-              <path d="M9 7h6"></path>
-              <path d="M9 11h6"></path>
-              <path d="M9 15h6"></path>
-            </svg>
-          </div>
-          <div class="card-content-wide">
-            <h4>Pharmaceutical</h4>
-            <p>
-              The pharmaceutical industry stands at a transformative crossroads.
-              Rising costs in drug discovery and development, combined with the
-              integration of digital technologies, present both challenges and
-              enormous opportunities. We help re-engineer the pharmaceutical
-              value chain with digital technology at its core—from AI-powered
-              drug discovery and predictive analytics for clinical development
-              to digitally optimized supply chains and patient engagement
-              platforms.
-            </p>
-          </div>
-          <div class="card-footer-side">
-            <span class="card-stat">Digital-first transformation</span>
-          </div>
-        </div>
-
-        <!-- Secondary Industries Grid - 3 equal columns -->
-        <div class="industries-grid">
-          <div class="industry-card">
-            <div class="card-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h4>Healthcare</h4>
-            <p>
-              Healthcare is undergoing crucial transformation due to rising
-              costs and the need for more effective, affordable, personalized
-              treatments. We help organizations shift toward innovation and
-              efficiency in care delivery.
-            </p>
-            <div class="card-footer">
-              <span class="card-stat">Care coordination & AI</span>
+            <div class="capability-content">
+              <h4>IoMT & Connected Devices</h4>
+              <p>Internet of Medical Things solutions for real-time patient monitoring and data collection.</p>
             </div>
           </div>
 
-          <div class="industry-card">
-            <div class="card-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+            </div>
+            <div class="capability-content">
+              <h4>Remote Monitoring</h4>
+              <p>Continuous patient surveillance systems enabling proactive healthcare interventions.</p>
+            </div>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="capability-content">
+              <h4>VR/AR Training</h4>
+              <p>Immersive training platforms for medical professionals and surgical simulations.</p>
+            </div>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <div class="capability-content">
+              <h4>AI Diagnostics</h4>
+              <p>Machine learning algorithms for faster, more accurate medical diagnoses.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pharmaceutical Section -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="industry-block">
+        <div class="industry-header">
+          <span class="industry-badge">Pharmaceutical</span>
+          <h2 class="industry-title">Re-Engineering the Value Chain</h2>
+          <p class="industry-description">
+            From AI-powered drug discovery to digitally optimized supply chains, we help you navigate
+            the crossroads of cost, speed, and compliance—delivering transformative solutions that
+            accelerate your path to market.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="3"></circle>
                 <path d="M12 2v4"></path>
                 <path d="M12 18v4"></path>
@@ -193,39 +108,52 @@ import PageHero from "../components/PageHero.astro";
                 <path d="M18 12h4"></path>
               </svg>
             </div>
-            <h4>Biotechnology</h4>
-            <p>
-              Accelerate biologics from lab to patient. Our expertise in process
-              development, scale-up, and technology transfer helps biotech
-              companies commercialize faster while maintaining quality.
-            </p>
-            <div class="card-footer">
-              <span class="card-stat">Process development</span>
+            <div class="capability-content">
+              <h4>AI-Powered Discovery</h4>
+              <p>Accelerate drug discovery with machine learning and predictive modeling.</p>
             </div>
           </div>
 
-          <div class="industry-card industry-card-highlight">
-            <div class="card-icon">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 3v18h18"></path>
+                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
               </svg>
             </div>
-            <h4>Digital Health</h4>
-            <p>
-              Navigate the evolving landscape of SaMD regulations and AI/ML
-              requirements. We help digital health companies meet compliance
-              standards while driving innovation in connected care.
-            </p>
-            <div class="card-footer">
-              <span class="card-stat">SaMD & AI/ML compliance</span>
+            <div class="capability-content">
+              <h4>Predictive Analytics</h4>
+              <p>Data-driven insights for clinical trials, manufacturing, and market forecasting.</p>
+            </div>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="capability-content">
+              <h4>Patient Engagement</h4>
+              <p>Digital platforms connecting patients with care teams throughout their journey.</p>
+            </div>
+          </div>
+
+          <div class="capability-card">
+            <div class="capability-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="capability-content">
+              <h4>Supply Chain Optimization</h4>
+              <p>End-to-end visibility and efficiency across your pharmaceutical distribution.</p>
             </div>
           </div>
         </div>
@@ -233,36 +161,128 @@ import PageHero from "../components/PageHero.astro";
     </div>
   </section>
 
-  <section class="approach-section section section-light">
+  <!-- Healthcare, Biotech, Digital Health Grid -->
+  <section class="section bg-white">
     <div class="container">
-      <div class="approach-content">
-        <h2>Our approach</h2>
-        <p class="approach-lead">
-          We believe digital technology should be the core enabler of
-          sustainable growth—not just an add-on. That's why we focus on
-          strategic reinvention, helping you modernize infrastructure, leverage
-          data-driven insights, and build capabilities that last.
+      <div class="section-header">
+        <span class="section-badge">Specialized Expertise</span>
+        <h2 class="section-title">Additional Industries</h2>
+        <p class="section-subtitle">
+          Our deep domain knowledge extends across the entire life sciences ecosystem.
         </p>
-        <div class="approach-grid">
-          <div class="approach-item">
-            <h4>Understand first</h4>
+      </div>
+
+      <div class="industries-grid">
+        <!-- Healthcare -->
+        <div class="industry-card">
+          <div class="industry-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Healthcare</h3>
+          <p class="industry-card-description">
+            Shifting toward innovation in care delivery through effective, personalized treatments.
+            We help healthcare organizations modernize their operations and improve patient outcomes.
+          </p>
+          <div class="industry-card-tags">
+            <span class="tag">Care Coordination</span>
+            <span class="tag">AI Integration</span>
+            <span class="tag">Telehealth</span>
+          </div>
+        </div>
+
+        <!-- Biotechnology -->
+        <div class="industry-card">
+          <div class="industry-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4"></path>
+              <path d="M12 18v4"></path>
+              <path d="M4.93 4.93l2.83 2.83"></path>
+              <path d="M16.24 16.24l2.83 2.83"></path>
+              <path d="M2 12h4"></path>
+              <path d="M18 12h4"></path>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Biotechnology</h3>
+          <p class="industry-card-description">
+            Accelerating biologics from lab to patient with process development and technology transfer.
+            We support biotech companies through every stage of product development.
+          </p>
+          <div class="industry-card-tags">
+            <span class="tag">Process Development</span>
+            <span class="tag">Tech Transfer</span>
+            <span class="tag">Scale-Up</span>
+          </div>
+        </div>
+
+        <!-- Digital Health -->
+        <div class="industry-card industry-card-featured">
+          <div class="industry-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Digital Health</h3>
+          <p class="industry-card-description">
+            Meeting compliance standards while driving innovation in connected care and SaMD.
+            We guide organizations through the complexities of digital health regulations.
+          </p>
+          <div class="industry-card-tags">
+            <span class="tag">SaMD</span>
+            <span class="tag">AI/ML Compliance</span>
+            <span class="tag">FDA Guidance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="section bg-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Methodology</span>
+        <h2 class="section-title">Our Approach</h2>
+        <p class="section-subtitle">
+          We believe digital technology should be the core enabler of sustainable growth.
+          We focus on strategic reinvention to build capabilities that last.
+        </p>
+      </div>
+
+      <div class="approach-grid">
+        <div class="approach-card">
+          <div class="approach-number">01</div>
+          <div class="approach-content">
+            <h3>Understand First</h3>
             <p>
-              We take time to deeply understand your business, products, and
-              unique challenges before recommending solutions.
+              We take time to deeply understand your business, products, and unique challenges
+              before recommending solutions. Every engagement starts with listening.
             </p>
           </div>
-          <div class="approach-item">
-            <h4>Technology as enabler</h4>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-number">02</div>
+          <div class="approach-content">
+            <h3>Technology Enabled</h3>
             <p>
-              Digital isn't the goal—better outcomes are. We use technology to
-              solve real problems and create measurable value.
+              Digital isn't the goal—better outcomes are. We use technology as a precise tool
+              to solve real problems and create measurable value for your organization.
             </p>
           </div>
-          <div class="approach-item">
-            <h4>End-to-end partnership</h4>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-number">03</div>
+          <div class="approach-content">
+            <h3>End-to-End Partner</h3>
             <p>
-              From strategy through implementation, we're with you at every step
-              to ensure successful outcomes.
+              From strategy through implementation, we're with you at every step to ensure
+              successful outcomes and lasting adoption across your organization.
             </p>
           </div>
         </div>
@@ -270,365 +290,371 @@ import PageHero from "../components/PageHero.astro";
     </div>
   </section>
 
-  <section class="cta-section section">
+  <!-- CTA Section -->
+  <section class="section bg-white">
     <div class="container">
-      <div class="cta-card">
+      <div class="cta-block">
         <div class="cta-content">
-          <h2>Accelerate your transformation</h2>
+          <h2>Ready to Transform Your Organization?</h2>
           <p>
-            Let's discuss how we can help shape your future in life sciences.
+            Let's discuss how we can help shape your future in the life sciences
+            ecosystem with tailored digital solutions.
           </p>
         </div>
-        <a href="/contact-us" class="btn">Get in Touch</a>
+        <a href="/contact-us" class="btn btn-primary">
+          Get in Touch
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .industries-section {
-    background: #fff;
-  }
-
-  /* Primary Industry Card */
-  .industry-primary {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border-radius: var(--radius-xl);
-    padding: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .industry-tag {
-    display: inline-block;
-    padding: 0.375rem 0.875rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-accent-tertiary);
-    background: rgba(245, 163, 2, 0.2);
-    border-radius: var(--radius-full);
-    margin-bottom: 1rem;
-  }
-
-  .industry-primary-content h3 {
-    color: #fff;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .industry-primary-content > p {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .industry-primary-content .secondary-text {
-    margin-bottom: 1.5rem;
-  }
-
-  .capabilities-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-
-  .capabilities-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.9375rem;
-  }
-
-  .capabilities-list svg {
-    color: var(--color-accent-tertiary);
-    flex-shrink: 0;
-  }
-
-  .visual-card {
-    background: var(--gradient-brand);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem 2rem;
+  /* Section Headers */
+  .section-header {
     text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
   }
 
-  .visual-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-lg);
-    color: #fff;
-    margin-bottom: 1.25rem;
-  }
-
-  .visual-text {
-    display: block;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* Full Width Industry Card (Pharmaceutical) */
-  .industry-card-full {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background: var(--color-bg-surface);
-    border-radius: var(--radius-lg);
-    padding: 2rem 2.5rem;
-    margin-bottom: 1.5rem;
-    transition: all var(--transition-base);
-  }
-
-  .industry-card-full:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    background: #fff;
-  }
-
-  .industry-card-full .card-icon {
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-
-  .card-content-wide {
-    flex: 1;
-  }
-
-  .card-content-wide h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .card-content-wide p {
-    color: var(--color-text-muted);
-    font-size: 0.9375rem;
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .card-footer-side {
-    flex-shrink: 0;
-    padding-left: 2rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  /* Industries Grid - 3 columns */
-  .industries-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .industry-card {
-    background: var(--color-bg-surface);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all var(--transition-base);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .industry-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
-    background: #fff;
-  }
-
-  .industry-card-highlight {
-    background: linear-gradient(
-      135deg,
-      rgba(245, 163, 2, 0.1) 0%,
-      rgba(234, 88, 12, 0.1) 100%
-    );
-    border: 1px solid rgba(245, 163, 2, 0.2);
-  }
-
-  .industry-card-highlight:hover {
-    background: linear-gradient(
-      135deg,
-      rgba(245, 163, 2, 0.15) 0%,
-      rgba(234, 88, 12, 0.15) 100%
-    );
-  }
-
-  .card-icon {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    border-radius: var(--radius-md);
-    color: var(--color-accent-primary);
-    margin-bottom: 1.25rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .industry-card-highlight .card-icon {
-    background: var(--gradient-brand);
-    color: #fff;
-  }
-
-  .industry-card h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .industry-card p {
-    color: var(--color-text-muted);
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-
-  .industry-card .card-secondary {
-    margin-top: 0.75rem;
-    flex-grow: 1;
-  }
-
-  .card-footer {
-    margin-top: 1.25rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .card-stat {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--color-accent-primary);
+  .section-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: var(--color-accent-light, #fff7e6);
+    color: var(--color-accent, #F5A302);
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-
-  /* Approach Section */
-  .approach-section {
-    background: var(--color-bg-surface);
-  }
-
-  .approach-content h2 {
+    letter-spacing: 0.1em;
+    border-radius: 9999px;
     margin-bottom: 1rem;
   }
 
-  .approach-lead {
-    max-width: 100%;
-    color: var(--color-text-muted);
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
     font-size: 1.125rem;
+    color: var(--color-secondary, #64748b);
     line-height: 1.7;
+  }
+
+  /* Industry Block */
+  .industry-block {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .industry-header {
     margin-bottom: 3rem;
   }
 
+  .industry-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: var(--color-accent-light, #fff7e6);
+    color: var(--color-accent, #F5A302);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+  }
+
+  .industry-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .industry-description {
+    font-size: 1.125rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.8;
+    max-width: 800px;
+  }
+
+  /* Capabilities Grid */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .capability-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .bg-surface .capability-card {
+    background: white;
+  }
+
+  .capability-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .capability-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-light, #fff7e6);
+    color: var(--color-accent, #F5A302);
+    border-radius: 0.75rem;
+  }
+
+  .capability-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.5rem;
+  }
+
+  .capability-content p {
+    font-size: 0.875rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Industries Grid */
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .industries-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .industries-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .industry-card {
+    background: var(--color-surface, #f8fafc);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .industry-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .industry-card-featured {
+    background: linear-gradient(135deg, #fff7e6 0%, #fff 100%);
+    border-color: var(--color-accent, #F5A302);
+    border-width: 2px;
+  }
+
+  .industry-card-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--color-accent, #F5A302);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .industry-card-featured .industry-card-icon {
+    background: var(--color-accent, #F5A302);
+    color: white;
+  }
+
+  .industry-card-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.75rem;
+  }
+
+  .industry-card-description {
+    font-size: 0.9375rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .industry-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: white;
+    color: var(--color-accent, #F5A302);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: 1px solid rgba(245, 163, 2, 0.2);
+  }
+
+  .industry-card-featured .tag {
+    background: rgba(245, 163, 2, 0.1);
+  }
+
+  /* Approach Grid */
   .approach-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-  }
-
-  .approach-item {
-    background: #fff;
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .approach-item h4 {
-    margin-bottom: 0.75rem;
-    font-size: 1.0625rem;
-  }
-
-  .approach-item p {
-    color: var(--color-text-muted);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-  }
-
-  /* CTA Section */
-  .cta-section {
-    background: #fff;
-  }
-
-  .cta-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background: #0f172a;
-    border-radius: var(--radius-xl);
-    padding: 3rem 4rem;
-  }
-
-  .cta-content h2 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
-  }
-
-  .cta-content p {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .cta-card .btn {
-    flex-shrink: 0;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
   @media (max-width: 1024px) {
-    .industry-primary {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .capabilities-list {
-      grid-template-columns: 1fr;
-    }
-
-    .industry-card-full {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-
-    .card-footer-side {
-      padding-left: 0;
-      padding-top: 1rem;
-      border-left: none;
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      width: 100%;
-    }
-
-    .industries-grid {
-      grid-template-columns: 1fr;
-    }
-
     .approach-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
   }
 
-  @media (max-width: 768px) {
-    .industry-primary {
-      padding: 2rem;
-    }
+  .approach-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
 
-    .cta-card {
+  .approach-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .approach-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent, #F5A302);
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.75rem;
+  }
+
+  .approach-content h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary, #1a1a2e);
+    margin-bottom: 0.5rem;
+  }
+
+  .approach-content p {
+    font-size: 0.9375rem;
+    color: var(--color-secondary, #64748b);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* CTA Block */
+  .cta-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem;
+    background: var(--color-primary, #1a1a2e);
+    border-radius: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .cta-block {
       flex-direction: column;
       text-align: center;
-      padding: 2.5rem;
+      padding: 2.5rem 2rem;
     }
+  }
 
-    .cta-card .btn {
-      width: 100%;
-    }
+  .cta-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--color-accent, #F5A302);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .btn-primary:hover {
+    background: #e09500;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(245, 163, 2, 0.3);
+  }
+
+  .btn-primary svg {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-primary:hover svg {
+    transform: translateX(4px);
   }
 </style>

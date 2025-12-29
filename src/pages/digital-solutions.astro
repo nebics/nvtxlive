@@ -21,9 +21,13 @@ import PageHero from "../components/PageHero.astro";
         </p>
       </div>
 
-      <div class="capabilities-grid">
-        <div class="capability-card">
-          <div class="capability-icon">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+          >
             <svg
               width="28"
               height="28"
@@ -35,11 +39,17 @@ import PageHero from "../components/PageHero.astro";
               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
             </svg>
           </div>
-          <h4>Healthcare Technology</h4>
-          <p>Integrated systems connecting providers, patients, and devices.</p>
+          <h4 class="text-lg font-bold mb-2">Healthcare Technology</h4>
+          <p class="text-secondary text-sm leading-relaxed">
+            Integrated systems connecting providers, patients, and devices.
+          </p>
         </div>
-        <div class="capability-card">
-          <div class="capability-icon">
+        <div
+          class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+          >
             <svg
               width="28"
               height="28"
@@ -55,13 +65,17 @@ import PageHero from "../components/PageHero.astro";
               <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
-          <h4>Cloud-Native Architecture</h4>
-          <p>
+          <h4 class="text-lg font-bold mb-2">Cloud-Native Architecture</h4>
+          <p class="text-secondary text-sm leading-relaxed">
             Scalable, secure infrastructure built for healthcare compliance.
           </p>
         </div>
-        <div class="capability-card">
-          <div class="capability-icon">
+        <div
+          class="bg-surface p-8 rounded-2xl border border-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-accent mb-6 shadow-sm"
+          >
             <svg
               width="28"
               height="28"
@@ -75,27 +89,41 @@ import PageHero from "../components/PageHero.astro";
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
           </div>
-          <h4>Data-Driven Insights</h4>
-          <p>Analytics and AI that enable evidence-based decisions.</p>
+          <h4 class="text-lg font-bold mb-2">Data-Driven Insights</h4>
+          <p class="text-secondary text-sm leading-relaxed">
+            Analytics and AI that enable evidence-based decisions.
+          </p>
         </div>
-        <div class="capability-card capability-card-highlight">
-          <div class="capability-icon">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
+        <div
+          class="relative overflow-hidden bg-gradient-brand p-[1px] rounded-2xl group hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+        >
+          <div
+            class="absolute inset-0 bg-white/90 rounded-2xl group-hover:bg-white/95 transition-colors"
+          >
           </div>
-          <h4>Open-Source Community</h4>
-          <p>Committed to transparency and collaborative innovation.</p>
+          <div class="relative p-8 h-full">
+            <div
+              class="w-14 h-14 bg-gradient-brand rounded-xl flex items-center justify-center text-white mb-6 shadow-sm"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold mb-2">Open-Source Community</h4>
+            <p class="text-secondary text-sm leading-relaxed">
+              Committed to transparency and collaborative innovation.
+            </p>
+          </div>
         </div>
       </div>
     </div>

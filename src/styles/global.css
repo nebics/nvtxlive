@@ -163,6 +163,18 @@ a {
   padding: 0 1.5rem;
 }
 
+.bg-surface {
+  background-color: var(--color-bg-surface);
+}
+
+.bg-main {
+  background-color: var(--color-bg-main);
+}
+
+.bg-gradient-brand {
+  background: var(--gradient-brand);
+}
+
 .text-gradient {
   background: var(--gradient-brand);
   -webkit-background-clip: text;
@@ -171,7 +183,19 @@ a {
 }
 
 .text-white {
+  color: #ffffff;
+}
+
+.text-primary {
   color: var(--color-text-main);
+}
+
+.text-accent {
+  color: var(--color-accent-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
 }
 
 .text-muted {

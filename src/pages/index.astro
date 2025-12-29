@@ -14,7 +14,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <span class="badge">Life Sciences Consulting</span>
         <h1>
           Transform Ideas Into<br /><span class="text-gradient"
-            >Market-Ready Products</span>
+            >Market-Ready Products</span
+          >
         </h1>
         <p class="hero-description">
           We partner with life sciences companies to accelerate product
@@ -67,6 +68,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="client-logo">
             <img src="/images/janseen.png" alt="Janssen" />
           </div>
+          <!-- Duplicates for seamless loop -->
           <div class="client-logo">
             <img src="/images/johnson.png" alt="Johnson & Johnson" />
           </div>
@@ -95,7 +97,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="container">
       <div class="about-grid">
         <div class="about-content">
-          <h6>Why NovintiX</h6>
+          <h6 class="text-accent font-bold tracking-widest uppercase mb-2">
+            Why NovintiX
+          </h6>
           <h2>Your Partner in Life Sciences Innovation</h2>
           <p class="about-lead">
             We bring deep industry knowledge, hands-on expertise, and a
@@ -191,8 +195,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
               </svg>
             </div>
-            <h4>98%</h4>
-            <p>Client Satisfaction</p>
+            <h4 class="text-3xl font-bold mb-1">98%</h4>
+            <p class="text-sm opacity-90">Client Satisfaction</p>
           </div>
         </div>
       </div>
@@ -429,7 +433,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .hero .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(245, 163, 2, 0.1);
+    color: var(--color-accent-primary);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
+    border: 1px solid rgba(245, 163, 2, 0.2);
+    backdrop-filter: blur(4px);
   }
 
   .hero h1 {
@@ -498,14 +513,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   /* Clients Section */
   .clients-section {
     padding: 3rem 0;
-    background: var(--color-bg-surface);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .clients-label {
     text-align: center;
     font-size: 0.875rem;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
@@ -555,18 +571,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     align-items: center;
     justify-content: center;
     padding: 1rem 1.5rem;
-    background: #fff;
+    background: transparent;
     border-radius: var(--radius-md);
     height: 60px;
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Added border for white background visibility */
+    border: 1px solid transparent;
   }
 
   .client-logo img {
     height: 28px !important;
     width: auto !important;
     object-fit: contain;
-    opacity: 0.8;
-    transition: opacity var(--transition-base);
+    opacity: 0.5;
+    filter: grayscale(100%) brightness(0) invert(1);
+    transition: all var(--transition-base);
   }
 
   .client-logo:hover img {
