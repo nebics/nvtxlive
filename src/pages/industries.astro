@@ -11,20 +11,29 @@ import PageHero from "../components/PageHero.astro";
   />
 
   <!-- Medical Technology Section -->
-  <section class="section bg-white">
+  <section class="intro-section">
     <div class="container">
-      <div class="industry-block">
-        <div class="industry-header">
-          <span class="industry-badge">Medical Technology</span>
-          <h2 class="industry-title">Transforming Patient Care</h2>
-          <p class="industry-description">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="accent-bar"></div>
+          <div class="intro-content">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Medical Technology
+            </span>
+            <h2>Transforming <span class="text-gradient">Patient Care</span></h2>
+          </div>
+        </div>
+        <div class="intro-right">
+          <p>
             The medical device landscape is evolving rapidly. From IoMT sensors to remote monitoring,
-            we help you build the connected ecosystem of the future—enabling better patient outcomes
+            we help you build the <strong>connected ecosystem of the future</strong>—enabling better patient outcomes
             through innovative technology solutions.
           </p>
         </div>
+      </div>
 
-        <div class="capabilities-grid">
+      <div class="capabilities-grid">
           <div class="capability-card">
             <div class="capability-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -75,27 +84,35 @@ import PageHero from "../components/PageHero.astro";
               <h4>AI Diagnostics</h4>
               <p>Machine learning algorithms for faster, more accurate medical diagnoses.</p>
             </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pharmaceutical Section -->
-  <section class="section bg-surface">
+  <section class="intro-section bg-surface">
     <div class="container">
-      <div class="industry-block">
-        <div class="industry-header">
-          <span class="industry-badge">Pharmaceutical</span>
-          <h2 class="industry-title">Re-Engineering the Value Chain</h2>
-          <p class="industry-description">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="accent-bar"></div>
+          <div class="intro-content">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Pharmaceutical
+            </span>
+            <h2>Re-Engineering the <span class="text-gradient">Value Chain</span></h2>
+          </div>
+        </div>
+        <div class="intro-right">
+          <p>
             From AI-powered drug discovery to digitally optimized supply chains, we help you navigate
-            the crossroads of cost, speed, and compliance—delivering transformative solutions that
+            the crossroads of <strong>cost, speed, and compliance</strong>—delivering transformative solutions that
             accelerate your path to market.
           </p>
         </div>
+      </div>
 
-        <div class="capabilities-grid">
+      <div class="capabilities-grid">
           <div class="capability-card">
             <div class="capability-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -155,7 +172,6 @@ import PageHero from "../components/PageHero.astro";
               <h4>Supply Chain Optimization</h4>
               <p>End-to-end visibility and efficiency across your pharmaceutical distribution.</p>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -314,7 +330,168 @@ import PageHero from "../components/PageHero.astro";
 </BaseLayout>
 
 <style>
-  /* Section Headers */
+  /* ==================== INTRO SECTION ==================== */
+  .intro-section {
+    padding: 6rem 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-section.bg-surface {
+    background: #f8fafc;
+  }
+
+  .intro-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 163, 2, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .intro-left {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .accent-bar {
+    width: 5px;
+    background: linear-gradient(180deg, #F5A302 0%, #ea580c 100%);
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(245, 163, 2, 0.08);
+    border: 1px solid rgba(245, 163, 2, 0.15);
+    border-radius: 100px;
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ea580c;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #F5A302;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .intro-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #F5A302 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .intro-right p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .intro-right strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* ==================== CAPABILITIES GRID ==================== */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .capability-card {
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .intro-section.bg-surface .capability-card {
+    background: #ffffff;
+  }
+
+  .capability-card:hover {
+    border-color: #F5A302;
+    box-shadow: 0 20px 40px rgba(245, 163, 2, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .capability-card:hover .capability-icon {
+    background: #F5A302;
+    color: #ffffff;
+  }
+
+  .capability-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 163, 2, 0.08);
+    color: #F5A302;
+    border-radius: 1rem;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .capability-content h4 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .capability-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ==================== SECTION HEADERS ==================== */
   .section-header {
     text-align: center;
     max-width: 640px;
@@ -346,102 +523,6 @@ import PageHero from "../components/PageHero.astro";
     font-size: 1.125rem;
     color: var(--color-secondary, #64748b);
     line-height: 1.7;
-  }
-
-  /* Industry Block */
-  .industry-block {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .industry-header {
-    margin-bottom: 3rem;
-  }
-
-  .industry-badge {
-    display: inline-block;
-    padding: 0.375rem 1rem;
-    background: var(--color-accent-light, #fff7e6);
-    color: var(--color-accent, #F5A302);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 9999px;
-    margin-bottom: 1rem;
-  }
-
-  .industry-title {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .industry-description {
-    font-size: 1.125rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.8;
-    max-width: 800px;
-  }
-
-  /* Capabilities Grid */
-  .capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .capabilities-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .capability-card {
-    display: flex;
-    gap: 1.25rem;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-  }
-
-  .bg-surface .capability-card {
-    background: white;
-  }
-
-  .capability-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-  }
-
-  .capability-icon {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-accent-light, #fff7e6);
-    color: var(--color-accent, #F5A302);
-    border-radius: 0.75rem;
-  }
-
-  .capability-content h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 0.5rem;
-  }
-
-  .capability-content p {
-    font-size: 0.875rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.6;
-    margin: 0;
   }
 
   /* Industries Grid */
@@ -656,5 +737,36 @@ import PageHero from "../components/PageHero.astro";
 
   .btn-primary:hover svg {
     transform: translateX(4px);
+  }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1024px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 4rem 0;
+    }
+
+    .intro-left {
+      flex-direction: column;
+    }
+
+    .accent-bar {
+      width: 60px;
+      height: 5px;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

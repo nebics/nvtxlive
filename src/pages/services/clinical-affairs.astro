@@ -11,20 +11,29 @@ import PageHero from "../../components/PageHero.astro";
   />
 
   <!-- Intro Section -->
-  <section class="section bg-white">
+  <section class="intro-section">
     <div class="container">
-      <div class="intro-block">
-        <div class="intro-header">
-          <span class="intro-badge">Clinical Excellence</span>
-          <h2 class="intro-title">From Evidence to Market Success</h2>
-          <p class="intro-description">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="accent-bar"></div>
+          <div class="intro-content">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Clinical Excellence
+            </span>
+            <h2>From Evidence to <span class="text-gradient">Market Success</span></h2>
+          </div>
+        </div>
+        <div class="intro-right">
+          <p>
             Payers and regulatory authorities demand comprehensive evidence data and expert assessments
-            during evaluation. We help orchestrate your journey from clinical development to market entry
+            during evaluation. We help orchestrate your journey from <strong>clinical development to market entry</strong>
             by showcasing the distinctive value and outcomes your innovations offer.
           </p>
         </div>
+      </div>
 
-        <div class="capabilities-grid">
+      <div class="capabilities-grid">
           <div class="capability-card">
             <div class="capability-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -78,7 +87,6 @@ import PageHero from "../../components/PageHero.astro";
               <h4>Evidence Generation</h4>
               <p>Comprehensive clinical data and real-world evidence to demonstrate safety and efficacy.</p>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -227,7 +235,171 @@ import PageHero from "../../components/PageHero.astro";
 </BaseLayout>
 
 <style>
-  /* Section Headers */
+  /* ==================== INTRO SECTION ==================== */
+  .intro-section {
+    padding: 6rem 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 163, 2, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .intro-left {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .accent-bar {
+    width: 5px;
+    background: linear-gradient(180deg, #F5A302 0%, #ea580c 100%);
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(245, 163, 2, 0.08);
+    border: 1px solid rgba(245, 163, 2, 0.15);
+    border-radius: 100px;
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ea580c;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #F5A302;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .intro-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #F5A302 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .intro-right p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .intro-right strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* ==================== CAPABILITIES GRID ==================== */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .capability-card {
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .capability-card:hover {
+    border-color: #F5A302;
+    box-shadow: 0 20px 40px rgba(245, 163, 2, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .capability-card:hover .capability-icon {
+    background: #F5A302;
+    color: #ffffff;
+  }
+
+  .capability-card-featured {
+    background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+    border-color: #F5A302;
+  }
+
+  .capability-card-featured .capability-icon {
+    background: linear-gradient(135deg, #F5A302 0%, #ea580c 100%);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(245, 163, 2, 0.3);
+  }
+
+  .capability-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 163, 2, 0.08);
+    color: #F5A302;
+    border-radius: 1rem;
+    margin-bottom: 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .capability-content h4 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .capability-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ==================== SECTION HEADERS ==================== */
   .section-header {
     text-align: center;
     max-width: 640px;
@@ -259,109 +431,6 @@ import PageHero from "../../components/PageHero.astro";
     font-size: 1.125rem;
     color: var(--color-secondary, #64748b);
     line-height: 1.7;
-  }
-
-  /* Intro Block */
-  .intro-block {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .intro-header {
-    margin-bottom: 3rem;
-  }
-
-  .intro-badge {
-    display: inline-block;
-    padding: 0.375rem 1rem;
-    background: var(--color-accent-light, #fff7e6);
-    color: var(--color-accent, #F5A302);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 9999px;
-    margin-bottom: 1rem;
-  }
-
-  .intro-title {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .intro-description {
-    font-size: 1.125rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.8;
-    max-width: 800px;
-  }
-
-  /* Capabilities Grid */
-  .capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .capabilities-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .capability-card {
-    display: flex;
-    gap: 1.25rem;
-    padding: 1.5rem;
-    background: var(--color-surface, #f8fafc);
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-  }
-
-  .capability-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-  }
-
-  .capability-card-featured {
-    background: linear-gradient(135deg, #fff7e6 0%, #fff 100%);
-    border-color: var(--color-accent, #F5A302);
-  }
-
-  .capability-card-featured .capability-icon {
-    background: var(--color-accent, #F5A302);
-    color: white;
-  }
-
-  .capability-icon {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    color: var(--color-accent, #F5A302);
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-
-  .capability-content h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 0.5rem;
-  }
-
-  .capability-content p {
-    font-size: 0.875rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.6;
-    margin: 0;
   }
 
   /* Services Grid */
@@ -580,5 +649,36 @@ import PageHero from "../../components/PageHero.astro";
 
   .btn-primary:hover svg {
     transform: translateX(4px);
+  }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1024px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 4rem 0;
+    }
+
+    .intro-left {
+      flex-direction: column;
+    }
+
+    .accent-bar {
+      width: 60px;
+      height: 5px;
+    }
+
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

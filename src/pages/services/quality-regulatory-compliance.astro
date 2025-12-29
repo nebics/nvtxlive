@@ -14,21 +14,30 @@ import PageHero from "../../components/PageHero.astro";
   />
 
   <!-- Intro Section -->
-  <section class="section bg-white">
+  <section class="intro-section">
     <div class="container">
-      <div class="intro-block">
-        <div class="intro-header">
-          <span class="intro-badge">Regulatory Excellence</span>
-          <h2 class="intro-title">Ensuring Compliance, Enabling Success</h2>
-          <p class="intro-description">
+      <div class="intro-grid">
+        <div class="intro-left">
+          <div class="accent-bar"></div>
+          <div class="intro-content">
+            <span class="badge">
+              <span class="badge-dot"></span>
+              Regulatory Excellence
+            </span>
+            <h2>Ensuring Compliance, <span class="text-gradient">Enabling Success</span></h2>
+          </div>
+        </div>
+        <div class="intro-right">
+          <p>
             Quality management has a far-reaching impact across all facets of your business—from R&D
-            and clinical trials to manufacturing and distribution. Consolidating quality management
-            within an enterprise platform streamlines operations, enabling greater efficiency and
+            and clinical trials to manufacturing and distribution. <strong>Consolidating quality management
+            within an enterprise platform</strong> streamlines operations, enabling greater efficiency and
             effectiveness, along with reductions in risks and costs.
           </p>
         </div>
+      </div>
 
-        <div class="focus-grid">
+      <div class="focus-grid">
           <div class="focus-card">
             <h3>Quality Compliance</h3>
             <p>
@@ -53,7 +62,6 @@ import PageHero from "../../components/PageHero.astro";
               Our approach centers on best practices encompassing information security management,
               FDA guidelines on system validation, and electronic records and signatures.
             </p>
-          </div>
         </div>
       </div>
     </div>
@@ -208,7 +216,142 @@ import PageHero from "../../components/PageHero.astro";
 </BaseLayout>
 
 <style>
-  /* Section Headers */
+  /* ==================== INTRO SECTION ==================== */
+  .intro-section {
+    padding: 6rem 0;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 163, 2, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .intro-left {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .accent-bar {
+    width: 5px;
+    background: linear-gradient(180deg, #F5A302 0%, #ea580c 100%);
+    border-radius: 100px;
+    flex-shrink: 0;
+  }
+
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(245, 163, 2, 0.08);
+    border: 1px solid rgba(245, 163, 2, 0.15);
+    border-radius: 100px;
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ea580c;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #F5A302;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .intro-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #F5A302 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .intro-right p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .intro-right strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* ==================== FOCUS GRID ==================== */
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .focus-card {
+    padding: 2rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .focus-card:hover {
+    border-color: #F5A302;
+    box-shadow: 0 20px 40px rgba(245, 163, 2, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .focus-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .focus-card p {
+    font-size: 0.9375rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ==================== SECTION HEADERS ==================== */
   .section-header {
     text-align: center;
     max-width: 640px;
@@ -240,78 +383,6 @@ import PageHero from "../../components/PageHero.astro";
     font-size: 1.125rem;
     color: var(--color-secondary, #64748b);
     line-height: 1.7;
-  }
-
-  /* Intro Block */
-  .intro-block {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .intro-header {
-    margin-bottom: 3rem;
-  }
-
-  .intro-badge {
-    display: inline-block;
-    padding: 0.375rem 1rem;
-    background: var(--color-accent-light, #fff7e6);
-    color: var(--color-accent, #F5A302);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-radius: 9999px;
-    margin-bottom: 1rem;
-  }
-
-  .intro-title {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-  }
-
-  .intro-description {
-    font-size: 1.125rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.8;
-    max-width: 800px;
-  }
-
-  /* Focus Grid */
-  .focus-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  @media (max-width: 768px) {
-    .focus-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .focus-card {
-    padding: 2rem;
-    background: var(--color-surface, #f8fafc);
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .focus-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-primary, #1a1a2e);
-    margin-bottom: 1rem;
-  }
-
-  .focus-card p {
-    font-size: 0.9375rem;
-    color: var(--color-secondary, #64748b);
-    line-height: 1.7;
-    margin: 0;
   }
 
   /* Services Grid */
@@ -566,5 +637,32 @@ import PageHero from "../../components/PageHero.astro";
 
   .btn-primary:hover svg {
     transform: translateX(4px);
+  }
+
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 1024px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 4rem 0;
+    }
+
+    .intro-left {
+      flex-direction: column;
+    }
+
+    .accent-bar {
+      width: 60px;
+      height: 5px;
+    }
+
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
