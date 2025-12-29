@@ -1,177 +1,528 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 ---
 
 <BaseLayout title="Clinical Affairs" currentPage="/services/clinical-affairs">
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Clinical Affairs</h1>
-      <p>Expert guidance through clinical trials and regulatory submissions.</p>
+  <PageHero
+    title="Clinical Affairs"
+    description="Expert guidance through clinical trials and regulatory submissions."
+    icon="services"
+  />
+
+  <section class="section">
+    <div class="container">
+      <!-- Creative Intro Section (Redesigned) -->
+      <div class="relative max-w-6xl mx-auto mb-32 pt-12 px-4">
+        <!-- Floating Watermark -->
+        <div
+          class="absolute -top-20 -left-10 text-[10rem] opacity-[0.03] select-none pointer-events-none text-accent font-serif leading-none hidden lg:block"
+        >
+          &ldquo;
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10"
+        >
+          <!-- Left: Heading (Flexbox Layout) -->
+          <div class="flex flex-row items-stretch" style="gap: 1.5rem;">
+            <!-- Vertical Accent Bar -->
+            <div
+              class="shrink-0 rounded-full"
+              style="width: 6px; background-color: #F5A302;"
+            >
+            </div>
+
+            <!-- Heading Text -->
+            <h2
+              class="text-4xl lg:text-5xl font-extrabold tracking-tight text-gradient leading-[1.15]"
+            >
+              Clinical Excellence
+            </h2>
+          </div>
+
+          <!-- Right: Content -->
+          <div>
+            <p class="text-xl text-secondary leading-relaxed">
+              NovintiX provides comprehensive <strong
+                class="text-accent font-medium"
+                >clinical affairs services</strong
+              > to help medical device companies generate the clinical evidence needed
+              for regulatory approval and market success. Our team brings extensive
+              experience in designing and executing clinical strategies across a wide
+              range of device types.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="mb-24">
+        <div class="text-center mb-16">
+          <h6
+            class="text-accent text-sm font-bold uppercase tracking-widest mb-3"
+          >
+            Capabilities
+          </h6>
+          <h3>Our Services Include</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              01
+            </div>
+            <h4>Clinical Strategy</h4>
+            <p>
+              Development planning and regulatory pathway analysis to ensure
+              study success.
+            </p>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              02
+            </div>
+            <h4>Study Design</h4>
+            <p>
+              Protocol development, statistical analysis plans, and
+              comprehensive study setup.
+            </p>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              03
+            </div>
+            <h4>CER Development</h4>
+            <p>
+              Clinical Evaluation Reports strictly aligned with EU MDR
+              requirements.
+            </p>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              04
+            </div>
+            <h4>Literature Reviews</h4>
+            <p>
+              Systematic literature searches and gap analysis for clinical data.
+            </p>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              05
+            </div>
+            <h4>PMCF</h4>
+            <p>
+              Post-Market Clinical Follow-up planning and execution strategies.
+            </p>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="card service-feature-card group">
+            <div
+              class="feature-icon group-hover:scale-110 transition-transform duration-300"
+            >
+              06
+            </div>
+            <h4>Submissions</h4>
+            <p>
+              Full support for IDE, 510(k), and CE marking clinical
+              documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us -->
+      <div
+        class="bg-surface rounded-3xl p-12 text-center relative overflow-hidden mb-24"
+      >
+        <div class="bg-glow"></div>
+        <!-- Decorative Glow -->
+        <div class="relative z-10 max-w-3xl mx-auto">
+          <h3 class="mb-6">Why Choose NovintiX?</h3>
+          <p class="text-lg mb-0 text-secondary">
+            Our clinical affairs team combines scientific rigor with practical
+            regulatory knowledge. We help you develop efficient clinical
+            strategies that meet regulatory requirements while minimizing time
+            and cost.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="content-section">
+  <!-- Related Services Nav -->
+  <section class="section border-t border-border bg-surface/50">
     <div class="container">
-      <div class="content-grid">
-        <div class="content-main">
-          <h2>Clinical Excellence for Medical Devices</h2>
-          <p>NovintiX provides comprehensive clinical affairs services to help medical device companies generate the clinical evidence needed for regulatory approval and market success. Our team brings extensive experience in designing and executing clinical strategies across a wide range of device types.</p>
+      <div class="text-center mb-10">
+        <h6 class="text-accent mb-2">Explore More</h6>
+        <h3>Related Services</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <a
+          href="/services/quality-regulatory-compliance"
+          class="card hover-card group"
+        >
+          <h5 class="group-hover:text-accent transition-colors">
+            Quality & Compliance
+          </h5>
+          <p class="text-sm mb-0">Navigate regulatory landscapes.</p>
+        </a>
+        <a href="/services/product-engineering" class="card hover-card group">
+          <h5 class="group-hover:text-accent transition-colors">
+            Product Engineering
+          </h5>
+          <p class="text-sm mb-0">From concept to commercialization.</p>
+        </a>
+        <a href="/digital-solutions" class="card hover-card group">
+          <h5 class="group-hover:text-accent transition-colors">
+            Digital Solutions
+          </h5>
+          <p class="text-sm mb-0">Accelerate innovation.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-          <h3>Our Services Include:</h3>
-          <ul>
-            <li><strong>Clinical Strategy Development</strong> - Clinical development planning and regulatory pathway analysis</li>
-            <li><strong>Clinical Study Design</strong> - Protocol development, statistical analysis plans, and study setup</li>
-            <li><strong>Clinical Evaluation Reports</strong> - CER development per EU MDR requirements</li>
-            <li><strong>Literature Reviews</strong> - Systematic literature searches and analysis</li>
-            <li><strong>Post-Market Clinical Follow-up</strong> - PMCF planning and execution</li>
-            <li><strong>Regulatory Submissions</strong> - IDE, 510(k), and CE marking clinical support</li>
-          </ul>
-
-          <h3>Why Choose NovintiX?</h3>
-          <p>Our clinical affairs team combines scientific rigor with practical regulatory knowledge. We help you develop efficient clinical strategies that meet regulatory requirements while minimizing time and cost.</p>
-        </div>
-
-        <div class="content-sidebar">
-          <div class="sidebar-card">
-            <h5>Related Services</h5>
-            <ul>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
-              <li><a href="/digital-solutions">Digital Solutions</a></li>
-            </ul>
-          </div>
-
-          <div class="sidebar-card">
-            <h5>Get Started</h5>
-            <p>Need clinical affairs support?</p>
-            <a href="/contact-us" class="btn">Contact Us</a>
-          </div>
-        </div>
+  <!-- CTA Section -->
+  <section class="section text-center">
+    <div class="container">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="mb-6">Need clinical affairs support?</h2>
+        <p class="mb-8">
+          Let's discuss how we can help you generate the evidence you need.
+        </p>
+        <a href="/contact-us" class="btn btn-primary">
+          Get in Touch
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+              points="12 5 19 12 12 19"></polyline></svg
+          >
+        </a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .hero-section {
-    position: relative;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
-    padding: 7% 0;
+  /* Local Utilities */
+  .max-w-6xl {
+    max-width: 72rem;
+  }
+  .max-w-5xl {
+    max-width: 64rem;
+  }
+  .max-w-4xl {
+    max-width: 56rem;
+  }
+  .max-w-3xl {
+    max-width: 48rem;
+  }
+  .max-w-2xl {
+    max-width: 42rem;
+  }
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: url('/images/pattern.png') repeat;
-    opacity: 0.1;
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  .mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  .mb-10 {
+    margin-bottom: 2.5rem;
+  }
+  .mb-16 {
+    margin-bottom: 4rem;
+  }
+  .mb-24 {
+    margin-bottom: 6rem;
+  }
+  .mb-32 {
+    margin-bottom: 8rem;
   }
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    max-width: 720px;
-    padding: 0 20px;
+  .pt-10 {
+    padding-top: 2.5rem;
+  }
+  .pt-12 {
+    padding-top: 3rem;
+  }
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .p-12 {
+    padding: 3rem;
   }
 
-  .hero-content h1 {
-    color: #fff;
-    margin-bottom: 20px;
+  .gap-6 {
+    gap: 1.5rem;
+  }
+  .gap-8 {
+    gap: 2rem;
+  }
+  .gap-12 {
+    gap: 3rem;
+  }
+  .gap-16 {
+    gap: 4rem;
   }
 
-  .hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 18px;
-  }
-
-  .content-section {
-    padding: 5em 0;
-  }
-
-  .content-grid {
+  .grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
   }
 
-  .content-main h2 {
-    margin-bottom: 20px;
-  }
-
-  .content-main h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-
-  .content-main p {
-    color: #7C7C7D;
-    line-height: 1.7;
-    margin-bottom: 15px;
-  }
-
-  .content-main ul {
-    margin: 20px 0;
-    padding-left: 20px;
-  }
-
-  .content-main li {
-    color: #7C7C7D;
-    line-height: 1.8;
-    margin-bottom: 10px;
-  }
-
-  .content-main li strong {
-    color: #1E2128;
-  }
-
-  .sidebar-card {
-    background: #f8f8f9;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-  }
-
-  .sidebar-card h5 {
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar-card li {
-    margin-bottom: 10px;
-  }
-
-  .sidebar-card a {
-    color: #033C59;
-    font-size: 14px;
-  }
-
-  .sidebar-card a:hover {
-    color: #F5A302;
-  }
-
-  .sidebar-card p {
-    color: #7C7C7D;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-
-  .sidebar-card .btn {
-    width: 100%;
+  .text-center {
     text-align: center;
   }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  .text-4xl {
+    font-size: 2.25rem;
+  }
+  .text-5xl {
+    font-size: 3rem;
+  }
+  .text-\[10rem\] {
+    font-size: 10rem;
+  }
+  .text-\[12rem\] {
+    font-size: 12rem;
+  }
 
-  @media (max-width: 1024px) {
-    .content-grid {
-      grid-template-columns: 1fr;
+  .font-bold {
+    font-weight: 700;
+  }
+  .font-extrabold {
+    font-weight: 800;
+  }
+  .font-medium {
+    font-weight: 500;
+  }
+  .font-serif {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .leading-none {
+    line-height: 1;
+  }
+  .leading-tight {
+    line-height: 1.25;
+  }
+  .leading-relaxed {
+    line-height: 1.625;
+  }
+  .leading-\[1\.15\] {
+    line-height: 1.15;
+  }
+
+  .tracking-tight {
+    letter-spacing: -0.025em;
+  }
+  .tracking-widest {
+    letter-spacing: 0.1em;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .relative {
+    position: relative;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .-top-10 {
+    top: -2.5rem;
+  }
+  .-top-20 {
+    top: -5rem;
+  }
+  .-left-10 {
+    left: -2.5rem;
+  }
+
+  .w-24 {
+    width: 6rem;
+  }
+  .h-1\.5 {
+    height: 0.375rem;
+  }
+
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  .rounded-3xl {
+    border-radius: 1.5rem;
+  }
+
+  .opacity-5 {
+    opacity: 0.05;
+  }
+  .opacity-\[0\.03\] {
+    opacity: 0.03;
+  }
+  .opacity-60 {
+    opacity: 0.6;
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent-primary);
+  }
+  .bg-surface {
+    background-color: var(--color-bg-surface);
+  }
+  .bg-surface\/50 {
+    background-color: rgba(248, 250, 252, 0.5);
+  }
+
+  .text-accent {
+    color: var(--color-accent-primary);
+  }
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .border-t {
+    border-top-width: 1px;
+  }
+  .border-border {
+    border-color: var(--color-border);
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .select-none {
+    user-select: none;
+  }
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .hidden {
+    display: none;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
     }
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .lg\:grid-cols-12 {
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .lg\:text-5xl {
+      font-size: 3rem;
+    }
+    .lg\:block {
+      display: block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Custom Feature Card Styling */
+  .service-feature-card {
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-accent-primary);
+    margin-bottom: 1rem;
+    opacity: 0.4;
+  }
+
+  .hover-card {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+  }
+
+  .group-hover\:text-accent {
+    transition: color 0.2s;
+  }
+
+  .hover-card:hover .group-hover\:text-accent {
+    color: var(--color-accent-primary);
+  }
+
+  .group:hover .feature-icon {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .transition-transform {
+    transition-property: transform;
+  }
+  .duration-300 {
+    transition-duration: 300ms;
   }
 </style>

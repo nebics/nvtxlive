@@ -1,0 +1,319 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page Not Found" currentPage="/404">
+    <section class="error-page">
+        <div class="page-bg">
+            <div class="pattern-grid"></div>
+        </div>
+
+        <div class="container">
+            <div class="error-content animate-fade-up">
+                <!-- Icon: Fixed Size & Stroke -->
+                <div class="icon-wrapper">
+                    <div class="icon-circle animate-float">
+                        <svg
+                            width="48"
+                            height="48"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54"
+                            ></path>
+                            <path
+                                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Specimen Not Found</h2>
+                <p class="error-desc">
+                    The sample you're looking for seems to have escaped the lab.
+                    It may have been moved, renamed, or perhaps it's still in
+                    clinical trials.
+                </p>
+
+                <!-- Actions -->
+                <div class="action-group">
+                    <a href="/" class="btn btn-primary">Return to Lab</a>
+                    <a href="/contact-us" class="btn btn-secondary"
+                        >Report Missing Sample</a
+                    >
+                </div>
+
+                <!-- Spacer / Divider -->
+                <div class="divider-section">
+                    <span class="divider-label">OR EXPLORE RESEARCH AREAS</span>
+                </div>
+
+                <!-- Navigation Pills -->
+                <div class="nav-pills">
+                    <a href="/services/product-engineering" class="nav-pill"
+                        >Product Engineering</a
+                    >
+                    <a href="/industries" class="nav-pill">Industries</a>
+                    <a href="/digital-solutions" class="nav-pill"
+                        >Digital Solutions</a
+                    >
+                    <a href="/careers" class="nav-pill">Careers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    /* --- Layout --- */
+    .error-page {
+        position: relative;
+        /* Adjust height to position content optimally */
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+        background-color: #f8fafc;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .error-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 680px;
+    }
+
+    /* --- Background --- */
+    .page-bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .pattern-grid {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+        background-size: 40px 40px;
+        opacity: 0.4;
+    }
+
+    /* --- Icon --- */
+    .icon-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #ffffff;
+        border: 1px solid #e0e7ff;
+        display: flex; /* Critical for centering SVG */
+        align-items: center;
+        justify-content: center;
+        color: #f5a302; /* BRAND ORANGE */
+        box-shadow: 0 10px 25px -5px rgba(245, 163, 2, 0.15);
+    }
+
+    /* --- Text --- */
+    .error-code {
+        font-size: 7rem; /* Explicit size to fix potential clamp issues */
+        line-height: 1;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+        /* ORANGE GRADIENT */
+        background: linear-gradient(135deg, #f5a302 0%, #ea580c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #f5a302; /* Fallback */
+    }
+
+    .error-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 1rem 0;
+    }
+
+    .error-desc {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #475569;
+        margin: 0 0 3rem 0;
+        max-width: 540px;
+    }
+
+    /* --- Buttons --- */
+    .action-group {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 4rem; /* Spacing before divider */
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem; /* Fixed height for consistency */
+        padding: 0 2.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .btn-primary {
+        /* ORANGE GRADIENT BUTTON */
+        background: linear-gradient(135deg, #f5a302 0%, #ea580c 100%);
+        color: white !important; /* Force white text */
+        border: none;
+        box-shadow: 0 4px 6px -1px rgba(245, 163, 2, 0.25);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(245, 163, 2, 0.35);
+    }
+
+    .btn-secondary {
+        background: white;
+        border: 1px solid #e2e8f0;
+        color: #334155;
+    }
+
+    .btn-secondary:hover {
+        border-color: #f5a302;
+        color: #f5a302;
+        background: #fffbeb;
+    }
+
+    /* --- Divider --- */
+    .divider-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem; /* Spacing between label and pills */
+        position: relative;
+    }
+
+    .divider-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #94a3b8;
+    }
+
+    /* --- Navigation Pills --- */
+    .nav-pills {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: center;
+        gap: 1rem; /* Space between pills */
+        width: 100%;
+    }
+
+    .nav-pill {
+        display: inline-flex; /* Fix for pill structure */
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 1rem; /* Rounded rect */
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #475569;
+        text-decoration: none;
+        transition: all 0.2s;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-pill:hover {
+        border-color: #f5a302;
+        color: #f5a302;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* --- Animations --- */
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-up 0.8s ease-out forwards;
+    }
+
+    /* --- Mobile Tuning --- */
+    @media (max-width: 640px) {
+        .error-code {
+            font-size: 5rem;
+        }
+        .action-group {
+            flex-direction: column;
+            width: 100%;
+            padding: 0 2rem;
+        }
+        .btn {
+            width: 100%;
+        }
+        .nav-pills {
+            flex-direction: column;
+            padding: 0 2rem;
+        }
+        .nav-pill {
+            width: 100%;
+        }
+    }
+</style>

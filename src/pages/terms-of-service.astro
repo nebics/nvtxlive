@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout title="Terms of Service" currentPage="/terms-of-service">
+    <PageHero
+        icon="default"
+        title="Terms of Service"
+        description="The rules and regulations for the use of NovintiX's Website."
+    />
+
+    <section class="section section-darker">
+        <div class="container relative z-10">
+            <div class="legal-content glass-panel">
+                <div class="prose">
+                    <p class="updated-date">Last Updated: October 24, 2023</p>
+
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>
+                        By accessing this website we assume you accept these
+                        terms and conditions. Do not continue to use NovintiX if
+                        you do not agree to take all of the terms and conditions
+                        stated on this page.
+                    </p>
+
+                    <h3>2. Intellectual Property Rights</h3>
+                    <p>
+                        Other than the content you own, under these Terms,
+                        NovintiX and/or its licensors own all the intellectual
+                        property rights and materials contained in this Website.
+                        You are granted limited license only for purposes of
+                        viewing the material contained on this Website.
+                    </p>
+
+                    <h3>3. Restrictions</h3>
+                    <p>
+                        You are specifically restricted from all of the
+                        following:
+                    </p>
+                    <ul>
+                        <li>
+                            Publishing any Website material in any other media;
+                        </li>
+                        <li>
+                            Selling, sublicensing and/or otherwise
+                            commercializing any Website material;
+                        </li>
+                        <li>
+                            Publicly performing and/or showing any Website
+                            material;
+                        </li>
+                        <li>
+                            Using this Website in any way that is or may be
+                            damaging to this Website;
+                        </li>
+                        <li>
+                            Using this Website in any way that impacts user
+                            access to this Website;
+                        </li>
+                    </ul>
+
+                    <h3>4. Limitation of Liability</h3>
+                    <p>
+                        In no event shall NovintiX, nor any of its officers,
+                        directors and employees, be held liable for anything
+                        arising out of or in any way connected with your use of
+                        this Website whether such liability is under contract.
+                        NovintiX, including its officers, directors and
+                        employees shall not be held liable for any indirect,
+                        consequential or special liability arising out of or in
+                        any way related to your use of this Website.
+                    </p>
+
+                    <h3>5. Indemnification</h3>
+                    <p>
+                        You hereby indemnify to the fullest extent NovintiX from
+                        and against any and/or all liabilities, costs, demands,
+                        causes of action, damages and expenses arising in any
+                        way related to your breach of any of the provisions of
+                        these Terms.
+                    </p>
+
+                    <h3>6. Governing Law & Jurisdiction</h3>
+                    <p>
+                        These Terms will be governed by and interpreted in
+                        accordance with the laws of the State of California, and
+                        you submit to the non-exclusive jurisdiction of the
+                        state and federal courts located in California for the
+                        resolution of any disputes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .section {
+        padding: 6rem 0;
+    }
+    .section-darker {
+        background: #f1f5f9; /* Light Gray */
+    }
+
+    .legal-content {
+        background: #ffffff;
+        border-radius: var(--radius-lg);
+        padding: 4rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid var(--color-border);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .prose {
+        color: var(--color-text-secondary);
+    }
+
+    .updated-date {
+        display: block;
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-text-main);
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+        font-size: 1.0625rem;
+    }
+
+    ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    li::marker {
+        color: var(--color-accent-primary);
+    }
+
+    @media (max-width: 768px) {
+        .legal-content {
+            padding: 2rem;
+        }
+    }
+</style>

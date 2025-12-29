@@ -2,69 +2,264 @@
 interface Props {
   title: string;
   description?: string;
-  backgroundImage?: string;
+  icon?: string;
 }
 
-const { title, description, backgroundImage = '/images/industry-bg.jpg' } = Astro.props;
+const { title, description, icon = "default" } = Astro.props;
+
+// Icon paths for different page types
+const icons: Record<string, string> = {
+  careers: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="4"></circle>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+  </svg>`,
+  industries: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+  </svg>`,
+  services: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+    <path d="M2 17l10 5 10-5"></path>
+    <path d="M2 12l10 5 10-5"></path>
+  </svg>`,
+  digital: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+    <line x1="8" y1="21" x2="16" y2="21"></line>
+    <line x1="12" y1="17" x2="12" y2="21"></line>
+  </svg>`,
+  contact: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+  </svg>`,
+  default: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 6v6l4 2"></path>
+  </svg>`,
+};
+
+const selectedIcon = icons[icon] || icons.default;
 ---
 
-<section class="page-hero" style={`background-image: url('${backgroundImage}')`}>
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content">
-    <h1>{title}</h1>
-    {description && <p>{description}</p>}
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <!-- Animated Gradient Blobs -->
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+
+    <!-- Noise Texture for visual richness -->
+    <div class="hero-noise"></div>
+
+    <!-- Glass Sheen Overlay -->
+    <div class="glass-overlay"></div>
+
+    <!-- Large Background Icon -->
+    <div class="hero-icon-bg" set:html={selectedIcon} />
   </div>
+
+  <div class="container relative z-10">
+    <div class="page-hero-grid">
+      <div class="page-hero-content animate-fade-in-up">
+        <h1>{title}</h1>
+        {description && <p class="hero-description">{description}</p>}
+      </div>
+    </div>
+  </div>
+
+  <!-- Use a clean border separator instead of glow -->
+  <div class="hero-separator"></div>
 </section>
 
 <style>
   .page-hero {
     position: relative;
-    min-height: 200px;
+    /* Dynamic height */
+    min-height: clamp(400px, 45vh, 600px);
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px 50px;
+    overflow: hidden;
+    padding: clamp(8rem, 12vh, 10rem) 0 clamp(4rem, 6vh, 6rem);
+    background: #ffffff;
   }
 
-  .page-hero-overlay {
+  .page-hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #1E2128 0%, rgba(30, 33, 40, 0.85) 100%);
+    overflow: hidden;
+    z-index: 0;
+    background: #ffffff; /* Fallback */
   }
 
-  .page-hero-content {
-    position: relative;
+  /* --- Creative Glassy Elements --- */
+
+  /* 1. Moving Gradient Blobs */
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* Heavy blur for soft diffuse look */
+    opacity: 0.6;
+    animation: floatBlob 20s infinite alternate ease-in-out;
+    z-index: 0;
+  }
+
+  .hero-blob-1 {
+    width: 60vh;
+    height: 60vh;
+    background: radial-gradient(
+      circle,
+      rgba(14, 165, 233, 0.4) 0%,
+      transparent 70%
+    ); /* Sky Blue */
+    top: -20%;
+    right: -10%;
+    animation-delay: 0s;
+  }
+
+  .hero-blob-2 {
+    width: 70vh;
+    height: 70vh;
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.3) 0%,
+      transparent 70%
+    ); /* Indigo */
+    bottom: -30%;
+    left: -10%;
+    animation-delay: -5s;
+  }
+
+  .hero-blob-3 {
+    width: 40vh;
+    height: 40vh;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.8) 0%,
+      transparent 70%
+    ); /* White Highlight */
+    top: 40%;
+    right: 20%;
+    mix-blend-mode: overlay;
+    animation-delay: -10s;
+  }
+
+  @keyframes floatBlob {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(50px, 30px) scale(1.1);
+    }
+  }
+
+  /* 2. Noise Texture - Vital for "Premium" feel */
+  .hero-noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.4;
     z-index: 1;
-    text-align: center;
-    max-width: 800px;
+    mix-blend-mode: overlay;
+  }
+
+  /* 3. Glass Sheen/Reflection */
+  .glass-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    z-index: 2;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  /* 4. Large Icon Watermark */
+  .hero-icon-bg {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-10deg);
+    width: 60vh;
+    height: 60vh;
+    color: var(--color-accent-primary);
+    opacity: 0.03; /* Very faint */
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* --- Content Styling --- */
+  .page-hero-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    max-width: 900px; /* Centered focus */
+    margin: 0 auto;
+    text-align: center; /* Center aligned for impact */
+    position: relative;
+    z-index: 10;
   }
 
   .page-hero-content h1 {
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    color: var(--color-text-main); /* Dark Slate */
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
   }
 
-  .page-hero-content p {
-    color: rgba(255,255,255,0.85);
-    font-size: 1.1rem;
-    margin: 0;
+  .hero-description {
+    color: var(--color-text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 700px;
   }
 
-  @media (max-width: 767px) {
-    .page-hero {
-      min-height: 160px;
-      padding: 80px 15px 40px;
+  /* --- Separator --- */
+  .hero-separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.06),
+      transparent
+    );
+    z-index: 10;
+  }
+
+  /* Animation */
+  .animate-fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
+  @media (max-width: 768px) {
     .page-hero-content h1 {
-      font-size: 1.8rem;
+      font-size: 2.5rem;
     }
-
-    .page-hero-content p {
-      font-size: 1rem;
+    .hero-description {
+      font-size: 1.125rem;
+    }
+    .hero-blob-1 {
+      right: -20%;
+    }
+    .hero-blob-2 {
+      left: -20%;
     }
   }
 </style>
