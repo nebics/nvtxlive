@@ -32,8 +32,15 @@ jobs:
       - name: Clean previous build
         run: rm -rf dist .astro
 
+      - name: Generate timestamp
+        id: timestamp
+        run: echo "time=$(date -u "+%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_OUTPUT
+
       - name: Build Astro site
         run: npm run build
+        env:
+          PUBLIC_DEPLOY_TIMESTAMP: ${{ steps.timestamp.outputs.time }}
+          PUBLIC_COMMIT_HASH: ${{ github.sha }}
 
       - name: Extract project name from branch
         id: extract
@@ -105,9 +112,13 @@ jobs:
           command: pages deploy dist --project-name=${{ steps.extract.outputs.project_name }} --branch=main --commit-dirty=true
 
       - name: Purge Cloudflare Cache
-        run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            --data '{"purge_everything":true}' || echo "Cache purge skipped (no zone ID or pages.dev domain)"
         continue-on-error: true
+        run: |
+          if [ -n "${{ secrets.CLOUDFLARE_ZONE_ID }}" ]; then
+            curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              --data '{"purge_everything":true}'
+          else
+            echo "Skipping cache purge - no CLOUDFLARE_ZONE_ID configured"
+          fi
