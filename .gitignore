@@ -22,3 +22,13 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+.wrangler/state/v3/d1/miniflare-D1DatabaseObject/e577cb47b4affd94c43c7af66c5c670e80007b12413f45249fbf93d4d39ae6d9.sqlite
+.wrangler/tmp/bundle-HsF6Pw/middleware-insertion-facade.js
+.wrangler/tmp/bundle-HsF6Pw/middleware-loader.entry.ts
+.wrangler/tmp/bundle-Sar2Dt/middleware-insertion-facade.js
+.wrangler/tmp/bundle-Sar2Dt/middleware-loader.entry.ts
+.wrangler/tmp/dev-4GTkjo/functionsWorker-0.1391169526110505.js
+.wrangler/tmp/dev-4GTkjo/functionsWorker-0.1391169526110505.js.map
+.wrangler/tmp/pages-5yu8y3/functionsRoutes-0.6549947861989165.mjs
+.wrangler/tmp/pages-5yu8y3/functionsWorker-0.1391169526110505.mjs
+.wrangler/tmp/pages-5yu8y3/functionsWorker-0.1391169526110505.mjs.map

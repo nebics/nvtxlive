@@ -17,3 +17,18 @@ Add these secrets in GitHub repo → Settings → Secrets and variables → Acti
 
 curl "https://api.cloudflare.com/client/v4/user/tokens/verify" \
 -H "Authorization: Bearer BE2m6ACHrha8JsfdNW0PwSToK8u0ZHKR6tbwgVE8"
+
+----
+
+D1 ID: d238133c-34ee-4d1d-838c-5f6b6064cf61
+KV ID: ac8e44424b454514bc209afe8b0f5362
+
+-----
+
+Admin user: admin@novintix.com / admin123
+
+---
+
+
+resend api token
+re_GMs53CV2_3vxZkS949tB1sDcJN3o2dozX
