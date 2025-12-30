@@ -36,7 +36,30 @@ import PageHero from '../components/PageHero.astro';
             <h6>Send Us a Message</h6>
             <h3>How Can We Help?</h3>
 
-            <form class="contact-form" action="#" method="POST">
+            <div id="form-success" class="form-message success" style="display: none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <div>
+                <strong>Message Sent!</strong>
+                <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+              </div>
+            </div>
+
+            <div id="form-error" class="form-message error" style="display: none;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+              </svg>
+              <div>
+                <strong>Something went wrong</strong>
+                <p id="error-message">Please try again or contact us directly.</p>
+              </div>
+            </div>
+
+            <form id="contact-form" class="contact-form">
               <div class="form-row">
                 <div class="form-group">
                   <label for="firstName">First Name *</label>
@@ -53,14 +76,29 @@ import PageHero from '../components/PageHero.astro';
                 <input type="email" id="email" name="email" required />
               </div>
 
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" />
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <input type="text" id="company" name="company" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" />
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required />
+                <label for="service">What can we help with? *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service area</option>
+                  <option value="product-engineering">Product Engineering</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="supply-chain">Supply Chain</option>
+                  <option value="quality-compliance">Quality & Regulatory Compliance</option>
+                  <option value="clinical-affairs">Clinical Affairs</option>
+                  <option value="general-inquiry">General Inquiry</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                </select>
               </div>
 
               <div class="form-group">
@@ -68,7 +106,15 @@ import PageHero from '../components/PageHero.astro';
                 <textarea id="message" name="message" rows="5" required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" id="submit-btn" class="btn btn-primary">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none;">
+                  <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="12"></circle>
+                  </svg>
+                  Sending...
+                </span>
+              </button>
             </form>
           </div>
         </div>
@@ -202,6 +248,91 @@ import PageHero from '../components/PageHero.astro';
 
   .contact-form .btn {
     width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .contact-form .btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  .btn-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #D3D3DC;
+    border-radius: 10px;
+    background: #F8F8F9;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%237C7C7D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+
+  .form-group select:focus {
+    outline: none;
+    border-color: #F5A302;
+    background-color: #fff;
+  }
+
+  .form-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-message.success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #047857;
+  }
+
+  .form-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
+  }
+
+  .form-message svg {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  .form-message strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-message p {
+    margin: 0;
+    font-size: 0.875rem;
+    opacity: 0.9;
   }
 
   .map-section {
@@ -237,3 +368,74 @@ import PageHero from '../components/PageHero.astro';
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
+    const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLElement;
+    const successMessage = document.getElementById('form-success') as HTMLElement;
+    const errorMessage = document.getElementById('form-error') as HTMLElement;
+    const errorText = document.getElementById('error-message') as HTMLElement;
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Hide previous messages
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'flex';
+
+      // Collect form data
+      const formData = {
+        first_name: (document.getElementById('firstName') as HTMLInputElement).value,
+        last_name: (document.getElementById('lastName') as HTMLInputElement).value,
+        email: (document.getElementById('email') as HTMLInputElement).value,
+        phone: (document.getElementById('phone') as HTMLInputElement)?.value || undefined,
+        company: (document.getElementById('company') as HTMLInputElement)?.value || undefined,
+        inquiry_type: (document.getElementById('service') as HTMLSelectElement).value,
+        message: (document.getElementById('message') as HTMLTextAreaElement).value,
+        page_url: window.location.href,
+        submitted_at_local: new Date().toISOString(),
+        utm: {
+          source: new URLSearchParams(window.location.search).get('utm_source') || undefined,
+          medium: new URLSearchParams(window.location.search).get('utm_medium') || undefined,
+          campaign: new URLSearchParams(window.location.search).get('utm_campaign') || undefined,
+        }
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          successMessage.style.display = 'flex';
+          form.reset();
+          form.style.display = 'none';
+        } else {
+          errorText.textContent = result.error || 'Please try again or contact us directly.';
+          errorMessage.style.display = 'flex';
+        }
+      } catch (error) {
+        errorText.textContent = 'Network error. Please check your connection and try again.';
+        errorMessage.style.display = 'flex';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }
+    });
+  });
+</script>
