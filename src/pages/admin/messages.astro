@@ -15,16 +15,16 @@
       *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
       :root {
-        --bg-primary: #0a0a0f;
-        --bg-secondary: #12121a;
-        --bg-tertiary: #1a1a24;
-        --bg-hover: #22222e;
-        --bg-active: #2a2a38;
-        --border-color: #2a2a38;
-        --border-light: #3a3a48;
-        --text-primary: #f0f0f5;
-        --text-secondary: #a0a0b0;
-        --text-muted: #6a6a7a;
+        --bg-primary: #111827;
+        --bg-secondary: #1f2937;
+        --bg-tertiary: #374151;
+        --bg-hover: #4b5563;
+        --bg-active: #6b7280;
+        --border-color: #374151;
+        --border-light: #4b5563;
+        --text-primary: #f9fafb;
+        --text-secondary: #d1d5db;
+        --text-muted: #9ca3af;
         --accent: #6366f1;
         --accent-hover: #818cf8;
         --accent-soft: rgba(99, 102, 241, 0.15);
@@ -351,11 +351,11 @@
       /* Checkbox */
       .checkbox-wrap { display: flex; align-items: center; justify-content: center; position: relative; }
       .checkbox {
-        width: 18px;
-        height: 18px;
-        border: 2px solid var(--border-light);
+        width: 16px;
+        height: 16px;
+        border: 2px solid #6b7280;
         border-radius: 4px;
-        background: var(--bg-tertiary);
+        background: transparent;
         cursor: pointer;
         transition: all var(--transition);
         appearance: none;
@@ -371,10 +371,10 @@
       .checkbox:checked::after {
         content: '';
         position: absolute;
-        left: 5px;
-        top: 2px;
-        width: 4px;
-        height: 8px;
+        left: 3px;
+        top: 0px;
+        width: 5px;
+        height: 9px;
         border: solid white;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
@@ -467,14 +467,14 @@
       .message-cell.unread { color: var(--text-primary); }
 
       /* Actions */
-      .actions-cell { display: flex; align-items: center; gap: 0.5rem; }
+      .actions-cell { display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end; }
       .action-btn {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
         border-radius: var(--radius-md);
-        border: 1px solid var(--border-color);
-        background: var(--bg-tertiary);
-        color: var(--text-muted);
+        border: 1px solid #4b5563;
+        background: #374151;
+        color: #d1d5db;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
@@ -483,14 +483,14 @@
         flex-shrink: 0;
       }
       .action-btn:hover {
-        background: var(--bg-hover);
-        color: var(--text-primary);
-        border-color: var(--border-light);
+        background: #4b5563;
+        color: #f9fafb;
+        border-color: #6b7280;
       }
       .action-btn:active { transform: scale(0.95); }
-      .action-btn svg { width: 16px; height: 16px; stroke-width: 2; }
-      .action-btn.view:hover { color: var(--info); border-color: var(--info); }
-      .action-btn.archive:hover { color: var(--warning); border-color: var(--warning); }
+      .action-btn svg { width: 16px; height: 16px; }
+      .action-btn.view:hover { color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.1); }
+      .action-btn.archive:hover { color: #fbbf24; border-color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
 
       /* Unread Indicator */
       .unread-row td:first-child { position: relative; }
@@ -931,10 +931,10 @@
             <td>
               <div class="actions-cell">
                 <button class="action-btn view" title="View" onclick="event.stopPropagation(); openMessage(${msg.id})">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 </button>
                 <button class="action-btn archive" title="Archive" onclick="event.stopPropagation(); quickArchive(${msg.id})">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"></path><path d="M1 3h22v5H1z"></path><path d="M10 12h4"></path></svg>
                 </button>
               </div>
             </td>
