@@ -1,0 +1,27 @@
+---
+// Redirect to login or messages based on auth status
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | NovintiX</title>
+  <script>
+    (async () => {
+      try {
+        const res = await fetch('/api/admin/verify');
+        const data = await res.json();
+        window.location.href = data.authenticated ? '/admin/messages' : '/admin/login';
+      } catch (e) {
+        window.location.href = '/admin/login';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p style="font-family: sans-serif; text-align: center; padding: 2rem;">Redirecting...</p>
+</body>
+</html>

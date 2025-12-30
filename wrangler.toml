@@ -1,0 +1,22 @@
+name = "novintix-static"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "dist"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "novintix-db"
+database_id = "d238133c-34ee-4d1d-838c-5f6b6064cf61"
+
+# KV Namespace binding (for page views, sessions cache, etc.)
+[[kv_namespaces]]
+binding = "VIEWS"
+id = "ac8e44424b454514bc209afe8b0f5362"
+
+# AI binding (Workers AI) - disabled for local dev
+# [ai]
+# binding = "AI"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"

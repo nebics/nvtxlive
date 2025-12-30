@@ -89,33 +89,35 @@ else
     echo -e "\n${YELLOW}[3/5] Skipping build (--skip-build)${NC}"
 fi
 
-# Step 4: Add Basic Auth Worker
-echo -e "\n${YELLOW}[4/5] Adding HTTP Basic Auth worker...${NC}"
-cat > dist/_worker.js << 'EOF'
+# Step 4: Add Basic Auth Middleware (works with Functions)
+echo -e "\n${YELLOW}[4/5] Adding HTTP Basic Auth middleware...${NC}"
+cat > functions/_middleware.ts << 'EOF'
+// HTTP Basic Auth Middleware - protects all routes including /api/*
 const CREDENTIALS = {
   username: 'dev_env1',
   password: 'z7kws3mfl5e2y'
 };
 
-export default {
-  async fetch(request, env) {
-    const authorization = request.headers.get('Authorization');
+export const onRequest: PagesFunction = async (context) => {
+  const { request } = context;
+  const authorization = request.headers.get('Authorization');
 
-    if (!authorization) {
-      return new Response('Authentication required', {
-        status: 401,
-        headers: {
-          'WWW-Authenticate': 'Basic realm="Protected Area"'
-        }
-      });
-    }
+  if (!authorization) {
+    return new Response('Authentication required', {
+      status: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="Protected Area"'
+      }
+    });
+  }
 
-    const [scheme, encoded] = authorization.split(' ');
+  const [scheme, encoded] = authorization.split(' ');
 
-    if (scheme !== 'Basic') {
-      return new Response('Invalid authentication scheme', { status: 401 });
-    }
+  if (scheme !== 'Basic') {
+    return new Response('Invalid authentication scheme', { status: 401 });
+  }
 
+  try {
     const decoded = atob(encoded);
     const [username, password] = decoded.split(':');
 
@@ -127,12 +129,15 @@ export default {
         }
       });
     }
-
-    return env.ASSETS.fetch(request);
+  } catch (e) {
+    return new Response('Invalid authorization header', { status: 401 });
   }
+
+  // Auth passed - continue to next handler (Functions or static assets)
+  return context.next();
 };
 EOF
-echo "✓ Auth worker added"
+echo "✓ Auth middleware added"
 
 # Step 5: Deploy to Cloudflare Pages
 echo -e "\n${YELLOW}[5/5] Deploying to Cloudflare Pages...${NC}"
