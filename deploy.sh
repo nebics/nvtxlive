@@ -65,6 +65,15 @@ if [ -z "$PROJECT_NAME" ]; then
     usage
 fi
 
+# Swap project name parts (e.g., novintix-v2 -> v2-novintix)
+if [[ "$PROJECT_NAME" == *"-"* ]]; then
+    IFS='-' read -r part1 part2 <<< "$PROJECT_NAME"
+    if [ ! -z "$part2" ]; then
+        echo -e "${YELLOW}Swapping project name: $PROJECT_NAME -> ${part2}-${part1}${NC}"
+        PROJECT_NAME="${part2}-${part1}"
+    fi
+fi
+
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}Deploying to: ${PROJECT_NAME}.pages.dev${NC}"
 echo -e "${GREEN}========================================${NC}"
