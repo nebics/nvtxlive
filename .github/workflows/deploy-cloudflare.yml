@@ -41,6 +41,15 @@ jobs:
           # Branch: release/novintix-v3 -> Project: novintix-v3
           BRANCH_NAME="${GITHUB_REF#refs/heads/}"
           PROJECT_NAME="${BRANCH_NAME#release/}"
+          
+          # Swap parts: novintix-v2 -> v2-novintix
+          if [[ "$PROJECT_NAME" == *"-"* ]]; then
+             IFS='-' read -r part1 part2 <<< "$PROJECT_NAME"
+             if [ ! -z "$part2" ]; then
+                 PROJECT_NAME="${part2}-${part1}"
+             fi
+          fi
+
           echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT
           echo "Deploying to Cloudflare Pages project: $PROJECT_NAME"
 
