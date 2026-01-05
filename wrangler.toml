@@ -6,12 +6,12 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "novintix-db"
-database_id = "d238133c-34ee-4d1d-838c-5f6b6064cf61"
+database_id = "c07c2b0c-2b91-4351-9303-87b36f5d53b3"
 
 # KV Namespace binding (for page views, sessions cache, etc.)
 [[kv_namespaces]]
 binding = "VIEWS"
-id = "ac8e44424b454514bc209afe8b0f5362"
+id = "d3c34e13ec49498f8217617916d07603"
 
 # AI binding (Workers AI) - disabled for local dev
 # [ai]
