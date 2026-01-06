@@ -16,9 +16,20 @@ A static marketing website for NovintiX, a life sciences consulting company. Bui
 git clone <repository-url>
 cd novintix-static
 
-# Install dependencies
-npm install
+# Run Smart Start Script (Handles Auth, Dependencies, Database, and Server)
+./setup.sh
 ```
+
+### Manual Deployment
+
+To deploy manually to Cloudflare Pages (Production):
+```bash
+./deploy.sh <project-name> --public
+
+# Example:
+./deploy.sh v2-novintix --public
+```
+This script handles building, authenticating, and deploying using the current branch to the primary environment.
 
 ### Development
 
