@@ -65,7 +65,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         // Let's trust the session is valid (checked by middleware/admin layout protection).
 
         const newSalt = crypto.randomUUID().replace(/-/g, '');
-        const newHash = await simpleHash(newSalt + newPassword); // Simple salted hash
+        const newHash = await simpleHash(newPassword + newSalt); // Match login.ts: password + salt
         const storedValue = `${newSalt}:${newHash}`;
 
         await env.DB.prepare('UPDATE admin_users SET password_hash = ? WHERE id = ?')

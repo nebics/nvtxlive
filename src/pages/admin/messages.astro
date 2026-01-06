@@ -529,6 +529,14 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
       background: #4b5563;
       color: white;
     }
+    .action-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .checkbox-wrap {
+      text-align: center;
+    }
 
     /* Footer */
     .table-footer {
@@ -721,7 +729,7 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
         const res = await fetch(url);
         const data = await res.json();
 
-        if (!data.success) throw new Error(data.error);
+        // if (!data.success) throw new Error(data.error); // API response doesn't have success field
 
         // Update Stats
         if (data.stats) {
@@ -742,7 +750,7 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
         }
 
         // Render Table
-        if (data.messages.length === 0) {
+        if (!data.messages || data.messages.length === 0) {
           tbody.innerHTML =
             '<tr><td colspan="8" class="table-empty">No messages found.</td></tr>';
         } else {
@@ -781,8 +789,15 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
             .join("");
         }
 
-        document.getElementById("showing-total").textContent =
-          data.messages.length; // Simplified for now
+        if (data.pagination && data.pagination.total !== undefined) {
+          document.getElementById("showing-total").textContent =
+            data.pagination.total;
+          // Update range logic could go here if needed
+        } else {
+          document.getElementById("showing-total").textContent = data.messages
+            ? data.messages.length
+            : 0;
+        }
       } catch (e) {
         console.error(e);
         tbody.innerHTML =

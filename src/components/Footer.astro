@@ -7,11 +7,19 @@ const currentYear = new Date().getFullYear();
     <div class="footer-main">
       <div class="footer-brand">
         <a href="/" class="footer-logo">
-          <span class="logo-text">NovintiX</span>
+          <img
+            src="/images/novintix-logo.png"
+            alt="NovintiX"
+            width="180"
+            height="40"
+          />
         </a>
-        <p class="footer-tagline">Accelerate Transformation To Shape Your Future</p>
+        <p class="footer-tagline">
+          Accelerate Transformation To Shape Your Future
+        </p>
         <p class="footer-description">
-          Let's Embark on a Journey with NOVINTIX – Discover Innovation, Embrace Transformation, and Unlock Your Business's Full Potential.
+          Let's Embark on a Journey with NOVINTIX – Discover Innovation, Embrace
+          Transformation, and Unlock Your Business's Full Potential.
         </p>
       </div>
 
@@ -19,10 +27,16 @@ const currentYear = new Date().getFullYear();
         <div class="footer-column">
           <h5>Services</h5>
           <ul>
-            <li><a href="/services/product-engineering">Product Engineering</a></li>
+            <li>
+              <a href="/services/product-engineering">Product Engineering</a>
+            </li>
             <li><a href="/services/supply-chain">Supply Chain</a></li>
             <li><a href="/services/manufacturing">Manufacturing</a></li>
-            <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
+            <li>
+              <a href="/services/quality-regulatory-compliance"
+                >Quality & Compliance</a
+              >
+            </li>
             <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
           </ul>
         </div>
@@ -61,7 +75,7 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .site-footer {
-    background: #1E2128;
+    background: #1e2128;
     color: #fff;
     padding: 60px 0 30px;
   }
@@ -77,23 +91,22 @@ const currentYear = new Date().getFullYear();
     grid-template-columns: 1fr 2fr;
     gap: 60px;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .footer-brand {
     max-width: 300px;
   }
 
-  .footer-logo .logo-text {
-    font-family: 'Rubik', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #E05A47;
+  .footer-logo img {
+    display: block;
+    height: auto;
+    /* No inversion needed, logo is original colors */
   }
 
   .footer-tagline {
     font-size: 12px;
-    color: #F5A302;
+    color: #f5a302;
     margin-top: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -102,7 +115,7 @@ const currentYear = new Date().getFullYear();
   .footer-description {
     margin-top: 20px;
     font-size: 14px;
-    color: #90A4AF;
+    color: #90a4af;
     line-height: 1.6;
   }
 
@@ -113,7 +126,7 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-column h5 {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
@@ -132,12 +145,12 @@ const currentYear = new Date().getFullYear();
 
   .footer-column a {
     font-size: 14px;
-    color: #90A4AF;
+    color: #90a4af;
     transition: color 0.3s ease;
   }
 
   .footer-column a:hover {
-    color: #F5A302;
+    color: #f5a302;
   }
 
   .contact-info li {
@@ -147,7 +160,7 @@ const currentYear = new Date().getFullYear();
   .contact-info strong {
     display: block;
     font-size: 12px;
-    color: #F5A302;
+    color: #f5a302;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -155,7 +168,7 @@ const currentYear = new Date().getFullYear();
 
   .contact-info span {
     font-size: 14px;
-    color: #90A4AF;
+    color: #90a4af;
   }
 
   .footer-bottom {
@@ -165,7 +178,7 @@ const currentYear = new Date().getFullYear();
 
   .footer-bottom p {
     font-size: 13px;
-    color: #90A4AF;
+    color: #90a4af;
   }
 
   @media (max-width: 1024px) {

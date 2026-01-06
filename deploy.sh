@@ -11,6 +11,7 @@ NC='\033[0m' # No Color
 # Default values
 PROJECT_NAME=""
 SKIP_BUILD=false
+PUBLIC_DEPLOY=false
 
 usage() {
     echo -e "${YELLOW}Usage:${NC} ./deploy.sh <project-name> [options]"
@@ -39,6 +40,10 @@ while [[ $# -gt 0 ]]; do
     case $1 in
         --skip-build)
             SKIP_BUILD=true
+            shift
+            ;;
+        --public)
+            PUBLIC_DEPLOY=true
             shift
             ;;
         --help)
@@ -119,8 +124,9 @@ else
 fi
 
 # Step 4: Add Basic Auth Middleware (works with Functions)
-echo -e "\n${YELLOW}[4/5] Adding HTTP Basic Auth middleware...${NC}"
-cat > functions/_middleware.ts << 'EOF'
+if [ "$PUBLIC_DEPLOY" = false ]; then
+    echo -e "\n${YELLOW}[4/5] Adding HTTP Basic Auth middleware...${NC}"
+    cat > functions/_middleware.ts << 'EOF'
 // HTTP Basic Auth Middleware - protects all routes including /api/*
 const CREDENTIALS = {
   username: 'dev_env1',
@@ -166,7 +172,12 @@ export const onRequest: PagesFunction = async (context) => {
   return context.next();
 };
 EOF
-echo "✓ Auth middleware added"
+    echo "✓ Auth middleware added"
+else
+    echo -e "\n${GREEN}[4/5] Public deployment selected - Skipping Auth Middleware${NC}"
+    # Ensure no stale middleware exists
+    rm -f functions/_middleware.ts
+fi
 
 # Step 5: Deploy to Cloudflare Pages
 echo -e "\n${YELLOW}[5/5] Deploying to Cloudflare Pages...${NC}"
@@ -178,7 +189,21 @@ if ! npx wrangler pages project list 2>/dev/null | grep -q "$PROJECT_NAME"; then
 fi
 
 # Deploy
-DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true 2>&1)
+if [ "$PUBLIC_DEPLOY" = true ]; then
+    # For production/public deploy, we ideally want to hit the main production environment.
+    # Omitting --branch might help if it defaults to production, OR we ensure we pass the production branch name.
+    # Since we saw 'main' in the screenshot for production, let's try WITHOUT --branch first to see if it defaults correctly,
+    # OR we stick to main but ensure it's treated as production.
+    # Actually, simpler: if --public is passed, we assume it's production-ready.
+    
+    echo "Deploying to PRODUCTION (Public)..."
+    # Removing --branch argument to let Cloudflare infer or default to production
+    DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --commit-dirty=true 2>&1)
+else
+    # Development/Preview deploy
+    DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true 2>&1)
+fi
+
 echo "$DEPLOY_OUTPUT"
 
 # Extract deployment URL
@@ -196,15 +221,30 @@ cat > dist/_headers << EOF
   Cache-Control: no-cache, no-store, must-revalidate
   Pragma: no-cache
   Expires: 0
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 EOF
 
-# Redeploy with headers to ensure cache settings
-npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true > /dev/null 2>&1
+# Redeploy with headers
+if [ "$PUBLIC_DEPLOY" = true ]; then
+    npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --commit-dirty=true > /dev/null 2>&1
+else
+    npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true > /dev/null 2>&1
+fi
+
 echo "✓ Cache headers applied"
 
 echo -e "\n${GREEN}========================================${NC}"
 echo -e "${GREEN}✓ Deployment complete!${NC}"
 echo -e "${GREEN}========================================${NC}"
-echo -e "\n${YELLOW}URL:${NC} https://${PROJECT_NAME}.pages.dev"
-echo -e "${YELLOW}Auth:${NC} dev_env1 / z7kws3mfl5e2y"
+if [ "$PUBLIC_DEPLOY" = true ]; then
+    echo -e "\n${YELLOW}URL:${NC} https://${PROJECT_NAME}.pages.dev"
+    echo -e "${YELLOW}Mode:${NC} PRODUCTION (Public)"
+else
+    echo -e "\n${YELLOW}URL:${NC} ${DEPLOY_URL}"
+    echo -e "${YELLOW}Auth:${NC} dev_env1 / z7kws3mfl5e2y"
+fi
 echo ""

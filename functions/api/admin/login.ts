@@ -24,8 +24,27 @@ async function verifyPassword(password: string, storedHash: string): Promise<boo
   const [salt, hash] = storedHash.split(':');
   if (!salt || !hash) return false;
 
-  const computedHash = await hashPassword(password, salt);
-  return computedHash === hash;
+  /* 
+     Try standard "password + salt" first (correct implementation)
+     This matches the fixed change-password.ts
+  */
+  const standardHash = await hashPassword(password, salt);
+  if (standardHash === hash) return true;
+
+  /* 
+     Fallback: Try "salt + password" 
+     This supports users who changed their password with the buggy implementation 
+     before we fixed it.
+  */
+  const encoder = new TextEncoder();
+  const reverseData = encoder.encode(salt + password);
+  const reverseBuffer = await crypto.subtle.digest('SHA-256', reverseData);
+  const reverseHashArray = Array.from(new Uint8Array(reverseBuffer));
+  const reverseHash = reverseHashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+  if (reverseHash === hash) return true;
+
+  return false;
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Supply Chain" currentPage="/services/supply-chain">
@@ -7,7 +7,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Supply Chain</h1>
-      <p>Optimize your supply chain for resilience, efficiency, and compliance.</p>
+      <p>
+        Optimize your supply chain for resilience, efficiency, and compliance.
+      </p>
     </div>
   </section>
 
@@ -16,20 +18,47 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="content-grid">
         <div class="content-main">
           <h2>Building Resilient Supply Chains</h2>
-          <p>In today's complex global environment, a robust supply chain is essential for business success. NovintiX helps life sciences companies design, optimize, and manage supply chains that deliver consistent quality while minimizing risk and cost.</p>
+          <p>
+            In today's complex global environment, a robust supply chain is
+            essential for business success. NovintiX helps life sciences
+            companies design, optimize, and manage supply chains that deliver
+            consistent quality while minimizing risk and cost.
+          </p>
 
           <h3>Our Services Include:</h3>
           <ul>
-            <li><strong>Supply Chain Strategy</strong> - End-to-end supply chain design and optimization</li>
-            <li><strong>Supplier Management</strong> - Qualification, auditing, and performance monitoring</li>
-            <li><strong>Risk Management</strong> - Identification and mitigation of supply chain risks</li>
-            <li><strong>Inventory Optimization</strong> - Demand planning and inventory management</li>
-            <li><strong>Logistics & Distribution</strong> - Cold chain management and distribution network design</li>
-            <li><strong>Compliance</strong> - GDP, serialization, and regulatory requirements</li>
+            <li>
+              <strong>Supply Chain Strategy</strong> - End-to-end supply chain design
+              and optimization
+            </li>
+            <li>
+              <strong>Supplier Management</strong> - Qualification, auditing, and
+              performance monitoring
+            </li>
+            <li>
+              <strong>Risk Management</strong> - Identification and mitigation of
+              supply chain risks
+            </li>
+            <li>
+              <strong>Inventory Optimization</strong> - Demand planning and inventory
+              management
+            </li>
+            <li>
+              <strong>Logistics & Distribution</strong> - Cold chain management and
+              distribution network design
+            </li>
+            <li>
+              <strong>Compliance</strong> - GDP, serialization, and regulatory requirements
+            </li>
           </ul>
 
           <h3>Why Choose NovintiX?</h3>
-          <p>Our supply chain experts understand the unique challenges of regulated industries. We combine operational excellence with deep regulatory knowledge to help you build supply chains that are both efficient and compliant.</p>
+          <p>
+            Our supply chain experts understand the unique challenges of
+            regulated industries. We combine operational excellence with deep
+            regulatory knowledge to help you build supply chains that are both
+            efficient and compliant.
+          </p>
         </div>
 
         <div class="content-sidebar">
@@ -37,8 +66,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <h5>Related Services</h5>
             <ul>
               <li><a href="/services/manufacturing">Manufacturing</a></li>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
+              <li>
+                <a href="/services/quality-regulatory-compliance"
+                  >Quality & Compliance</a>
+              </li>
+              <li>
+                <a href="/services/product-engineering">Product Engineering</a>
+              </li>
             </ul>
           </div>
 
@@ -60,14 +94,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    background: linear-gradient(135deg, #1e2128 0%, #32353e 100%);
     padding: 7% 0;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('/images/pattern.png') repeat;
+    background: url("/images/pattern.png") repeat;
     opacity: 0.1;
   }
 
@@ -85,7 +119,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .hero-content p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 18px;
   }
 
@@ -109,7 +143,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.7;
     margin-bottom: 15px;
   }
@@ -120,13 +154,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main li {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.8;
     margin-bottom: 10px;
   }
 
   .content-main li strong {
-    color: #1E2128;
+    color: #1e2128;
   }
 
   .sidebar-card {
@@ -150,16 +184,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .sidebar-card a {
-    color: #033C59;
+    color: #033c59;
     font-size: 14px;
   }
 
   .sidebar-card a:hover {
-    color: #F5A302;
+    color: #f5a302;
   }
 
   .sidebar-card p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     font-size: 14px;
     margin-bottom: 15px;
   }
@@ -167,6 +201,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .sidebar-card .btn {
     width: 100%;
     text-align: center;
+    color: #fff !important;
   }
 
   @media (max-width: 1024px) {
