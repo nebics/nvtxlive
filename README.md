@@ -13,8 +13,8 @@ A static marketing website for NovintiX, a life sciences consulting company. Bui
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd novintix-static
+git clone https://github.com/nebics/nvtxlive
+cd nvtxlive
 
 # Run Smart Start Script (Handles Auth, Dependencies, Database, and Server)
 ./setup.sh
@@ -26,19 +26,48 @@ To deploy manually to Cloudflare Pages (Production):
 ```bash
 ./deploy.sh <project-name> --public
 
-# Example:
-./deploy.sh v2-novintix --public
+# Example - check the updates from https://v2-novintix.pages.dev/
+./deploy.sh v2-novintix # Deploy with http auth
+./deploy.sh v2-novintix --public # Deploy without http auth
+
 ```
 This script handles building, authenticating, and deploying using the current branch to the primary environment.
 
 ### Development
 
+### CI/CD Automated Deployment (GitHub Actions)
+
+We use a "Controlled Automation" workflow for safety:
+
+1.  **Manual Trigger (Admin)**:
+    - Go to GitHub Actions tab -> "Deploy to Cloudflare Pages".
+    - Click **Run workflow**.
+    - Inputs: `v2-novintix` (default) and `main` (default).
+    - This bypasses safety checks and deploys immediately.
+
+2.  **Automated Trigger (Push)**:
+    - Pushing to `main` triggers the workflow automatically.
+    - **Safety Gate**: The deployment ONLY proceeds if the commit message contains the tag:
+      `#DEPLOY=PROD`
+    - If the tag is missing, the workflow skips the deployment step (Passes green but does nothing).
+
+### Local Development Preview
+
+Use Cloudflare Wrangler to preview the site locally (includes DB/Functions support):
+
 ```bash
-# Start development server
-npm run dev
+# Start dev server with hot reload
+npm run build && npx wrangler pages dev dist --d1 binding=DB --kv binding=VIEWS
+
+# OR simply run:
+./setup.sh
 ```
 
-Open http://localhost:4321 in your browser. The dev server supports hot reload.
+Standard Astro dev server (Static only, no DB/Auth):
+```bash
+npm run dev
+```
+Open http://localhost:4321.
 
 ### Production Build
 
