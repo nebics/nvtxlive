@@ -1,239 +1,901 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PageHero from '../components/PageHero.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
 ---
 
 <BaseLayout title="Contact Us" currentPage="/contact-us">
   <PageHero
+    icon="contact"
     title="Contact Us"
-    description="Let's Start a Conversation"
-    backgroundImage="/images/contact-bg.jpg"
+    description="Thank you for considering NovintiX. We're excited to collaborate with you."
   />
 
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <span class="section-badge">Get in Touch</span>
+      <h2 class="section-title">Let's Start a Conversation</h2>
+      <p class="section-description">
+        Whether you're exploring a new project, looking to improve existing processes,
+        or seeking expert guidance on regulatory compliance—we're here to help you succeed.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
   <section class="contact-section">
     <div class="container">
       <div class="contact-grid">
+        <!-- Left Column: Contact Info -->
         <div class="contact-info">
-          <div class="info-card">
-            <h6>Get In Touch</h6>
-            <h2>We'd Love to Hear From You</h2>
-            <div class="divider"></div>
+          <div class="info-header">
+            <h3>Direct Contact</h3>
+            <p>Reach out to us directly through any of these channels.</p>
+          </div>
 
-            <div class="contact-item">
-              <h5>Email</h5>
-              <p><a href="mailto:info@novintix.com">info@novintix.com</a></p>
+          <div class="contact-methods">
+            <a href="mailto:connect@novintix.com" class="contact-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email Us</span>
+                <span class="contact-value">connect@novintix.com</span>
+              </div>
+              <div class="contact-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+
+            <a href="tel:+13023061115" class="contact-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Call Us</span>
+                <span class="contact-value">+1 (302) 306-1115</span>
+              </div>
+              <div class="contact-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+
+            <a href="/careers" class="contact-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Join Our Team</span>
+                <span class="contact-value">View open positions</span>
+              </div>
+              <div class="contact-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="response-notice">
+            <div class="notice-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
             </div>
+            <p>We typically respond within 24 hours</p>
+          </div>
 
-            <div class="contact-item">
-              <h5>Phone</h5>
-              <p>Contact us for details</p>
+          <!-- Office Locations -->
+          <div class="locations-block">
+            <h4>Our Presence</h4>
+            <div class="locations-grid">
+              <div class="location-item">
+                <div class="location-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="location-name">United States</span>
+                  <span class="location-region">Headquarters</span>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="location-name">Europe</span>
+                  <span class="location-region">Regional Office</span>
+                </div>
+              </div>
+              <div class="location-item">
+                <div class="location-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="location-name">Asia Pacific</span>
+                  <span class="location-region">Regional Office</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="contact-form-wrapper">
-          <div class="form-card">
-            <h6>Send Us a Message</h6>
-            <h3>How Can We Help?</h3>
+        <!-- Right Column: Form -->
+        <div class="form-wrapper">
+          <div class="form-header">
+            <h3>Send Us a Message</h3>
+            <p>Fill out the form below and we'll get back to you shortly.</p>
+          </div>
 
-            <form class="contact-form" action="#" method="POST">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" required />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" required />
-                </div>
-              </div>
+          <div id="form-success" class="form-message success" style="display: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <div>
+              <strong>Message Sent!</strong>
+              <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
 
+          <div id="form-error" class="form-message error" style="display: none;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+            <div>
+              <strong>Something went wrong</strong>
+              <p id="error-message">Please try again or contact us directly.</p>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required />
+                <label for="firstName">First Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="John"
+                  required
+                />
               </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Smith"
+                  required
+                />
+              </div>
+            </div>
 
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@company.com"
+                required
+              />
+            </div>
+
+            <div class="form-row">
               <div class="form-group">
                 <label for="company">Company</label>
-                <input type="text" id="company" name="company" />
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company name"
+                />
               </div>
-
               <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required />
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+1 (555) 000-0000"
+                />
               </div>
+            </div>
 
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
+            <div class="form-group">
+              <label for="service">What can we help with? <span class="required">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Select a service area</option>
+                <option value="product-engineering">Product Engineering</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="supply-chain">Supply Chain</option>
+                <option value="quality-compliance">Quality & Regulatory Compliance</option>
+                <option value="clinical-affairs">Clinical Affairs</option>
+                <option value="general-inquiry">General Inquiry</option>
+                <option value="partnership">Partnership Opportunity</option>
+              </select>
+            </div>
 
-              <button type="submit" class="btn">Send Message</button>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us about your project or inquiry..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <p class="privacy-note">
+                By submitting this form, you agree to our
+                <a href="/privacy-policy">Privacy Policy</a>.
+              </p>
+              <button type="submit" id="submit-btn" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none;">
+                  <svg class="spinner" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="12"></circle>
+                  </svg>
+                  Sending...
+                </span>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="map-section">
+  <!-- FAQ Section -->
+  <section class="faq-section">
     <div class="container">
-      <div class="section-header">
-        <h6>Our Presence</h6>
-        <h2>Global Reach, Local Expertise</h2>
-        <p>NovintiX serves clients worldwide with offices strategically located to provide localized support and expertise.</p>
+      <div class="faq-header">
+        <span class="section-badge">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>What industries do you serve?</h4>
+          <p>We specialize in medical devices, biotechnology, pharmaceuticals, and digital health solutions, serving clients across the healthcare ecosystem.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How quickly can you start a project?</h4>
+          <p>Depending on scope and resource availability, we can typically begin new engagements within 1-2 weeks of contract finalization.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you offer remote collaboration?</h4>
+          <p>Yes, we have extensive experience with distributed teams and offer flexible engagement models including on-site, remote, and hybrid arrangements.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What regulatory standards do you work with?</h4>
+          <p>We're experienced with FDA, CE marking, ISO 13485, ISO 14971, IEC 62304, and other relevant medical device and pharmaceutical regulations.</p>
+        </div>
       </div>
     </div>
   </section>
-</BaseLayout>
 
-<style>
-  .contact-section {
-    padding: 5em 0;
-  }
+  <style>
+    /* Intro Section */
+    .intro-section {
+      padding: 4rem 0 2rem;
+      background: #fff;
+      text-align: center;
+    }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 50px;
-    align-items: start;
-  }
+    .section-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      background: var(--color-accent-light, #fff7e6);
+      color: var(--color-accent, #F5A302);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
 
-  .info-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
-    padding: 2.5em;
-  }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--color-primary, #1a1a2e);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
 
-  .info-card h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
-  }
+    .section-description {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary, #64748b);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
 
-  .info-card h2 {
-    margin-bottom: 20px;
-  }
+    /* Contact Section */
+    .contact-section {
+      padding: 2rem 0 5rem;
+      background: #fff;
+    }
 
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: #D3D3DC;
-    margin: 20px 0;
-  }
-
-  .contact-item {
-    margin-bottom: 20px;
-  }
-
-  .contact-item h5 {
-    margin-bottom: 5px;
-  }
-
-  .contact-item p {
-    color: #7C7C7D;
-  }
-
-  .contact-item a {
-    color: #033C59;
-  }
-
-  .contact-item a:hover {
-    color: #F5A302;
-  }
-
-  .form-card {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
-    padding: 2.5em;
-  }
-
-  .form-card h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
-  }
-
-  .form-card h3 {
-    margin-bottom: 25px;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .form-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #1E2128;
-    margin-bottom: 8px;
-  }
-
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    font-size: 16px;
-    font-family: inherit;
-    border: 1px solid #D3D3DC;
-    border-radius: 10px;
-    background: #F8F8F9;
-    transition: border-color 0.3s ease, background 0.3s ease;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #F5A302;
-    background: #fff;
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  .contact-form .btn {
-    width: 100%;
-  }
-
-  .map-section {
-    padding: 5em 0;
-    background: #f8f8f9;
-  }
-
-  .map-section .section-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .map-section .section-header h6 {
-    color: #F5A302;
-    margin-bottom: 10px;
-  }
-
-  .map-section .section-header p {
-    color: #7C7C7D;
-    margin-top: 15px;
-  }
-
-  @media (max-width: 1024px) {
     .contact-grid {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
+      align-items: start;
     }
-  }
 
-  @media (max-width: 767px) {
-    .form-row {
-      grid-template-columns: 1fr;
+    /* Contact Info Column */
+    .contact-info {
+      position: sticky;
+      top: 2rem;
     }
-  }
-</style>
+
+    .info-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-primary, #1a1a2e);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-header p {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary, #64748b);
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--color-surface, #f8fafc);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 0.75rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      background: #fff;
+      border-color: var(--color-accent, #F5A302);
+      box-shadow: 0 4px 20px rgba(245, 163, 2, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .contact-card:hover .contact-icon {
+      background: var(--color-accent, #F5A302);
+      color: #fff;
+    }
+
+    .contact-card:hover .contact-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 0.625rem;
+      color: var(--color-accent, #F5A302);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-details {
+      flex: 1;
+    }
+
+    .contact-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-secondary, #64748b);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-value {
+      display: block;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary, #1a1a2e);
+    }
+
+    .contact-arrow {
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: all 0.3s ease;
+      color: var(--color-accent, #F5A302);
+    }
+
+    .response-notice {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: var(--color-accent-light, #fff7e6);
+      border-radius: 0.625rem;
+      margin-bottom: 2rem;
+    }
+
+    .notice-icon {
+      color: var(--color-accent, #F5A302);
+      flex-shrink: 0;
+    }
+
+    .response-notice p {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-primary, #1a1a2e);
+      margin: 0;
+    }
+
+    /* Locations Block */
+    .locations-block {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .locations-block h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent, #F5A302);
+      margin-bottom: 1rem;
+    }
+
+    .locations-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .location-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .location-icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-surface, #f8fafc);
+      border-radius: 0.5rem;
+      color: var(--color-text-secondary, #64748b);
+    }
+
+    .location-name {
+      display: block;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-primary, #1a1a2e);
+    }
+
+    .location-region {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--color-text-secondary, #64748b);
+    }
+
+    /* Form Wrapper */
+    .form-wrapper {
+      background: #fff;
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .form-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .form-header h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary, #1a1a2e);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-header p {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary, #64748b);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-primary, #1a1a2e);
+    }
+
+    .required {
+      color: #ef4444;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-size: 1rem;
+      font-family: inherit;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 0.625rem;
+      background: var(--color-surface, #f8fafc);
+      color: var(--color-primary, #1a1a2e);
+      transition: all 0.2s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--color-accent, #F5A302);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(245, 163, 2, 0.12);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1rem;
+      padding-right: 2.5rem;
+    }
+
+    .form-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .privacy-note {
+      font-size: 0.8125rem;
+      color: var(--color-text-secondary, #64748b);
+    }
+
+    .privacy-note a {
+      color: var(--color-accent, #F5A302);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .privacy-note a:hover {
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, var(--color-accent, #F5A302) 0%, #e69500 100%);
+      border: none;
+      border-radius: 0.625rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 163, 2, 0.3);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(245, 163, 2, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .btn-loading {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .spinner {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .form-message {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-message.success {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #047857;
+    }
+
+    .form-message.error {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #b91c1c;
+    }
+
+    .form-message svg {
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+
+    .form-message strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-message p {
+      margin: 0;
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 0;
+      background: var(--color-surface, #f8fafc);
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .faq-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--color-primary, #1a1a2e);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-item h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary, #1a1a2e);
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary, #64748b);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .contact-info {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .form-wrapper {
+        padding: 1.5rem;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-section {
+        padding: 3rem 0 1.5rem;
+      }
+
+      .contact-section {
+        padding: 1.5rem 0 4rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-wrapper {
+        border-radius: 1rem;
+        padding: 1.25rem;
+      }
+
+      .form-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+      }
+
+      .submit-btn {
+        padding: 0.875rem 1.5rem;
+      }
+    }
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
+    const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLElement;
+    const successMessage = document.getElementById('form-success') as HTMLElement;
+    const errorMessage = document.getElementById('form-error') as HTMLElement;
+    const errorText = document.getElementById('error-message') as HTMLElement;
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Hide previous messages
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+
+      // Show loading state
+      submitBtn.disabled = true;
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'flex';
+
+      // Collect form data
+      const formData = {
+        first_name: (document.getElementById('firstName') as HTMLInputElement).value,
+        last_name: (document.getElementById('lastName') as HTMLInputElement).value,
+        email: (document.getElementById('email') as HTMLInputElement).value,
+        phone: (document.getElementById('phone') as HTMLInputElement).value || undefined,
+        company: (document.getElementById('company') as HTMLInputElement).value || undefined,
+        inquiry_type: (document.getElementById('service') as HTMLSelectElement).value,
+        message: (document.getElementById('message') as HTMLTextAreaElement).value,
+        page_url: window.location.href,
+        submitted_at_local: new Date().toISOString(),
+        utm: {
+          source: new URLSearchParams(window.location.search).get('utm_source') || undefined,
+          medium: new URLSearchParams(window.location.search).get('utm_medium') || undefined,
+          campaign: new URLSearchParams(window.location.search).get('utm_campaign') || undefined,
+        }
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          successMessage.style.display = 'flex';
+          form.reset();
+          form.style.display = 'none';
+        } else {
+          errorText.textContent = result.error || 'Please try again or contact us directly.';
+          errorMessage.style.display = 'flex';
+        }
+      } catch (error) {
+        errorText.textContent = 'Network error. Please check your connection and try again.';
+        errorMessage.style.display = 'flex';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }
+    });
+  });
+</script>
+</BaseLayout>

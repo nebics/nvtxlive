@@ -5,10 +5,17 @@ interface Props {
   backgroundImage?: string;
 }
 
-const { title, description, backgroundImage = '/images/industry-bg.jpg' } = Astro.props;
+const {
+  title,
+  description,
+  backgroundImage = "/images/industry-bg.jpg",
+} = Astro.props;
 ---
 
-<section class="page-hero" style={`background-image: url('${backgroundImage}')`}>
+<section
+  class="page-hero"
+  style={`background-image: url('${backgroundImage}')`}
+>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-content">
     <h1>{title}</h1>
@@ -31,7 +38,9 @@ const { title, description, backgroundImage = '/images/industry-bg.jpg' } = Astr
   .page-hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #1E2128 0%, rgba(30, 33, 40, 0.85) 100%);
+    /* Slightly lighter gradient to distinguish from the header, but keeping the dark theme */
+    background: linear-gradient(180deg, #232730 0%, #171a21 100%);
+    opacity: 0.95;
   }
 
   .page-hero-content {
@@ -48,7 +57,7 @@ const { title, description, backgroundImage = '/images/industry-bg.jpg' } = Astr
   }
 
   .page-hero-content p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1.1rem;
     margin: 0;
   }

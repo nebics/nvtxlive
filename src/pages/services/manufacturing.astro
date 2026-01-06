@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Manufacturing" currentPage="/services/manufacturing">
@@ -7,7 +7,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Manufacturing</h1>
-      <p>Transform your manufacturing operations for excellence and efficiency.</p>
+      <p>
+        Transform your manufacturing operations for excellence and efficiency.
+      </p>
     </div>
   </section>
 
@@ -16,20 +18,45 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="content-grid">
         <div class="content-main">
           <h2>Manufacturing Excellence</h2>
-          <p>NovintiX helps life sciences companies optimize their manufacturing operations to achieve higher quality, lower costs, and faster time to market. Our team brings deep expertise in lean manufacturing, process optimization, and regulatory compliance.</p>
+          <p>
+            NovintiX helps life sciences companies optimize their manufacturing
+            operations to achieve higher quality, lower costs, and faster time
+            to market. Our team brings deep expertise in lean manufacturing,
+            process optimization, and regulatory compliance.
+          </p>
 
           <h3>Our Services Include:</h3>
           <ul>
-            <li><strong>Process Development</strong> - Scale-up, tech transfer, and process validation</li>
-            <li><strong>Lean Manufacturing</strong> - Waste reduction and continuous improvement</li>
-            <li><strong>Facility Design</strong> - Cleanroom design and equipment qualification</li>
-            <li><strong>Production Support</strong> - Troubleshooting and yield improvement</li>
-            <li><strong>Automation</strong> - Manufacturing execution systems and Industry 4.0</li>
-            <li><strong>Compliance</strong> - GMP compliance and audit readiness</li>
+            <li>
+              <strong>Process Development</strong> - Scale-up, tech transfer, and
+              process validation
+            </li>
+            <li>
+              <strong>Lean Manufacturing</strong> - Waste reduction and continuous
+              improvement
+            </li>
+            <li>
+              <strong>Facility Design</strong> - Cleanroom design and equipment qualification
+            </li>
+            <li>
+              <strong>Production Support</strong> - Troubleshooting and yield improvement
+            </li>
+            <li>
+              <strong>Automation</strong> - Manufacturing execution systems and Industry
+              4.0
+            </li>
+            <li>
+              <strong>Compliance</strong> - GMP compliance and audit readiness
+            </li>
           </ul>
 
           <h3>Why Choose NovintiX?</h3>
-          <p>We understand that manufacturing excellence requires a balance of quality, cost, and speed. Our consultants bring hands-on experience from leading life sciences companies, combined with expertise in the latest manufacturing technologies and methodologies.</p>
+          <p>
+            We understand that manufacturing excellence requires a balance of
+            quality, cost, and speed. Our consultants bring hands-on experience
+            from leading life sciences companies, combined with expertise in the
+            latest manufacturing technologies and methodologies.
+          </p>
         </div>
 
         <div class="content-sidebar">
@@ -37,8 +64,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <h5>Related Services</h5>
             <ul>
               <li><a href="/services/supply-chain">Supply Chain</a></li>
-              <li><a href="/services/quality-regulatory-compliance">Quality & Compliance</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
+              <li>
+                <a href="/services/quality-regulatory-compliance"
+                  >Quality & Compliance</a>
+              </li>
+              <li>
+                <a href="/services/product-engineering">Product Engineering</a>
+              </li>
             </ul>
           </div>
 
@@ -60,14 +92,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    background: linear-gradient(135deg, #1e2128 0%, #32353e 100%);
     padding: 7% 0;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('/images/pattern.png') repeat;
+    background: url("/images/pattern.png") repeat;
     opacity: 0.1;
   }
 
@@ -85,7 +117,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .hero-content p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 18px;
   }
 
@@ -109,7 +141,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.7;
     margin-bottom: 15px;
   }
@@ -120,13 +152,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main li {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.8;
     margin-bottom: 10px;
   }
 
   .content-main li strong {
-    color: #1E2128;
+    color: #1e2128;
   }
 
   .sidebar-card {
@@ -150,16 +182,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .sidebar-card a {
-    color: #033C59;
+    color: #033c59;
     font-size: 14px;
   }
 
   .sidebar-card a:hover {
-    color: #F5A302;
+    color: #f5a302;
   }
 
   .sidebar-card p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     font-size: 14px;
     margin-bottom: 15px;
   }
@@ -167,6 +199,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .sidebar-card .btn {
     width: 100%;
     text-align: center;
+    color: #fff !important;
   }
 
   @media (max-width: 1024px) {

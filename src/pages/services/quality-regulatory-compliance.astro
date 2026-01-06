@@ -1,8 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Quality & Regulatory Compliance" currentPage="/services/quality-regulatory-compliance">
+<BaseLayout
+  title="Quality & Regulatory Compliance"
+  currentPage="/services/quality-regulatory-compliance"
+>
   <section class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -16,16 +19,39 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="content-grid">
         <div class="content-main">
           <h2>Ensuring Compliance, Enabling Success</h2>
-          <p>NovintiX provides comprehensive quality and regulatory consulting services to help life sciences companies meet the highest standards of compliance. Our experienced team understands the complexities of global regulatory requirements and helps you navigate them efficiently.</p>
+          <p>
+            NovintiX provides comprehensive quality and regulatory consulting
+            services to help life sciences companies meet the highest standards
+            of compliance. Our experienced team understands the complexities of
+            global regulatory requirements and helps you navigate them
+            efficiently.
+          </p>
 
           <h3>Our Services Include:</h3>
           <ul>
-            <li><strong>Quality Management Systems</strong> - QMS design, implementation, and optimization</li>
-            <li><strong>Regulatory Strategy</strong> - Global regulatory planning and submission support</li>
-            <li><strong>Audit Readiness</strong> - Preparation for FDA, EU MDR, and ISO audits</li>
-            <li><strong>CAPA Management</strong> - Corrective and preventive action systems</li>
-            <li><strong>Risk Management</strong> - ISO 14971 compliance and risk assessment</li>
-            <li><strong>Post-Market Surveillance</strong> - Vigilance, complaint handling, and MDR reporting</li>
+            <li>
+              <strong>Quality Management Systems</strong> - QMS design, implementation,
+              and optimization
+            </li>
+            <li>
+              <strong>Regulatory Strategy</strong> - Global regulatory planning and
+              submission support
+            </li>
+            <li>
+              <strong>Audit Readiness</strong> - Preparation for FDA, EU MDR, and
+              ISO audits
+            </li>
+            <li>
+              <strong>CAPA Management</strong> - Corrective and preventive action
+              systems
+            </li>
+            <li>
+              <strong>Risk Management</strong> - ISO 14971 compliance and risk assessment
+            </li>
+            <li>
+              <strong>Post-Market Surveillance</strong> - Vigilance, complaint handling,
+              and MDR reporting
+            </li>
           </ul>
 
           <h3>Regulatory Expertise</h3>
@@ -44,7 +70,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <ul>
               <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
               <li><a href="/services/manufacturing">Manufacturing</a></li>
-              <li><a href="/services/product-engineering">Product Engineering</a></li>
+              <li>
+                <a href="/services/product-engineering">Product Engineering</a>
+              </li>
             </ul>
           </div>
 
@@ -66,14 +94,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    background: linear-gradient(135deg, #1e2128 0%, #32353e 100%);
     padding: 7% 0;
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url('/images/pattern.png') repeat;
+    background: url("/images/pattern.png") repeat;
     opacity: 0.1;
   }
 
@@ -91,7 +119,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .hero-content p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 18px;
   }
 
@@ -115,7 +143,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.7;
     margin-bottom: 15px;
   }
@@ -126,13 +154,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .content-main li {
-    color: #7C7C7D;
+    color: #7c7c7d;
     line-height: 1.8;
     margin-bottom: 10px;
   }
 
   .content-main li strong {
-    color: #1E2128;
+    color: #1e2128;
   }
 
   .sidebar-card {
@@ -156,16 +184,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   }
 
   .sidebar-card a {
-    color: #033C59;
+    color: #033c59;
     font-size: 14px;
   }
 
   .sidebar-card a:hover {
-    color: #F5A302;
+    color: #f5a302;
   }
 
   .sidebar-card p {
-    color: #7C7C7D;
+    color: #7c7c7d;
     font-size: 14px;
     margin-bottom: 15px;
   }
@@ -173,6 +201,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .sidebar-card .btn {
     width: 100%;
     text-align: center;
+    color: #fff !important;
   }
 
   @media (max-width: 1024px) {

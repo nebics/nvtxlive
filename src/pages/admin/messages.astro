@@ -1,0 +1,932 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+---
+
+<AdminLayout title="Messages" currentPage="messages">
+  <div class="topbar-actions">
+    <button
+      class="icon-btn"
+      title="Refresh"
+      onclick="loadMessages(currentFilter)"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        ><polyline points="23 4 23 10 17 10"></polyline><polyline
+          points="1 20 1 14 7 14"></polyline><path
+          d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"
+        ></path></svg
+      >
+    </button>
+  </div>
+
+  <div class="content">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon blue">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path><polyline points="22,6 12,13 2,6"></polyline></svg
+          >
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="stat-unread">-</div>
+          <div class="stat-label">Unread Messages</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><polyline points="9 11 12 14 22 4"></polyline><path
+              d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+            ></path></svg
+          >
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="stat-read">-</div>
+          <div class="stat-label">Read Messages</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon yellow">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><path d="M21 8v13H3V8M1 3h22v5H1zM10 12h4"></path></svg
+          >
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="stat-archived">-</div>
+          <div class="stat-label">Archived</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon purple">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+            ></path></svg
+          >
+        </div>
+        <div class="stat-content">
+          <div class="stat-value" id="stat-total">-</div>
+          <div class="stat-label">Total Messages</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <div class="table-tabs">
+          <button class="table-tab active" data-filter="">All</button>
+          <button class="table-tab" data-filter="unread">Unread</button>
+          <button class="table-tab" data-filter="read">Read</button>
+          <button class="table-tab" data-filter="archived">Archived</button>
+        </div>
+        <div class="table-actions">
+          <div class="search-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><circle cx="11" cy="11" r="8"></circle><path
+                d="M21 21l-4.35-4.35"></path></svg
+            >
+            <input
+              type="text"
+              placeholder="Search messages..."
+              id="search-input"
+            />
+          </div>
+          <button class="btn btn-secondary">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
+              ></polygon></svg
+            >
+            Filter
+          </button>
+          <button class="btn btn-secondary">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><path
+                d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"
+              ></path></svg
+            >
+            Export
+          </button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="messages-table">
+          <thead>
+            <tr>
+              <th
+                class="checkbox-wrap"
+                style="width: 40px; text-align: center;"
+              >
+                <input type="checkbox" class="checkbox" id="select-all" />
+              </th>
+              <th>Status</th>
+              <th>Sender</th>
+              <th>Company</th>
+              <th>Inquiry</th>
+              <th>Message</th>
+              <th>Date</th>
+              <th style="width: 100px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="messages-body">
+            <!-- Populated by JS -->
+            <tr class="table-loading">
+              <td colspan="8"><div class="spinner"></div>Loading messages...</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-footer">
+        <div class="pagination-info">
+          Showing <span id="showing-start">0</span>-<span id="showing-end"
+            >0</span
+          > of <span id="showing-total">0</span>
+        </div>
+        <div class="pagination">
+          <button class="page-btn" disabled
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><polyline points="15 18 9 12 15 6"></polyline></svg
+            ></button
+          >
+          <button class="page-btn active">1</button>
+          <button class="page-btn" disabled
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              ><polyline points="9 18 15 12 9 6"></polyline></svg
+            ></button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Detail Modal -->
+  <div class="modal-overlay" id="message-modal">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3 class="modal-title">Message Details</h3>
+        <button class="modal-close" onclick="closeModal()">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            ><line x1="18" y1="6" x2="6" y2="18"></line><line
+              x1="6"
+              y1="6"
+              x2="18"
+              y2="18"></line></svg
+          >
+        </button>
+      </div>
+      <div class="modal-body" id="modal-content">
+        <!-- Content injected by JS -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+        <button class="btn btn-primary" id="modal-reply-btn"
+          >Reply via Email</button
+        >
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Stats Row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .stat-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+    .stat-icon.blue {
+      background: var(--info-soft);
+      color: var(--info);
+    }
+    .stat-icon.green {
+      background: var(--success-soft);
+      color: var(--success);
+    }
+    .stat-icon.yellow {
+      background: var(--warning-soft);
+      color: var(--warning);
+    }
+    .stat-icon.purple {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .stat-content {
+      flex: 1;
+    }
+    .stat-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    /* Table Container */
+    .table-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .table-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .table-tabs {
+      display: flex;
+      gap: 0.25rem;
+      background: var(--bg-tertiary);
+      padding: 0.25rem;
+      border-radius: var(--radius-md);
+    }
+    .table-tab {
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .table-tab:hover {
+      color: var(--text-primary);
+    }
+    .table-tab.active {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      box-shadow: var(--shadow-sm);
+    }
+    .table-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0 0.75rem;
+      height: 36px;
+      transition: border-color var(--transition);
+    }
+    .search-box:focus-within {
+      border-color: var(--accent);
+    }
+    .search-box svg {
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .search-box input {
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 0.8125rem;
+      width: 180px;
+      outline: none;
+    }
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0 1rem;
+      height: 36px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      border-radius: var(--radius-md);
+      border: 1px solid;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn svg {
+      width: 16px;
+      height: 16px;
+    }
+    .btn-secondary {
+      background: var(--bg-tertiary);
+      border-color: var(--border-color);
+      color: var(--text-secondary);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      border-color: var(--border-light);
+    }
+    .btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    /* Table */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 900px;
+    }
+    thead {
+      background: var(--bg-tertiary);
+    }
+    th {
+      padding: 0.75rem 1rem;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    th:first-child {
+      padding-left: 1.25rem;
+    }
+    th:last-child {
+      padding-right: 1.25rem;
+    }
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: middle;
+    }
+    td:first-child {
+      padding-left: 1.25rem;
+    }
+    td:last-child {
+      padding-right: 1.25rem;
+    }
+    tbody tr {
+      transition: background var(--transition);
+    }
+    tbody tr:hover {
+      background: var(--bg-hover);
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    tbody tr.unread td {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      accent-color: var(--accent);
+    }
+
+    /* Badges & Cells */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .status-badge.unread {
+      background: var(--info-soft);
+      color: #60a5fa;
+    }
+    .status-badge.unread .status-dot {
+      background: var(--info);
+    }
+    .status-badge.read {
+      background: var(--bg-active);
+      color: var(--text-muted);
+    }
+    .status-badge.read .status-dot {
+      background: var(--text-muted);
+    }
+    .status-badge.archived {
+      background: var(--warning-soft);
+      color: #fbbf24;
+    }
+    .status-badge.archived .status-dot {
+      background: var(--warning);
+    }
+
+    .inquiry-badge {
+      padding: 0.25rem 0.625rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      background: var(--accent-soft);
+      color: var(--accent-hover);
+    }
+
+    .action-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-md);
+      background: #374151;
+      color: #d1d5db;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #4b5563;
+      cursor: pointer;
+      margin-left: 0.5rem;
+    }
+    .action-btn:hover {
+      background: #4b5563;
+      color: white;
+    }
+    .action-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .checkbox-wrap {
+      text-align: center;
+    }
+
+    /* Missing Table Styles */
+    .sender-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .sender-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .sender-name {
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 0.875rem;
+    }
+    .sender-name.unread {
+      font-weight: 700;
+    }
+    .sender-email {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .company-cell,
+    .message-cell {
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+    }
+    .message-cell.unread {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .date-cell {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .actions-cell {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Matches previous version */
+      gap: 0.5rem;
+    }
+
+    /* Footer */
+    .table-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    .pagination {
+      display: flex;
+      gap: 0.25rem;
+    }
+    .page-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .page-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+    .modal-overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+    }
+    .modal-panel {
+      position: relative;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.95);
+      transition: transform 0.2s;
+      max-height: 85vh;
+    }
+    .modal-overlay.visible .modal-panel {
+      transform: scale(1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .modal-title {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .detail-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .detail-value {
+      font-size: 0.9rem;
+    }
+    .message-box {
+      background: var(--bg-tertiary);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      line-height: 1.6;
+      white-space: pre-wrap;
+      color: var(--text-secondary);
+    }
+
+    .topbar-actions {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      z-index: 50;
+    }
+
+    @media (max-width: 640px) {
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+      .table-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    let currentFilter = "";
+
+    // Initialize
+    document.addEventListener("DOMContentLoaded", () => {
+      loadMessages("");
+      setupTabs();
+      setupSearch();
+    });
+
+    function setupTabs() {
+      document.querySelectorAll(".table-tab").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          document
+            .querySelectorAll(".table-tab")
+            .forEach((b) => b.classList.remove("active"));
+          e.target.classList.add("active");
+          currentFilter = e.target.dataset.filter;
+          loadMessages(currentFilter);
+        });
+      });
+    }
+
+    function setupSearch() {
+      const input = document.getElementById("search-input");
+      let debounce;
+      input?.addEventListener("input", (e) => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => {
+          loadMessages(currentFilter, e.target.value);
+        }, 300);
+      });
+    }
+
+    async function loadMessages(filter = "", search = "") {
+      const tbody = document.getElementById("messages-body");
+      const statsUnread = document.getElementById("stat-unread");
+
+      try {
+        let url = "/api/admin/messages?";
+        if (filter) url += `status=${filter}&`;
+        if (search) url += `search=${encodeURIComponent(search)}`;
+
+        const res = await fetch(url);
+        const data = await res.json();
+
+        // if (!data.success) throw new Error(data.error); // API response doesn't have success field
+
+        // Update Stats
+        if (data.stats) {
+          document.getElementById("stat-unread").textContent =
+            data.stats.unread;
+          document.getElementById("stat-read").textContent = data.stats.read;
+          document.getElementById("stat-archived").textContent =
+            data.stats.archived;
+          document.getElementById("stat-total").textContent = data.stats.total;
+
+          // Update Sidebar Badge (if layout script accesses it)
+          const navBadge = document.getElementById("nav-unread");
+          if (navBadge) {
+            navBadge.textContent = data.stats.unread;
+            navBadge.style.display =
+              data.stats.unread > 0 ? "inline-block" : "none";
+          }
+        }
+
+        // Render Table
+        if (!data.messages || data.messages.length === 0) {
+          tbody.innerHTML =
+            '<tr><td colspan="8" class="table-empty">No messages found.</td></tr>';
+        } else {
+          tbody.innerHTML = data.messages
+            .map(
+              (msg) => `
+          <tr class="${msg.status === "unread" ? "unread" : ""}">
+            <td class="checkbox-wrap" style="text-align: center;"><input type="checkbox" class="checkbox" value="${msg.id}"></td>
+            <td><span class="status-badge ${msg.status}"><span class="status-dot"></span>${msg.status}</span></td>
+            <td>
+              <div class="sender-cell">
+                <div class="sender-avatar">${msg.first_name[0]}${msg.last_name[0]}</div>
+                <div>
+                   <div class="sender-name ${msg.status === "unread" ? "unread" : ""}">${msg.first_name} ${msg.last_name}</div>
+                   <div class="sender-email">${msg.email}</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="company-cell">${msg.company || "-"}</div></td>
+            <td><span class="inquiry-badge">${msg.inquiry_type}</span></td>
+            <td><div class="message-cell ${msg.status === "unread" ? "unread" : ""}">${msg.message}</div></td>
+            <td class="date-cell">${new Date(msg.created_at).toLocaleDateString()}</td>
+            <td>
+              <div class="actions-cell">
+                <button class="action-btn view" onclick="event.stopPropagation(); openMessage(${msg.id})" title="View">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </button>
+                <button class="action-btn archive" onclick="event.stopPropagation(); updateStatus(${msg.id}, 'archived')" title="Archive">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `,
+            )
+            .join("");
+        }
+
+        if (data.pagination && data.pagination.total !== undefined) {
+          document.getElementById("showing-total").textContent =
+            data.pagination.total;
+          // Update range logic could go here if needed
+        } else {
+          document.getElementById("showing-total").textContent = data.messages
+            ? data.messages.length
+            : 0;
+        }
+      } catch (e) {
+        console.error(e);
+        tbody.innerHTML =
+          '<tr><td colspan="8" class="table-empty">Error loading messages.</td></tr>';
+      }
+    }
+
+    async function openMessage(id) {
+      const modal = document.getElementById("message-modal");
+      const content = document.getElementById("modal-content");
+
+      try {
+        const res = await fetch(`/api/admin/messages/${id}`);
+        const data = await res.json();
+
+        if (!data.success) throw new Error(data.error);
+        const msg = data.message;
+
+        content.innerHTML = `
+        <div class="detail-grid">
+          <div><div class="detail-label">From</div><div class="detail-value text-white">${msg.first_name} ${msg.last_name}</div></div>
+          <div><div class="detail-label">Email</div><div class="detail-value"><a href="mailto:${msg.email}">${msg.email}</a></div></div>
+          <div><div class="detail-label">Company</div><div class="detail-value">${msg.company || "-"}</div></div>
+          <div><div class="detail-label">Phone</div><div class="detail-value">${msg.phone || "-"}</div></div>
+          <div><div class="detail-label">Type</div><div class="detail-value">${msg.inquiry_type}</div></div>
+          <div><div class="detail-label">Date</div><div class="detail-value">${new Date(msg.created_at).toLocaleString()}</div></div>
+        </div>
+        
+        <div class="detail-label">Message</div>
+        <div class="message-box">${msg.message}</div>
+        
+        ${
+          msg.metadata
+            ? `
+          <div style="margin-top: 1rem; border-top: 1px solid #374151; padding-top: 1rem;">
+             <div class="detail-label">Technical Metadata</div>
+             <pre style="font-size: 0.7rem; color: #6b7280; overflow-x: auto;">${msg.metadata}</pre>
+          </div>
+        `
+            : ""
+        }
+      `;
+
+        modal.classList.add("visible");
+
+        // Mark as read if unread
+        if (msg.status === "unread") {
+          updateStatus(id, "read");
+        }
+      } catch (e) {
+        alert("Error loading message details");
+      }
+    }
+
+    function closeModal() {
+      document.getElementById("message-modal").classList.remove("visible");
+    }
+
+    async function updateStatus(id, status) {
+      try {
+        await fetch(`/api/admin/messages/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status }),
+        });
+        loadMessages(currentFilter); // Refresh list
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  </script>
+</AdminLayout>
