@@ -145,7 +145,10 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
         <table id="messages-table">
           <thead>
             <tr>
-              <th width="40" class="checkbox-wrap" style="text-align: center;">
+              <th
+                class="checkbox-wrap"
+                style="width: 40px; text-align: center;"
+              >
                 <input type="checkbox" class="checkbox" id="select-all" />
               </th>
               <th>Status</th>
@@ -154,7 +157,7 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
               <th>Inquiry</th>
               <th>Message</th>
               <th>Date</th>
-              <th width="100">Actions</th>
+              <th style="width: 100px;">Actions</th>
             </tr>
           </thead>
           <tbody id="messages-body">
@@ -538,6 +541,63 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
       text-align: center;
     }
 
+    /* Missing Table Styles */
+    .sender-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .sender-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .sender-name {
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: 0.875rem;
+    }
+    .sender-name.unread {
+      font-weight: 700;
+    }
+    .sender-email {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .company-cell,
+    .message-cell {
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+    }
+    .message-cell.unread {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .date-cell {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .actions-cell {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; /* Matches previous version */
+      gap: 0.5rem;
+    }
+
     /* Footer */
     .table-footer {
       display: flex;
@@ -775,11 +835,11 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
             <td class="date-cell">${new Date(msg.created_at).toLocaleDateString()}</td>
             <td>
               <div class="actions-cell">
-                <button class="action-btn view" onclick="openMessage(${msg.id})" title="View">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <button class="action-btn view" onclick="event.stopPropagation(); openMessage(${msg.id})" title="View">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                 </button>
-                <button class="action-btn archive" onclick="updateStatus(${msg.id}, 'archived')" title="Archive">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                <button class="action-btn archive" onclick="event.stopPropagation(); updateStatus(${msg.id}, 'archived')" title="Archive">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
                 </button>
               </div>
             </td>

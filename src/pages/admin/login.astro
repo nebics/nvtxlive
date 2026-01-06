@@ -240,45 +240,61 @@
 
       const form = document.getElementById("login-form");
       const submitBtn = document.getElementById("submit-btn");
-      const btnText = submitBtn.querySelector(".btn-text");
-      const btnLoading = submitBtn.querySelector(".btn-loading");
+      const btnText = submitBtn?.querySelector(".btn-text");
+      const btnLoading = submitBtn?.querySelector(".btn-loading");
       const errorDiv = document.getElementById("error-message");
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        errorDiv.style.display = "none";
+      if (form) {
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          if (errorDiv) errorDiv.style.display = "none";
 
-        submitBtn.disabled = true;
-        btnText.style.display = "none";
-        btnLoading.style.display = "flex";
+          if (submitBtn) submitBtn.setAttribute("disabled", "true");
+          if (btnText instanceof HTMLElement) btnText.style.display = "none";
+          if (btnLoading instanceof HTMLElement)
+            btnLoading.style.display = "flex";
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+          const emailInput = document.getElementById("email");
+          const passwordInput = document.getElementById("password");
 
-        try {
-          const response = await fetch("/api/admin/login", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password }),
-          });
+          const email =
+            emailInput instanceof HTMLInputElement ? emailInput.value : "";
+          const password =
+            passwordInput instanceof HTMLInputElement
+              ? passwordInput.value
+              : "";
 
-          const result = await response.json();
+          try {
+            const response = await fetch("/api/admin/login", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email, password }),
+            });
 
-          if (response.ok && result.success) {
-            window.location.href = "/admin/messages";
-          } else {
-            errorDiv.textContent = result.error || "Invalid credentials";
-            errorDiv.style.display = "block";
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+              window.location.href = "/admin/messages";
+            } else {
+              if (errorDiv) {
+                errorDiv.textContent = result.error || "Invalid credentials";
+                errorDiv.style.display = "block";
+              }
+            }
+          } catch (error) {
+            if (errorDiv) {
+              errorDiv.textContent = "Network error. Please try again.";
+              errorDiv.style.display = "block";
+            }
+          } finally {
+            if (submitBtn) submitBtn.removeAttribute("disabled");
+            if (btnText instanceof HTMLElement)
+              btnText.style.display = "inline";
+            if (btnLoading instanceof HTMLElement)
+              btnLoading.style.display = "none";
           }
-        } catch (error) {
-          errorDiv.textContent = "Network error. Please try again.";
-          errorDiv.style.display = "block";
-        } finally {
-          submitBtn.disabled = false;
-          btnText.style.display = "inline";
-          btnLoading.style.display = "none";
-        }
-      });
+        });
+      }
     </script>
   </body>
 </html>
