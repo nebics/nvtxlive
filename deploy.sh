@@ -65,27 +65,47 @@ if [ -z "$PROJECT_NAME" ]; then
     usage
 fi
 
-# Swap project name parts (e.g., novintix-v2 -> v2-novintix)
-if [[ "$PROJECT_NAME" == *"-"* ]]; then
-    IFS='-' read -r part1 part2 <<< "$PROJECT_NAME"
-    if [ ! -z "$part2" ]; then
-        echo -e "${YELLOW}Swapping project name: $PROJECT_NAME -> ${part2}-${part1}${NC}"
-        PROJECT_NAME="${part2}-${part1}"
-    fi
-fi
+# Project name swapping logic removed for predictability
+# if [[ "$PROJECT_NAME" == *"-"* ]]; then
+#     IFS='-' read -r part1 part2 <<< "$PROJECT_NAME"
+#     if [ ! -z "$part2" ]; then
+#         echo -e "${YELLOW}Swapping project name: $PROJECT_NAME -> ${part2}-${part1}${NC}"
+#         PROJECT_NAME="${part2}-${part1}"
+#     fi
+# fi
 
 echo -e "${GREEN}========================================${NC}"
 echo -e "${GREEN}Deploying to: ${PROJECT_NAME}.pages.dev${NC}"
 echo -e "${GREEN}========================================${NC}"
 
+# Step 0: Generate Deployment Info
+echo -e "\n${YELLOW}[0/5] Generating deployment info...${NC}"
+mkdir -p src/data
+# Try to get branch from git, fallback to env var or 'unknown'
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "${GITHUB_REF_NAME:-unknown}")
+DEPLOY_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+cat > src/data/deployment.json <<EOF
+{
+  "lastDeployed": "$DEPLOY_DATE",
+  "branch": "$BRANCH_NAME",
+  "project": "$PROJECT_NAME"
+}
+EOF
+echo "✓ Generated src/data/deployment.json: Branch=$BRANCH_NAME"
+
 # Step 1: Clean previous build
-echo -e "\n${YELLOW}[1/5] Cleaning previous build...${NC}"
-rm -rf dist
-echo "✓ Cleaned dist folder"
+if [ "$SKIP_BUILD" = false ]; then
+    echo -e "\n${YELLOW}[1/5] Cleaning previous build...${NC}"
+    rm -rf dist
+    echo "✓ Cleaned dist folder"
+fi
 
 # Step 2: Install dependencies (ensure fresh)
 echo -e "\n${YELLOW}[2/5] Installing dependencies...${NC}"
-rm -rf node_modules package-lock.json
+if [ "$SKIP_BUILD" = false ]; then
+    rm -rf node_modules package-lock.json
+fi
 npm install
 echo "✓ Dependencies installed"
 

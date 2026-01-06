@@ -1,0 +1,436 @@
+---
+import deploymentInfo from "../data/deployment.json";
+
+// Default deployment info if file is missing (dev mode)
+const deployData = deploymentInfo || {
+    lastDeployed: new Date().toISOString(),
+    branch: "dev",
+    project: "local",
+};
+
+const formatDate = (isoString: string) => {
+    try {
+        return new Date(isoString).toLocaleString("en-US", {
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+    } catch (e) {
+        return "Unknown";
+    }
+};
+
+interface Props {
+    title: string;
+    currentPage: string;
+}
+
+const { title, currentPage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow" />
+        <title>{title} | NovintiX Admin</title>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style is:global>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --bg-primary: #111827;
+                --bg-secondary: #1f2937;
+                --bg-tertiary: #374151;
+                --bg-hover: #4b5563;
+                --bg-active: #6b7280;
+                --border-color: #374151;
+                --border-light: #4b5563;
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-muted: #9ca3af;
+                --accent: #6366f1;
+                --accent-hover: #818cf8;
+                --accent-soft: rgba(99, 102, 241, 0.15);
+                --success: #22c55e;
+                --success-soft: rgba(34, 197, 94, 0.15);
+                --warning: #f59e0b;
+                --warning-soft: rgba(245, 158, 11, 0.15);
+                --danger: #ef4444;
+                --danger-soft: rgba(239, 68, 68, 0.15);
+                --info: #3b82f6;
+                --info-soft: rgba(59, 130, 246, 0.15);
+                --radius-sm: 6px;
+                --radius-md: 8px;
+                --radius-lg: 12px;
+                --radius-xl: 16px;
+                --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+                --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+                --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+                --transition: 0.15s ease;
+            }
+
+            body {
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;
+                background: var(--bg-primary);
+                color: var(--text-primary);
+                min-height: 100vh;
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            /* Sidebar */
+            .layout {
+                display: flex;
+                min-height: 100vh;
+            }
+            .sidebar {
+                width: 260px;
+                background: var(--bg-secondary);
+                border-right: 1px solid var(--border-color);
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 40;
+            }
+            .sidebar-header {
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .logo {
+                font-size: 1.375rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                background: linear-gradient(
+                    135deg,
+                    var(--accent) 0%,
+                    #a855f7 100%
+                );
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .sidebar-nav {
+                padding: 1rem 0.75rem;
+                flex: 1;
+            }
+            .nav-section {
+                margin-bottom: 1.5rem;
+            }
+            .nav-label {
+                font-size: 0.6875rem;
+                font-weight: 600;
+                color: var(--text-muted);
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                padding: 0 0.75rem;
+                margin-bottom: 0.5rem;
+            }
+            .nav-item {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 0.625rem 0.75rem;
+                border-radius: var(--radius-md);
+                color: var(--text-secondary);
+                text-decoration: none;
+                font-size: 0.875rem;
+                font-weight: 500;
+                transition: all var(--transition);
+                margin-bottom: 0.25rem;
+            }
+            .nav-item:hover {
+                background: var(--bg-hover);
+                color: var(--text-primary);
+            }
+            .nav-item.active {
+                background: var(--accent-soft);
+                color: var(--accent-hover);
+            }
+            .nav-item svg {
+                width: 18px;
+                height: 18px;
+                opacity: 0.7;
+            }
+            .nav-item.active svg {
+                opacity: 1;
+            }
+            .nav-badge {
+                margin-left: auto;
+                background: var(--accent);
+                color: white;
+                font-size: 0.6875rem;
+                font-weight: 600;
+                padding: 0.125rem 0.5rem;
+                border-radius: 999px;
+            }
+            .sidebar-footer {
+                padding: 1rem;
+                border-top: 1px solid var(--border-color);
+            }
+            .user-card {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 0.625rem;
+                border-radius: var(--radius-md);
+                transition: background var(--transition);
+                cursor: pointer;
+                margin-bottom: 1rem;
+            }
+            .user-card:hover {
+                background: var(--bg-hover);
+            }
+            .user-avatar {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: linear-gradient(
+                    135deg,
+                    var(--accent) 0%,
+                    #a855f7 100%
+                );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: 600;
+                font-size: 0.875rem;
+            }
+            .user-info {
+                flex: 1;
+                min-width: 0;
+            }
+            .user-name {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: var(--text-primary);
+            }
+            .user-role {
+                font-size: 0.75rem;
+                color: var(--text-muted);
+            }
+
+            .deployment-info {
+                padding-top: 1rem;
+                border-top: 1px solid var(--border-color);
+                font-size: 0.7rem;
+                color: var(--text-muted);
+            }
+            .deploy-row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.25rem;
+            }
+            .deploy-label {
+                font-weight: 600;
+                color: var(--text-secondary);
+            }
+
+            /* Main Content */
+            .main {
+                flex: 1;
+                margin-left: 260px;
+            }
+            .topbar {
+                height: 64px;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border-color);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1.5rem;
+                position: sticky;
+                top: 0;
+                z-index: 30;
+            }
+            .topbar-left {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .page-title {
+                font-size: 1.125rem;
+                font-weight: 600;
+            }
+            .topbar-right {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .icon-btn {
+                width: 36px;
+                height: 36px;
+                border-radius: var(--radius-md);
+                border: 1px solid var(--border-color);
+                background: var(--bg-tertiary);
+                color: var(--text-secondary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all var(--transition);
+            }
+            .icon-btn:hover {
+                background: var(--bg-hover);
+                color: var(--text-primary);
+                border-color: var(--border-light);
+            }
+            .icon-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            @media (max-width: 1024px) {
+                .sidebar {
+                    display: none;
+                }
+                .main {
+                    margin-left: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <a href="/admin" class="logo">
+                        <div class="logo-icon">N</div>
+                        <span>NovintiX</span>
+                    </a>
+                </div>
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-label">Main</div>
+                        <a
+                            href="/admin/messages"
+                            class={`nav-item ${currentPage === "messages" ? "active" : ""}`}
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                ><path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                ></path><polyline points="22,6 12,13 2,6"
+                                ></polyline></svg
+                            >
+                            Messages
+                        </a>
+                        <a
+                            href="/admin/settings"
+                            class={`nav-item ${currentPage === "settings" ? "active" : ""}`}
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                ><circle cx="12" cy="12" r="3"></circle><path
+                                    d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+                                ></path></svg
+                            >
+                            Settings
+                        </a>
+                    </div>
+                </nav>
+                <div class="sidebar-footer">
+                    <div class="user-card" id="user-layout-card">
+                        <div class="user-avatar">A</div>
+                        <div class="user-info">
+                            <div class="user-name">Admin</div>
+                            <div class="user-role">{deployData.branch}</div>
+                        </div>
+                    </div>
+                    <div class="deployment-info">
+                        <div class="deploy-row">
+                            <span class="deploy-label">Deployed:</span>
+                            <span>{formatDate(deployData.lastDeployed)}</span>
+                        </div>
+                        <div class="deploy-row">
+                            <span class="deploy-label">Branch:</span>
+                            <span>{deployData.branch}</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <h1 class="page-title">{title}</h1>
+                    </div>
+                    <div class="topbar-right">
+                        <button
+                            class="icon-btn"
+                            id="logout-btn-layout"
+                            title="Logout"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                ><path
+                                    d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"
+                                ></path></svg
+                            >
+                        </button>
+                    </div>
+                </header>
+
+                <slot />
+            </main>
+        </div>
+
+        <script>
+            // Logout logic
+            document
+                .getElementById("logout-btn-layout")
+                ?.addEventListener("click", async () => {
+                    try {
+                        await fetch("/api/admin/logout", { method: "POST" });
+                        window.location.href = "/admin/login";
+                    } catch (e) {
+                        console.error("Logout failed", e);
+                    }
+                });
+        </script>
+    </body>
+</html>

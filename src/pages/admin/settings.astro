@@ -1,0 +1,286 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+---
+
+<AdminLayout title="Settings" currentPage="settings">
+    <div class="content">
+        <div class="settings-grid">
+            <!-- Password Change Section -->
+            <section class="settings-card">
+                <div class="card-header">
+                    <h2>Change Password</h2>
+                    <p>Update your admin account password</p>
+                </div>
+                <form id="password-form" class="settings-form">
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input
+                            type="password"
+                            id="current-password"
+                            name="currentPassword"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input
+                            type="password"
+                            id="new-password"
+                            name="newPassword"
+                            required
+                            minlength="8"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password"
+                            >Confirm New Password</label
+                        >
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirmPassword"
+                            required
+                            minlength="8"
+                        />
+                    </div>
+                    <div
+                        id="pwd-message"
+                        class="form-message"
+                        style="display: none;"
+                    >
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="pwd-submit">Update Password</button
+                    >
+                </form>
+            </section>
+
+            <!-- Analytics Injection Section -->
+            <section class="settings-card">
+                <div class="card-header">
+                    <h2>Google Analytics Injection</h2>
+                    <p>
+                        Paste your full Google Analytics snippet here (e.g.,
+                        &lt;script&gt;...&lt;/script&gt;). Be careful, this
+                        injects raw HTML into your site.
+                    </p>
+                </div>
+                <form id="analytics-form" class="settings-form">
+                    <div class="form-group">
+                        <label for="ga-snippet">GA Snippet</label>
+                        <textarea
+                            id="ga-snippet"
+                            name="gaSnippet"
+                            rows="8"
+                            placeholder="<!-- Google tag (gtag.js) --> ..."
+                        ></textarea>
+                    </div>
+                    <div
+                        id="ga-message"
+                        class="form-message"
+                        style="display: none;"
+                    >
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="ga-submit"
+                        >Save Snippet</button
+                    >
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <style>
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+        .settings-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+        .card-header {
+            margin-bottom: 1.5rem;
+        }
+        .card-header h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .card-header p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .settings-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .form-group input,
+        .form-group textarea {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 0.75rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.875rem;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-soft);
+        }
+
+        .btn {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            font-size: 0.875rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+        .btn-primary:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            padding: 0.75rem;
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            margin-top: -0.5rem;
+        }
+        .form-message.success {
+            background: var(--success-soft);
+            color: var(--success);
+        }
+        .form-message.error {
+            background: var(--danger-soft);
+            color: var(--danger);
+        }
+    </style>
+
+    <script>
+        // Password Form
+        const pwdForm = document.getElementById(
+            "password-form",
+        ) as HTMLFormElement;
+        pwdForm?.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const fd = new FormData(pwdForm);
+            const message = document.getElementById("pwd-message")!;
+            const btn = document.getElementById(
+                "pwd-submit",
+            ) as HTMLButtonElement;
+
+            if (fd.get("newPassword") !== fd.get("confirmPassword")) {
+                message.textContent = "New passwords do not match";
+                message.className = "form-message error";
+                message.style.display = "block";
+                return;
+            }
+
+            try {
+                btn.disabled = true;
+                btn.textContent = "Updating...";
+                const res = await fetch("/api/admin/change-password", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.fromEntries(fd)),
+                });
+                const data = await res.json();
+
+                message.textContent =
+                    data.error || "Password updated successfully";
+                message.className = `form-message ${res.ok ? "success" : "error"}`;
+                message.style.display = "block";
+                if (res.ok) pwdForm.reset();
+            } catch (err) {
+                console.error(err);
+                message.textContent = "Network error";
+                message.className = "form-message error";
+                message.style.display = "block";
+            } finally {
+                btn.disabled = false;
+                btn.textContent = "Update Password";
+            }
+        });
+
+        // Analytics Form
+        const gaForm = document.getElementById(
+            "analytics-form",
+        ) as HTMLFormElement;
+        const gaSnippet = document.getElementById(
+            "ga-snippet",
+        ) as HTMLTextAreaElement;
+
+        // Load current snippet
+        (async () => {
+            try {
+                const res = await fetch("/api/admin/settings?key=ga_snippet");
+                const data = await res.json();
+                if (data.value) gaSnippet.value = data.value;
+            } catch (e) {}
+        })();
+
+        gaForm?.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const message = document.getElementById("ga-message")!;
+            const btn = document.getElementById(
+                "ga-submit",
+            ) as HTMLButtonElement;
+
+            try {
+                btn.disabled = true;
+                btn.textContent = "Saving...";
+                const res = await fetch("/api/admin/settings", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        key: "ga_snippet",
+                        value: gaSnippet.value,
+                    }),
+                });
+                const data = await res.json();
+
+                message.textContent = data.success
+                    ? "Snippet saved successfully"
+                    : "Error saving";
+                message.className = `form-message ${data.success ? "success" : "error"}`;
+                message.style.display = "block";
+            } catch (err) {
+                message.textContent = "Network error";
+                message.className = "form-message error";
+                message.style.display = "block";
+            } finally {
+                btn.disabled = false;
+                btn.textContent = "Save Snippet";
+            }
+        });
+    </script>
+</AdminLayout>
