@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Careers" currentPage="/careers">
+  <section class="hero-section" style="background-image: url('/images/careers-bg.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Careers</h1>
+      <h4>Join Our Team of Innovators</h4>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Build Your Career at NovintiX</h2>
+        <p>At NovintiX, we believe our people are our greatest asset. We're always looking for talented individuals who share our passion for innovation and excellence in the life sciences industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <h6>Why Join Us</h6>
+        <h2>What We Offer</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h5>Professional Growth</h5>
+          <p>Continuous learning opportunities and career development programs to help you reach your full potential.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <h5>Work-Life Balance</h5>
+          <p>Flexible working arrangements and supportive policies that respect your personal time.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h5>Collaborative Culture</h5>
+          <p>Work alongside industry experts in a supportive and inclusive environment.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h5>Impactful Work</h5>
+          <p>Make a real difference in healthcare by helping companies bring life-saving products to market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Interested in Joining NovintiX?</h2>
+        <p>We're always looking for talented professionals to join our team. Send us your resume and let's start a conversation.</p>
+        <a href="/careers/apply" class="btn">View Open Positions</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 7% 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #1E2128 0%, rgba(30, 33, 40, 0.7) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 720px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .hero-content h4 {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .intro-section {
+    padding: 5em 0 3em;
+  }
+
+  .intro-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-content h2 {
+    margin-bottom: 20px;
+  }
+
+  .intro-content p {
+    color: #7C7C7D;
+    line-height: 1.7;
+  }
+
+  .benefits-section {
+    padding: 3em 0 7em;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-header h6 {
+    color: #F5A302;
+    margin-bottom: 10px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .benefit-card {
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+    padding: 2em;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: #F5A302;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto 20px;
+  }
+
+  .benefit-card h5 {
+    margin-bottom: 10px;
+  }
+
+  .benefit-card p {
+    color: #7C7C7D;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    padding: 5em 0;
+    background: #f8f8f9;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    border-radius: 25px;
+    padding: 4em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-box h2 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .cta-box p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .benefits-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-box {
+      padding: 2em;
+    }
+  }
+</style>

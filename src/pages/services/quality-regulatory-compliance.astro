@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Quality & Regulatory Compliance"
+  currentPage="/services/quality-regulatory-compliance"
+>
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Quality & Regulatory Compliance</h1>
+      <p>Navigate complex regulatory landscapes with confidence.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>Ensuring Compliance, Enabling Success</h2>
+          <p>
+            NovintiX provides comprehensive quality and regulatory consulting
+            services to help life sciences companies meet the highest standards
+            of compliance. Our experienced team understands the complexities of
+            global regulatory requirements and helps you navigate them
+            efficiently.
+          </p>
+
+          <h3>Our Services Include:</h3>
+          <ul>
+            <li>
+              <strong>Quality Management Systems</strong> - QMS design, implementation,
+              and optimization
+            </li>
+            <li>
+              <strong>Regulatory Strategy</strong> - Global regulatory planning and
+              submission support
+            </li>
+            <li>
+              <strong>Audit Readiness</strong> - Preparation for FDA, EU MDR, and
+              ISO audits
+            </li>
+            <li>
+              <strong>CAPA Management</strong> - Corrective and preventive action
+              systems
+            </li>
+            <li>
+              <strong>Risk Management</strong> - ISO 14971 compliance and risk assessment
+            </li>
+            <li>
+              <strong>Post-Market Surveillance</strong> - Vigilance, complaint handling,
+              and MDR reporting
+            </li>
+          </ul>
+
+          <h3>Regulatory Expertise</h3>
+          <p>Our team has extensive experience with:</p>
+          <ul>
+            <li>FDA 21 CFR Part 820, 210/211</li>
+            <li>EU MDR and IVDR</li>
+            <li>ISO 13485 and ISO 9001</li>
+            <li>Health Canada and international regulations</li>
+          </ul>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h5>Related Services</h5>
+            <ul>
+              <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
+              <li><a href="/services/manufacturing">Manufacturing</a></li>
+              <li>
+                <a href="/services/product-engineering">Product Engineering</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h5>Get Started</h5>
+            <p>Need help with compliance?</p>
+            <a href="/contact-us" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e2128 0%, #32353e 100%);
+    padding: 7% 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url("/images/pattern.png") repeat;
+    opacity: 0.1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 720px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+  }
+
+  .content-section {
+    padding: 5em 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+
+  .content-main h2 {
+    margin-bottom: 20px;
+  }
+
+  .content-main h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .content-main p {
+    color: #7c7c7d;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .content-main ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+
+  .content-main li {
+    color: #7c7c7d;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  .content-main li strong {
+    color: #1e2128;
+  }
+
+  .sidebar-card {
+    background: #f8f8f9;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .sidebar-card h5 {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar-card li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar-card a {
+    color: #033c59;
+    font-size: 14px;
+  }
+
+  .sidebar-card a:hover {
+    color: #f5a302;
+  }
+
+  .sidebar-card p {
+    color: #7c7c7d;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card .btn {
+    width: 100%;
+    text-align: center;
+    color: #fff !important;
+  }
+
+  @media (max-width: 1024px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

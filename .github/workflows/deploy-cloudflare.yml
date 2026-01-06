@@ -1,0 +1,112 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  # 1. Manual Admin Trigger ("Confirmation")
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: 'Cloudflare Project Name'
+        required: true
+        default: 'v2-novintix'
+      branch:
+        description: 'Branch to deploy (default: main)'
+        required: false
+        default: 'main'
+
+  # 2. Automated Trigger on Merge
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Gatekeeper Logic
+      - name: Check Deploy Condition
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "✅ Manual dispatch detected. Proceeding with deployment."
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          if [[ "$COMMIT_MSG" == *"#DEPLOY=PROD"* ]]; then
+            echo "✅ Deployment tag '#DEPLOY=PROD' found. Proceeding."
+            echo "should_deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️  Deployment tag '#DEPLOY=PROD' NOT found."
+            echo "   Skipping automated deployment."
+            echo "   To deploy manually, use the 'Run workflow' button in Actions."
+            echo "should_deploy=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        if: steps.check.outputs.should_deploy == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Clean npm cache
+        if: steps.check.outputs.should_deploy == 'true'
+        run: npm cache clean --force
+
+      - name: Install dependencies (fresh)
+        if: steps.check.outputs.should_deploy == 'true'
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+
+      - name: Clean previous build
+        if: steps.check.outputs.should_deploy == 'true'
+        run: rm -rf dist .astro
+
+      - name: Build Astro site
+        if: steps.check.outputs.should_deploy == 'true'
+        run: npm run build
+
+      - name: Configure Project Name
+        if: steps.check.outputs.should_deploy == 'true'
+        id: config
+        run: |
+          # Use manual input if available, else default
+          PROJECT="${{ inputs.project_name || 'v2-novintix' }}"
+          echo "Target Project: $PROJECT"
+          echo "project_name=$PROJECT" >> $GITHUB_OUTPUT
+
+      - name: Add cache control headers
+        if: steps.check.outputs.should_deploy == 'true'
+        run: |
+          cat > dist/_headers << 'EOF'
+          /*
+            Cache-Control: no-cache, no-store, must-revalidate
+            Pragma: no-cache
+            Expires: 0
+          EOF
+
+      - name: Deploy to Cloudflare Pages
+        if: steps.check.outputs.should_deploy == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ steps.config.outputs.project_name }} --branch=${{ inputs.branch || 'main' }} --commit-dirty=true
+
+      - name: Purge Cloudflare Cache
+        if: steps.check.outputs.should_deploy == 'true'
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}' || echo "Cache purge skipped (no zone ID)"
+        continue-on-error: true

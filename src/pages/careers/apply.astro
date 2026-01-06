@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<BaseLayout title="Apply - Careers" currentPage="/careers">
+  <PageHero
+    title="Current Openings"
+    description="Explore opportunities to join our team of innovators"
+    backgroundImage="/images/careers-bg.jpg"
+  />
+
+  <section class="jobs-section">
+    <div class="container">
+      <div class="jobs-intro">
+        <h2>Life at NovintiX</h2>
+        <p>We're always looking for talented professionals who share our passion for innovation and excellence in the life sciences industry. Browse our current openings below.</p>
+      </div>
+
+      <div class="jobs-widget">
+        <!-- CEIPAL Jobs Widget -->
+        <div id="example-widget-container"></div>
+      </div>
+
+      <div class="jobs-fallback">
+        <p>Can't find a suitable position? We'd still love to hear from you.</p>
+        <a href="/contact-us" class="btn">Send Your Resume</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- CEIPAL Widget Script -->
+<script type="text/javascript" src="https://jobsapi.ceipal.com/APISource/widget.js" data-ceipal-api-key="ZmlYbU9kMTBTdXJVUDVwTFByWW1xQT09" data-ceipal-career-portal-id="Z3RkUkt2OXZJVld2MjFpOVRSTXoxZz09"></script>
+
+<style>
+  .jobs-section {
+    padding: 4em 0 5em;
+  }
+
+  .jobs-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3em;
+  }
+
+  .jobs-intro h2 {
+    margin-bottom: 15px;
+  }
+
+  .jobs-intro p {
+    color: #7C7C7D;
+    line-height: 1.7;
+  }
+
+  .jobs-widget {
+    min-height: 400px;
+    background: #f8f8f9;
+    border-radius: 15px;
+    padding: 2em;
+    margin-bottom: 3em;
+  }
+
+  /* Style overrides for CEIPAL widget */
+  .jobs-widget :global(.ceipal-widget) {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .jobs-widget :global(.ceipal-job-title) {
+    color: #1E2128;
+  }
+
+  .jobs-widget :global(.ceipal-apply-btn) {
+    background: #F5A302;
+    border-radius: 25px;
+  }
+
+  .jobs-fallback {
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(135deg, #1E2128 0%, #32353E 100%);
+    border-radius: 15px;
+  }
+
+  .jobs-fallback p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .jobs-widget {
+      padding: 1em;
+    }
+  }
+</style>

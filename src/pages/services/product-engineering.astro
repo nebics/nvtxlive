@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Product Engineering & Discovery"
+  currentPage="/services/product-engineering"
+>
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Product Engineering & Discovery</h1>
+      <p>
+        From concept to commercialization, we bring your product vision to life.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>Transforming Ideas into Market-Ready Products</h2>
+          <p>
+            At NovintiX, we combine technical expertise with creative innovation
+            to help you navigate the complex journey from initial concept to
+            successful product launch. Our comprehensive product engineering
+            services cover every stage of the development lifecycle.
+          </p>
+
+          <h3>Our Services Include:</h3>
+          <ul>
+            <li>
+              <strong>Product Discovery & Ideation</strong> - Market research, competitive
+              analysis, and concept development
+            </li>
+            <li>
+              <strong>Design & Development</strong> - Design controls, prototyping,
+              and iterative development
+            </li>
+            <li>
+              <strong>Verification & Validation</strong> - Testing strategies and
+              execution to ensure product performance
+            </li>
+            <li>
+              <strong>Design Transfer</strong> - Seamless transition from development
+              to manufacturing
+            </li>
+            <li>
+              <strong>Technical Documentation</strong> - Comprehensive documentation
+              for regulatory submissions
+            </li>
+          </ul>
+
+          <h3>Why Choose NovintiX?</h3>
+          <p>
+            Our team brings deep expertise in medical device development,
+            combined with a practical understanding of regulatory requirements.
+            We work as an extension of your team, providing the specialized
+            skills you need to accelerate your product timeline while
+            maintaining the highest quality standards.
+          </p>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h5>Related Services</h5>
+            <ul>
+              <li><a href="/services/manufacturing">Manufacturing</a></li>
+              <li>
+                <a href="/services/quality-regulatory-compliance"
+                  >Quality & Compliance</a>
+              </li>
+              <li><a href="/services/clinical-affairs">Clinical Affairs</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h5>Get Started</h5>
+            <p>Ready to bring your product to market?</p>
+            <a href="/contact-us" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e2128 0%, #32353e 100%);
+    padding: 7% 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url("/images/pattern.png") repeat;
+    opacity: 0.1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 720px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+  }
+
+  .content-section {
+    padding: 5em 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+  }
+
+  .content-main h2 {
+    margin-bottom: 20px;
+  }
+
+  .content-main h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .content-main p {
+    color: #7c7c7d;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+  .content-main ul {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+
+  .content-main li {
+    color: #7c7c7d;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  .content-main li strong {
+    color: #1e2128;
+  }
+
+  .sidebar-card {
+    background: #f8f8f9;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .sidebar-card h5 {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar-card li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar-card a {
+    color: #033c59;
+    font-size: 14px;
+  }
+
+  .sidebar-card a:hover {
+    color: #f5a302;
+  }
+
+  .sidebar-card p {
+    color: #7c7c7d;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-card .btn {
+    width: 100%;
+    text-align: center;
+    color: #fff !important;
+  }
+
+  @media (max-width: 1024px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

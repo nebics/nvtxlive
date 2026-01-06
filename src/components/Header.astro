@@ -1,0 +1,268 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = "" } = Astro.props;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/industries", label: "Industries" },
+  {
+    label: "Services",
+    href: "#",
+    children: [
+      {
+        href: "/services/product-engineering",
+        label: "Product Engineering & Discovery",
+      },
+      { href: "/services/supply-chain", label: "Supply Chain" },
+      { href: "/services/manufacturing", label: "Manufacturing" },
+      {
+        href: "/services/quality-regulatory-compliance",
+        label: "Quality & Regulatory Compliance",
+      },
+      { href: "/services/clinical-affairs", label: "Clinical Affairs" },
+    ],
+  },
+  { href: "/digital-solutions", label: "Digital Solutions" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact-us", label: "Contact us" },
+];
+---
+
+<header class="site-header">
+  <div class="header-container">
+    <a href="/" class="logo">
+      <img
+        src="/images/novintix-logo.png"
+        alt="NovintiX - Accelerate Transformation To Shape Your Future"
+        width="200"
+        height="60"
+      />
+    </a>
+
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="site-navigation">
+      <ul class="menu">
+        {
+          navItems.map((item) => (
+            <li
+              class={`menu-item ${item.children ? "has-children" : ""} ${currentPage === item.href ? "current" : ""}`}
+            >
+              <a href={item.href}>{item.label}</a>
+              {item.children && (
+                <ul class="sub-menu">
+                  {item.children.map((child) => (
+                    <li
+                      class={`menu-item ${currentPage === child.href ? "current" : ""}`}
+                    >
+                      <a href={child.href}>{child.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(20, 24, 30, 0.95); /* Dark Glassy Background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    /* Optional: Invert logo if it's too dark for the background. 
+       Uncomment the next line if the logo is black text. */
+  }
+
+  .site-navigation .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .menu-item > a {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e2e8f0; /* Light text for dark bg */
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+  }
+
+  .menu-item > a:hover,
+  .menu-item.current > a {
+    color: #f5a302;
+  }
+
+  .menu-item.has-children {
+    position: relative;
+  }
+
+  .menu-item.has-children > a::after {
+    content: "▾";
+    margin-left: 5px;
+    font-size: 10px;
+    color: #94a3b8;
+  }
+
+  .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1f2937; /* Dark dropdown */
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  .menu-item.has-children:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .sub-menu .menu-item a {
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #e2e8f0; /* Light text */
+  }
+
+  .sub-menu .menu-item a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f5a302;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #f5a302;
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f5a302;
+    left: 0;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+  .hamburger::after {
+    top: 8px;
+  }
+
+  @media (max-width: 1024px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+
+    .site-navigation {
+      position: fixed;
+      top: 90px;
+      left: 0;
+      right: 0;
+      background: #1f2937; /* Dark mobile menu */
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .site-navigation.active {
+      transform: translateX(0);
+    }
+
+    .site-navigation .menu {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .menu-item > a {
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-item.has-children > a::after {
+      color: #e2e8f0;
+    }
+
+    .sub-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      padding-left: 20px;
+      background: transparent;
+      border: none;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const nav = document.querySelector(".site-navigation");
+
+  toggle?.addEventListener("click", () => {
+    nav?.classList.toggle("active");
+  });
+</script>
