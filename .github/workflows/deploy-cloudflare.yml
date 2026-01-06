@@ -53,49 +53,6 @@ jobs:
           echo "project_name=$PROJECT_NAME" >> $GITHUB_OUTPUT
           echo "Deploying to Cloudflare Pages project: $PROJECT_NAME"
 
-      - name: Add Basic Auth Worker
-        run: |
-          cat > dist/_worker.js << 'EOF'
-          const CREDENTIALS = {
-            username: '${{ secrets.HTTP_AUTH_USER }}',
-            password: '${{ secrets.HTTP_AUTH_PASS }}'
-          };
-
-          export default {
-            async fetch(request, env) {
-              const authorization = request.headers.get('Authorization');
-
-              if (!authorization) {
-                return new Response('Authentication required', {
-                  status: 401,
-                  headers: {
-                    'WWW-Authenticate': 'Basic realm="Protected Area"'
-                  }
-                });
-              }
-
-              const [scheme, encoded] = authorization.split(' ');
-
-              if (scheme !== 'Basic') {
-                return new Response('Invalid authentication scheme', { status: 401 });
-              }
-
-              const decoded = atob(encoded);
-              const [username, password] = decoded.split(':');
-
-              if (username !== CREDENTIALS.username || password !== CREDENTIALS.password) {
-                return new Response('Invalid credentials', {
-                  status: 401,
-                  headers: {
-                    'WWW-Authenticate': 'Basic realm="Protected Area"'
-                  }
-                });
-              }
-
-              return env.ASSETS.fetch(request);
-            }
-          };
-          EOF
 
       - name: Add cache control headers
         run: |

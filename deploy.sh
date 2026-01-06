@@ -190,15 +190,12 @@ fi
 
 # Deploy
 if [ "$PUBLIC_DEPLOY" = true ]; then
-    # For production/public deploy, we ideally want to hit the main production environment.
-    # Omitting --branch might help if it defaults to production, OR we ensure we pass the production branch name.
-    # Since we saw 'main' in the screenshot for production, let's try WITHOUT --branch first to see if it defaults correctly,
-    # OR we stick to main but ensure it's treated as production.
-    # Actually, simpler: if --public is passed, we assume it's production-ready.
+    # For production/public deploy, we MUST explicitely tell Cloudflare this is for the 'main' branch
+    # to update the primary Production environment.
+    # If we omit it, it uses the local git branch (release/novintix-v2) which creates a Preview.
     
-    echo "Deploying to PRODUCTION (Public)..."
-    # Removing --branch argument to let Cloudflare infer or default to production
-    DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --commit-dirty=true 2>&1)
+    echo "Deploying to PRODUCTION (Public) on branch 'main'..."
+    DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true 2>&1)
 else
     # Development/Preview deploy
     DEPLOY_OUTPUT=$(npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true 2>&1)
@@ -230,7 +227,7 @@ EOF
 
 # Redeploy with headers
 if [ "$PUBLIC_DEPLOY" = true ]; then
-    npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --commit-dirty=true > /dev/null 2>&1
+    npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true > /dev/null 2>&1
 else
     npx wrangler pages deploy dist --project-name="$PROJECT_NAME" --branch=main --commit-dirty=true > /dev/null 2>&1
 fi

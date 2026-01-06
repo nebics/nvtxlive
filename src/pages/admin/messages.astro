@@ -758,7 +758,7 @@ import AdminLayout from "../../layouts/AdminLayout.astro";
             .map(
               (msg) => `
           <tr class="${msg.status === "unread" ? "unread" : ""}">
-            <td class="checkbox-wrap"><input type="checkbox" class="checkbox" value="${msg.id}"></td>
+            <td class="checkbox-wrap" style="text-align: center;"><input type="checkbox" class="checkbox" value="${msg.id}"></td>
             <td><span class="status-badge ${msg.status}"><span class="status-dot"></span>${msg.status}</span></td>
             <td>
               <div class="sender-cell">
