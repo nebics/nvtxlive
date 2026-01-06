@@ -174,9 +174,8 @@ export const onRequest: PagesFunction = async (context) => {
 EOF
     echo "✓ Auth middleware added"
 else
-    echo -e "\n${GREEN}[4/5] Public deployment selected - Skipping Auth Middleware${NC}"
-    # Ensure no stale middleware exists
-    rm -f functions/_middleware.ts
+    echo -e "\n${GREEN}[4/5] Public deployment selected - Using Repo Middleware${NC}"
+    # Do not delete middleware - we use the one in repo for Admin Auth
 fi
 
 # Step 5: Deploy to Cloudflare Pages
